@@ -1,0 +1,106 @@
+<body>
+
+
+<script type="text/javascript">
+
+/*cook = {
+	path	: '\\',
+	set:function(name, value, time, path, domain)
+	{
+		if(name && value)
+		{
+			var cookie_string	= '';
+				cookie_string	+= name+'='+escape(value);
+				cookie_string	+= cook.stetime(time);
+				cookie_string	+= 'path='+(path ? path : cook.path);
+				cookie_string	+= 'domain='+(domain ? domain : '');
+			document.cookie	= cookie_string;
+		}
+	},
+	settime:function(time)
+	{
+		if(time > 0)
+		{
+			var exdate	= new Date();
+				exdate.setDate(exdate.getDate()+time);
+				end_time= exdate.toGMTString();
+			return ';expires='+end_time;
+		}
+		return '';
+	},
+	get:function(name)
+	{
+		if (document.cookie.length>0)
+		{
+			start	= document.cookie.indexOf(name+"=")
+			if(start != -1)
+			{ 
+				start	= start+name.length+1;
+				end		= document.cookie.indexOf(";", start);
+				if(end == -1)
+				{
+					end= document.cookie.length;
+				}
+				return unescape(document.cookie.substring(start, end));
+			}
+		}
+		return '';
+	}
+}
+cook.set('hello', 'world', 20);
+console.log(cook.get('hello'));*/
+
+var ids	= '789654,987654,123789,654789,123258,147963,258456,125678,325489,153585';
+/**
+ *	@DESC 处理历史记录数据。设置max，当数据长度到达max值时，往头部插入新值，并踢掉最后一个，
+ *	data	string	'id1,id2,id3,id4,id5,'
+ *	max		int		
+*/
+function setHisData(new_id, data, max, is_del)
+{
+	if(data.length <= 0 || new_id <= 0)
+	{
+		return data;
+	}
+	data_obj	= data.split(',');
+	data_obj.splice(0, 1, new_id);
+	if(data_obj.length >= max)
+	{
+		data_obj.pop();
+	}
+	return data_obj.join(',');
+}
+/**
+ *	@DESC 获取历史记录。start起始位，limit取几条
+*/
+function getHisDataList(data, start, limit)
+{
+	if(data.length <= 0)
+	{
+		return data;
+	}
+	var data_obj	= data.split(',');
+		data_obj	= data_obj.slice(start, limit);
+	return data_obj.join(',');
+}
+/**
+ *	@DESC 判断当前新加入的id是否已存在于记录的数据当中，存在则删除
+*/
+function checkData(new_id, data)
+{
+	var start	= data.indexOf(new_id);
+	if(start >= 0)
+	{
+		end		= data.indexOf(',', start)+1;
+		var pre	= data.substring(0, start);
+		var suf	= data.substring(end);
+		data	= pre+suf;
+	}
+	return data;
+}
+ids	= checkData('123258', ids);
+ids	= setHisData('123258', ids, 10);
+getHisDataList(ids, 0, 4);
+
+</script>
+</body>

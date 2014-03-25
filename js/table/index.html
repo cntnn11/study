@@ -1,0 +1,207 @@
+<!Doctype html>
+<header>
+<title>JS操作表格</title>
+</header>
+<style type="text/css">
+table, td
+{	font: 100% Arial, Helvetica, sans-serif;	}
+table
+{	width: 100%; border-collapse: collapse; margin: 1em 0;	}
+th, td
+{	margin: 1em 0; border:#000000 1px solid;	}
+</style>
+<body>
+<table id="tab">
+	<tr>
+		<td>姓名</td>
+		<td>性别</td>
+		<td onclick="tabSort(this, 1)">年龄</td>
+	</tr>
+	<tr>
+		<td>xxx1</td>
+		<td>男</td>
+		<td>34</td>
+	</tr>
+	<tr>
+		<td>王二</td>
+		<td>女</td>
+		<td>23</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>女</td>
+		<td>45</td>
+	</tr>
+	<tr>
+		<td>李四</td>
+		<td>男</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>武松</td>
+		<td>男</td>
+		<td>35</td>
+	</tr>
+	<tr>
+		<td>老毕</td>
+		<td>女</td>
+		<td>43</td>
+	</tr>
+	<tr>
+		<td>xx2</td>
+		<td>男</td>
+		<td>22</td>
+	</tr>
+</table>
+<script type="text/javascript">
+alert('hello 站着工作!');
+	var tab		= document.getElementById("tab");
+	var rows	= tab.rows.length;	//获取表格的行数
+	var cells	= tab.rows[0].length;
+	for (var i = 0; i<rows; i++)
+	{
+		//console.log("当前行："+i+"\n\r单元格数："+tab.rows[i].cells.length);
+	}
+</script>
+
+<script type="text/javascript">
+/**
+ *	动态创建一个表格
+ *	兼容所有浏览器
+*/
+var newtab	= document.createElement("table");
+	newtab.border	= 1;
+	newtab.id	= "newtab";
+	var row, cell;
+	for(var i = 0; i<4; i++)
+	{
+		row	= newtab.insertRow(0);
+		for(var j = 0; j<3; j++)
+		{
+			cell	= row.insertCell(0);
+			cell.id	= "td_"+j+"_"+i;
+			cell.innerHTML	= "我的坐标点是：x:"+j+" y:"+i;
+		}
+	}
+	document.body.appendChild(newtab);
+	//insertRow(跟在哪一行的后边。)	//如果是创建新的表格，那么设置成1以下的整数。即不能超过原有表格的行数(超过即报错)
+	//obj.insertRow(0).insertCell(0)//insertCell(0)插入单元格
+/**
+ *	删除表格行和单元列
+*/
+	//tab.deleteRow(0);	//删除第1行。对应数组的下标
+	//tab.rows[0].deleteCell(2);	//删除第1行第2列。后边的单元格往前挪
+</script>
+
+<script type="text/javascript">
+/**
+ *	操作表格变换颜色
+*/
+	//tab;
+	tab.onmouseover	= function(e){
+		e	= e || event;	//这里考虑兼容。但是chrome和ie没有问题。可能是火狐
+		var target	= e.target || e.srcElement;	//兼容事件源.
+		if(target.tagName.toLowerCase() == "td")
+		{
+			var cells	= target.parentNode.cells;	//获取target（当前单元格）所在行的单元格对象
+			for(var i=0, l=cells.length; i<l; i++)
+			{
+				cells[i].style.background	= "#bce774";
+			}
+		}
+	}
+	tab.onmouseout	= function(e){
+		e	= e || event;
+		var target	= e.target || e.srcElement;
+		if(target.tagName.toLowerCase() == 'td')
+		{
+			var cells	= target.parentNode.cells;
+			for(var i=0, l=cells.length; i<l; i++)
+			{
+				cells[i].style.background	= "#ffffff";
+			}
+		}
+	}
+</script>
+<script type="text/javascript">
+/**
+ *	sort()排序
+*/
+var test_arr	= [5, 5, 3, 8, 43, 3, 34];
+function tabSort(obj, type)
+{
+	//获取本列原始行顺序数据
+	var list	= [];
+	//获取本列排序后行顺序数据
+	var sorted_list	= [];
+
+	var tr	= obj.parentNode;
+
+	while(tr.nextSibling)
+	{
+		tr	= tr.nextSibling;
+		if(tr.nodeType == 1)
+		{
+			list.push(tr.cells[obj.cellIndex].innerHTML);	//获取每一行当前列单元格的原始内容
+			sorted_list.push(tr.cells[obj.cellIndex].innerHTML);
+		}
+	}
+
+	//排序方式
+	if(obj.direct == undefined)
+	{
+		obj.direct	= 1;
+	}
+	//改变移动方向
+	if(obj.direct)
+	{
+		obj.direct	= 0;
+	}
+	else
+	{
+		obj.direct	= 1;
+	}
+
+	var target	= [];
+	//获取排序后行的原坐标
+	for(var i=0,l=sorted_list.length; i<l; i++)
+	{
+		for(var j=0,k=list.length; j<k; j++)
+		{
+			if(sorted_list[i] == list[j])
+			{
+				target.push(j+1);
+			}
+		}
+	}
+
+	//根据坐标获取该列所有td
+	var cells	= [];
+	var sort_table	= document.getElementById('tab');
+	for(var i=0,l=target.length; i<l; i++)
+	{
+		cells.push(sort_table.rows[target[i]].cells[obj.cellIndex]);
+	}
+
+	//移动行
+	for(var i=0,l=list.length; i<l; i++)
+	{
+		sort_table.moveRow(cells[i].parentNode.rowIndex, i+l);
+	}
+}
+/**
+ *	找当前节点，type第一次出现时的父级对象
+*/
+function findParent(obj, type)
+{
+	if(obj.tagName.toLowerCase() == type)
+	{
+		return obj;
+	}
+	else
+	{
+		findParent(obj.parentNode, type);
+	}
+}
+</script>
+</body>

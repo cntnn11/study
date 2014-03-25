@@ -1,0 +1,89 @@
+<title>js对象的引用</title>
+<style>
+p{ text-indent: 2em;}
+</style>
+<body>
+<h1>1.使用系统对象</h1>
+<p>时间对象 var dt = newDate();</p>
+<p>字符串对象</p>
+<p>数学对象</p>
+<p>数组对象</p>
+<h3>步骤</h3>
+<p>找到对象->实例化对象->操作对象</p>
+<p>对象实例.属性名/方法名</p>
+<p>对象实例['字符串型属性名']</p>
+<hr/>
+<h1>js对象方法</h1>
+<h3>字符串String()</h3>
+
+
+</body>
+<script>
+//1.	使用系统对象 时间对象打印输出一个当前客户端的日期、时间、星期几
+var dt = new Date();
+str	= dt.getFullYear()+'年';
+str+= (dt.getMonth()+1)+'月';
+str+= dt.getDate()+'日';
+str+= dt.getHours()+'时';
+str+= dt.getMinutes()+'分';
+str+= dt.getSeconds()+'秒';
+str+= '星期';
+//当前周的某一天
+switch(dt.getDay())
+{
+	case 0:
+		str+= '一';
+		break;
+	case 1:
+		str+= '二';
+		break;
+	case 2:
+		str+= '三';
+		break;
+	case 3:
+		str+= '四';
+		break;
+	case 4:
+		str+= '五';
+		break;
+	case 5:
+		str+= '六';
+		break;
+	case 6:
+		str+= '七';
+		break;
+}
+//alert(str);
+
+//2.	自定义对象
+//Object()为系统自动开辟的空对象区间。
+function selfObj(width, height)
+{
+	var o = new Object();
+	//添加属性
+	o.width	= width ? width : 300;
+	o.height= height ? height: 500;
+
+	//添加方法
+	o.autoload	= function(){
+		alert('autoload()属性');
+	}
+	return o;
+}
+var o = selfObj(100);
+//alert(o.width+' * '+o.height);
+
+//3.	对象遍历
+
+/*for (i in Object)
+{
+	Things[i]
+};*/
+
+/*with(obj对象)
+{
+	//如果不写‘obj.’，那么里边执行的方法为obj对象的方法
+	//exp: document.write(); = write();
+}*/
+
+</script>

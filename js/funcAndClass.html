@@ -1,0 +1,221 @@
+<!Doctype html>
+<title>js函数&面向对象</title>
+<script>
+	//具名函数
+	function name()
+	{
+		alert('name');
+	}
+	
+	/*lambda函数表达式
+		不具名函数，一个表达式
+		声明总是有用的*/
+		var var2=function() {alert('var2')};
+		var2;
+
+	/**
+	 *	获取函数的所有参数并输出
+	 *	
+	*/
+	function msg(args)
+	{
+		/*字符串连接 因为效率一直比较低，所以采用数组
+		var str	= '';
+		for (var i = 0; i < args.length ; i++)
+		{
+			str	+= args[i]+"\n";
+		};
+		return str;*/
+		//var  arr = [];
+		//以下的写法是更见简单的，代码更少的写法
+		for( var i = 0,  arr = []; i < args.length; i++)
+		{
+			arr.push(args[i]+" |");
+		}
+		return arr.join("\n");
+	}
+	/*
+	 *	argument
+	 *	保存函数的所有参数
+	 *	类似数组，可以用下表访问
+	*/
+	function arg(a, b ,c)
+	{
+		alert(msg(arguments));
+	}
+	//arg(1, 2, 3);
+
+	//arguments递归
+	function jifechen(n)
+	{
+		//alert(arguments.callee.caller);
+		return n ? n*jifechen(n-1) : 1;
+	}
+	//返回当前函数的参数个数
+	//alert(jifechen.length);
+	//alert(jifechen(5));
+	function call()
+	{
+		jifechen(3);
+	}
+	//call();
+
+	/**
+	 *	闭包：词法表示包括不被计算的变量的函数，也就是说，函数可以使用函数之外定义的变量
+	 *		ECMAScript中，使用全局变量是一种简单的闭包
+	*/
+	var g = '我是全局的';
+	function each()
+	{
+		var a = 'fnA';
+		function fnA()
+		{
+			//alert(a);
+			var b = 'fnB';
+			//alert(c);	//变量未声明
+			//alert(arguments.caller);
+			function fnB()
+			{
+				var c = "fnC";
+				//alert(a+"\n"+b);
+			}
+		}
+		//fnA();
+	}
+	//each();
+
+	function fnTest()
+	{
+		var a	= '';
+		return {
+			set:function(param) { a = param; },
+			get:function() { return a; }
+		};
+	}
+	var obj	= fnTest();
+	obj.set(4);
+	//alert(obj.get());
+	/**
+	 *	类对象，面向对象
+	*/
+	var obj	= new Object();
+	//alert(Object);
+
+	//自定义类
+	function DemoClass(name, age)
+	{
+		//alert('我是DemoClass类的构造函数');
+		this.name	= name;
+		this.age	= age;
+		this.version= '1.0';
+		this.conf	= function(){
+			this.db	= "database";
+			this.ip	= '127.0.0.1';
+		}
+	}
+	var demo	= new DemoClass('cntnn11', '22');//在这里new他，相当于直接调用。也可以算一个构造函数
+	//demo.conf;
+
+	//实例类 instanceof 用来判断是否是某个类？
+	
+	//模拟一个闭包，
+	function testBG(name, age)
+	{
+		this.name = "name拒绝访问！"; 
+		this.age = "age拒绝访问！";
+
+		this.getName = function()
+		{
+			return name;
+		};
+		this.getAge = function()
+		{
+			return age;
+		};
+
+		this.setName = function(n)
+		{
+			name = n;
+		};
+		this.setAge = function(a)
+		{
+			age = a;
+		};
+	}
+	var t = new testBG('tnn', 23);
+	//alert(t.name);	//js类里没有似有的概念。所以外界都能访问
+	//但我不希望被公共访问
+	t.setName('xxx');
+	t.setAge(2345234523);
+	//alert(t.getName()+":"+t.getAge());
+
+	//自定义类借用了object的toString和valueOf方法
+	//ECMAScript都从object类继承
+	function newClass() { }
+	var n = new newClass();
+	//alert(n.valueOf);
+
+	//prototype()继承 子类.prototype = new 父类; //类似php的extend继承。*继承时不能传参数
+	//prototype.isPrototypeOf()	//判断是不是另一个对象的原型？
+	//类继承
+	function classA()
+	{
+		this.aname = 'classA_Var';
+	}
+
+	function classB()
+	{
+		this.bname = 'classB_Var';
+	}
+	classB.prototype = new classA();
+	var a = new classA();
+	var b = new classB();
+	//alert(a.aname+"-"+b.bname);//正常，各个类访问各自的变量和方法。
+	//alert(b instanceof classB);
+	//alert(b.prototype.isPrototypeOf());
+	//alert("b继承classA后："+b.aname);	//成功继承
+
+	//call(obj, arg1, arg2....) 	//obj表示指针指向的this对象。后边的arg则是函数的参数
+	//apply(obj , [arg1, arg2,...])	//同上。函数参数则是以数组传入
+
+	//object是所有的子类，所有对象都是object的实例
+
+	//将其他类型转换成字符串，就是去调用toString方法
+	//
+	
+
+
+
+</script>
+
+<script type="text/javascript">
+function link($no)
+{
+     this.no = $no;
+     this.next;
+}
+function addLink($num)
+{
+  var $first=$cur = {};
+  
+  for(var $i=1;$i<=$num;$i++)
+  {
+       var $link = new link($i);
+       if($i==1){
+           $first = $link;
+           $first.next = $first;
+           $cur = $first;
+       }else{
+         $cur.next  = $link;
+         $link.next = $first;
+         $cur = $cur.next;
+      }
+  }
+   return $first;
+}
+
+$link = addLink(5);
+
+console.log($link);
+
+</script>

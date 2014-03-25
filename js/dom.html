@@ -1,0 +1,25 @@
+<!Doctype html>
+<body>
+	<div id="id1">
+		<p></p>
+	</div>
+
+	<div id="id2">
+		<span><font></font></span>
+		<label>
+			<a href=""></a>
+		</label>
+	</div>
+</body>
+
+<script type="text/javascript">
+var div1 = document.getElementById('id1');
+//alert('节点类型：'+div.nodeType+"\n\r"+'节点名称：'+div.nodeName+"\r\n"+'节点值：'+div.nodeValue);
+//alert(div1.childNodes.length);	//谷歌火狐下，空白符也算一个节点
+
+var div2 = document.getElementById('id2');
+//alert(div2.childNodes[4].nodeName);
+//alert(div2.firstChild.nodeName);
+//alert(div2.nextSibling.nodeName);
+alert(div2.previousSibling.nodeName);
+</script>

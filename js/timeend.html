@@ -1,0 +1,32 @@
+<meta charset=utf-8>
+<header>
+<title>倒计时效果</title>
+</header>
+<body>
+	<p><span id="timeend"></span></p>
+</body>
+<script type="text/javascript" src="../jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	timeend();
+})
+function timeend()
+{
+	var end			= "2013-09-01";
+	var date_end	= new Date(end);
+	var date_now	= new Date();
+	var times		= parseInt(date_end.getTime().toString().substr(0, 10))-parseInt(date_now.getTime().toString().substr(0, 10));
+
+	var s_minute	= 60;
+	var s_hour		= 60*s_minute;
+	var s_day		= 24*s_hour;
+
+	var days		= parseInt(times/s_day);
+	var hour		= parseInt((times-s_day*days)/s_hour);
+	var minute		= parseInt((times-s_day*days-s_hour*hour)/s_minute);
+	var second		= parseInt(times-s_day*days-s_hour*hour-s_minute*minute);
+
+	$("#timeend").html("距离 "+end+" 还剩"+days+"天"+hour+"时"+minute+"分"+second+"秒");
+	setInterval("timeend()", 1000);
+}
+</script>

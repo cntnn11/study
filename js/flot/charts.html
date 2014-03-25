@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script type="text/javascript" src="/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery.flot.min.js"></script>
+<script type="text/javascript" src="jquery.flot.pie.js"></script>
+<script type="text/javascript" src="jquery.flot.pie.resize_update.js"></script>
+<script type="text/javascript" src="jquery.flot.resize.min.js"></script>
+<script type="text/javascript" src="jquery.flot.time.js"></script>
+<body>
+	<div id="charts" style="width:600px; height:400px;"></div>
+</body>
+<script type="text/javascript">
+var data	= [ { label: "Foo", data: [[new Date(2010, 1, 1), 1], [new Date(2010, 5, 1), -14], [new Date(2010, 10, 1), 5]]},
+		{ label: "Bar", data: [[new Date(2010, 2, 1), 13], [new Date(2010, 6, 1), 11], [new Date(2010, 12, 1), -7]]}
+	];
+/*var data	= [ { label: "Foo", data: [[1, new Date(2010, 1, 1)], [-14, new Date(2010, 5, 1)], [5, new Date(2010, 10, 1)]]},
+		{ label: "Bar", data: [[13, new Date(2010, 2, 1)], [11, new Date(2010, 6, 1)], [-7, new Date(2010, 12, 1)]]}
+	];*/
+$.plot($("#charts"), data, {
+		xaxes: [{
+			position: "bottom",
+			mode: "time",	// X轴设置成时间
+			timeformat: '%Y-%m-%d'
+		}],
+		yaxes: [{
+			position: "left",
+		}]
+	}
+);
+// data_format:[{label:'thisTitle', data:[[x1, y1], [x2, y2]...]}, ...];
+/*flot	= [
+	data		= [],
+	position	= ["bottom", "left"],
+	mode		= ["", "time"],
+	axes_title	= function(callback_x, callback_y)
+	{
+		callback_x();
+		callback_y();
+	},
+
+
+];*/
+</script>
+
+<body>

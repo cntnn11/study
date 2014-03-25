@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>js判断浏览器版本及版本号</title>
+
+<script>
+
+
+function test1(){
+window["MzBrowser"]={};(function(){if(MzBrowser.platform) return;
+
+var ua = window.navigator.userAgent;
+MzBrowser.platform = window.navigator.platform;
+
+MzBrowser.firefox = ua.indexOf("Firefox")>0;
+MzBrowser.ie = !MzBrowser.opera && ua.indexOf("MSIE")>0;
+
+
+if(MzBrowser.firefox) var re = /Firefox(\s|\/)(\d+(\.\d+)?)/;
+else if(MzBrowser.ie) var re = /MSIE( )(\d+(\.\d+)?)/;
+
+if("undefined"!=typeof(re)&&re.test(ua))MzBrowser.version = parseFloat(RegExp.$2);})(); 
+
+
+if(MzBrowser.ie)
+{alert('ie');}
+if(MzBrowser.firefox)
+{alert('firefox');}
+alert(MzBrowser.version);
+}
+
+
+function test2()
+{
+	if(window.navigator.userAgent.indexOf("MSIE 8.0")>=1){
+		//如果浏览器为IE 8.0
+		alert("ie8");
+	}
+	else if(window.navigator.userAgent.indexOf("MSIE 7.0")>=1){
+		//如果浏览器为IE 7.0
+		alert("ie8");
+	}
+	else if(window.navigator.userAgent.indexOf("MSIE 6.0")>=1){
+		//如果浏览器为IE 6.0
+		alert("ie6");
+	}
+}
+
+
+</script>
+</head>
+
+<body>
+<input type="button" value="获取类型与版本1" onclick="test1()" />
+<input type="button" value="获取类型与版本2" onclick="test2()" />
+</body>
+</html>
