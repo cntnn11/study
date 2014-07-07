@@ -1,4 +1,6 @@
 <?php
+echo date('Y年m月d日');
+echo '<br/>';
 echo substr(md5('svnALYcntnn11'), 0, 12);
 echo '<br/>';
 echo substr(md5('alyIcpTnn11'), 0, 12);
