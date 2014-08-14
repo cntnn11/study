@@ -141,7 +141,7 @@ class Selection extends Plugin
     startRange = range.cloneRange()
     endRange = range.cloneRange()
     startRange.collapse(true)
-    endRange.collapse()
+    endRange.collapse(false)
 
     # the default behavior of cmd+a is buggy
     if !range.collapsed and @rangeAtStartOf(@editor.body, startRange) and @rangeAtEndOf(@editor.body, endRange)
@@ -253,7 +253,7 @@ class Formatter extends Plugin
 
     findLinkNode $el
 
-    re = /(https?:\/\/|www\.)[\w\-\.\?&=\/#%:]+/ig
+    re = /(https?:\/\/|www\.)[\w\-\.\?&=\/#%:\!]+/ig
     for $node in linkNodes
       text = $node.text()
       replaceEls = []
@@ -284,7 +284,7 @@ class Formatter extends Plugin
       if $node.is('br')
         blockNode = null if blockNode?
         $node.remove()
-      else if @editor.util.isBlockNode(node) or $node.is('img')
+      else if @editor.util.isBlockNode(node)
         if $node.is('li')
           if blockNode and blockNode.is('ul, ol')
             blockNode.append node
@@ -316,8 +316,14 @@ class Formatter extends Plugin
 
     if $node.is(@_allowedTags.join(',')) or isDecoration
       # img inside a is not allowed
-      if $node.is('a') and $node.find('img').length > 0
-        contents.first().unwrap()
+      if $node.is('a') and ($childImg = $node.find('img')).length > 0
+        $node.replaceWith $childImg
+        $node = $childImg
+        contents = null
+
+      # exclude uploading img
+      if $node.is('img') and $node.hasClass('uploading')
+        $node.remove()
 
       # Clean attributes except `src` `alt` on `img` tag and `href` `target` on `a` tag
       unless isDecoration
@@ -351,16 +357,17 @@ class Formatter extends Plugin
 
   clearHtml: (html, lineBreak = true) ->
     container = $('<div/>').append(html)
+    contents = container.contents()
     result = ''
 
-    container.contents().each (i, node) =>
+    contents.each (i, node) =>
       if node.nodeType == 3
         result += node.nodeValue
       else if node.nodeType == 1
         $node = $(node)
-        contents = $node.contents()
-        result += @clearHtml contents if contents.length > 0
-        if lineBreak and $node.is 'br, p, div, li, tr, pre, address, artticle, aside, dl, figcaption, footer, h1, h2, h3, h4, header'
+        children = $node.contents()
+        result += @clearHtml children if children.length > 0
+        if lineBreak and i < contents.length - 1 and $node.is 'br, p, div, li, tr, pre, address, artticle, aside, dl, figcaption, footer, h1, h2, h3, h4, header'
           result += '\n'
 
     result
@@ -413,9 +420,24 @@ class InputManager extends Plugin
       .addClass('simditor-paste-area')
       .appendTo(@editor.el)
 
+    @_cleanPasteArea = $('<textarea/>')
+      .css({
+        width: '1px',
+        height: '1px',
+        overflow: 'hidden',
+        position: 'fixed',
+        right: '0',
+        bottom: '101px'
+      })
+      .attr({
+        tabIndex: '-1'
+      })
+      .addClass('simditor-clean-paste-area')
+      .appendTo(@editor.el)
+
     @editor.on 'valuechanged', =>
-      # make sure each code block, img and table has siblings
-      @editor.body.find('hr, pre, .simditor-image, .simditor-table').each (i, el) =>
+      # make sure each code block and table has siblings
+      @editor.body.find('hr, pre, .simditor-table').each (i, el) =>
         $el = $(el)
         if ($el.parent().is('blockquote') or $el.parent()[0] == @editor.body[0])
           formatted = false
@@ -443,6 +465,7 @@ class InputManager extends Plugin
       .on('focus', $.proxy(@_onFocus, @))
       .on('blur', $.proxy(@_onBlur, @))
       .on('paste', $.proxy(@_onPaste, @))
+      .on('drop', $.proxy(@_onDrop, @))
 
     # fix firefox cmd+left/right bug
     if @editor.util.browser.firefox
@@ -468,7 +491,7 @@ class InputManager extends Plugin
     @focused = true
     @lastCaretPosition = null
 
-    @editor.body.find('.selected').removeClass('selected')
+    #@editor.body.find('.selected').removeClass('selected')
 
     setTimeout =>
       @editor.triggerHandler 'focus'
@@ -484,9 +507,10 @@ class InputManager extends Plugin
     @editor.triggerHandler 'blur'
 
   _onMouseUp: (e) ->
-    return if $(e.target).is('img, .simditor-image')
-    @editor.trigger 'selectionchanged'
-    @editor.undoManager.update()
+    setTimeout =>
+      @editor.trigger 'selectionchanged'
+      @editor.undoManager.update()
+    , 0
 
   _onKeyDown: (e) ->
     if @editor.triggerHandler(e) == false
@@ -553,7 +577,7 @@ class InputManager extends Plugin
       @editor.undoManager.update()
       return
 
-    if e.which == 8 and (@editor.body.is(':empty') or (@editor.body.children().length == 1 and @editor.body.children().is('br')))
+    if e.which == 8 and @editor.util.isEmptyNode(@editor.body)
       @editor.body.empty()
       p = $('<p/>').append(@editor.util.phBr)
         .appendTo(@editor.body)
@@ -564,36 +588,54 @@ class InputManager extends Plugin
     if @editor.triggerHandler(e) == false
       return false
 
+    range = @editor.selection.deleteRangeContents()
+    range.collapse(true) unless range.collapsed
+    $blockEl = @editor.util.closestBlockEl()
+    cleanPaste = $blockEl.is 'pre, table'
+
     if e.originalEvent.clipboardData && e.originalEvent.clipboardData.items && e.originalEvent.clipboardData.items.length > 0
       pasteItem = e.originalEvent.clipboardData.items[0]
 
       # paste file in chrome
-      if /^image\//.test pasteItem.type
+      if /^image\//.test(pasteItem.type) and !cleanPaste
         imageFile = pasteItem.getAsFile()
         return unless imageFile? and @opts.pasteImage
 
         unless imageFile.name
-          imageFile.name = "来自剪贴板的图片.png"
+          imageFile.name = "Clipboard Image.png"
 
         uploadOpt = {}
         uploadOpt[@opts.pasteImage] = true
         @editor.uploader?.upload(imageFile, uploadOpt)
         return false
 
-    range = @editor.selection.deleteRangeContents()
-    range.collapse(true) unless range.collapsed
-
-    $blockEl = @editor.util.closestBlockEl()
-    cleanPaste = $blockEl.is 'pre, table'
     @editor.selection.save range
 
-    @_pasteArea.focus()
+    if cleanPaste
+      @_cleanPasteArea.focus()
+
+      # firefox cannot set focus on textarea before pasting
+      if @editor.util.browser.firefox
+        e.preventDefault()
+        @_cleanPasteArea.val e.originalEvent.clipboardData.getData('text/plain')
+
+      # IE10 cannot set focus on textarea or editable div before pasting
+      else if @editor.util.browser.msie and @editor.util.browser.version == 10
+        e.preventDefault()
+        @_cleanPasteArea.val window.clipboardData.getData('Text')
+    else
+      @_pasteArea.focus()
+
+      # IE10 cannot set focus on textarea or editable div before pasting
+      if @editor.util.browser.msie and @editor.util.browser.version == 10
+        e.preventDefault()
+        @_pasteArea.html window.clipboardData.getData('Text')
 
     setTimeout =>
-      if @_pasteArea.is(':empty')
+      if @_pasteArea.is(':empty') and !@_cleanPasteArea.val()
         pasteContent = null
       else if cleanPaste
-        pasteContent = @editor.formatter.clearHtml @_pasteArea.html()
+        pasteContent = @_cleanPasteArea.val()
       else
         pasteContent = $('<div/>').append(@_pasteArea.contents())
         @editor.formatter.format pasteContent
@@ -602,6 +644,7 @@ class InputManager extends Plugin
         pasteContent = pasteContent.contents()
 
       @_pasteArea.empty()
+      @_cleanPasteArea.val('')
       range = @editor.selection.restore()
 
       if @editor.triggerHandler('pasting', [pasteContent]) == false
@@ -627,26 +670,27 @@ class InputManager extends Plugin
       else if pasteContent.length == 1
         if pasteContent.is('p')
           children = pasteContent.contents()
-          @editor.selection.insertNode(node, range) for node in children
 
-        # paste image in firefox and IE 11
-        else if pasteContent.is('.simditor-image')
-          $img = pasteContent.find('img')
+          if children.length == 1 and children.is('img')
+            $img = children
 
-          # firefox and IE 11
-          if /^data:image/.test($img.attr('src'))
-            return unless @opts.pasteImage
-            blob = @editor.util.dataURLtoBlob $img.attr( "src" )
-            blob.name = "来自剪贴板的图片.png"
+            # paste image in firefox and IE 11
+            if /^data:image/.test($img.attr('src'))
+              return unless @opts.pasteImage
+              blob = @editor.util.dataURLtoBlob $img.attr( "src" )
+              blob.name = "Clipboard Image.png"
 
-            uploadOpt = {}
-            uploadOpt[@opts.pasteImage] = true
-            @editor.uploader?.upload(blob, uploadOpt)
-            return
+              uploadOpt = {}
+              uploadOpt[@opts.pasteImage] = true
+              @editor.uploader?.upload(blob, uploadOpt)
+              return
 
-          # cannot paste image in safari
-          else if $img.is('img[src^="webkit-fake-url://"]')
-            return
+            # cannot paste image in safari
+            else if $img.is('img[src^="webkit-fake-url://"]')
+              return
+          else
+            @editor.selection.insertNode(node, range) for node in children
+
         else if $blockEl.is('p') and @editor.util.isEmptyNode $blockEl
           $blockEl.replaceWith pasteContent
           @editor.selection.setRangeAtEndOf(pasteContent, range)
@@ -673,6 +717,15 @@ class InputManager extends Plugin
       @editor.trigger 'valuechanged'
       @editor.trigger 'selectionchanged'
     , 10
+
+  _onDrop: (e) ->
+    if @editor.triggerHandler(e) == false
+      return false
+
+    setTimeout =>
+      @editor.trigger 'valuechanged'
+      @editor.trigger 'selectionchanged'
+    , 0
 
 
   # handlers which will be called when specific key is pressed in specific node
@@ -723,11 +776,28 @@ class Keystroke extends Plugin
         true
 
 
-    # Remove hr and img node
+    # press enter at end of title block in webkit and IE
+    if @editor.util.browser.webkit or @editor.util.browser.msie
+      titleEnterHandler = (e, $node) =>
+        return unless @editor.selection.rangeAtEndOf $node
+        $p = $('<p/>').append(@editor.util.phBr)
+          .insertAfter($node)
+        @editor.selection.setRangeAtStartOf $p
+        true
+
+      @editor.inputManager.addKeystrokeHandler '13', 'h1', titleEnterHandler
+      @editor.inputManager.addKeystrokeHandler '13', 'h2', titleEnterHandler
+      @editor.inputManager.addKeystrokeHandler '13', 'h3', titleEnterHandler
+      @editor.inputManager.addKeystrokeHandler '13', 'h4', titleEnterHandler
+      @editor.inputManager.addKeystrokeHandler '13', 'h5', titleEnterHandler
+      @editor.inputManager.addKeystrokeHandler '13', 'h6', titleEnterHandler
+
+
+    # Remove hr
     @editor.inputManager.addKeystrokeHandler '8', '*', (e) =>
       $rootBlock = @editor.util.furthestBlockEl()
       $prevBlockEl = $rootBlock.prev()
-      if $prevBlockEl.is('hr, .simditor-image') and @editor.selection.rangeAtStartOf $rootBlock
+      if $prevBlockEl.is('hr') and @editor.selection.rangeAtStartOf $rootBlock
         # TODO: need to test on IE
         @editor.selection.save()
         $prevBlockEl.remove()
@@ -1134,19 +1204,19 @@ class Util extends Plugin
 
     if ie
       msie: true
-      version: ua.match(/(msie |rv:)(\d+(\.\d+)?)/i)[2]
+      version: ua.match(/(msie |rv:)(\d+(\.\d+)?)/i)[2] * 1
     else if chrome
       webkit: true
       chrome: true
-      version: ua.match(/(?:chrome|crios)\/(\d+(\.\d+)?)/i)[1]
+      version: ua.match(/(?:chrome|crios)\/(\d+(\.\d+)?)/i)[1] * 1
     else if safari
       webkit: true
       safari: true
-      version: ua.match(/version\/(\d+(\.\d+)?)/i)[1]
+      version: ua.match(/version\/(\d+(\.\d+)?)/i)[1] * 1
     else if firefox
       mozilla: true
       firefox: true
-      version: ua.match(/firefox\/(\d+(\.\d+)?)/i)[1]
+      version: ua.match(/firefox\/(\d+(\.\d+)?)/i)[1] * 1
     else
       {}
   )()
@@ -1157,7 +1227,7 @@ class Util extends Plugin
 
   isEmptyNode: (node) ->
     $node = $(node)
-    !$node.text() and !$node.find(':not(br, span)').length
+    $node.is(':empty') or (!$node.text() and !$node.find(':not(br, span, div)').length)
 
   isBlockNode: (node) ->
     node = $(node)[0]
@@ -1415,6 +1485,7 @@ class Toolbar extends Plugin
     if @opts.toolbarFloat
       @wrapper.width @wrapper.outerWidth()
       @wrapper.css 'left', @wrapper.offset().left
+      toolbarHeight = @wrapper.outerHeight()
       $(window).on 'scroll.simditor-' + @editor.id, (e) =>
         topEdge = @editor.wrapper.offset().top
         bottomEdge = topEdge + @editor.wrapper.outerHeight() - 80
@@ -1422,8 +1493,10 @@ class Toolbar extends Plugin
 
         if scrollTop <= topEdge or scrollTop >= bottomEdge
           @editor.wrapper.removeClass('toolbar-floating')
+            .css('padding-top', '')
         else
           @editor.wrapper.addClass('toolbar-floating')
+            .css('padding-top', toolbarHeight)
 
     @editor.on 'selectionchanged focus', =>
       @toolbarStatus()
@@ -1449,6 +1522,8 @@ class Toolbar extends Plugin
         continue
 
       @buttons.push new @constructor.buttons[name](@editor)
+
+    @editor.placeholderEl.css 'top', @wrapper.outerHeight()
 
   toolbarStatus: (name) ->
     return unless @editor.inputManager.focused
@@ -1526,20 +1601,16 @@ class Simditor extends Widget
 
     # set default value after all plugins are connected
     @on 'pluginconnected', =>
-      @setValue @textarea.val() || ''
-
       if @opts.placeholder
         @on 'valuechanged', =>
           @_placeholder()
 
-      setTimeout =>
-        @trigger 'valuechanged'
-      , 0
+      @setValue @textarea.val() || ''
 
     # Disable the resizing of `img` and `table`
-    #if @browser.mozilla
-      #document.execCommand "enableObjectResizing", false, "false"
-      #document.execCommand "enableInlineTableEditing", false, "false"
+    if @util.browser.mozilla
+      document.execCommand "enableObjectResizing", false, false
+      document.execCommand "enableInlineTableEditing", false, false
 
   _tpl:"""
     <div class="simditor">
@@ -1585,16 +1656,22 @@ class Simditor extends Widget
       @placeholderEl.hide()
 
   setValue: (val) ->
+    @hidePopover()
     @textarea.val val
     @body.html val
 
     @formatter.format()
     @formatter.decorate()
 
+    setTimeout =>
+      @trigger 'valuechanged'
+    , 0
+
   getValue: () ->
     @sync()
 
   sync: ->
+    @hidePopover
     cloneBody = @body.clone()
     @formatter.undecorate cloneBody
     @formatter.format cloneBody
@@ -1606,25 +1683,31 @@ class Simditor extends Widget
     children = cloneBody.children()
     lastP = children.last 'p'
     firstP = children.first 'p'
-    while lastP.is('p') and !lastP.text() and !lastP.find('img').length
+    while lastP.is('p') and @util.isEmptyNode(lastP)
       emptyP = lastP
       lastP = lastP.prev 'p'
       emptyP.remove()
-    while firstP.is('p') and !firstP.text() and !firstP.find('img').length
+    while firstP.is('p') and @util.isEmptyNode(firstP)
       emptyP = firstP
       firstP = lastP.next 'p'
       emptyP.remove()
+
+    # remove images being uploaded
+    cloneBody.find('img.uploading').remove()
 
     val = $.trim(cloneBody.html())
     @textarea.val val
     val
 
   focus: ->
-    $blockEl = @body.find('p, li, pre, h1, h2, h3, h4, td').first()
-    return unless $blockEl.length > 0
-    range = document.createRange()
-    @selection.setRangeAtStartOf $blockEl, range
-    @body.focus()
+    if @inputManager.lastCaretPosition
+      @undoManager.caretPosition @inputManager.lastCaretPosition
+    else
+      $blockEl = @body.find('p, li, pre, h1, h2, h3, h4, td').first()
+      return unless $blockEl.length > 0
+      range = document.createRange()
+      @selection.setRangeAtStartOf $blockEl, range
+      @body.focus()
 
   blur: ->
     @body.blur()
@@ -1822,8 +1905,8 @@ class Popover extends Module
       .data('popover', @)
     @render()
 
-    @editor.on 'blur.linkpopover', =>
-      @target.addClass('selected') if @active and @target?
+    #@editor.on 'blur.popover', =>
+      #@target.addClass('selected') if @active and @target?
 
     @el.on 'mouseenter', (e) =>
       @el.addClass 'hover'
@@ -1834,11 +1917,9 @@ class Popover extends Module
 
   show: ($target, position = 'bottom') ->
     return unless $target?
-    @target = $target
+    @editor.hidePopover()
 
-    @el.siblings('.simditor-popover').each (i, el) =>
-      popover = $(el).data('popover')
-      popover.hide()
+    @target = $target.addClass('selected')
 
     if @active
       @refresh(position)
@@ -1864,6 +1945,7 @@ class Popover extends Module
     @trigger 'popoverhide'
 
   refresh: (position = 'bottom') ->
+    return unless @active
     wrapperOffset = @editor.wrapper.offset()
     targetOffset = @target.offset()
     targetH = @target.outerHeight()
@@ -2587,14 +2669,6 @@ Simditor.Toolbar.addButton(LinkButton)
 
 class ImageButton extends Button
 
-  _wrapperTpl: """
-    <div class="simditor-image" contenteditable="false" tabindex="-1">
-      <div class="simditor-image-resize-handle right"></div>
-      <div class="simditor-image-resize-handle bottom"></div>
-      <div class="simditor-image-resize-handle right-bottom"></div>
-    </div>
-  """
-
   name: 'image'
 
   icon: 'picture-o'
@@ -2607,9 +2681,11 @@ class ImageButton extends Button
 
   defaultImage: ''
 
-  maxWidth: 0
+  needFocus: false
 
-  maxHeight: 0
+  #maxWidth: 0
+
+  #maxHeight: 0
 
   menu: [{
     name: 'upload-image',
@@ -2624,56 +2700,53 @@ class ImageButton extends Button
     super @editor
 
     @defaultImage = @editor.opts.defaultImage
-    @maxWidth = @editor.opts.maxImageWidth || @editor.body.width()
-    @maxHeight = @editor.opts.maxImageHeight || $(window).height()
+    #@maxWidth = @editor.opts.maxImageWidth || @editor.body.width()
+    #@maxHeight = @editor.opts.maxImageHeight || $(window).height()
 
-    @editor.on 'decorate', (e, $el) =>
-      $el.find('img:not([data-non-image])').each (i, img) =>
-        @decorate $(img)
+    @editor.body.on 'click', 'img:not([data-non-image])', (e) =>
+      $img = $(e.currentTarget)
 
-    @editor.on 'undecorate', (e, $el) =>
-      $el.find('img:not([data-non-image])').each (i, img) =>
-        @undecorate $(img)
-
-    @editor.body.on 'mousedown', '.simditor-image', (e) =>
-      $imgWrapper = $(e.currentTarget)
-
-      if $imgWrapper.hasClass 'selected'
-        @popover.srcEl.blur()
-        $imgWrapper.focus()
-      else
-        @editor.body.blur()
-        @editor.body.find('.simditor-image').removeClass('selected')
-        $imgWrapper.addClass('selected').focus()
-        @popover.show $imgWrapper
+      #@popover.show $img
+      range = document.createRange()
+      range.selectNode $img[0]
+      @editor.selection.selectRange range
+      setTimeout =>
+        @editor.body.focus()
+        @editor.trigger 'selectionchanged'
+      , 0
 
       false
 
-    @editor.body.on 'click', '.simditor-image', (e) =>
-      false
+    @editor.body.on 'mouseup', 'img:not([data-non-image])', (e) =>
+      return false
+
 
     @editor.on 'selectionchanged.image', =>
-      range = @editor.selection.getRange()
+      range = @editor.selection.sel.getRangeAt(0)
       return unless range?
-      $container = $(range.commonAncestorContainer)
 
-      if range.collapsed and $container.is('.simditor-image')
-        $container.mousedown()
-      else if @popover.active
+      $contents = $(range.cloneContents()).contents()
+      if $contents.length == 1 and $contents.is('img:not([data-non-image])')
+        $img = $(range.startContainer).contents().eq(range.startOffset)
+        @popover.show $img
+      else
         @popover.hide()
 
-    @editor.body.on 'keydown', '.simditor-image', (e) =>
-      return unless e.which == 8
-      @popover.hide()
+    @editor.on 'valuechanged.image', =>
+      $masks = @editor.wrapper.find('.simditor-image-loading')
+      return unless $masks.length > 0
+      $masks.each (i, mask) =>
+        $mask = $(mask)
+        $img = $mask.data 'img'
+        unless $img and $img.parent().length > 0
+          $mask.remove()
+          if $img
+            file = $img.data 'file'
+            if file
+              @editor.uploader.cancel file
+              if @editor.body.find('img.uploading').length < 1
+                @editor.uploader.trigger 'uploadready', [file]
 
-      newBlockEl = $('<p/>').append(@editor.util.phBr)
-      $(e.currentTarget).replaceWith newBlockEl
-
-      range = document.createRange()
-      @editor.selection.setRangeAtStartOf newBlockEl, range
-      @editor.trigger 'valuechanged'
-      @editor.trigger 'selectionchanged'
-      return false
 
   render: (args...) ->
     super args...
@@ -2701,13 +2774,13 @@ class ImageButton extends Button
           inline: true
         })
         createInput()
-      else if @editor.inputManager.lastCaretPosition
+      else
         @editor.one 'focus', (e) =>
           @editor.uploader.upload($input, {
             inline: true
           })
           createInput()
-        @editor.undoManager.caretPosition @editor.inputManager.lastCaretPosition
+        @editor.focus()
       @wrapper.removeClass('menu-on')
 
     @_initUploader()
@@ -2720,26 +2793,24 @@ class ImageButton extends Button
     @editor.uploader.on 'beforeupload', (e, file) =>
       return unless file.inline
 
-      if file.imgWrapper
-        $img = file.imgWrapper.find("img")
+      if file.img
+        $img = $(file.img)
       else
-        $img = @createImage()
-        $img.mousedown()
-        file.imgWrapper = $img.parent '.simditor-image'
+        $img = @createImage(file.name)
+        #$img.click()
+        file.img = $img
+
+      $img.addClass 'uploading'
+      $img.data 'file', file
 
       @editor.uploader.readImageFile file.obj, (img) =>
-        prepare = () =>
-          @popover.srcEl.val('正在上传...')
-          file.imgWrapper.append '<div class="mask"></div>'
-          $progress = $('<div class="simditor-image-progress"><span></span></div>').appendTo file.imgWrapper
-          $progress.addClass('loading') unless @editor.uploader.html5
+        return unless $img.hasClass('uploading')
+        src = if img then img.src else @defaultImage
 
-        if img
-          @loadImage $img, img.src, () =>
-            @popover.refresh()
-            prepare()
-        else
-          prepare()
+        @loadImage $img, src, () =>
+          @popover.refresh()
+          @popover.srcEl.val('正在上传...')
+            .prop('disabled', true)
 
     @editor.uploader.on 'uploadprogress', (e, file, loaded, total) =>
       return unless file.inline
@@ -2748,22 +2819,32 @@ class ImageButton extends Button
       percent = (percent * 100).toFixed(0)
       percent = 99 if percent > 99
 
-      file.imgWrapper.find(".simditor-image-progress span").text(percent)
-
-      file.imgWrapper.find('.mask').css({
-        top: percent + '%',
-        height: (100 - percent) + '%'
-      })
+      $mask = file.img.data('mask')
+      if $mask
+        $img = $mask.data('img')
+        if $img and $img.parent().length > 0
+          $mask.find("span").text(percent)
+        else
+          $mask.remove()
 
     @editor.uploader.on 'uploadsuccess', (e, file, result) =>
       return unless file.inline
 
-      $img = file.imgWrapper.find("img")
-      @loadImage $img, result.file_path, () =>
-        file.imgWrapper.find(".mask, .simditor-image-progress").remove()
-        @popover.srcEl.val result.file_path
-        @editor.trigger 'valuechanged'
+      $img = file.img
+      $img.removeData 'file'
+      $img.removeClass 'uploading'
+
+      $mask = $img.data('mask')
+      $mask.remove() if $mask
+      $img.removeData 'mask'
+
+      $img.attr 'src', result.file_path
+      @popover.srcEl.prop('disabled', false)
+
+      @editor.trigger 'valuechanged'
+      if @editor.body.find('img.uploading').length < 1
         @editor.uploader.trigger 'uploadready', [file, result]
+
 
     @editor.uploader.on 'uploaderror', (e, file, xhr) =>
       return unless file.inline
@@ -2777,117 +2858,112 @@ class ImageButton extends Button
           msg = '上传出错了'
 
         if simple? and simple.message?
-          simple.message(msg)
+          simple.message
+            content: msg
         else
-          alert(msg)
+          alert msg
 
-      $img = file.imgWrapper.find("img")
-      @loadImage $img, @defaultImage, =>
-        @popover.refresh()
-        @popover.srcEl.val $img.attr('src')
-        file.imgWrapper.find(".mask, .simditor-image-progress").remove()
-        @editor.trigger 'valuechanged'
+      $img = file.img
+      $img.removeData 'file'
+      $img.removeClass 'uploading'
+
+      $mask = $img.data('mask')
+      $mask.remove() if $mask
+      $img.removeData 'mask'
+
+      $img.attr 'src', @defaultImage
+      @popover.srcEl.prop('disabled', false)
+
+      @editor.trigger 'valuechanged'
+      if @editor.body.find('img.uploading').length < 1
+        @editor.uploader.trigger 'uploadready', [file, result]
+
 
   status: ($node) ->
     @setDisabled $node.is(@disableTag) if $node?
     return true if @disabled
 
-  decorate: ($img) ->
-    $parent = $img.parent()
-    return if $parent.is('.simditor-image')
-
-    $wrapper = $(@_wrapperTpl)
-      .width($img.width())
-
-    if $parent.is('p')
-      $wrapper.prepend($img)
-        .replaceAll($parent)
-    else
-      $wrapper.insertBefore($img)
-        .prepend($img)
-
-  undecorate: ($img) ->
-    $wrapper = $img.parent('.simditor-image')
-    return if $wrapper.length < 1
-
-    unless /^data:image/.test($img.attr('src'))
-      $('<p/>').append($img).insertAfter($wrapper)
-    $wrapper.remove()
-
   loadImage: ($img, src, callback) ->
-    $wrapper = $img.parent('.simditor-image')
+    $mask = $img.data('mask')
+    if !$mask
+      $mask = $('<div class="simditor-image-loading"><span></span></div>')
+        .appendTo(@editor.wrapper)
+      $mask.addClass('uploading') if $img.hasClass('uploading') and @editor.uploader.html5
+      $img.data('mask', $mask)
+      $mask.data('img', $img)
+
+    imgPosition = $img.position()
+    toolbarH = @editor.toolbar.wrapper.outerHeight()
+    $mask.css({
+      top: imgPosition.top + toolbarH,
+      left: imgPosition.left,
+      width: $img.width(),
+      height: $img.height()
+    })
+
     img = new Image()
 
     img.onload = =>
       width = img.width
       height = img.height
-      if width > @maxWidth
-        height = @maxWidth * height / width
-        width = @maxWidth
-      if height > @maxHeight
-        width = @maxHeight * width / height
-        height = @maxHeight
+      #if width > @maxWidth
+        #height = @maxWidth * height / width
+        #width = @maxWidth
+      #if height > @maxHeight
+        #width = @maxHeight * width / height
+        #height = @maxHeight
 
       $img.attr({
         src: src,
-        width: width,
-        height: height,
-        'data-image-src':  src,
-        'data-image-name': '图片',
+        #width: width,
+        #height: height,
         'data-image-size': img.width + ',' + img.height
       })
 
-      $wrapper.width(width)
-        .height(height)
+      if $img.hasClass 'uploading' # img being uploaded
+        $mask.css({
+          width: $img.width(),
+          height: $img.height()
+        })
+      else
+        $mask.remove()
+        $img.removeData('mask')
 
-      callback(true)
+      callback(img)
 
     img.onerror = =>
       callback(false)
+      $mask.remove()
+      $img.removeData('mask')
 
     img.src = src
 
-  createImage: () ->
+  createImage: (name = 'Image') ->
+    @editor.focus() unless @editor.inputManager.focused
     range = @editor.selection.getRange()
-    startNode = range.startContainer
-    endNode = range.endContainer
-    $startBlock = @editor.util.closestBlockEl(startNode)
-    $endBlock = @editor.util.closestBlockEl(endNode)
-
     range.deleteContents()
 
-    if $startBlock[0] == $endBlock[0]
-      if $startBlock.is 'li'
-        $startBlock = @editor.util.furthestNode($startBlock, 'ul, ol')
-        $endBlock = $startBlock
-        range.setEndAfter($startBlock[0])
-        range.collapse(false)
-      else if $startBlock.is 'p'
-        if @editor.util.isEmptyNode $startBlock
-          range.selectNode $startBlock[0]
-          range.deleteContents()
-        else if @editor.selection.rangeAtEndOf $startBlock, range
-          range.setEndAfter($startBlock[0])
-          range.collapse(false)
-        else if @editor.selection.rangeAtStartOf $startBlock, range
-          range.setEndBefore($startBlock[0])
-          range.collapse(false)
-        else
-          $breakedEl = @editor.selection.breakBlockEl($startBlock, range)
-          range.setEndBefore($breakedEl[0])
-          range.collapse(false)
+    $block = @editor.util.closestBlockEl()
+    if $block.is('p') and !@editor.util.isEmptyNode $block
+      $block = $('<p/>').append(@editor.util.phBr).insertAfter($block)
+      @editor.selection.setRangeAtStartOf $block, range
 
-    $img = $('<img/>')
+    $img = $('<img/>').attr('alt', name)
     range.insertNode $img[0]
-    @decorate $img
+
+    $nextBlock = $block.next 'p'
+    unless $nextBlock.length > 0
+      $nextBlock = $('<p/>').append(@editor.util.phBr).insertAfter($block)
+    @editor.selection.setRangeAtStartOf $nextBlock
+
     $img
 
-  command: () ->
+  command: (src) ->
     $img = @createImage()
 
-    @loadImage $img, @defaultImage, =>
+    @loadImage $img, src or @defaultImage, =>
       @editor.trigger 'valuechanged'
-      $img.mousedown()
+      $img.click()
 
       @popover.one 'popovershow', =>
         @popover.srcEl.focus()
@@ -2920,27 +2996,22 @@ class ImagePopover extends Popover
       .append(@_tpl)
     @srcEl = @el.find '.image-src'
 
-    @srcEl.on 'keyup', (e) =>
-      return if e.which == 13
-      clearTimeout @timer if @timer
-
-      @timer = setTimeout =>
-        src = @srcEl.val()
-        $img = @target.find('img')
-        @button.loadImage $img, src, (success) =>
-          return unless success
-          @refresh()
-          @editor.trigger 'valuechanged'
-
-        @timer = null
-      , 200
-
     @srcEl.on 'keydown', (e) =>
       if e.which == 13 or e.which == 27 or e.which == 9
         e.preventDefault()
-        @srcEl.blur()
-        @target.removeClass('selected')
-        @hide()
+
+        if e.which == 13 and !@target.hasClass('uploading')
+          src = @srcEl.val()
+          @button.loadImage @target, src, (success) =>
+            return unless success
+            @button.editor.body.focus()
+            @button.editor.selection.setRangeAfter @target
+            @hide()
+            @editor.trigger 'valuechanged'
+        else
+          @button.editor.body.focus()
+          @button.editor.selection.setRangeAfter @target
+          @hide()
 
     @editor.on 'valuechanged', (e) =>
       @refresh() if @active
@@ -2966,14 +3037,17 @@ class ImagePopover extends Popover
     @el.on 'change', 'input[name=upload_file]', (e) =>
       @editor.uploader.upload(@input, {
         inline: true,
-        imgWrapper: @target
+        img: @target
       })
       createInput()
 
   show: (args...) ->
     super args...
-    $img = @target.find('img')
-    @srcEl.val $img.attr('src')
+    $img = @target
+    if $img.hasClass 'uploading'
+      @srcEl.val '正在上传'
+    else
+      @srcEl.val $img.attr('src')
 
 
 Simditor.Toolbar.addButton(ImageButton)

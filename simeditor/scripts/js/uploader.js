@@ -128,6 +128,7 @@
       return file.xhr = $.ajax({
         url: file.url,
         data: formData,
+        dataType: 'json',
         processData: false,
         contentType: false,
         type: 'POST',
@@ -221,7 +222,7 @@
         _ref = this.files;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           f = _ref[_i];
-          if (f.id === file) {
+          if (f.id === file * 1) {
             file = f;
             break;
           }

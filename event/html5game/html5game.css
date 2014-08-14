@@ -1,0 +1,187 @@
+.game7
+{ font-family: "Microsoft YaHei", "微软雅黑"; font-family: sans-serif; }
+.div1, .div2, .div3, .div4, .div5
+{ margin: 0px; padding: 0px; width: 100%; text-align: center; display: inline-block; }
+a.btn-main
+{ display: inline-block; color: #0096ff; border-radius: 35px; border: 1px #0096ff solid; }
+a.btn-main:hover, a.btn-main-hover
+{ background-color:#e03c3c; border: 1px #e03c3c solid; color:#FFFFFF; }
+a.btn-main > span
+{ cursor: pointer; padding: 2em; }
+a.btn-main > span > em
+{ font-size: 18px; display: inline-block; line-height: 2em }
+a.btn-white
+{ display: inline-block; color: #FFFFFF; border-radius: 35px; border: 1px #FFFFFF solid; }
+a.btn-white:hover, a.btn-white-hover
+{ background-color:#FFFFFF; color:#000000; }
+a.btn-white > span
+{ cursor: pointer; padding: 1em 2em; }
+a.btn-white > span > em
+{ font-size: 20px; display: inline-block; }
+a.btn-div3
+{ display: inline-block; color: #0096ff; border-radius: 35px; border: 1px #0096ff solid; }
+a.btn-div3:hover, a.btn-div3-hover
+{ background-color:#e03c3c; border: 1px #e03c3c solid; color:#FFFFFF; }
+a.btn-div3 > span
+{ cursor: pointer; padding: 1.5em; }
+a.btn-div3 > span > em
+{ font-size: 14px; display: inline-block; }
+
+a.btn-0096ff
+{ display: inline-block; color: #0096ff; border-radius: 35px; border: 1px #0096ff solid; }
+a.btn-0096ff:hover, a.btn-0096ff-hover
+{ background-color:#0096ff; color:#FFFFFF; }
+a.btn-0096ff > span
+{ cursor: pointer; padding: 1em 2em; }
+a.btn-0096ff > span > em
+{ font-size: 20px; display: inline-block; }
+
+.margin-right-no
+{ margin-right: 0px; }
+.margin-right-140
+{ margin-right: 140px; }
+.margin-right-150
+{ margin-right: 150px; }
+.margin-right-20p
+{ margin-right: 20px; }
+.margin-right-10p
+{ margin-right: 10px; }
+.fl
+{ float: left; }
+.fr
+{ float: right; }
+.hidden
+{ display: none; }
+.co999
+{ color: #999; }
+.co0096ff
+{ color: #0096ff; }
+.lineh100b
+{ line-height: 100%; }
+.lineh550b
+{ line-height: 550%; }
+
+.div1
+{ height: 720px; color: #FFF; background: url('http://static-jkxy.qiniudn.com/jkxy7game/bg1.jpg') no-repeat; background-position: center; }
+.div1 > p 
+{ line-height: 150%; font-size: 24px; }
+.div1 > p.div1_btn
+{ margin-top: 20px; }
+.div1 .div1_title
+{ margin-top: 200px; margin-bottom: 25px; font-size: 70px; }
+.div1 .div1-jiantou
+{ margin: 200px auto 0px auto; width: 78px; height: 21px; display: inline-block; }
+
+.div2
+{ height: 780px; background: url('http://static-jkxy.qiniudn.com/jkxy7game/bg2.png') no-repeat center; color: #FFF; }
+.div2 .div2-img
+{ margin: 100px auto 80px auto; width: 100%; }
+.div2 .div2-body
+{ margin: 0 auto; width: 1100px; }
+.div2 .div2-box
+{ margin-top: 0px; vertical-align: top; width: 180px; height: auto; display: inline-block; }
+.div2 .div2-box .div2-round
+{ width: 138px; height: 138px; border: 1px solid #FFF; border-radius: 69px; display: inline-block; }
+.div2 .div2-box .div2-round .dr-doubel
+{ margin-top: 6px; width: 121px; height: 121px; border: 2px solid #FFF; border-radius: 60px; display: inline-block; }
+.div2-round .dr-doubel .dr-font
+{ margin-top: 30px; line-height: 100%; width: 65px; font-size: 30px; display: inline-block; }
+.div2-round .dr1:hover
+{ background: url('http://static-jkxy.qiniudn.com/jkxy7game/yuan1.png') no-repeat center; }
+.div2-round .dr2:hover
+{ background: url('yuan2.png') no-repeat center; }
+.div2-round .dr3:hover
+{ background: url('http://static-jkxy.qiniudn.com/jkxy7game/yuan3.png') no-repeat center; }
+.div2 .div2-box .div2-font
+{ margin-top: 20px; line-height: 200%; text-align: left; font-size: 12px; padding-left: 10px; padding-right: 10px; }
+
+.div3
+{ padding-bottom: 80px; background: #FFF; }
+.div3 .div3-head
+{ width: 100%; margin: 80px auto; }
+.div3 .div3-tab
+{ width: 1100px; margin: 0 auto; }
+.div3-tab .div3-tab-btn
+{ padding: 0px 0px 60px; }
+.div3-tab .div3-tab-btn > a.btn-main
+{ margin-left: 10px; margin-right: 10px; }
+.div3-tab .div3-tab-box
+{  }
+.div3-tab-box .div3-tab-body .tab-body-img
+{ width: 395px; margin-right: 70px; }
+.div3-tab-box .div3-tab-body .tab-body-text
+{ width: 600px; padding-top: 10px; text-align: left; }
+.div3-tab-body .tab-body-text > h3
+{ line-height: 150%; font-size: 45px; font-weight: normal; }
+.div3-tab-body .tab-body-text > p
+{ line-height: 150%; font-size: 20px; color: #999; }
+.div3-tab-body .tab-body-text > p.reg
+{ margin: 0.5em auto 2em auto; }
+.div3-tab-body .tab-body-text .tab-body-course
+{  }
+.div3-tab-body .tab-body-text .tab-body-course > ul > li
+{ float: left; list-style: square; }
+.div3-tab-body .tab-body-text .tab-body-course > ul > li > h4
+{ width: 200px; font-size: 14px; font-weight: bold; }
+.div3-tab-body .tab-body-text .tab-body-course > ul > li > p
+{ width: 150px; color: #999999; }
+
+.div4
+{ width: 100%; height: 670px; background: #27282A; }
+.div4 .div4-head
+{ margin: 80px auto 40px auto; width: 100%; text-align: center; }
+.div4-head > h3
+{ font-size: 72px; color: #0096FF; font-weight: bold; position: relative; z-index: 1; }
+.div4-head > h3 > span.small-want
+{ position: absolute; top: 60%; left: 40%; font-size: 30px; z-index: -1; color: #333333; font-weight: normal;}
+.div4-head > p
+{ margin: 20px auto; width: 750px; font-size: 14px; line-height: 34px; color: #999999; }
+.div4 .div4-body
+{ margin: 0px auto; width: 700px; height: 300px; color: #FFF; text-align: left; display: inline-block; }
+
+.div4-body .div4-xiexian
+{ float: left; margin: 0px; padding: 0px; width: 76px; height: 260px; background: url('http://static-jkxy.qiniudn.com/jkxy7game/xiexian.jpg') no-repeat center; }
+.div4-body .flip-box
+{ float: left; width: 260px; height: 260px; text-align: center; }
+
+.flip-box .flip-head
+{ position: relative; width: 260px; height: 220px; margin: 0px; padding: 0px; transition: 0.6s; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; }
+.div4-body .flip-head:hover
+{ transform: rotateY(180deg); -webkit-transform: rotateY(180deg); }
+/*机器人ico图*/
+.flip-head .flip-img
+{ position: absolute; top: 0px; left: 0px; margin: 0 auto; padding: 0px; width: 100%; height: 100%; z-index: 2; backface-visibility: hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; transform: rotateY(0deg); -webkit-transform: rotateY(0deg); background: #000; }
+.flip-head .android_bg
+{ background: url('http://static-jkxy.qiniudn.com/jkxy7game/android.jpg') no-repeat center; }
+.flip-head .android_bg:hover
+{ background: url('http://static-jkxy.qiniudn.com/jkxy7game/android_hover.png') no-repeat center; }
+.flip-head .cocos2dx_bg
+{ background: url('http://static-jkxy.qiniudn.com/jkxy7game/cocos2dx.png') no-repeat center; }
+.flip-head .cocos2dx_bg:hover
+{ background: url('http://static-jkxy.qiniudn.com/jkxy7game/cocos2dx_hover.png') no-repeat center; }
+/*机器人背面文字*/
+.flip-box .flip-font
+{ position: absolute; top: 0px; left: 0px; margin: 0 auto; padding: 0px; width: 100%; height: 100%; display: inline-block; backface-visibility: hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; transform: rotateY(180deg);  -webkit-transform: rotateY(180deg); }
+.flip-font > p.flip-font-A
+{ margin-top: 30px; font-size: 22px; font-weight: bold; color: #aacd06; line-height: 50px; }
+.flip-font > p.flip-font-C
+{ margin-top: 30px; font-size: 22px; font-weight: bold; color: #0096ff; line-height: 50px; }
+.flip-font > p
+{ font-size: 16px; line-height: 36px; }
+
+/*标题文字*/
+.flip-box .flip-tit-A, .flip-box .flip-tit-C
+{ font-size: 22px; margin-bottom: 20px; }
+.flip-box .flip-tit-A > a:hover
+{ color: #aacd06; }
+.flip-box .flip-tit-C > a:hover
+{ color: #0096ff; }
+
+.div5
+{ width: 100%; min-height:  }
+.div5 .div5-btn 
+{ margin-top: 130px; margin-bottom: 50px; }
+.div5 .div5-font
+{ line-height: 55px; font-size: 30px; color: #999999; }
+.div5 .div5-erwei
+{ margin-top: 50px; margin-bottom: 150px; }

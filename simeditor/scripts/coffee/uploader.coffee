@@ -97,6 +97,7 @@ class Uploader extends Module
     file.xhr = $.ajax
       url: file.url
       data: formData
+      dataType: 'json'
       processData: false
       contentType: false
       type: 'POST'
@@ -180,7 +181,7 @@ class Uploader extends Module
   cancel: (file) ->
     unless file.id
       for f in @files
-        if f.id == file
+        if f.id == file * 1
           file = f
           break
 

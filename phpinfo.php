@@ -1,4 +1,12 @@
 <?php
+$i = 0;
+$i++;
+
+$j=$i;
+$j++;
+echo $j+$i;
+
+echo '<br/>';
 echo date('Y年m月d日');
 echo '<br/>';
 echo substr(md5('svnALYcntnn11'), 0, 12);
