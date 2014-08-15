@@ -5,10 +5,10 @@
 .jumbotron
 { margin-bottom: 1px; }
 .one
-{ background: url('http://test.study.com/bootstrap/dist/images/simpleylayout_bg1.jpg') no-repeat center; color: #FFFFFF; }
+{ background: url('./../images/simpleylayout_bg1.jpg') no-repeat center; color: #FFFFFF; }
 
 .two
-{ background: url('http://test.study.com/bootstrap/dist/images/simpleylayout_bg2.jpg') no-repeat center; color: #FFFFFF; }
+{ background: url('./../images/simpleylayout_bg2.jpg') no-repeat center; color: #FFFFFF; }
 
 .three .course_info > h3
 { font-size: 18px; }
