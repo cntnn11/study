@@ -1,0 +1,11 @@
+.simplelayout
+{ /*padding-top: 50px;*/ }
+.navbar
+{ margin-bottom: 0px; }
+.jumbotron
+{ margin-bottom: 1px; }
+.one
+{ background: url('http://test.study.com/bootstrap/dist/images/simpleylayout_bg1.jpg') no-repeat center; color: #FFFFFF; }
+
+.two
+{ background: url('http://test.study.com/bootstrap/dist/images/simpleylayout_bg2.jpg') no-repeat center; color: #FFFFFF; }
