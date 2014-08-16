@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>处理jquery的超时问题</title>
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+<h1>jq的超时处理，一定要解决！</h1>
+<hr/>
+<h3>心得</h3>
+<p>在之前的开发中，我为了避免一个问题，在ajax进行异步请求时，还没有返回任何状态，程序就已经运行到下一步去了，所以每次设置了“async:false;”。</p>
+<p>这个设置很好的避免了上述问题，代码流程一切正常，但是有个非常严重的问题，服务器反映一慢，就会造成页面假死！用户体验差到极致！但一直找不到解决方案。</p>
+<p>这个一直是我心中永远的纠结点……</p>
+<p>直到今天，邂逅一只工程猫之后，一番沟通，终于走出心中这个纠结点，变得清晰明了。</p>
+<p>具体解决方案（请研究代码，比对二者的差异之处）：既然是异步操作，那我们就不能再用同步的思路去做，得切换成异步思维。调整后通过回调函数来处理诸如超时、页面错误等问题，将用户体验提升一个新高度。</p>
+<hr/>
+<h3>同步思路的ajax提交</h3>
+<p><a href="javascript:void(0);" id="subOld">同步：点击我模拟jq的ajax提交超时</a></p>
+<script type="text/javascript">
+$('#subOld').click(function(){
+	$.ajax({
+		url:'jq_timeout.php',	// 请求的URL
+		type : 'post',			// 请求方式，get或post
+		data :{isajax:1},		// 请求所传参数，json格式
+		dataType:'json',		// 返回的数据格式
+		async:false,			// 这是一个罪恶的设置，严重影响用户体验
+		timeout : 2000,			// 超时时间设置，单位毫秒
+		success:function(data){
+			alert('yeah！成功了！');
+		},
+		complete : function(XMLHttpRequest,status){
+			// 超时,status还有success,error等值的情况
+			if(status=='timeout')
+			{
+				alert('这是超时需要做的处理，超时时长：2s!');
+			}
+			else if( status == 'error' )
+			{
+				alert('抛出了某个错误');
+			}
+		}
+	});
+	alert('The END!');
+});
+</script>
+<hr/>
+<h3>调整后的ajax提交</h3>
+<p><a href="javascript:void(0);" id="subNew">异步：点击我模拟jq的ajax提交超时</a></p>
+
+<script type="text/javascript">
+var ajaxSuccFunc	= function(){
+	alert('yeah！成功了！');
+}
+var ajaxFailFunc	= function(){
+	alert('抛出了某个错误');
+}
+var ajaxTimeOutFunc	= function(){
+	alert('这是超时需要做的处理，超时时长：2s!');
+}
+
+$('#subNew').click(function(){
+	$.ajax({
+		url:'jq_timeout.php',	// 请求的URL
+		type : 'post',			// 请求方式，get或post
+		data :{isajax:1},		// 请求所传参数，json格式
+		dataType:'json',		// 返回的数据格式
+		//async:false,			// 这是一个罪恶的设置，严重影响用户体验
+		timeout : 2000,			// 超时时间设置，单位毫秒
+		success:function(data){
+			ajaxSuccFunc();
+		},
+		complete : function(XMLHttpRequest,status){
+			// 超时,status还有success,error等值的情况
+			if(status=='timeout')
+			{
+				ajaxTimeOutFunc();
+			}
+			else if( status == 'error' )
+			{
+				ajaxFailFunc();
+			}
+		}
+	});
+});
+</script>
+</body>
+</html>
