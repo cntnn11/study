@@ -1,60 +1,64 @@
-var tnn = $.extend(tnn, {
+/* 
+ *	@params dom obj
+ *		dom.attr = "{tit:'', input:'text/textarea/select/checkbox/radio', methods: { empty:true, email:false, phone:false, tel:true, len:[0, 30], repeat: {re_id:'$re_id', input:'text', name_zh:'中文提示名'}, ajaxUnique: {url:'$url', data_name:'data_name'} } }"
+ *		EXP：
+ *			var dom = $('input[name=xx]'); 
+ *			var dom_verify	= {tit:'', input:'text/textarea/select/checkbox/radio', methods: { empty:true, email:false, phone:false, tel:true, len:[0, 30], repeat:{re_id:'password', input:'text', name_zh:'密码'}, ajaxUnique: {url:'/aaa/bbb.html', data_name:'username'} } };
+ *	
+ *	@验证步骤
+ *		checkFormData -> getFormValue -> verifyFormData [ {循环处理:methods} ] -> showError/showSucc/showWait [只是给验证元素增加或删除form-check-wait/succ/error样式]
+ *		判断所有的是否通过check，使用 subCheck方法，将表单（form的id）作为参数，找到该表单内部所有带ck的元素，进行验证。
+ *	@TIP
+ *		参与验证的dom元素必须处在同一个ID元素下，样式中必须包含"ck"指定字符
+ *		
+ */
+var chkForm = $.extend(chkForm, {
+	domObj: {},
+	verify: {},
+	checkVal: '',
 	initialize: function(){
 		return this;
 	},
-	/* 
-	 *	@params dom obj
-	 *		dom.attr = "{tit:'', input:'text/textarea/select/checkbox/radio', format: { empty:true, email:false, phone:false, tel:true, len:[0, 30], repeat: {re_id:'$re_id', input:'text', name_zh:'中文提示名'}, ajaxUnique: {url:'$url', data_name:'data_name'} } }"
-	 *		EXP： var data_format	= {tit:'', input:'text/textarea/select/checkbox/radio', format: { empty:true, email:false, phone:false, tel:true, len:[0, 30], repeat:{re_id:\'password\', input:\'text\', name_zh:\'密码\'}, ajaxUnique: {url:\'/aaa/bbb.html\', data_name:\'username\'} } };
-	 *	
-	 */
-	checkFormData: function( obj )
+	checkFormData: function( obj, verify )
 	{
-		var result = false;
-		// js错误，没有获取到对像，弹窗提示
 		if( !obj )
 		{
-			checkFormResult(false, 'system' );
+			this.msgBox(false, this.checkFormMessages.system );
 			return false;
 		}
-		// 没有verify说明无需验证，但是既然使用了该方法就得报错
-		var data_format	= obj.attr('verify');
-		if( !data_format )
-		{
-			eoe.msgBox(false, '错误', '系统出错了！刷新页面试试~');
-			return false;
-		}
-		data_format	=  new Function('return '+data_format)();
+		this.domObj	= obj;
+		this.verify	= verify;
 
+		// verify只能是一个object对象
+		if( typeof( verify ) != 'object' )
+		{
+			this.msgBox(false, this.checkFormMessages.system );
+			return false;
+		}
 		// 对值进行验证，无论是否为空
-		var value	= eoe.getFormValue(obj, data_format.input );
+		this.checkVal	= this.getFormValue();
 		// 验证值，并返回错误信息
-		if( obj && data_format.format && typeof(data_format.format) == 'object' )
+		if( this.domObj && this.verify.methods && typeof(this.verify.methods) == 'object' )
 		{
-			var verify_result	= eoe.verifyFormData(obj, value, data_format.format);
-			if( verify_result === true )
-			{
-				eoe.showSucc(obj);
-				result	= true;
-			}
-			else
-			{
-				eoe.showError( obj, verify_result.replace(/\%s/g, data_format.tit) );
-			}
+			this.verifyFormData( this.checkVal, this.domObj );
 		}
-		return result;
-
+		else
+		{
+			this.msgBox(false, this.checkFormMessages.system );
+			return false;
+		}
 	},
 	// 获取表单元素的值
-	getFormValue: function(obj, obj_type)
+	getFormValue: function(obj, verify_input)
 	{
+		var obj				= typeof(obj)!='undefined' ? obj : this.domObj;
+		var verify_input	= typeof(verify_input)!='undefined' ? verify_input : this.verify.input;
 		if( !obj )
 		{
 			return false;
 		}
-		var obj_type	= obj_type ? obj_type : 'text';
 		var data		= false;
-		switch( obj_type )
+		switch( verify_input )
 		{
 			case 'radio':
 			case 'checkbox':
@@ -62,135 +66,217 @@ var tnn = $.extend(tnn, {
 			case 'textarea':
 			case 'text':
 			default:
-				data	= obj.val();
+				data	= this.domObj.val();
 				break;
 		}
 		return data;
 	},
 	// 验证表单元素的结果值，错误返回提示语，正确返回true！
-	verifyFormData: function(obj, value, format)
+	verifyFormData: function( val )
 	{
-		eoe.methods.val	= $.trim( value );
-		var result		= true;
-		for( var i in format)
+		var obj		= this.domObj;
+		var value	= val;
+		var methods	= this.verify.methods;
+
+		this.methodsFunc.val	= $.trim( value );
+		for( var i in methods)
 		{
-			if( typeof( eoe.methods[i] ) == 'function' )
+			if( typeof( this.methodsFunc[i] ) == 'function' )
 			{
-				eoe.methods.checkFormt	= format[i];
-				result	= eoe.methods[i]();
-				if( !result )
-				{
-					result	= eoe.checkFormMessages[i] ? eoe.checkFormMessages[i] : eoe.checkFormMessages['system'];
-					break;
-				}
+				this.showWait('', obj);
+				this.methodsFunc[i](val, methods[i], obj);
 			}
 		}
+	},
+	// 验证所有的输入项，返回true or false，输入当前验证框的父级ID的值
+	subCheck: function( form_id )
+	{
+		var result		= true;
+		try{
+			$('#'+form_id).find('.ck').each(function(){
+				var class_name	= $(this).attr('class');
+				var dom_name	= $(this).attr('name');
+console.log('email_verify -> ', email_verify);
+				if( class_name.indexOf('succ') < 0 )
+				{
+					try{
+						var verify	= new Function( 'return '+dom_name+'_verify')();
+						chkForm.checkFormData( $(this), verify );
+					}
+					catch(e){
+						//alert('系统出错了！请联系小雪来处理该问题！'+"\n错误代码："+e);
+						chkForm.msgBox( chkForm.checkFormMessages.system );
+					}
+					result	= false;
+				}
+			});
+		}
+		catch(e){
+			chkForm.msgBox( chkForm.checkFormMessages.system );
+			result	= false;
+		};
 		return result;
 	},
-	// 验证方法
-	methods:{
+	// 验证方法，一个object，不是函数
+	methodsFunc:{
 		val: '',
 		checkFormt: '',
-		empty: function()
+		empty: function(val, params)
 		{
 			var result	= false;
-			if( typeof(this.checkFormt) == 'boolean' && this.checkFormt && this.val )
+			if( typeof(params) == 'boolean' && params && val )
 			{
-				return true;
-			}
-			return result;
-		},
-		len: function(min, max)
-		{
-			var val	= this.val;
-			if( val.length >= this.checkFormt[0] && val.length <= this.checkFormt[1] )
-			{
-				return true;
-			}
-			return false;
-		},
-		num: function()
-		{
-			var num_val		= this.val;
-			var num_preg	= new RegExp(/^\d*$/);
-			if( num_val && num_preg.test(num_val) )
-			{
-				return true;
-			}
-			return false;
-		},
-		email: function()
-		{
-			var email_val	= this.val;
-			var email_preg	= new RegExp(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/);
-			if( email_val && email_preg.test(email_val) )
-			{
-				return true;
-			}
-			return false;
-		},
-		phone: function()
-		{
-			var phone_val	= this.val;
-			var phone_preg	= new RegExp(/^13[0-9]{1}[0-9]{8}$|15[0-9]{9}$|18[0-9]{9}$/);
-			if( phone_val && phone_preg.test( phone_val ) )
-			{
-				return true;
-			}
-			return false;
-		},
-		repeat: function()
-		{
-			var re_id		= this.checkFormt.re_id;
-			var val_source	= eoe.getFormValue($('#'+re_id), this.checkFormt.input );
-			if( val_source && this.val && val_source == this.val )
-			{
-				return true;
+				chkForm.showSucc();
 			}
 			else
 			{
-				var message			= eoe.checkFormMessages.repeat;
-				eoe.checkFormMessages.repeat	= message.replace('%s', this.checkFormt.name_zh);
-				return false;
+				//chkForm.showError( chkForm.checkFormMessages.empty.replace( /\%s/g, chkForm.verify.tit ) );
+				chkForm.showError();
 			}
 		},
-		ajaxUnique: function()
+		len: function(val, params)
+		{
+			if( val.length >= params[0] && val.length <= params[1] )
+			{
+				chkForm.showSucc();
+			}
+			else
+			{
+				var errorTip	= chkForm.checkFormMessages.len.replace( /\%s/g, params[0] );
+					errorTip	= errorTip.replace( /\%e/g, params[1] );
+				chkForm.showError( errorTip );
+			}
+		},
+		num: function(val)
+		{
+			var num_preg	= new RegExp(/^\d*$/);
+			if( val && num_preg.test(val) )
+			{
+				chkForm.showSucc();
+			}
+			else
+			{
+				chkForm.showError( chkForm.checkFormMessages.num );
+			}
+		},
+		email: function(val)
+		{
+			var email_preg	= new RegExp(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/);
+			if( val && email_preg.test( val ) )
+			{
+				chkForm.showSucc();
+			}
+			else
+			{
+				chkForm.showError( chkForm.checkFormMessages.email );
+			}
+		},
+		phone: function(val)
+		{
+			var phone_preg	= new RegExp(/^13[0-9]{1}[0-9]{8}$|15[0-9]{9}$|18[0-9]{9}$/);
+			if( val && phone_preg.test( val ) )
+			{
+				chkForm.showSucc();
+			}
+			else
+			{
+				chkForm.showError( chkForm.checkFormMessages.phone );
+			}
+		},
+		repeat: function(val, params)
+		{
+			var re_id		= params.re_id;
+			var val_source	= chkForm.getFormValue( $('#'+re_id), params.input );
+			if( val_source && this.val && val_source == val )
+			{
+				chkForm.showSucc();
+			}
+			else
+			{
+				var message	= chkForm.checkFormMessages.repeat.replace('%s', params.name_zh);
+				chkForm.showError( message );
+			}
+		},
+		ajaxUnique: function(val, params, sourceObj)
 		{
 			var result		= true;
-			var url			= this.checkFormt.url;
-			var data_name	= this.checkFormt.data_name;
-			var val			= this.val;
+			var url			= params.url;
+			var data_name	= params.data_name;
+			var out			= this.out ? this.out : 2000;
 			$.ajax({
 				url: url,
 				data: '&'+data_name+'='+val,
 				dataType: 'json',
 				type: 'POST',
-				async: false,
+				timeout: out,
 				success: function(msg){
-					result	= msg.result == 'fail' ? msg['msg'] : true;
+					if( msg.result == 'fail' )
+					{
+						chkForm.showError( msg['msg'], sourceObj );
+					}
+					else
+					{
+						chkForm.showSucc( msg['msg'], sourceObj );
+					}
+				},
+				complete: function(XMLHttpRequest, status){
+					if(status=='timeout')
+					{
+						if( typeof(params)=='object' && typeof( params.timeOutFunc ) == 'function' )
+						{
+							params.timeOutFunc();
+						}
+						else
+						{
+							chkForm.showError( chkForm.checkFormMessages.timeout, sourceObj );
+						}
+					}
+					else if( status == 'error' )
+					{
+						if( typeof(params)=='object' && typeof( params.errorFunc ) == 'function' )
+						{
+							params.errorFunc();
+						}
+						else
+						{
+							chkForm.showError( chkForm.checkFormMessages.system, sourceObj );
+						}
+					}
 				}
 			});
-			return result;
 		}
 	},
 	// 校验错误默认提示语句
 	checkFormMessages: {
 		empty: '请在此输入您的%s',
+		num: '只能填入数字的，亲~',
 		len: '输入内容的长度限制在%s-%e个字数哦',
 		email: '邮箱格式不正确~',
-		phone: '手机号码格式正确~',
+		phone: '手机号码格式不正确~',
 		repeat: '确保这里和%s保持一致',
 		ajaxUnique: '这个%s已经存在了，换一个吧~',
-		system: '啊哦！我出问题了！但我不知道问题在哪！赶快联系小雪救我 . . .'
+		timeout: '网络原因导致数据请求失败了，确保网络畅通重新试试吧~',
+		system: '啊哦！我出问题了！但我不知道问题在哪！赶快联系小雪救我 . . .',
 	},
-	showError: function(obj, msg)
+	showWait: function(msg, obj)
 	{
-		obj.css('border', '2px solid red');
-		obj.parent().find('p[class=checkError]').html('<span class="red">'+msg+'</span>');
+		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
+			domObj.addClass('form-check-wait').removeClass('form-check-error').removeClass('form-check-succ');
+			domObj.next('.checkError').html('<span class="wait">检测中……</span>');
 	},
-	showSucc: function(obj)
+	showError: function(msg, obj)
 	{
-		obj.css('border', '2px solid green');
-		obj.parent().find('p[class=checkError]').html('');
+		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
+			domObj.addClass('form-check-error').removeClass('form-check-wait').removeClass('form-check-succ');
+			domObj.parent().find('.checkError').html('<span class="red">'+msg+'</span>');
+	},
+	showSucc: function(msg, obj)
+	{
+		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
+			domObj.addClass('form-check-succ').removeClass('form-check-wait').removeClass('form-check-error');
+			domObj.parent().find('.checkError').html('');
+	},
+	msgBox:function(status, content){
+		alert('系统错误：'+content);
 	}
 });
