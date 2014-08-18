@@ -38,12 +38,12 @@
 	</p>
 	<p>
 		<label>密码（验证重复）：</label>
-		<input type="password" class="input ck" name="pwd" id="pwd" />
+		<input type="password" class="input ck" name="password" id="password" />
 		<small class="checkError"></small>
 	</p>
 	<p>
 		<label>重复密码：</label>
-		<input type="password" class="input ck" name="repwd" />
+		<input type="password" class="input ck" name="repassword" />
 		<small class="checkError"></small>
 	</p>
 	<p>
@@ -59,27 +59,31 @@
 
 
 <script type="text/javascript">
-	var username		= $('input[name=username]');
-	var username_verify	= {tit:'用户名', input:'text', methods:{ empty:true, ajaxUnique: {url:'./checkusername.php', data_name:'username'} } };
-		username.on('blur', function(){
-			chkForm.checkFormData( username, username_verify );
-		});
 
+	var username		= $('input[name=username]');
 	var email			= $('input[name=email]');
-	var email_verify	= {tit:'邮箱', input:'text', methods:{ empty:true, email:true, ajaxUnique: {url:'./checkemail.php', data_name:'email'} } };
-		email.on('blur', function(){
-			chkForm.checkFormData(email, email_verify);
-		});
-	var pwd			= $('input[name=pwd]');
-	var pwd_verify	= {tit:'密码', input:'text', methods:{ empty:true, len:[1, 16] } };
-		pwd.on('blur', function(){
-			chkForm.checkFormData( pwd, pwd_verify );
-		});
-	var repwd			= $('input[name=repwd]');
-	var repwd_verify	= {tit:'确认密码', input:'text', methods:{ empty:true, len:[1, 16], repeat:{re_id:'pwd', input:'text', name_zh:'密码'} } };
-		repwd.on('blur', function(){
-			chkForm.checkFormData( repwd, repwd_verify );
-		});
+	var password				= $('input[name=password]');
+	var repassword			= $('input[name=repassword]');
+
+	chkForm.verify_options	= {
+		'username':{obj:username, verify: {tit:'用户名', input:'text', methods:{ empty:true, ajaxUnique: {url:'./checkusername.php', data_name:'username'} } }},
+		'email': {obj:email, verify: {tit:'邮箱', input:'text', methods:{ empty:true, email:true, ajaxUnique: {url:'./checkemail.php', data_name:'email'} } }},
+		'password': {obj:password, verify: {tit:'密码', input:'text', methods:{ empty:true, len:[1, 16] } }},
+		'repassword': {obj:repassword, verify: {tit:'确认密码', input:'text', methods:{ empty:true, len:[1, 16], repeat:{re_id:'password', input:'text', name_zh:'密码'} } }}
+	};
+	
+	username.on('blur', function(){
+		chkForm.checkFormData( username, chkForm.verify_options.username.verify );
+	});
+	email.on('blur', function(){
+		chkForm.checkFormData(email, chkForm.verify_options.email.verify );
+	});
+	password.on('blur', function(){
+		chkForm.checkFormData( password, chkForm.verify_options.password.verify );
+	});
+	repassword.on('blur', function(){
+		chkForm.checkFormData( repassword, chkForm.verify_options.repassword.verify );
+	});
 
 	$('#sub').click(function(){
 		if( chkForm.subCheck( 'checkform' ) )

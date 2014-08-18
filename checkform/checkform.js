@@ -14,7 +14,7 @@
  */
 var chkForm = $.extend(chkForm, {
 	domObj: {},
-	verify: {},
+	verify_options: {},
 	checkVal: '',
 	initialize: function(){
 		return this;
@@ -27,7 +27,6 @@ var chkForm = $.extend(chkForm, {
 			return false;
 		}
 		this.domObj	= obj;
-		this.verify	= verify;
 
 		// verify只能是一个object对象
 		if( typeof( verify ) != 'object' )
@@ -36,11 +35,10 @@ var chkForm = $.extend(chkForm, {
 			return false;
 		}
 		// 对值进行验证，无论是否为空
-		this.checkVal	= this.getFormValue();
-		// 验证值，并返回错误信息
-		if( this.domObj && this.verify.methods && typeof(this.verify.methods) == 'object' )
+		this.checkVal	= this.getFormValue(obj, verify);
+		if( this.domObj && verify.methods && typeof(verify.methods) == 'object' )
 		{
-			this.verifyFormData( this.checkVal, this.domObj );
+			this.verifyFormData( this.checkVal, verify );
 		}
 		else
 		{
@@ -49,10 +47,10 @@ var chkForm = $.extend(chkForm, {
 		}
 	},
 	// 获取表单元素的值
-	getFormValue: function(obj, verify_input)
+	getFormValue: function(obj, verify)
 	{
 		var obj				= typeof(obj)!='undefined' ? obj : this.domObj;
-		var verify_input	= typeof(verify_input)!='undefined' ? verify_input : this.verify.input;
+		var verify_input	= verify.input;
 		if( !obj )
 		{
 			return false;
@@ -72,11 +70,11 @@ var chkForm = $.extend(chkForm, {
 		return data;
 	},
 	// 验证表单元素的结果值，错误返回提示语，正确返回true！
-	verifyFormData: function( val )
+	verifyFormData: function( val, verify )
 	{
 		var obj		= this.domObj;
 		var value	= val;
-		var methods	= this.verify.methods;
+		var methods	= verify.methods;
 
 		this.methodsFunc.val	= $.trim( value );
 		for( var i in methods)
@@ -85,34 +83,31 @@ var chkForm = $.extend(chkForm, {
 			{
 				this.showWait('', obj);
 				this.methodsFunc[i](val, methods[i], obj);
+				if( obj.attr('class').indexOf('succ') < 0 )
+				{
+					break;
+				}
 			}
 		}
 	},
 	// 验证所有的输入项，返回true or false，输入当前验证框的父级ID的值
 	subCheck: function( form_id )
 	{
-		var result		= true;
+		var result	= true;
 		try{
 			$('#'+form_id).find('.ck').each(function(){
 				var class_name	= $(this).attr('class');
 				var dom_name	= $(this).attr('name');
-console.log('email_verify -> ', email_verify);
 				if( class_name.indexOf('succ') < 0 )
 				{
-					try{
-						var verify	= new Function( 'return '+dom_name+'_verify')();
-						chkForm.checkFormData( $(this), verify );
-					}
-					catch(e){
-						//alert('系统出错了！请联系小雪来处理该问题！'+"\n错误代码："+e);
-						chkForm.msgBox( chkForm.checkFormMessages.system );
-					}
+					var dom_verify	= new Function( 'return chkForm.verify_options.'+dom_name+'.verify')();
+					chkForm.checkFormData( $(this), dom_verify );
 					result	= false;
 				}
 			});
 		}
 		catch(e){
-			chkForm.msgBox( chkForm.checkFormMessages.system );
+			chkForm.msgBox(false, chkForm.checkFormMessages.system );
 			result	= false;
 		};
 		return result;
@@ -260,20 +255,23 @@ console.log('email_verify -> ', email_verify);
 	},
 	showWait: function(msg, obj)
 	{
+		var msg		= typeof(msg)=='undefined' ? '' : msg;
 		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
-			domObj.addClass('form-check-wait').removeClass('form-check-error').removeClass('form-check-succ');
+			domObj.addClass('form-check-wait').removeClass('form-check-error').removeClass('form-check-succ').css('border', '1px solid orange');
 			domObj.next('.checkError').html('<span class="wait">检测中……</span>');
 	},
 	showError: function(msg, obj)
 	{
+		var msg		= typeof(msg)=='undefined' ? '' : msg;
 		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
-			domObj.addClass('form-check-error').removeClass('form-check-wait').removeClass('form-check-succ');
+			domObj.addClass('form-check-error').removeClass('form-check-wait').removeClass('form-check-succ').css('border', '1px solid red');
 			domObj.parent().find('.checkError').html('<span class="red">'+msg+'</span>');
 	},
 	showSucc: function(msg, obj)
 	{
+		var msg		= typeof(msg)=='undefined' ? '' : msg;
 		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
-			domObj.addClass('form-check-succ').removeClass('form-check-wait').removeClass('form-check-error');
+			domObj.addClass('form-check-succ').removeClass('form-check-wait').removeClass('form-check-error').css('border', '1px solid green');
 			domObj.parent().find('.checkError').html('');
 	},
 	msgBox:function(status, content){
