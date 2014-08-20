@@ -16,6 +16,7 @@ var chkForm = $.extend(chkForm, {
 	domObj: {},
 	verify_options: {},
 	checkVal: '',
+	domParent: '',
 	initialize: function(){
 		return this;
 	},
@@ -255,24 +256,48 @@ var chkForm = $.extend(chkForm, {
 	},
 	showWait: function(msg, obj)
 	{
-		var msg		= typeof(msg)=='undefined' ? '' : msg;
-		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
-			domObj.addClass('form-check-wait').removeClass('form-check-error').removeClass('form-check-succ').css('border', '1px solid orange');
-			domObj.next('.checkError').html('<span class="wait">检测中……</span>');
+		var msg				= typeof(msg)=='undefined' ? '' : msg;
+		var domObj			= typeof(obj)=='object' ? obj : this.domObj;
+			domObj.addClass('form-check-wait').removeClass('form-check-error').removeClass('form-check-succ').css('border', '2px solid orange');
+		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent)) ? eval('domObj'+chkForm.domParent) : domObj;
+			if( typeof(errorParentObj) == 'object' )
+			{
+				errorParentObj.find('.checkError').html('<span class="wait">检测中……</span>');
+			}
+			else
+			{
+				domObj.next('.checkError').html('<span class="wait">检测中……</span>');
+			}
 	},
 	showError: function(msg, obj)
 	{
 		var msg		= typeof(msg)=='undefined' ? '' : msg;
 		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
-			domObj.addClass('form-check-error').removeClass('form-check-wait').removeClass('form-check-succ').css('border', '1px solid red');
-			domObj.parent().find('.checkError').html('<span class="red">'+msg+'</span>');
+			domObj.addClass('form-check-error').removeClass('form-check-wait').removeClass('form-check-succ').css('border', '2px solid red');
+		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent)) ? eval('domObj'+chkForm.domParent) : domObj;
+			if( typeof(errorParentObj) == 'object' )
+			{
+				errorParentObj.find('.checkError').html('<span class="red">'+msg+'</span>');
+			}
+			else
+			{
+				domObj.next('.checkError').html('<span class="red">'+msg+'</span>');
+			}
 	},
 	showSucc: function(msg, obj)
 	{
 		var msg		= typeof(msg)=='undefined' ? '' : msg;
 		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
-			domObj.addClass('form-check-succ').removeClass('form-check-wait').removeClass('form-check-error').css('border', '1px solid green');
-			domObj.parent().find('.checkError').html('');
+			domObj.addClass('form-check-succ').removeClass('form-check-wait').removeClass('form-check-error').css('border', '2px solid green');
+		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent)) ? eval('domObj'+chkForm.domParent) : domObj;
+			if( typeof(errorParentObj) == 'object' )
+			{
+				errorParentObj.find('.checkError').html('&nbsp;');
+			}
+			else
+			{
+				domObj.next('.checkError').html('&nbsp;');
+			}
 	},
 	msgBox:function(status, content){
 		alert('系统错误：'+content);
