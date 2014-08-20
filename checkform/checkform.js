@@ -266,8 +266,8 @@ var chkForm = $.extend(chkForm, {
 		var msg				= typeof(msg)=='undefined' ? '' : msg;
 		var domObj			= typeof(obj)=='object' ? obj : this.domObj;
 			domObj.addClass('form-check-wait').removeClass('form-check-error').removeClass('form-check-succ').css('border', '2px solid orange');
-		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent)) ? eval('domObj'+chkForm.domParent) : domObj;
-			if( typeof(errorParentObj) == 'object' )
+		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent))=='object' ? eval('domObj'+chkForm.domParent) : '';
+			if( chkForm.domParent && typeof(errorParentObj) == 'object' )
 			{
 				errorParentObj.find('.checkError').html('<span class="wait">检测中……</span>');
 			}
@@ -281,8 +281,8 @@ var chkForm = $.extend(chkForm, {
 		var msg		= typeof(msg)=='undefined' ? '' : msg;
 		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
 			domObj.addClass('form-check-error').removeClass('form-check-wait').removeClass('form-check-succ').css('border', '2px solid red');
-		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent)) ? eval('domObj'+chkForm.domParent) : domObj;
-			if( typeof(errorParentObj) == 'object' )
+		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent))=='object' ? eval('domObj'+chkForm.domParent) : '';
+			if( chkForm.domParent && typeof(errorParentObj) == 'object' )
 			{
 				errorParentObj.find('.checkError').html('<span class="red">'+msg+'</span>');
 			}
@@ -296,8 +296,8 @@ var chkForm = $.extend(chkForm, {
 		var msg		= typeof(msg)=='undefined' ? '' : msg;
 		var domObj	= typeof(obj)=='object' ? obj : this.domObj;
 			domObj.addClass('form-check-succ').removeClass('form-check-wait').removeClass('form-check-error').css('border', '2px solid green');
-		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent)) ? eval('domObj'+chkForm.domParent) : domObj;
-			if( typeof(errorParentObj) == 'object' )
+		var errorParentObj	= chkForm.domParent && typeof(eval('domObj'+chkForm.domParent))=='object' ? eval('domObj'+chkForm.domParent) : '';
+			if( chkForm.domParent && typeof(errorParentObj) == 'object' )
 			{
 				errorParentObj.find('.checkError').html('&nbsp;');
 			}
