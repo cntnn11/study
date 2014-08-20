@@ -205,13 +205,13 @@ var chkForm = $.extend(chkForm, {
 				type: 'POST',
 				timeout: out,
 				success: function(msg){
-					if( msg.info.status == 'fail' )
+					if( msg.result == 'fail' )
 					{
-						chkForm.showError( msg.info['tip'], sourceObj );
+						chkForm.showError( msg['msg'], sourceObj );
 					}
 					else
 					{
-						chkForm.showSucc( msg.info['tip'], sourceObj );
+						chkForm.showSucc( msg['msg'], sourceObj );
 					}
 				},
 				complete: function(XMLHttpRequest, status){
