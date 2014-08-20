@@ -71,6 +71,7 @@
 	var password		= $('input[name=password]');
 	var repassword		= $('input[name=repassword]');
 
+	chkForm.domParent	= '.parent()';
 	chkForm.verify_options	= {
 		'username':{obj:username, verify: {tit:'用户名', input:'text', methods:{ empty:true, ajaxUnique: {url:'./checkusername.php', data_name:'username'} } }},
 		'email': {obj:email, verify: {tit:'邮箱', input:'text', methods:{ empty:true, email:true, ajaxUnique: {url:'./checkemail.php', data_name:'email'} } }},

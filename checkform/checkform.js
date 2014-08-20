@@ -138,8 +138,15 @@ var chkForm = $.extend(chkForm, {
 			}
 			else
 			{
-				var errorTip	= chkForm.checkFormMessages.len.replace( /\%s/g, params[0] );
-					errorTip	= errorTip.replace( /\%e/g, params[1] );
+				if(params[0]==params[1])
+				{
+					var errorTip	= chkForm.checkFormMessages.len.replace( /\%s\-\%e/g, params[0] );
+				}
+				else
+				{
+					var errorTip	= chkForm.checkFormMessages.len.replace( /\%s/g, params[0] );
+						errorTip	= errorTip.replace( /\%e/g, params[1] );
+				}
 				chkForm.showError( errorTip );
 			}
 		},
