@@ -247,6 +247,49 @@ var chkForm = $.extend(chkForm, {
 					}
 				}
 			});
+		},
+		ajaxSafeCode: function(val, params, sourceObj){
+			$.ajax({
+				url: params.url+'?'+Math.random(),
+				data: '&safecode='+val,
+				dataType: 'json',
+				type: 'POST',
+				timeout: 1000,
+				success: function(msg){
+					if( msg.info.status == 'fail' )
+					{
+						chkForm.showError( msg.info['tip'], sourceObj );
+					}
+					else
+					{
+						chkForm.showSucc( msg.info['tip'], sourceObj );
+					}
+				},
+				complete: function(XMLHttpRequest, status){
+					if(status=='timeout')
+					{
+						if( typeof(params)=='object' && typeof( params.timeOutFunc ) == 'function' )
+						{
+							params.timeOutFunc();
+						}
+						else
+						{
+							chkForm.showError( chkForm.checkFormMessages.timeout, sourceObj );
+						}
+					}
+					else if( status == 'error' )
+					{
+						if( typeof(params)=='object' && typeof( params.errorFunc ) == 'function' )
+						{
+							params.errorFunc();
+						}
+						else
+						{
+							chkForm.showError( chkForm.checkFormMessages.system, sourceObj );
+						}
+					}
+				}
+			});
 		}
 	},
 	// 校验错误默认提示语句
@@ -273,7 +316,7 @@ var chkForm = $.extend(chkForm, {
 			}
 			else
 			{
-				domObj.next('.checkError').html('<span class="wait">检测中……</span>');
+				domObj.parent().find('.checkError').html('<span class="wait">检测中……</span>');
 			}
 	},
 	showError: function(msg, obj)
@@ -288,7 +331,7 @@ var chkForm = $.extend(chkForm, {
 			}
 			else
 			{
-				domObj.next('.checkError').html('<span class="red">'+msg+'</span>');
+				domObj.parent().find('.checkError').html('<span class="red">'+msg+'</span>');
 			}
 	},
 	showSucc: function(msg, obj)
@@ -303,7 +346,7 @@ var chkForm = $.extend(chkForm, {
 			}
 			else
 			{
-				domObj.next('.checkError').html('&nbsp;');
+				domObj.parent().find('.checkError').html('&nbsp;');
 			}
 	},
 	msgBox:function(status, content){
