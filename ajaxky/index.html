@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ajax跨域提交</title>
+	<style type="text/css">
+	/* Safari and Opera */
+	::selection
+	{
+		background:red;
+	}
+	/* Firefox */
+	::-moz-selection
+	{
+		background:green;
+	}
+	</style>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body onkeydown="keyLogin(event);">
+	<h1>Ajax 表单提交（跨域）</h1>
+	<hr/>
+	<h3>post提交</h3>
+	<p>
+		<span>内容一：</span>
+		&nbsp;<input type="text" name="content1" id="content1" value="我是post提交的内容一" />
+	</p>
+	<p>
+		<span>内容二：</span>
+		&nbsp;<input type="text" name="content2" id="content2" value="我是post提交的内容二" />
+	</p>
+	<p>
+		<span>用户名：</span>
+		&nbsp;<input type="text" name="username" id="username" value="test17" />
+	</p>
+	<p><input type="button" name="postbtn" id="postbtn" value="点我提交到test2" /></p>
+	<p>使用CROCS跨域成功了！在接收页面设置 -> header('Access-Control-Allow-Origin: url');</p>
+	<p>敲回车我也能登录呢！</p>
+	<hr/>
+	<h3>get提交处理</h3>
+	<p>
+		<span>内容三：</span>
+		&nbsp;<input type="text" name="content3" id="content3" value="我是get提交的内容三" />
+	</p>
+	<p>
+		<span>内容四：</span>
+		&nbsp;<input type="text" name="content4" id="content4" value="我是get提交的内容四" />
+	</p>
+	<p><input type="button" name="getbtn" id="getbtn" value="点我提交"></p>
+	<p>向tes2.study.com发送请求失败了！</p>
+
+<script type="text/javascript">
+function keyLogin(event)
+{
+	if( event.keyCode == 13 )
+	{
+		$('#postbtn').click();
+	}
+}
+$(function(){
+	$('#postbtn').click(function(){
+		var data	= '&content1='+$('#content1').val()+'&content2='+$('#content2').val();
+		var url		= 'http://test2.study.com/ajaxky/ajax.php?'+Math.random();
+		$.ajax({
+			url: url,
+			data: data,
+			dataType: 'json',
+			type: 'POST',
+			success: function(msg){
+				alert('我是post提交成功了！');
+			}
+		});
+	});
+
+	$('#getbtn').click(function(){
+		// var data	= 'content3='+$('#content3').val()+'&content4='+$('#content4').val();
+		var data	= {content3: $('#content3').val(), content4:$('#content4').val()};
+		var url		= 'http://test2.study.com/ajaxky/ajax.php';
+
+		function getJsonCallBack( json )
+		{
+			console.log('json -> ', json);
+			alert('getJSON 请求成功！');
+		}
+
+		// getJSON
+		$.getJSON(url, data, function (data) {
+			console.log('data -> ', data);
+			alert('getJSON');
+		}, "json");
+
+	})
+});
+	
+</script>
+</body>

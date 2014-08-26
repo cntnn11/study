@@ -4,6 +4,9 @@
 <link rel="stylesheet" type="text/css" href="styles/simditor.css" />
 
 <script type="text/javascript" src="scripts/js/jquery.min.js"></script>
+<script type="text/javascript">
+var jq_2_1	= $.noConflict(true);
+</script>
 
 </head>
 <body>
@@ -14,7 +17,7 @@
 <script type="text/javascript" src="scripts/js/simditor-all.js"></script>
 <script type="text/javascript">
 var editor = new Simditor({
-	textarea: $('#editor')
+	textarea: jq_2_1('#editor')
 });
 </script>
 

@@ -38,31 +38,31 @@
     Module.prototype.on = function() {
       var args, _ref;
       args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-      return (_ref = jq_2_1(this)).on.apply(_ref, args);
+      return (_ref = $(this)).on.apply(_ref, args);
     };
 
     Module.prototype.one = function() {
       var args, _ref;
       args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-      return (_ref = jq_2_1(this)).one.apply(_ref, args);
+      return (_ref = $(this)).one.apply(_ref, args);
     };
 
     Module.prototype.off = function() {
       var args, _ref;
       args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-      return (_ref = jq_2_1(this)).off.apply(_ref, args);
+      return (_ref = $(this)).off.apply(_ref, args);
     };
 
     Module.prototype.trigger = function() {
       var args, _ref;
       args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-      return (_ref = jq_2_1(this)).trigger.apply(_ref, args);
+      return (_ref = $(this)).trigger.apply(_ref, args);
     };
 
     Module.prototype.triggerHandler = function() {
       var args, _ref;
       args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-      return (_ref = jq_2_1(this)).triggerHandler.apply(_ref, args);
+      return (_ref = $(this)).triggerHandler.apply(_ref, args);
     };
 
     Module.prototype._i18n = function(key) {
@@ -107,7 +107,7 @@
 
     function Widget(opts) {
       var cls, instance, instances, name, _base, _i, _len;
-      this.opts = jq_2_1.extend({}, this.opts, opts);
+      this.opts = $.extend({}, this.opts, opts);
       (_base = this.constructor)._connectedClasses || (_base._connectedClasses = []);
       instances = (function() {
         var _i, _len, _ref, _results;
@@ -145,7 +145,7 @@
 
     function Plugin(widget) {
       this.widget = widget;
-      this.opts = jq_2_1.extend({}, this.opts, this.widget.opts);
+      this.opts = $.extend({}, this.opts, this.widget.opts);
     }
 
     Plugin.prototype._init = function() {};
@@ -191,17 +191,17 @@
       if (opts == null) {
         opts = {};
       }
-      jq_2_1.extend(this.opts, opts);
+      $.extend(this.opts, opts);
       this.id = ++Uploader.count;
       this.on('uploadcomplete', function(e, file) {
-        _this.files.splice(jq_2_1.inArray(file, _this.files), 1);
+        _this.files.splice($.inArray(file, _this.files), 1);
         if (_this.queue.length > 0 && _this.files.length < _this.opts.connectionCount) {
           return _this.upload(_this.queue.shift());
         } else {
           return _this.uploading = false;
         }
       });
-      jq_2_1(window).on('beforeunload.uploader-' + this.id, function(e) {
+      $(window).on('beforeunload.uploader-' + this.id, function(e) {
         if (!_this.uploading) {
           return;
         }
@@ -226,24 +226,24 @@
       if (file == null) {
         return;
       }
-      if (jq_2_1.isArray(file)) {
+      if ($.isArray(file)) {
         for (_i = 0, _len = file.length; _i < _len; _i++) {
           f = file[_i];
           this.upload(f, opts);
         }
-      } else if (jq_2_1(file).is('input:file') && this.html5) {
-        key = jq_2_1(file).attr('name');
+      } else if ($(file).is('input:file') && this.html5) {
+        key = $(file).attr('name');
         if (key) {
           opts.fileKey = key;
         }
-        this.upload(jq_2_1.makeArray(jq_2_1(file)[0].files), opts);
+        this.upload($.makeArray($(file)[0].files), opts);
       } else if (!file.id || !file.obj) {
         file = this.getFile(file);
       }
       if (!(file && file.obj)) {
         return;
       }
-      jq_2_1.extend(file, opts);
+      $.extend(file, opts);
       if (this.files.length >= this.opts.connectionCount) {
         this.queue.push(file);
         return;
@@ -264,9 +264,9 @@
       var name, _ref, _ref1;
       if (fileObj instanceof window.File || fileObj instanceof window.Blob) {
         name = (_ref = fileObj.fileName) != null ? _ref : fileObj.name;
-      } else if (jq_2_1(fileObj).is('input:file')) {
+      } else if ($(fileObj).is('input:file')) {
         name = $input.val().replace(/.*(\/|\\)/, "");
-        fileObj = jq_2_1(fileObj).clone();
+        fileObj = $(fileObj).clone();
       } else {
         return null;
       }
@@ -295,7 +295,7 @@
           formData.append(k, v);
         }
       }
-      return file.xhr = jq_2_1.ajax({
+      return file.xhr = $.ajax({
         url: file.url,
         data: formData,
         dataType: 'json',
@@ -308,7 +308,7 @@
         xhr: function() {
           var req,
             _this = this;
-          req = jq_2_1.ajaxSettings.xhr();
+          req = $.ajaxSettings.xhr();
           if (req) {
             req.upload.onprogress = function(e) {
               return _this.progress(e);
@@ -338,12 +338,12 @@
     Uploader.prototype.iframeUpload = function(file) {
       var k, v, _ref,
         _this = this;
-      file.iframe = jq_2_1('iframe', {
+      file.iframe = $('iframe', {
         src: 'javascript:false;',
         name: 'uploader-' + file.id
       }).hide().appendTo(document.body);
       fileObj.attr('name', file.fileKey);
-      file.form = jq_2_1('<form/>', {
+      file.form = $('<form/>', {
         method: 'post',
         enctype: 'multipart/form-data',
         action: file.url,
@@ -353,7 +353,7 @@
         _ref = file.params;
         for (k in _ref) {
           v = _ref[k];
-          jq_2_1('<input/>', {
+          $('<input/>', {
             type: 'hidden',
             name: k,
             value: v
@@ -372,7 +372,7 @@
         responseEl = iframeDoc.getElementById('json-response');
         json = responseEl ? responseEl.innerHTML : iframeDoc.body.innerHTML;
         try {
-          result = jq_2_1.parseJSON(json);
+          result = $.parseJSON(json);
         } catch (_error) {
           error = _error;
           _this.trigger('uploaderror', [file, null, 'parsererror']);
@@ -413,7 +413,7 @@
 
     Uploader.prototype.readImageFile = function(fileObj, callback) {
       var fileReader, img;
-      if (!jq_2_1.isFunction(callback)) {
+      if (!$.isFunction(callback)) {
         return;
       }
       img = new Image();
@@ -442,8 +442,8 @@
         file = _ref[_i];
         this.cancel(file);
       }
-      jq_2_1(window).off('.uploader-' + this.id);
-      return jq_2_1(document).off('.uploader-' + this.id);
+      $(window).off('.uploader-' + this.id);
+      return $(document).off('.uploader-' + this.id);
     };
 
     return Uploader;
@@ -513,21 +513,21 @@
       if (!((range != null) && range.collapsed)) {
         return;
       }
-      node = jq_2_1(node)[0];
+      node = $(node)[0];
       endNode = range.endContainer;
       endNodeLength = this.editor.util.getNodeLength(endNode);
-      if (!(range.endOffset === endNodeLength - 1 && jq_2_1(endNode).contents().last().is('br')) && range.endOffset !== endNodeLength) {
+      if (!(range.endOffset === endNodeLength - 1 && $(endNode).contents().last().is('br')) && range.endOffset !== endNodeLength) {
         return false;
       }
       if (node === endNode) {
         return true;
-      } else if (!jq_2_1.contains(node, endNode)) {
+      } else if (!$.contains(node, endNode)) {
         return false;
       }
       result = true;
-      jq_2_1(endNode).parentsUntil(node).addBack().each(function(i, n) {
+      $(endNode).parentsUntil(node).addBack().each(function(i, n) {
         var $lastChild, nodes;
-        nodes = jq_2_1(n).parent().contents().filter(function() {
+        nodes = $(n).parent().contents().filter(function() {
           return !(this !== n && this.nodeType === 3 && !this.nodeValue);
         });
         $lastChild = nodes.last();
@@ -548,20 +548,20 @@
       if (!((range != null) && range.collapsed)) {
         return;
       }
-      node = jq_2_1(node)[0];
+      node = $(node)[0];
       startNode = range.startContainer;
       if (range.startOffset !== 0) {
         return false;
       }
       if (node === startNode) {
         return true;
-      } else if (!jq_2_1.contains(node, startNode)) {
+      } else if (!$.contains(node, startNode)) {
         return false;
       }
       result = true;
-      jq_2_1(startNode).parentsUntil(node).addBack().each(function(i, n) {
+      $(startNode).parentsUntil(node).addBack().each(function(i, n) {
         var nodes;
-        nodes = jq_2_1(n).parent().contents().filter(function() {
+        nodes = $(n).parent().contents().filter(function() {
           return !(this !== n && this.nodeType === 3 && !this.nodeValue);
         });
         if (nodes.first().get(0) !== n) {
@@ -578,7 +578,7 @@
       if (range == null) {
         return;
       }
-      node = jq_2_1(node)[0];
+      node = $(node)[0];
       range.insertNode(node);
       return this.setRangeAfter(node, range);
     };
@@ -590,7 +590,7 @@
       if (range == null) {
         return;
       }
-      node = jq_2_1(node)[0];
+      node = $(node)[0];
       range.setEndAfter(node);
       range.collapse(false);
       return this.selectRange(range);
@@ -603,7 +603,7 @@
       if (range == null) {
         return;
       }
-      node = jq_2_1(node)[0];
+      node = $(node)[0];
       range.setEndBefore(node);
       range.collapse(false);
       return this.selectRange(range);
@@ -613,7 +613,7 @@
       if (range == null) {
         range = this.getRange();
       }
-      node = jq_2_1(node).get(0);
+      node = $(node).get(0);
       range.setEnd(node, 0);
       range.collapse(false);
       return this.selectRange(range);
@@ -624,7 +624,7 @@
       if (range == null) {
         range = this.getRange();
       }
-      $node = jq_2_1(node);
+      $node = $(node);
       node = $node.get(0);
       if ($node.is('pre')) {
         contents = $node.contents();
@@ -642,7 +642,7 @@
       } else {
         nodeLength = this.editor.util.getNodeLength(node);
         if (node.nodeType !== 3 && nodeLength > 0) {
-          $lastNode = jq_2_1(node).contents().last();
+          $lastNode = $(node).contents().last();
           if ($lastNode.is('br')) {
             nodeLength -= 1;
           } else if ($lastNode[0].nodeType !== 3 && this.editor.util.isEmptyNode($lastNode)) {
@@ -682,7 +682,7 @@
       if (range == null) {
         range = this.getRange();
       }
-      $el = jq_2_1(el);
+      $el = $(el);
       if (!range.collapsed) {
         return $el;
       }
@@ -701,8 +701,8 @@
       if (this._selectionSaved) {
         return;
       }
-      startCaret = jq_2_1('<span/>').addClass('simditor-caret-start');
-      endCaret = jq_2_1('<span/>').addClass('simditor-caret-end');
+      startCaret = $('<span/>').addClass('simditor-caret-start');
+      endCaret = $('<span/>').addClass('simditor-caret-end');
       range.insertNode(startCaret[0]);
       range.collapse(false);
       range.insertNode(endCaret[0]);
@@ -786,7 +786,7 @@
         $el = this.editor.body.clone();
       }
       this.editor.trigger('undecorate', [$el]);
-      return jq_2_1.trim($el.html());
+      return $.trim($el.html());
     };
 
     Formatter.prototype.autolink = function($el) {
@@ -798,7 +798,7 @@
       findLinkNode = function($parentNode) {
         return $parentNode.contents().each(function(i, node) {
           var $node, text;
-          $node = jq_2_1(node);
+          $node = $(node);
           if ($node.is('a') || $node.closest('a, pre', $el).length) {
             return;
           }
@@ -821,10 +821,10 @@
           replaceEls.push(document.createTextNode(text.substring(lastIndex, match.index)));
           lastIndex = re.lastIndex;
           uri = /^(http(s)?:\/\/|\/)/.test(match[0]) ? match[0] : 'http://' + match[0];
-          replaceEls.push(jq_2_1('<a href="' + uri + '" rel="nofollow"></a>').text(match[0])[0]);
+          replaceEls.push($('<a href="' + uri + '" rel="nofollow"></a>').text(match[0])[0]);
         }
         replaceEls.push(document.createTextNode(text.substring(lastIndex)));
-        $node.replaceWith(jq_2_1(replaceEls));
+        $node.replaceWith($(replaceEls));
       }
       return $el;
     };
@@ -846,7 +846,7 @@
       _ref1 = $el.contents();
       for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
         node = _ref1[_j];
-        $node = jq_2_1(node);
+        $node = $(node);
         if ($node.is('br')) {
           if (typeof blockNode !== "undefined" && blockNode !== null) {
             blockNode = null;
@@ -857,7 +857,7 @@
             if (blockNode && blockNode.is('ul, ol')) {
               blockNode.append(node);
             } else {
-              blockNode = jq_2_1('<ul/>').insertBefore(node);
+              blockNode = $('<ul/>').insertBefore(node);
               blockNode.append(node);
             }
           } else {
@@ -865,7 +865,7 @@
           }
         } else {
           if (!blockNode || blockNode.is('ul, ol')) {
-            blockNode = jq_2_1('<p/>').insertBefore(node);
+            blockNode = $('<p/>').insertBefore(node);
           }
           blockNode.append(node);
         }
@@ -876,7 +876,7 @@
     Formatter.prototype.cleanNode = function(node, recursive) {
       var $childImg, $node, $p, $td, allowedAttributes, attr, contents, isDecoration, n, text, textNode, _i, _j, _len, _len1, _ref, _ref1,
         _this = this;
-      $node = jq_2_1(node);
+      $node = $(node);
       if ($node[0].nodeType === 3) {
         text = $node.text().replace(/(\r\n|\n|\r)/gm, '');
         if (text) {
@@ -900,7 +900,7 @@
         }
         if (!isDecoration) {
           allowedAttributes = this._allowedAttributes[$node[0].tagName.toLowerCase()];
-          _ref = jq_2_1.makeArray($node[0].attributes);
+          _ref = $.makeArray($node[0].attributes);
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             attr = _ref[_i];
             if (!((allowedAttributes != null) && (_ref1 = attr.name, __indexOf.call(allowedAttributes, _ref1) >= 0))) {
@@ -913,9 +913,9 @@
           $node.append('<br/>');
           contents.first().unwrap();
         } else if ($node.is('table')) {
-          $p = jq_2_1('<p/>');
+          $p = $('<p/>');
           $node.find('tr').each(function(i, tr) {
-            return $p.append(jq_2_1(tr).text() + '<br/>');
+            return $p.append($(tr).text() + '<br/>');
           });
           $node.replaceWith($p);
           contents = null;
@@ -923,7 +923,7 @@
           $node.remove();
           contents = null;
         } else if ($node.is('th')) {
-          $td = jq_2_1('<td/>').append($node.contents());
+          $td = $('<td/>').append($node.contents());
           $node.replaceWith($td);
         } else {
           contents.first().unwrap();
@@ -947,7 +947,7 @@
       if (lineBreak == null) {
         lineBreak = true;
       }
-      container = jq_2_1('<div/>').append(html);
+      container = $('<div/>').append(html);
       contents = container.contents();
       result = '';
       contents.each(function(i, node) {
@@ -955,7 +955,7 @@
         if (node.nodeType === 3) {
           return result += node.nodeValue;
         } else if (node.nodeType === 1) {
-          $node = jq_2_1(node);
+          $node = $(node);
           children = $node.contents();
           if (children.length > 0) {
             result += _this.clearHtml(children);
@@ -976,7 +976,7 @@
       };
       return $contents.each(function(i, el) {
         var $el;
-        $el = jq_2_1(el);
+        $el = $(el);
         if ($el.is(':not(img, br, col, td, hr, [class^="simditor-"]):empty')) {
           $el.remove();
         }
@@ -1019,7 +1019,7 @@
     InputManager.prototype._init = function() {
       var submitKey,
         _this = this;
-      this._pasteArea = jq_2_1('<div/>').css({
+      this._pasteArea = $('<div/>').css({
         width: '1px',
         height: '1px',
         overflow: 'hidden',
@@ -1030,7 +1030,7 @@
         tabIndex: '-1',
         contentEditable: true
       }).addClass('simditor-paste-area').appendTo(this.editor.el);
-      this._cleanPasteArea = jq_2_1('<textarea/>').css({
+      this._cleanPasteArea = $('<textarea/>').css({
         width: '1px',
         height: '1px',
         overflow: 'hidden',
@@ -1043,15 +1043,15 @@
       this.editor.on('valuechanged', function() {
         _this.editor.body.find('hr, pre, .simditor-table').each(function(i, el) {
           var $el, formatted;
-          $el = jq_2_1(el);
+          $el = $(el);
           if ($el.parent().is('blockquote') || $el.parent()[0] === _this.editor.body[0]) {
             formatted = false;
             if ($el.next().length === 0) {
-              jq_2_1('<p/>').append(_this.editor.util.phBr).insertAfter($el);
+              $('<p/>').append(_this.editor.util.phBr).insertAfter($el);
               formatted = true;
             }
             if ($el.prev().length === 0) {
-              jq_2_1('<p/>').append(_this.editor.util.phBr).insertBefore($el);
+              $('<p/>').append(_this.editor.util.phBr).insertBefore($el);
               formatted = true;
             }
             if (formatted) {
@@ -1063,7 +1063,7 @@
         });
         return _this.editor.body.find('pre:empty').append(_this.editor.util.phBr);
       });
-      this.editor.body.on('keydown', jq_2_1.proxy(this._onKeyDown, this)).on('keypress', jq_2_1.proxy(this._onKeyPress, this)).on('keyup', jq_2_1.proxy(this._onKeyUp, this)).on('mouseup', jq_2_1.proxy(this._onMouseUp, this)).on('focus', jq_2_1.proxy(this._onFocus, this)).on('blur', jq_2_1.proxy(this._onBlur, this)).on('paste', jq_2_1.proxy(this._onPaste, this)).on('drop', jq_2_1.proxy(this._onDrop, this));
+      this.editor.body.on('keydown', $.proxy(this._onKeyDown, this)).on('keypress', $.proxy(this._onKeyPress, this)).on('keyup', $.proxy(this._onKeyUp, this)).on('mouseup', $.proxy(this._onMouseUp, this)).on('focus', $.proxy(this._onFocus, this)).on('blur', $.proxy(this._onBlur, this)).on('paste', $.proxy(this._onPaste, this)).on('drop', $.proxy(this._onDrop, this));
       if (this.editor.util.browser.firefox) {
         this.addShortcut('cmd+37', function(e) {
           e.preventDefault();
@@ -1138,7 +1138,7 @@
             return;
           }
           handler = (_ref = _this._keystrokeHandlers[e.which]) != null ? _ref[node.tagName.toLowerCase()] : void 0;
-          result = typeof handler === "function" ? handler(e, jq_2_1(node)) : void 0;
+          result = typeof handler === "function" ? handler(e, $(node)) : void 0;
           if (result === true || result === false) {
             return false;
           }
@@ -1205,7 +1205,7 @@
       }
       if (e.which === 8 && this.editor.util.isEmptyNode(this.editor.body)) {
         this.editor.body.empty();
-        p = jq_2_1('<p/>').append(this.editor.util.phBr).appendTo(this.editor.body);
+        p = $('<p/>').append(this.editor.util.phBr).appendTo(this.editor.body);
         this.editor.selection.setRangeAtStartOf(p);
       }
     };
@@ -1264,7 +1264,7 @@
         } else if (cleanPaste) {
           pasteContent = _this._cleanPasteArea.val();
         } else {
-          pasteContent = jq_2_1('<div/>').append(_this._pasteArea.contents());
+          pasteContent = $('<div/>').append(_this._pasteArea.contents());
           _this.editor.formatter.format(pasteContent);
           _this.editor.formatter.decorate(pasteContent);
           _this.editor.formatter.beautify(pasteContent.children());
@@ -1285,15 +1285,15 @@
             for (_i = 0, _len = lines.length; _i < _len; _i++) {
               line = lines[_i];
               _this.editor.selection.insertNode(document.createTextNode(line));
-              _this.editor.selection.insertNode(jq_2_1('<br/>'));
+              _this.editor.selection.insertNode($('<br/>'));
             }
             _this.editor.selection.insertNode(document.createTextNode(lastLine));
           } else {
-            pasteContent = jq_2_1('<div/>').text(pasteContent);
+            pasteContent = $('<div/>').text(pasteContent);
             _ref1 = pasteContent.contents();
             for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
               node = _ref1[_j];
-              _this.editor.selection.insertNode(jq_2_1(node)[0], range);
+              _this.editor.selection.insertNode($(node)[0], range);
             }
           }
         } else if ($blockEl.is(_this.editor.body)) {
@@ -1378,7 +1378,7 @@
     };
 
     InputManager.prototype.addShortcut = function(keys, handler) {
-      return this._shortcuts[keys] = jq_2_1.proxy(handler, this);
+      return this._shortcuts[keys] = $.proxy(handler, this);
     };
 
     return InputManager;
@@ -1406,10 +1406,10 @@
           if (!e.shiftKey) {
             return;
           }
-          $br = jq_2_1('<br/>');
+          $br = $('<br/>');
           if (_this.editor.selection.rangeAtEndOf($blockEl)) {
             _this.editor.selection.insertNode($br);
-            _this.editor.selection.insertNode(jq_2_1('<br/>'));
+            _this.editor.selection.insertNode($('<br/>'));
             _this.editor.selection.setRangeBefore($br);
           } else {
             _this.editor.selection.insertNode($br);
@@ -1423,7 +1423,7 @@
           if (!_this.editor.selection.rangeAtEndOf($node)) {
             return;
           }
-          $p = jq_2_1('<p/>').append(_this.editor.util.phBr).insertAfter($node);
+          $p = $('<p/>').append(_this.editor.util.phBr).insertAfter($node);
           _this.editor.selection.setRangeAtStartOf($p);
           return true;
         };
@@ -1469,24 +1469,24 @@
             return;
           }
           if (listEl.parent('li').length > 0) {
-            newBlockEl = jq_2_1('<li/>').append(_this.editor.util.phBr).insertAfter(listEl.parent('li'));
-            newListEl = jq_2_1('<' + listEl[0].tagName + '/>').append($node.nextAll('li'));
+            newBlockEl = $('<li/>').append(_this.editor.util.phBr).insertAfter(listEl.parent('li'));
+            newListEl = $('<' + listEl[0].tagName + '/>').append($node.nextAll('li'));
             newBlockEl.append(newListEl);
           } else {
-            newBlockEl = jq_2_1('<p/>').append(_this.editor.util.phBr).insertAfter(listEl);
-            newListEl = jq_2_1('<' + listEl[0].tagName + '/>').append($node.nextAll('li'));
+            newBlockEl = $('<p/>').append(_this.editor.util.phBr).insertAfter(listEl);
+            newListEl = $('<' + listEl[0].tagName + '/>').append($node.nextAll('li'));
             newBlockEl.after(newListEl);
           }
         } else {
           if (listEl.parent('li').length > 0) {
-            newBlockEl = jq_2_1('<li/>').insertAfter(listEl.parent('li'));
+            newBlockEl = $('<li/>').insertAfter(listEl.parent('li'));
             if ($node.contents().length > 0) {
               newBlockEl.append($node.contents());
             } else {
               newBlockEl.append(_this.editor.util.phBr);
             }
           } else {
-            newBlockEl = jq_2_1('<p/>').append(_this.editor.util.phBr).insertAfter(listEl);
+            newBlockEl = $('<p/>').append(_this.editor.util.phBr).insertAfter(listEl);
             if ($node.children('ul, ol').length > 0) {
               newBlockEl.after($node.children('ul, ol'));
             }
@@ -1548,12 +1548,12 @@
           if (n.nodeType === 3 && n.nodeValue) {
             text += n.nodeValue;
           } else if (n.nodeType === 1) {
-            text += jq_2_1(n).text();
+            text += $(n).text();
           }
-          return $textNode = jq_2_1(n);
+          return $textNode = $(n);
         });
         if ($textNode && text.length === 1 && _this.editor.util.browser.firefox && !$textNode.next('br').length) {
-          $br = jq_2_1(_this.editor.util.phBr).insertAfter($textNode);
+          $br = $(_this.editor.util.phBr).insertAfter($textNode);
           $textNode.remove();
           _this.editor.selection.setRangeBefore($br);
           return true;
@@ -1563,7 +1563,7 @@
         range = document.createRange();
         $prevChildList = $prevNode.children('ul, ol');
         if ($prevChildList.length > 0) {
-          $newLi = jq_2_1('<li/>').append(_this.editor.util.phBr).appendTo($prevChildList);
+          $newLi = $('<li/>').append(_this.editor.util.phBr).appendTo($prevChildList);
           $prevChildList.append($childList.children('li'));
           $node.remove();
           _this.editor.selection.setRangeAtEndOf($newLi, range);
@@ -1581,7 +1581,7 @@
           return;
         }
         codeStr = $node.html().replace('\n', '<br/>');
-        $newNode = jq_2_1('<p/>').append(codeStr || _this.editor.util.phBr).insertAfter($node);
+        $newNode = $('<p/>').append(codeStr || _this.editor.util.phBr).insertAfter($node);
         $node.remove();
         _this.editor.selection.setRangeAtStartOf($newNode);
         return true;
@@ -1734,9 +1734,9 @@
       var $parent, merging, offset,
         _this = this;
       if (index) {
-        $parent = jq_2_1(node);
+        $parent = $(node);
       } else {
-        $parent = jq_2_1(node).parent();
+        $parent = $(node).parent();
       }
       offset = 0;
       merging = false;
@@ -1787,7 +1787,7 @@
         offset = _ref[i];
         childNodes = node.childNodes;
         if (offset > childNodes.length - 1) {
-          if (i === position.length - 2 && jq_2_1(node).is('pre')) {
+          if (i === position.length - 2 && $(node).is('pre')) {
             child = document.createTextNode('');
             node.appendChild(child);
             childNodes = node.childNodes;
@@ -1935,12 +1935,12 @@
 
     Util.prototype.isEmptyNode = function(node) {
       var $node;
-      $node = jq_2_1(node);
+      $node = $(node);
       return $node.is(':empty') || (!$node.text() && !$node.find(':not(br, span, div)').length);
     };
 
     Util.prototype.isBlockNode = function(node) {
-      node = jq_2_1(node)[0];
+      node = $(node)[0];
       if (!node || node.nodeType === 3) {
         return false;
       }
@@ -1954,7 +1954,7 @@
         range = this.editor.selection.getRange();
         node = range != null ? range.commonAncestorContainer : void 0;
       }
-      $node = jq_2_1(node);
+      $node = $(node);
       if (!$node.length) {
         return null;
       }
@@ -1976,7 +1976,7 @@
         range = this.editor.selection.getRange();
         node = range != null ? range.commonAncestorContainer : void 0;
       }
-      $node = jq_2_1(node);
+      $node = $(node);
       if (!$node.length) {
         return null;
       }
@@ -1984,7 +1984,7 @@
       blockEl = blockEl.filter(function(i) {
         var $n;
         $n = blockEl.eq(i);
-        if (jq_2_1.isFunction(filter)) {
+        if ($.isFunction(filter)) {
           return filter($n);
         } else {
           return $n.is(filter);
@@ -2020,10 +2020,10 @@
         range = this.editor.selection.getRange();
         node = range != null ? range.commonAncestorContainer : void 0;
       }
-      if ((node == null) || !jq_2_1.contains(this.editor.body[0], node)) {
+      if ((node == null) || !$.contains(this.editor.body[0], node)) {
         return false;
       }
-      nodes = jq_2_1(node).parentsUntil(this.editor.body).get();
+      nodes = $(node).parentsUntil(this.editor.body).get();
       nodes.unshift(node);
       _results = [];
       for (_i = 0, _len = nodes.length; _i < _len; _i++) {
@@ -2077,7 +2077,7 @@
         if ($childList.length > 0) {
           $childList.append($blockEl);
         } else {
-          jq_2_1('<' + tagName + '/>').append($blockEl).appendTo($parentLi);
+          $('<' + tagName + '/>').append($blockEl).appendTo($parentLi);
         }
         this.editor.selection.restore();
       } else if ($blockEl.is('p, h1, h2, h3, h4')) {
@@ -2089,7 +2089,7 @@
         $blockEl.attr('data-indent', indentLevel);
       } else if ($blockEl.is('table')) {
         range = this.editor.selection.getRange();
-        $td = jq_2_1(range.commonAncestorContainer).closest('td');
+        $td = $(range.commonAncestorContainer).closest('td');
         $nextTd = $td.next('td');
         if (!($nextTd.length > 0)) {
           $nextTd = $td.parent('tr').next('tr').find('td:first');
@@ -2127,7 +2127,7 @@
         }
         this.editor.selection.save();
         if ($blockEl.next('li').length > 0) {
-          jq_2_1('<' + $parent[0].tagName + '/>').append($blockEl.nextAll('li')).appendTo($blockEl);
+          $('<' + $parent[0].tagName + '/>').append($blockEl.nextAll('li')).appendTo($blockEl);
         }
         $blockEl.insertAfter($parentLi);
         if ($parent.children('li').length < 1) {
@@ -2143,7 +2143,7 @@
         $blockEl.attr('data-indent', indentLevel);
       } else if ($blockEl.is('table')) {
         range = this.editor.selection.getRange();
-        $td = jq_2_1(range.commonAncestorContainer).closest('td');
+        $td = $(range.commonAncestorContainer).closest('td');
         $prevTd = $td.prev('td');
         if (!($prevTd.length > 0)) {
           $prevTd = $td.parent('tr').prev('tr').find('td:last');
@@ -2237,7 +2237,7 @@
       if (!this.opts.toolbar) {
         return;
       }
-      if (!jq_2_1.isArray(this.opts.toolbar)) {
+      if (!$.isArray(this.opts.toolbar)) {
         this.opts.toolbar = ['bold', 'italic', 'underline', 'strikethrough', '|', 'ol', 'ul', 'blockquote', 'code', '|', 'link', 'image', '|', 'indent', 'outdent'];
       }
       this._render();
@@ -2247,7 +2247,7 @@
       this.wrapper.on('mousedown', function(e) {
         return _this.list.find('.menu-on').removeClass('.menu-on');
       });
-      jq_2_1(document).on('mousedown.simditor', function(e) {
+      $(document).on('mousedown.simditor', function(e) {
         return _this.list.find('.menu-on').removeClass('.menu-on');
       });
       if (this.opts.toolbarFloat) {
@@ -2256,11 +2256,11 @@
           this.wrapper.css('left', this.wrapper.offset().left);
         }
         toolbarHeight = this.wrapper.outerHeight();
-        jq_2_1(window).on('scroll.simditor-' + this.editor.id, function(e) {
+        $(window).on('scroll.simditor-' + this.editor.id, function(e) {
           var bottomEdge, scrollTop, topEdge;
           topEdge = _this.editor.wrapper.offset().top;
           bottomEdge = topEdge + _this.editor.wrapper.outerHeight() - 80;
-          scrollTop = jq_2_1(document).scrollTop();
+          scrollTop = $(document).scrollTop();
           if (scrollTop <= topEdge || scrollTop >= bottomEdge) {
             _this.editor.wrapper.removeClass('toolbar-floating').css('padding-top', '');
             if (_this.editor.util.os.mobile) {
@@ -2284,7 +2284,7 @@
       this.editor.on('destroy', function() {
         return _this.buttons.length = 0;
       });
-      return jq_2_1(document).on('mousedown.simditor-' + this.editor.id, function(e) {
+      return $(document).on('mousedown.simditor-' + this.editor.id, function(e) {
         return _this.list.find('li.menu-on').removeClass('menu-on');
       });
     };
@@ -2292,13 +2292,13 @@
     Toolbar.prototype._render = function() {
       var name, _i, _len, _ref;
       this.buttons = [];
-      this.wrapper = jq_2_1(this._tpl.wrapper).prependTo(this.editor.wrapper);
+      this.wrapper = $(this._tpl.wrapper).prependTo(this.editor.wrapper);
       this.list = this.wrapper.find('ul');
       _ref = this.opts.toolbar;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         name = _ref[_i];
         if (name === '|') {
-          jq_2_1(this._tpl.separator).appendTo(this.list);
+          $(this._tpl.separator).appendTo(this.list);
           continue;
         }
         if (!this.constructor.buttons[name]) {
@@ -2325,13 +2325,13 @@
           if ((name != null) && button.name !== name) {
             continue;
           }
-          if (!button.status || button.status(jq_2_1(node)) === true) {
+          if (!button.status || button.status($(node)) === true) {
             removeButtons.push(button);
           }
         }
         for (_j = 0, _len1 = removeButtons.length; _j < _len1; _j++) {
           button = removeButtons[_j];
-          i = jq_2_1.inArray(button, buttons);
+          i = $.inArray(button, buttons);
           buttons.splice(i, 1);
         }
         if (buttons.length === 0) {
@@ -2392,7 +2392,7 @@
     Simditor.prototype._init = function() {
       var editor, form, uploadOpts,
         _this = this;
-      this.textarea = jq_2_1(this.opts.textarea);
+      this.textarea = $(this.opts.textarea);
       this.opts.placeholder = this.opts.placeholder || this.textarea.attr('placeholder');
       if (!this.textarea.length) {
         throw new Error('simditor: param textarea is required.');
@@ -2435,7 +2435,7 @@
 
     Simditor.prototype._render = function() {
       var key, val, _ref1, _results;
-      this.el = jq_2_1(this._tpl).insertBefore(this.textarea);
+      this.el = $(this._tpl).insertBefore(this.textarea);
       this.wrapper = this.el.find('.simditor-wrapper');
       this.body = this.wrapper.find('.simditor-body');
       this.placeholderEl = this.wrapper.find('.simditor-placeholder').append(this.opts.placeholder);
@@ -2455,7 +2455,7 @@
         _results = [];
         for (key in _ref1) {
           val = _ref1[key];
-          _results.push(jq_2_1('<input/>', {
+          _results.push($('<input/>', {
             type: 'hidden',
             name: key,
             value: val
@@ -2512,7 +2512,7 @@
         emptyP.remove();
       }
       cloneBody.find('img.uploading').remove();
-      val = jq_2_1.trim(cloneBody.html());
+      val = $.trim(cloneBody.html());
       this.textarea.val(val);
       return val;
     };
@@ -2539,7 +2539,7 @@
     Simditor.prototype.hidePopover = function() {
       var _this = this;
       return this.wrapper.find('.simditor-popover').each(function(i, popover) {
-        popover = jq_2_1(popover).data('popover');
+        popover = $(popover).data('popover');
         if (popover.active) {
           return popover.hide();
         }
@@ -2552,8 +2552,8 @@
       this.selection.clear();
       this.textarea.insertBefore(this.el).hide().val('').removeData('simditor');
       this.el.remove();
-      jq_2_1(document).off('.simditor-' + this.id);
-      jq_2_1(window).off('.simditor-' + this.id);
+      $(document).off('.simditor-' + this.id);
+      $(window).off('.simditor-' + this.id);
       return this.off();
     };
 
@@ -2627,7 +2627,7 @@
       this.wrapper.on('click', 'a.menu-item', function(e) {
         var btn, param;
         e.preventDefault();
-        btn = jq_2_1(e.currentTarget);
+        btn = $(e.currentTarget);
         _this.wrapper.removeClass('menu-on');
         if (btn.hasClass('disabled') || (_this.needFocus && !_this.editor.inputManager.focused)) {
           return false;
@@ -2653,41 +2653,41 @@
       _ref1 = this.htmlTag.split(',');
       for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
         tag = _ref1[_i];
-        tag = jq_2_1.trim(tag);
-        if (tag && jq_2_1.inArray(tag, this.editor.formatter._allowedTags) < 0) {
+        tag = $.trim(tag);
+        if (tag && $.inArray(tag, this.editor.formatter._allowedTags) < 0) {
           this.editor.formatter._allowedTags.push(tag);
         }
       }
     }
 
     Button.prototype.render = function() {
-      this.wrapper = jq_2_1(this._tpl.item).appendTo(this.editor.toolbar.list);
+      this.wrapper = $(this._tpl.item).appendTo(this.editor.toolbar.list);
       this.el = this.wrapper.find('a.toolbar-item');
       this.el.attr('title', this.title).addClass('toolbar-item-' + this.name).data('button', this);
       this.el.find('span').addClass(this.icon ? 'fa fa-' + this.icon : '').text(this.text);
       if (!this.menu) {
         return;
       }
-      this.menuWrapper = jq_2_1(this._tpl.menuWrapper).appendTo(this.wrapper);
+      this.menuWrapper = $(this._tpl.menuWrapper).appendTo(this.wrapper);
       this.menuWrapper.addClass('toolbar-menu-' + this.name);
       return this.renderMenu();
     };
 
     Button.prototype.renderMenu = function() {
       var $menuBtntnEl, $menuItemEl, menuItem, _i, _len, _ref1, _ref2, _results;
-      if (!jq_2_1.isArray(this.menu)) {
+      if (!$.isArray(this.menu)) {
         return;
       }
-      this.menuEl = jq_2_1('<ul/>').appendTo(this.menuWrapper);
+      this.menuEl = $('<ul/>').appendTo(this.menuWrapper);
       _ref1 = this.menu;
       _results = [];
       for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
         menuItem = _ref1[_i];
         if (menuItem === '|') {
-          jq_2_1(this._tpl.separator).appendTo(this.menuEl);
+          $(this._tpl.separator).appendTo(this.menuEl);
           continue;
         }
-        $menuItemEl = jq_2_1(this._tpl.menuItem).appendTo(this.menuEl);
+        $menuItemEl = $(this._tpl.menuItem).appendTo(this.menuEl);
         _results.push($menuBtntnEl = $menuItemEl.find('a.menu-item').attr({
           'title': (_ref2 = menuItem.title) != null ? _ref2 : menuItem.text,
           'data-param': menuItem.param
@@ -2742,7 +2742,7 @@
     function Popover(editor) {
       var _this = this;
       this.editor = editor;
-      this.el = jq_2_1('<div class="simditor-popover"></div>').appendTo(this.editor.wrapper).data('popover', this);
+      this.el = $('<div class="simditor-popover"></div>').appendTo(this.editor.wrapper).data('popover', this);
       this.render();
       this.el.on('mouseenter', function(e) {
         return _this.el.addClass('hover');
@@ -2899,7 +2899,7 @@
       this.editor.selection.save();
       range.setStartBefore($startBlock[0]);
       range.setEndAfter($endBlock[0]);
-      $contents = jq_2_1(range.extractContents());
+      $contents = $(range.extractContents());
       results = [];
       $contents.children().each(function(i, el) {
         var c, converted, _i, _len, _results;
@@ -2923,12 +2923,12 @@
 
     TitleButton.prototype._convertEl = function(el, param) {
       var $block, $el, results;
-      $el = jq_2_1(el);
+      $el = $(el);
       results = [];
       if ($el.is(param)) {
         results.push($el);
       } else {
-        $block = jq_2_1('<' + param + '/>').append($el.contents());
+        $block = $('<' + param + '/>').append($el.contents());
         results.push($block);
       }
       return results;
@@ -3131,14 +3131,14 @@
 
     ColorButton.prototype.renderMenu = function() {
       var _this = this;
-      jq_2_1('<ul class="color-list">\n  <li><a href="javascript:;" class="font-color font-color-1" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-2" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-3" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-4" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-5" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-6" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-7" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-8" data-color=""></a></li>\n  <li class="remove-color"><a href="javascript:;" class="link-remove-color">去掉颜色</a></li>\n</ul>').appendTo(this.menuWrapper);
+      $('<ul class="color-list">\n  <li><a href="javascript:;" class="font-color font-color-1" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-2" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-3" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-4" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-5" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-6" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-7" data-color=""></a></li>\n  <li><a href="javascript:;" class="font-color font-color-8" data-color=""></a></li>\n  <li class="remove-color"><a href="javascript:;" class="link-remove-color">去掉颜色</a></li>\n</ul>').appendTo(this.menuWrapper);
       this.menuWrapper.on('mousedown', '.color-list', function(e) {
         return false;
       });
       this.menuWrapper.on('click', '.font-color', function(e) {
         var $link, hex, rgb;
         _this.wrapper.removeClass('menu-on');
-        $link = jq_2_1(e.currentTarget);
+        $link = $(e.currentTarget);
         rgb = window.getComputedStyle($link[0], null).getPropertyValue('background-color');
         hex = _this._convertRgbToHex(rgb);
         if (!hex) {
@@ -3266,7 +3266,7 @@
           range.setEndAfter($furthestEnd[0]);
         }
       }
-      $contents = jq_2_1(range.extractContents());
+      $contents = $(range.extractContents());
       results = [];
       $contents.children().each(function(i, el) {
         var c, converted, _i, _len, _results;
@@ -3295,22 +3295,22 @@
     ListButton.prototype._convertEl = function(el) {
       var $el, anotherType, block, child, children, results, _i, _len, _ref7,
         _this = this;
-      $el = jq_2_1(el);
+      $el = $(el);
       results = [];
       anotherType = this.type === 'ul' ? 'ol' : 'ul';
       if ($el.is(this.type)) {
         $el.children('li').each(function(i, li) {
           var $childList, $li, block;
-          $li = jq_2_1(li);
+          $li = $(li);
           $childList = $li.children('ul, ol').remove();
-          block = jq_2_1('<p/>').append(jq_2_1(li).html() || _this.editor.util.phBr);
+          block = $('<p/>').append($(li).html() || _this.editor.util.phBr);
           results.push(block);
           if ($childList.length > 0) {
             return results.push($childList);
           }
         });
       } else if ($el.is(anotherType)) {
-        block = jq_2_1('<' + this.type + '/>').append($el.html());
+        block = $('<' + this.type + '/>').append($el.html());
         results.push(block);
       } else if ($el.is('blockquote')) {
         _ref7 = $el.children().get();
@@ -3318,11 +3318,11 @@
           child = _ref7[_i];
           children = this._convertEl(child);
         }
-        jq_2_1.merge(results, children);
+        $.merge(results, children);
       } else if ($el.is('table')) {
 
       } else {
-        block = jq_2_1('<' + this.type + '><li></li></' + this.type + '>');
+        block = $('<' + this.type + '><li></li></' + this.type + '>');
         block.find('li').append($el.html() || this.editor.util.phBr);
         results.push(block);
       }
@@ -3434,7 +3434,7 @@
       this.editor.selection.save();
       range.setStartBefore($startBlock[0]);
       range.setEndAfter($endBlock[0]);
-      $contents = jq_2_1(range.extractContents());
+      $contents = $(range.extractContents());
       results = [];
       $contents.children().each(function(i, el) {
         var c, converted, _i, _len, _results;
@@ -3463,14 +3463,14 @@
     BlockquoteButton.prototype._convertEl = function(el) {
       var $el, block, results,
         _this = this;
-      $el = jq_2_1(el);
+      $el = $(el);
       results = [];
       if ($el.is(this.htmlTag)) {
         $el.children().each(function(i, node) {
-          return results.push(jq_2_1(node));
+          return results.push($(node));
         });
       } else {
-        block = jq_2_1('<' + this.htmlTag + '/>').append($el);
+        block = $('<' + this.htmlTag + '/>').append($el);
         results.push(block);
       }
       return results;
@@ -3501,12 +3501,12 @@
       CodeButton.__super__.constructor.call(this, this.editor);
       this.editor.on('decorate', function(e, $el) {
         return $el.find('pre').each(function(i, pre) {
-          return _this.decorate(jq_2_1(pre));
+          return _this.decorate($(pre));
         });
       });
       this.editor.on('undecorate', function(e, $el) {
         return $el.find('pre').each(function(i, pre) {
-          return _this.undecorate(jq_2_1(pre));
+          return _this.undecorate($(pre));
         });
       });
     }
@@ -3557,7 +3557,7 @@
       $endBlock = this.editor.util.closestBlockEl(endNode);
       range.setStartBefore($startBlock[0]);
       range.setEndAfter($endBlock[0]);
-      $contents = jq_2_1(range.extractContents());
+      $contents = $(range.extractContents());
       results = [];
       $contents.children().each(function(i, el) {
         var c, converted, _i, _len, _results;
@@ -3585,10 +3585,10 @@
 
     CodeButton.prototype._convertEl = function(el) {
       var $el, block, codeStr, results;
-      $el = jq_2_1(el);
+      $el = $(el);
       results = [];
       if ($el.is(this.htmlTag)) {
-        block = jq_2_1('<p/>').append($el.html().replace('\n', '<br/>'));
+        block = $('<p/>').append($el.html().replace('\n', '<br/>'));
         results.push(block);
       } else {
         if (!$el.text() && $el.children().length === 1 && $el.children().is('br')) {
@@ -3596,7 +3596,7 @@
         } else {
           codeStr = this.editor.formatter.clearHtml($el);
         }
-        block = jq_2_1('<' + this.htmlTag + '/>').text(codeStr);
+        block = $('<' + this.htmlTag + '/>').text(codeStr);
         results.push(block);
       }
       return results;
@@ -3710,7 +3710,7 @@
         _this = this;
       range = this.editor.selection.getRange();
       if (this.active) {
-        $link = jq_2_1(range.commonAncestorContainer).closest('a');
+        $link = $(range.commonAncestorContainer).closest('a');
         txtNode = document.createTextNode($link.text());
         $link.replaceWith(txtNode);
         range.selectNode(txtNode);
@@ -3719,9 +3719,9 @@
         endNode = range.endContainer;
         $startBlock = this.editor.util.closestBlockEl(startNode);
         $endBlock = this.editor.util.closestBlockEl(endNode);
-        $contents = jq_2_1(range.extractContents());
+        $contents = $(range.extractContents());
         linkText = this.editor.formatter.clearHtml($contents.contents(), false);
-        $link = jq_2_1('<a/>', {
+        $link = $('<a/>', {
           href: 'http://www.example.com',
           target: '_blank',
           text: linkText || '链接文字'
@@ -3729,7 +3729,7 @@
         if ($startBlock[0] === $endBlock[0]) {
           range.insertNode($link[0]);
         } else {
-          $newBlock = jq_2_1('<p/>').append($link);
+          $newBlock = $('<p/>').append($link);
           range.insertNode($newBlock[0]);
         }
         range.selectNodeContents($link[0]);
@@ -3780,8 +3780,8 @@
         }
         return _this.target.attr('href', _this.urlEl.val());
       });
-      jq_2_1([this.urlEl[0], this.textEl[0]]).on('keydown', function(e) {
-        if (e.which === 13 || e.which === 27 || (!e.shiftKey && e.which === 9 && jq_2_1(e.target).hasClass('link-url'))) {
+      $([this.urlEl[0], this.textEl[0]]).on('keydown', function(e) {
+        if (e.which === 13 || e.which === 27 || (!e.shiftKey && e.which === 9 && $(e.target).hasClass('link-url'))) {
           e.preventDefault();
           return setTimeout(function() {
             var range;
@@ -3856,7 +3856,7 @@
       this.defaultImage = this.editor.opts.defaultImage;
       this.editor.body.on('click', 'img:not([data-non-image])', function(e) {
         var $img, range;
-        $img = jq_2_1(e.currentTarget);
+        $img = $(e.currentTarget);
         range = document.createRange();
         range.selectNode($img[0]);
         _this.editor.selection.selectRange(range);
@@ -3875,9 +3875,9 @@
         if (range == null) {
           return;
         }
-        $contents = jq_2_1(range.cloneContents()).contents();
+        $contents = $(range.cloneContents()).contents();
         if ($contents.length === 1 && $contents.is('img:not([data-non-image])')) {
-          $img = jq_2_1(range.startContainer).contents().eq(range.startOffset);
+          $img = $(range.startContainer).contents().eq(range.startOffset);
           return _this.popover.show($img);
         } else {
           return _this.popover.hide();
@@ -3891,7 +3891,7 @@
         }
         return $masks.each(function(i, mask) {
           var $img, $mask, file;
-          $mask = jq_2_1(mask);
+          $mask = $(mask);
           $img = $mask.data('img');
           if (!($img && $img.parent().length > 0)) {
             $mask.remove();
@@ -3926,7 +3926,7 @@
         if ($input) {
           $input.remove();
         }
-        return $input = jq_2_1('<input type="file" title="上传图片" accept="image/*">').appendTo($uploadItem);
+        return $input = $('<input type="file" title="上传图片" accept="image/*">').appendTo($uploadItem);
       };
       createInput();
       $uploadItem.on('click mousedown', 'input[type=file]', function(e) {
@@ -3964,7 +3964,7 @@
           return;
         }
         if (file.img) {
-          $img = jq_2_1(file.img);
+          $img = $(file.img);
         } else {
           $img = _this.createImage(file.name);
           file.img = $img;
@@ -4045,7 +4045,7 @@
         }
         if (xhr.responseText) {
           try {
-            result = jq_2_1.parseJSON(xhr.responseText);
+            result = $.parseJSON(xhr.responseText);
             msg = result.msg;
           } catch (_error) {
             e = _error;
@@ -4090,7 +4090,7 @@
         _this = this;
       $mask = $img.data('mask');
       if (!$mask) {
-        $mask = jq_2_1('<div class="simditor-image-loading"><span></span></div>').appendTo(this.editor.wrapper);
+        $mask = $('<div class="simditor-image-loading"><span></span></div>').appendTo(this.editor.wrapper);
         if ($img.hasClass('uploading') && this.editor.uploader.html5) {
           $mask.addClass('uploading');
         }
@@ -4145,14 +4145,14 @@
       range.deleteContents();
       $block = this.editor.util.closestBlockEl();
       if ($block.is('p') && !this.editor.util.isEmptyNode($block)) {
-        $block = jq_2_1('<p/>').append(this.editor.util.phBr).insertAfter($block);
+        $block = $('<p/>').append(this.editor.util.phBr).insertAfter($block);
         this.editor.selection.setRangeAtStartOf($block, range);
       }
-      $img = jq_2_1('<img/>').attr('alt', name);
+      $img = $('<img/>').attr('alt', name);
       range.insertNode($img[0]);
       $nextBlock = $block.next('p');
       if (!($nextBlock.length > 0)) {
-        $nextBlock = jq_2_1('<p/>').append(this.editor.util.phBr).insertAfter($block);
+        $nextBlock = $('<p/>').append(this.editor.util.phBr).insertAfter($block);
       }
       this.editor.selection.setRangeAtStartOf($nextBlock);
       return $img;
@@ -4238,7 +4238,7 @@
         if (_this.input) {
           _this.input.remove();
         }
-        return _this.input = jq_2_1('<input type="file" title="上传图片" accept="image/*">').appendTo($uploadBtn);
+        return _this.input = $('<input type="file" title="上传图片" accept="image/*">').appendTo($uploadBtn);
       };
       createInput();
       this.el.on('click mousedown', 'input[type=file]', function(e) {
@@ -4354,9 +4354,9 @@
       if ($nextBlock.length > 0) {
         this.editor.selection.save();
       } else {
-        $newBlock = jq_2_1('<p/>').append(this.editor.util.phBr);
+        $newBlock = $('<p/>').append(this.editor.util.phBr);
       }
-      $hr = jq_2_1('<hr/>').insertAfter($rootBlock);
+      $hr = $('<hr/>').insertAfter($rootBlock);
       if ($newBlock) {
         $newBlock.insertAfter($hr);
         this.editor.selection.setRangeAtStartOf($newBlock);
@@ -4393,19 +4393,19 @@
         _this = this;
       args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
       TableButton.__super__.constructor.apply(this, args);
-      jq_2_1.merge(this.editor.formatter._allowedTags, ['tbody', 'tr', 'td', 'colgroup', 'col']);
-      jq_2_1.extend(this.editor.formatter._allowedAttributes, {
+      $.merge(this.editor.formatter._allowedTags, ['tbody', 'tr', 'td', 'colgroup', 'col']);
+      $.extend(this.editor.formatter._allowedAttributes, {
         td: ['rowspan', 'colspan'],
         col: ['width']
       });
       this.editor.on('decorate', function(e, $el) {
         return $el.find('table').each(function(i, table) {
-          return _this.decorate(jq_2_1(table));
+          return _this.decorate($(table));
         });
       });
       this.editor.on('undecorate', function(e, $el) {
         return $el.find('table').each(function(i, table) {
-          return _this.undecorate(jq_2_1(table));
+          return _this.undecorate($(table));
         });
       });
       this.editor.on('selectionchanged.table', function(e) {
@@ -4415,7 +4415,7 @@
         if (range == null) {
           return;
         }
-        $container = jq_2_1(range.commonAncestorContainer);
+        $container = $(range.commonAncestorContainer);
         if (range.collapsed && $container.is('.simditor-table')) {
           if (_this.editor.selection.rangeAtStartOf($container)) {
             $container = $container.find('td:first');
@@ -4459,21 +4459,21 @@
       $wrapper = $table.parent('.simditor-table');
       $colgroup = $table.find('colgroup');
       if ($colgroup.length < 1) {
-        $colgroup = jq_2_1('<colgroup/>').prependTo($table);
+        $colgroup = $('<colgroup/>').prependTo($table);
         $table.find('tr:first td').each(function(i, td) {
           var $col;
-          return $col = jq_2_1('<col/>').appendTo($colgroup);
+          return $col = $('<col/>').appendTo($colgroup);
         });
         this.refreshTableWidth($table);
       }
-      $resizeHandle = jq_2_1('<div class="simditor-resize-handle" contenteditable="false"></div>').appendTo($wrapper);
+      $resizeHandle = $('<div class="simditor-resize-handle" contenteditable="false"></div>').appendTo($wrapper);
       $wrapper.on('mousemove', 'td', function(e) {
         var $col, $td, index, x, _ref16, _ref17;
         if ($wrapper.hasClass('resizing')) {
           return;
         }
-        $td = jq_2_1(e.currentTarget);
-        x = e.pageX - jq_2_1(e.currentTarget).offset().left;
+        $td = $(e.currentTarget);
+        x = e.pageX - $(e.currentTarget).offset().left;
         if (x < 5 && $td.prev().length > 0) {
           $td = $td.prev();
         }
@@ -4498,7 +4498,7 @@
       });
       return $wrapper.on('mousedown', '.simditor-resize-handle', function(e) {
         var $handle, $leftCol, $leftTd, $rightCol, $rightTd, minWidth, startHandleLeft, startLeftWidth, startRightWidth, startX, tableWidth;
-        $handle = jq_2_1(e.currentTarget);
+        $handle = $(e.currentTarget);
         $leftTd = $handle.data('td');
         $leftCol = $handle.data('col');
         $rightTd = $leftTd.next('td');
@@ -4509,7 +4509,7 @@
         startHandleLeft = parseFloat($handle.css('left'));
         tableWidth = $leftTd.closest('table').width();
         minWidth = 50;
-        jq_2_1(document).on('mousemove.simditor-resize-table', function(e) {
+        $(document).on('mousemove.simditor-resize-table', function(e) {
           var deltaX, leftWidth, rightWidth;
           deltaX = e.pageX - startX;
           leftWidth = startLeftWidth + deltaX;
@@ -4527,8 +4527,8 @@
           $rightCol.attr('width', (rightWidth / tableWidth * 100) + '%');
           return $handle.css('left', startHandleLeft + deltaX);
         });
-        jq_2_1(document).one('mouseup.simditor-resize-table', function(e) {
-          jq_2_1(document).off('.simditor-resize-table');
+        $(document).one('mouseup.simditor-resize-table', function(e) {
+          $(document).off('.simditor-resize-table');
           return $wrapper.removeClass('resizing');
         });
         $wrapper.addClass('resizing');
@@ -4554,20 +4554,20 @@
 
     TableButton.prototype.renderMenu = function() {
       var _this = this;
-      jq_2_1('<div class="menu-create-table">\n</div>\n<div class="menu-edit-table">\n  <ul>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteRow"><span>删除行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowAbove"><span>在上面插入行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowBelow"><span>在下面插入行</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteCol"><span>删除列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColLeft"><span>在左边插入列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColRight"><span>在右边插入列</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteTable"><span>删除表格</span></a></li>\n  </ul>\n</div>').appendTo(this.menuWrapper);
+      $('<div class="menu-create-table">\n</div>\n<div class="menu-edit-table">\n  <ul>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteRow"><span>删除行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowAbove"><span>在上面插入行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowBelow"><span>在下面插入行</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteCol"><span>删除列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColLeft"><span>在左边插入列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColRight"><span>在右边插入列</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteTable"><span>删除表格</span></a></li>\n  </ul>\n</div>').appendTo(this.menuWrapper);
       this.createMenu = this.menuWrapper.find('.menu-create-table');
       this.editMenu = this.menuWrapper.find('.menu-edit-table');
       this.createTable(6, 6).appendTo(this.createMenu);
       this.createMenu.on('mouseenter', 'td', function(e) {
         var $td, $tr, num;
         _this.createMenu.find('td').removeClass('selected');
-        $td = jq_2_1(e.currentTarget);
+        $td = $(e.currentTarget);
         $tr = $td.parent();
         num = $tr.find('td').index($td) + 1;
         return $tr.prevAll('tr').addBack().find('td:lt(' + num + ')').addClass('selected');
       });
       this.createMenu.on('mouseleave', function(e) {
-        return jq_2_1(e.currentTarget).find('td').removeClass('selected');
+        return $(e.currentTarget).find('td').removeClass('selected');
       });
       return this.createMenu.on('mousedown', 'td', function(e) {
         var $closestBlock, $table, $td, $tr, colNum, rowNum;
@@ -4575,7 +4575,7 @@
         if (!_this.editor.inputManager.focused) {
           return;
         }
-        $td = jq_2_1(e.currentTarget);
+        $td = $(e.currentTarget);
         $tr = $td.parent();
         colNum = $tr.find('td').index($td) + 1;
         rowNum = $tr.prevAll('tr').length + 1;
@@ -4596,12 +4596,12 @@
 
     TableButton.prototype.createTable = function(row, col, phBr) {
       var $table, $tbody, $td, $tr, c, r, _i, _j;
-      $table = jq_2_1('<table/>');
-      $tbody = jq_2_1('<tbody/>').appendTo($table);
+      $table = $('<table/>');
+      $tbody = $('<tbody/>').appendTo($table);
       for (r = _i = 0; 0 <= row ? _i < row : _i > row; r = 0 <= row ? ++_i : --_i) {
-        $tr = jq_2_1('<tr/>').appendTo($tbody);
+        $tr = $('<tr/>').appendTo($tbody);
         for (c = _j = 0; 0 <= col ? _j < col : _j > col; c = 0 <= col ? ++_j : --_j) {
-          $td = jq_2_1('<td/>').appendTo($tr);
+          $td = $('<td/>').appendTo($tr);
           if (phBr) {
             $td.append(this.editor.util.phBr);
           }
@@ -4618,7 +4618,7 @@
       return $table.find('tr:first td').each(function(i, td) {
         var $col;
         $col = cols.eq(i);
-        return $col.attr('width', (jq_2_1(td).outerWidth() / tableWidth * 100) + '%');
+        return $col.attr('width', ($(td).outerWidth() / tableWidth * 100) + '%');
       });
     };
 
@@ -4659,11 +4659,11 @@
       $table = $tr.closest('table');
       colNum = 0;
       $table.find('tr').each(function(i, tr) {
-        return colNum = Math.max(colNum, jq_2_1(tr).find('td').length);
+        return colNum = Math.max(colNum, $(tr).find('td').length);
       });
-      $newTr = jq_2_1('<tr/>');
+      $newTr = $('<tr/>');
       for (i = _i = 1; 1 <= colNum ? _i <= colNum : _i >= colNum; i = 1 <= colNum ? ++_i : --_i) {
-        jq_2_1('<td/>').append(this.editor.util.phBr).appendTo($newTr);
+        $('<td/>').append(this.editor.util.phBr).appendTo($newTr);
       }
       $tr[direction]($newTr);
       index = $tr.find('td').index($td);
@@ -4685,7 +4685,7 @@
         $table = $tr.closest('table');
         $table.find('col').eq(index).remove();
         $table.find('tr').each(function(i, tr) {
-          return jq_2_1(tr).find('td').eq(index).remove();
+          return $(tr).find('td').eq(index).remove();
         });
         this.refreshTableWidth($table);
         return this.editor.selection.setRangeAtEndOf($newTd);
@@ -4704,10 +4704,10 @@
       $col = $table.find('col').eq(index);
       $table.find('tr').each(function(i, tr) {
         var $newTd;
-        $newTd = jq_2_1('<td/>').append(_this.editor.util.phBr);
-        return jq_2_1(tr).find('td').eq(index)[direction]($newTd);
+        $newTd = $('<td/>').append(_this.editor.util.phBr);
+        return $(tr).find('td').eq(index)[direction]($newTd);
       });
-      $newCol = jq_2_1('<col/>');
+      $newCol = $('<col/>');
       $col[direction]($newCol);
       tableWidth = $table.width();
       width = Math.max(parseFloat($col.attr('width')) / 2, 50 / tableWidth * 100);
@@ -4731,7 +4731,7 @@
     TableButton.prototype.command = function(param) {
       var $td, range;
       range = this.editor.selection.getRange();
-      $td = jq_2_1(range.commonAncestorContainer).closest('td');
+      $td = $(range.commonAncestorContainer).closest('td');
       if (!($td.length > 0)) {
         return;
       }
