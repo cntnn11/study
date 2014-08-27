@@ -16,7 +16,7 @@
 	</style>
 	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 </head>
-<body onkeydown="keyLogin(event);">
+<body>
 	<h1>Ajax 表单提交（跨域）</h1>
 	<hr/>
 	<h3>post提交</h3>
@@ -57,6 +57,12 @@ function keyLogin(event)
 	}
 }
 $(function(){
+	$(window).keydown(function(e){
+		if( e.keyCode == 13 && $('#postbtn').length > 0 )
+		{
+			alert('按下了回车！post提交请求吧！');
+		}
+	});
 	$('#postbtn').click(function(){
 		var data	= '&content1='+$('#content1').val()+'&content2='+$('#content2').val();
 		var url		= 'http://test2.study.com/ajaxky/ajax.php?'+Math.random();
