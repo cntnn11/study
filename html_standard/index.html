@@ -1,0 +1,3137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>极客学院前端开发规范</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<!--[if lt IE 9]>
+			<style>
+				#menu,#submenu ul,.crumbs ul,#content{
+					border:1px solid rgb(210,210,210);
+				}
+			</style>
+			<script type="text/javascript" src="js/html5.js"></script>
+			<script type="text/javascript" src="js/ieLt9.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header id="header" class="header">
+				<div class="wrap">
+					<h1>极客学院 | 前端开发规范</h1>
+				</div>
+			</header>
+			<!-- container -->
+			<div id="container">
+				<aside id="sidebar">
+					<ul id="menu">
+						<li class="on">
+							<h2>HTML规范</h2>
+							<ol>
+								<li class="on"><a href="javascript:void(0)">HTML文档声明</a></li>
+								<li><a href="javascript:void(0)">HTML书写规范</a></li>
+							</ol>
+						</li>
+						<li class="on">
+							<h2>CSS规范</h2>
+							<ol>
+								<li><a href="javascript:void(0)">CSS书写规范</a></li>
+								<li><a href="javascript:void(0)">CSS样式引用</a></li>
+								<li><a href="javascript:void(0)">class与id命名规则</a></li>
+							</ol>
+						</li>
+						<li class="on">
+							<h2>注释规范</h2>
+							<ol>
+								<li><a href="javascript:void(0)">HTML注释</a></li>
+								<li><a href="javascript:void(0)">CSS注释</a></li>
+								<li><a href="javascript:void(0)">IE条件注释</a></li>
+							</ol>
+						</li>
+						<li>
+							<h2>制作技巧</h2>
+							<ol>
+								<li><a href="javascript:void(0)">EDM制作规范</a></li>
+								<li><a href="javascript:void(0)">经验常识</a></li>
+								<li><a href="javascript:void(0)">避免兼容问题</a></li>
+								<li><a href="javascript:void(0)">控件制作</a></li>
+							</ol>
+						</li>
+						<li class="last">
+							<h2>相关阅读</h2>
+							<ol>
+								<li><a href="javascript:void(0)">栅格化</a></li>
+								<li><a href="javascript:void(0)">语义化</a></li>
+								<li><a href="javascript:void(0)">模块化</a></li>
+								<li><a href="javascript:void(0)">面向对象CSS</a></li>
+								<li><a href="javascript:void(0)">块元素与行内元素</a></li>
+								<li><a href="javascript:void(0)">选择器兼容</a></li>
+								<li><a href="javascript:void(0)">CSS兼容</a></li>
+								<li><a href="javascript:void(0)">具有继承性的样式</a></li>
+								<li><a href="javascript:void(0)">可触发hoslayout的属性</a></li>
+								<li><a href="javascript:void(0)">控件盒模型</a></li>
+								<li><a href="javascript:void(0)">浏览器内核与实验性样式</a></li>
+								<li><a href="javascript:void(0)">SEO优化</a></li>
+								<li><a href="javascript:void(0)">网站性能优化</a></li>
+							</ol>
+						</li>
+					</ul>
+					<div class="allExpand" id="menuAllExpand">展开全部</div>
+				</aside>
+				<!-- main -->
+				<div id="main" class="main">
+					<div class="crumbs" id="crumbs">
+						<ul>
+							<li>HTML规范<i>&gt;</i></li>
+							<li style="font-weight:bold">HTML文档声明</li>
+							<li class="returnTop" id="returnTop"><span>返回顶部</span></li>
+							<li class="toolbar" id="toolbar"><span id="showCont" class="on">显示内容</span><span id="onlyTitle">只看标题</span><span id="allWDS" class="on">当前规范</span></li>
+						</ul>
+					</div>
+					<!-- content -->
+					<div id="content">
+						<!-- c-item-->
+						<div class="c-item" style="display:block">
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>使用 html5的文档声明 &lt;!DOCTYPE html&gt;</span></h3>
+								</header>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>所有标签都使用英文小写</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example1">
+										<code class="codes html">
+											<ol>
+												<li>&lt;DIV&gt;<i class="text">...</i>&lt;&#47;DIV&gt;</li>
+											</ol>
+										</code>
+										<div><i class="icon i-error">&times;</i></div>
+									</div>
+									<div class="example example1">
+										<code class="codes html">
+											<ol>
+												<li>&lt;div&gt;<i class="text">...</i>&lt;&#47;div&gt;</li>
+											</ol>
+										</code>
+										<div><i class="icon i-enter">&radic;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>标签必须闭合</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example1">
+										<code class="codes html">
+											<ol>
+												<li>&lt;div&gt;<i class="text">...</i></li>
+											</ol>
+										</code>
+										<div><i class="icon i-error">&times;</i></div>
+									</div>
+									<div class="example example1">
+										<code class="codes html">
+											<ol>
+												<li>&lt;div&gt;<i class="text">...</i>&lt;&#47;div&gt;</li>
+											</ol>
+										</code>
+										<div><i class="icon i-enter">&radic;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>&lt;div&gt; 是一个最基本的块标签</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>&lt;span&gt; 是一个最基本的行内标签</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>&lt;span&gt; 可以嵌套其他行内标签,如em,strong,b,i,del,ins 等</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;span&gt;&lt;i&gt;<i class="text">...</i>&lt;&#47;i&gt;&lt;&#47;span&gt;</li>
+											</ol>
+										</code>
+										<div><i class="icon i-enter">&radic;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>其他行内标签不能嵌套任何标签</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;i&gt;&lt;span&gt;<i class="text">...</i>&lt;&#47;span&gt;&lt;&#47;i&gt;</li>
+											</ol>
+										</code>
+										<div><i class="icon i-error">&times;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>&lt;p&gt; 标签不能包含任何的块元素标签，包括自身</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;p&gt;&lt;p&gt;<i class="text">...</i>&lt;&#47;p&gt;&lt;&#47;p&gt;</li>
+												<li>&lt;p&gt;&lt;div&gt;<i class="text">...</i>&lt;&#47;div&gt;&lt;&#47;p&gt;</li>
+											</ol>
+										</code>
+										<div><i class="icon i-error">&times;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>常用标签的自带属性</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;area <i class="attr">sharp</i>=<i class="val">&#34;&#34;</i> <i class="attr">coords</i>=<i class="val">&#34;&#34;</i> <i class="attr">alt</i>=<i class="val">&#34;&#34;</i> &#47;&gt;</li>
+												<li>&lt;img <i class="attr">title</i>=<i class="val">&#34;&#34;</i> <i class="attr">alt</i>=<i class="val">&#34;&#34;</i> &#47;&gt;</li>
+												<li>&lt;input <i class="attr">type</i>=<i class="val">&#34;&#34;</i> <i class="attr">value</i>=<i class="val">&#34;&#34;</i> &#47;&gt;</li>
+												<li>&lt;a <i class="attr">href</i>=<i class="val">&#34;&#34;</i> <i class="attr">alt</i>=<i class="val">&#34;&#34;</i>&gt;<i class="text">...</i>&lt;&#47;a&gt;</li>
+												<li>&lt;abbr <i class="attr">title</i>=<i class="val">&#34;&#34;</i>&gt;<i class="text">...</i>&lt;&#47;abbr&gt;</li>
+												<li>&lt;button <i class="attr">type</i>=<i class="val">&#34;&#34;</i>&gt;<i class="text">...</i>&lt;&#47;button&gt;</li>
+												<li>&lt;form <i class="attr">action</i>=<i class="val">&#34;&#34;</i> <i class="attr">method</i>=<i class="val">&#34;&#34;</i>&gt;<i class="text">...</i>&lt;&#47;form&gt;</li>
+												<li>&lt;lable <i class="attr">for</i>=<i class="val">&#34;id&#34;</i>&gt;<i class="text">...</i>&lt;&#47;lable&gt;</li>
+												<li>&lt;select <i class="attr">name</i>=<i class="val">&#34;&#34;</i>&gt;<i class="text">...</i>&lt;&#47;select&gt;</li>
+												<li>&lt;option <i class="attr">selected</i>=<i class="val">&#34;&#34;</i> <i class="attr">value</i>=<i class="val">&#34;&#34;</i>&gt;<i class="text">...</i>&lt;&#47;option&gt;</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>表单标签的结构</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;form <i class="attr">action</i>=<i class="val">&#34;&#34;</i> <i class="attr">method</i>=<i class="val">&#34;&#34;</i>&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;<i class="text">标题</i>&lt;&#47;legend&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<i class="text">表单内容</i>&lt;&#47;div&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;fieldset&gt;</li>
+												<li>&lt;&#47;form&gt;</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>下拉列表标签的结构</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;select <i class="attr">name</i>=<i class="val">&#34;&#34;</i>&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;optgroup&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <i class="attr">selected</i>=<i class="val">&#34;&#34;</i> <i class="attr">value</i>=<i class="val">&#34;&#34;</i>&gt;<i class="text">...</i>&lt;&#47;option&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;optgroup&gt;</li>
+												<li>&lt;&#47;select&gt;</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>表格标签的结构</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;table&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<i class="text">...</i>&lt;&#47;option&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;colgroup&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;col <i class="attr">width</i>=<i class="val">&#34;&#34;</i> &#47;&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;col <i class="attr">width</i>=<i class="val">&#34;&#34;</i> &#47;&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;colgroup&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;<i class="text">...</i>&lt;&#47;th&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;tr&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;thead&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;<i class="text">...</i>&lt;&#47;td&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;tr&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;tbody&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tfoot&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;<i class="text">...</i>&lt;&#47;td&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;tr&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;tfoot&gt;</li>
+												<li>&lt;&#47;table&gt;</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>特殊符号<a href="http://www.w3school.com.cn/tags/html_ref_ascii.asp" target="_blank">http://www.w3school.com.cn/tags/html_ref_ascii.asp</a></span></h3>
+								</header>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>CSS文档必需要加声明 <i class="colorRed">@charset</i></span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>采用多行书写</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">100</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">100</i>px;</li>
+												<li>}</li>
+												<li><i class="notes">/* 优点：直观易于阅读、易做文件对比（Diff）、不用横向滚动 */</i></li>
+											</ol>
+										</code>
+									</div>
+									<p><span class="mesText">注：后期我们对CSS 进行压缩便可减轻文件大小</span></p>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>每个属性后的分号不可省略</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>多行书写采用制表符(tab)的缩进方式（<i class="colorRed">一般编辑器都支持制表符和空格两种方式</i>）</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>避免使用 <i class="colorRed">!important</i></span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>伪类 和 伪元素 统一用一个“:”与选择符连接</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div:<i class="cssRed">hover</i></i>{<i class="notes">/* 伪类 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">100</i>px;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div:<i class="cssRed">after</i></i>{<i class="notes">/* 伪元素 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">100</i>px;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>属性值为"<i class="colorRed">0</i>"的可以省略单位</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;margin: <i class="num">0</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>小数点"个位数"为零的一律省略"个位数"的零</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;opacity: <i class="num">.5</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>颜色采用"<i class="colorRed">rgb</i>"和"<i class="colorRed">rgba</i>"的格式书写</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;background: <i class="cssRed">rgb</i>(<i class="num">255,255,255</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border-color: <i class="cssRed">rgb</i>(<i class="num">255,255,255</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">rgb</i>(<i class="num">255,255,255</i>);</li>
+												<li>}</li>
+												<li><i class="notes">/* 主流浏览器支持 */</i></li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;background: <i class="cssRed">rgba</i>(<i class="num">255,255,255,.5</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border-color: <i class="cssRed">rgba</i>(<i class="num">255,255,255,.5</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">rgba</i>(<i class="num">255,255,255,.5</i>);</li>
+												<li>}</li>
+												<li><i class="notes">/* 标准浏览器支持 */</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>给"<i class="colorRed">rgba</i>"格式增加后备色</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;background: <i class="cssRed">rgb</i>(<i class="num">255,255,255,.5</i>); <i class="notes">/* 不支持rgba浏览器的备用色 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;background: <i class="cssRed">rgba</i>(<i class="num">255,255,255</i>);</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>英文大写应使用 <i class="colorRed">text-transform</i> 属性来转换</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>透明度</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;opacity: <i class="num">.5</i>; <i class="notes">/* 标准浏览器支持 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;fliter: <i class="cssRed">alpha</i>(<i class="cssRed">opacity</i>=<i class="num">50</i>); <i class="notes">/* IE 浏览器支持 */</i></li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>关于 <i class="colorRed">z-index</i></span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* 页面元素  范围 10 ~ 490，已10为递增基准 */</i></li>
+												<li><i class="tag">div</i>{ <i class="notes">/* 页面元素 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;z-index: <i class="num">10</i>;</li>
+												<li>}</li>
+												<li><i class="notes">/* 弹出框与弹出窗口  范围 500 ~ 990，已10为递增基准 */</i></li>
+												<li><i class="cssRed">.pop</i>{ <i class="notes">/* 弹出框与弹出窗口 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;z-index: <i class="num">500</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>字体采用 Unicode 编码 英文名称的命名顺序，禁用中文命名字体</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;font-family: <i class="font"> '\5fae\8f6f\96c5\9ed1','Microsoft YaHei',Arial</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>选择器嵌套不超过 <i class="colorRed">4</i> 级</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.class</i> <i class="tag">div ul li</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;margin: <i class="num">0</i>;</li>
+												<li>}</li>
+												<li><i class="notes">/* 结构复杂的页面要合理运用class命名,避免4级以上的嵌套 */</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>属性书写顺序</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* 统一的书写顺序及方便阅读 */</i></li>
+												<li><i class="tag">div</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;position: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;top: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;right: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;bottom: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;left: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;z-index: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;visibility: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;display: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;box-sizing: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;clear: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;float: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;margin: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;padding: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;background: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border-radius: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;transform: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;transition: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;animation: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;font: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;line-height: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;text-overflow: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;text-: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;word-spacing: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;letter-spacing: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;white-space: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;word-break: <i class="cssRed">xxx</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;word-wrap: <i class="cssRed">xxx</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+									<p><i class="mesText">注：推荐使用缩写方式来编写CSS属性</i></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>CSS文件必须通过<i class="colorRed"> link </i>标签引用,标签必须放置在HTML文档的<i class="colorRed"> head </i>中,<i class="colorRed"> title </i>标签之后</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>禁止使用<i class="colorRed"> @import </i>引入外部样式表</span>&nbsp;<a href="http://www.blueidea.com/tech/web/2009/6666.asp" target="_blank"><cite>参考文章</cite></a></h3>
+								</header>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>不要在<i class="colorRed"> head </i>中直接编写样式</span></h3>
+								</header>
+								<div class="bd">
+									<p><span class="mesText">注：在制作期间我们会用@import引用各样式表，上线时我们会将样式表合并成一个文件</span></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>采用英文字母、数字以及”-“命名，以小写字母开头，不能以数字和”-“开头</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.123abc</i>{}</li>
+												<li><i class="cssRed">.-abc</i>{}</li>
+												<li><i class="cssRed">.ABC</i>{}</li>
+												<li><i class="cssRed">.ABCabc</i>{}</li>
+											</ol>
+										</code>
+										<div><i class="icon i-error">&times;</i></div>
+									</div>
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.icon</i>{}</li>
+												<li><i class="cssRed">.icon01</i>{}</li>
+												<li><i class="cssRed">.iconText</i>{}</li>
+												<li><i class="cssRed">.moz-class</i>{}</li>
+											</ol>
+										</code>
+										<div><i class="icon i-enter">&radic;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>采用以下几种命名格式</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* 一个单词，采用全部小写方式 */</i>{}</li>
+												<li><i class="cssRed">.wrapper</i>{}</li>
+												<li><i class="cssRed">.sidebar</i>{}</li>
+												<li><i class="notes">/* 多个单词，采用驼峰写法 */</i>{}</li>
+												<li><i class="cssRed">.topBar</i>{}</li>
+												<li><i class="cssRed">.floatBox</i>{}</li>
+												<li><i class="notes">/* 使用前缀，采用”-“连接符 */</i>{}</li>
+												<li><i class="cssRed">.goodsShowTitle</i>{} <i class="notes">/* 驼峰写法 */</i></li>
+												<li><i class="cssRed">.gs-title</i>{} <i class="notes">/* 使用连接符 */</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>命名要考虙复用,且符合语义化,要根据功能来命名,不要以表现来命名</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.boxLeft</i>{} <i class="notes">/* 侧边栏 */</i></li>
+												<li><i class="cssRed">.navLeft</i>{} <i class="notes">/* 侧导航 */</i></li>
+											</ol>
+										</code>
+										<div><i class="icon i-error">&times;</i></div>
+									</div>
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.sidebar</i>{} <i class="notes">/* 侧边栏 */</i></li>
+												<li><i class="cssRed">.navSide</i>{} <i class="notes">/* 侧导航 */</i></li>
+											</ol>
+										</code>
+										<div><i class="icon i-enter">&radic;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>一个 <i class="colorRed">id</i> 在一个页面中,只能出现一次,不能出现多个同名 <i class="colorRed">id</i></span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>预防命名冲突 ( <i class="colorRed">添加名称前缀可以有效的预防命名冲突</i> )</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.nav</i>{} <i class="notes">/* 可能所有页面都有 */</i></li>
+											</ol>
+										</code>
+										<div><i class="icon i-error">&times;</i></div>
+									</div>
+									<div class="example example1">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.order-nav</i>{} <i class="notes">/* 订单页导航 */</i></li>
+											</ol>
+										</code>
+										<div><i class="icon i-enter">&radic;</i></div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>命名尽量简短，但要保留基本语义，要能看懂</span></h3>
+								</header>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>区块注释</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><i class="notes">&lt;!-- header --&gt;</i></li>
+												<li>&lt;div <i class="attr">class</i>=<i class="val">"header"</i>&gt;</li>
+												<li>...</li>
+												<li>&lt;&#47;div&gt;</li>
+												<li><i class="notes">&lt;!-- header end --&gt;</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>描述注释</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;div <i class="attr">class</i>=<i class="val">"nav fixed"</i>&gt;<i class="notes">&lt;!-- 删除fixed取消固定效果  "主要是给开发人员做解释用的" --&gt;</i></li>
+												<li><i class="text">...</i></li>
+												<li>&lt;&#47;div&gt;</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>单行注释</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* sidebar */</i></li>
+												<li><i class="cssRed">.sidebar</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">rgb</i>(<i class="num">255,0,0</i>); <i class="notes">/* same color as blog */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>多行注释</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">&frasl;**</i></li>
+												<li><i class="notes">&nbsp;* yiwang.com common CSS</i></li>
+												<li><i class="notes">&nbsp;*</i></li>
+												<li><i class="notes">&nbsp;* containers frame、header、topBar、nav、footer、icon、model、pop、form…</i></li>
+												<li><i class="notes">&nbsp;*</i></li>
+												<li><i class="notes">&nbsp;* @project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yiwang.com</i></li>
+												<li><i class="notes">&nbsp;* @author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zhanghb</i></li>
+												<li><i class="notes">&nbsp;*&frasl;</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>文档头部申明</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">&frasl;**</i></li>
+												<li><i class="notes">&nbsp;* yiwang.com common CSS(简短描述)</i></li>
+												<li><i class="notes">&nbsp;*</i></li>
+												<li><i class="notes">&nbsp;* containers frame、header、topBar、nav、footer、icon…(长描述)</i></li>
+												<li><i class="notes">&nbsp;*</i></li>
+												<li><i class="notes">&nbsp;* @project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yiwang.com (项目名称)</i></li>
+												<li><i class="notes">&nbsp;* @copyright&nbsp;&nbsp;&nbsp;&nbsp;yiwang.com (版权所有)</i></li>
+												<li><i class="notes">&nbsp;* @author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zhanghb (作者)</i></li>
+												<li><i class="notes">&nbsp;* @version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0 (版本) (可选)</i></li>
+												<li><i class="notes">&nbsp;*</i></li>
+												<li><i class="notes">&nbsp;* @colordef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rgb(16,114,191)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link &amp; visible(配色约定)</i></li>
+												<li><i class="notes">&nbsp;* @colordef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rgb(215,0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hover &amp; active</i></li>
+												<li><i class="notes">&nbsp;*&frasl;</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>文档目录</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">&frasl;**</i></li>
+												<li><i class="notes">&nbsp;* CSS Menu</i></li>
+												<li><i class="notes">&nbsp;*</i></li>
+												<li><i class="notes">&nbsp;* Reset</i></li>
+												<li><i class="notes">&nbsp;* Common</i></li>
+												<li><i class="notes">&nbsp;* Color</i></li>
+												<li><i class="notes">&nbsp;* Module</i></li>
+												<li><i class="notes">&nbsp;*&frasl;</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>区块注释</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">&frasl;* Module</i></li>
+												<li><i class="notes">&nbsp;---------------------------------------- */</i></li>
+												<li><i class="notes">/* sidebar menu */</i></li>
+												<li><i class="cssRed">#menu</i>{</li>
+												<li>...</li>
+												<li>}</li>
+												<li><i class="notes">/* submune */</i></li>
+												<li>...</li>
+												<li><i class="notes">/* submune */</i></li>
+												<li>...</li>
+												<li><i class="notes">&nbsp;*&frasl;</i></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>HACK 注释</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.sidebar</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>color: <i class="cssRed">rgb</i>(<i class="num">255,0,0</i>); <i class="notes">/* HACK_IE_LTE_7 */ 针对IE7以下版本</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>color: <i class="cssRed">rgb</i>(<i class="num">255,0,0</i>); <i class="notes">/* HACK_IE_6 */ 针对IE6版本</i></li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>针对所有IE</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">&lt;!--[if IE]&gt;</span></li>
+												<li><span class="notes">&nbsp;&nbsp;&nbsp;&nbsp;您的代码</span></li>
+												<li><span class="notes">&lt;![endif]--&gt;</span></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>针对IE指定版本</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">&lt;!--[if IE 7]&gt;</span></li>
+												<li><span class="notes">&nbsp;&nbsp;&nbsp;&nbsp;您的代码</span></li>
+												<li><span class="notes">&lt;![endif]--&gt;</span></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>针对IE指定以上版本</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">&lt;!--[if gt IE 7]&gt;</span></li>
+												<li><span class="notes">&nbsp;&nbsp;&nbsp;&nbsp;您的代码</span></li>
+												<li><span class="notes">&lt;![endif]--&gt;</span></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>针对IE指定 及 以上版本</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">&lt;!--[if gte IE 7]&gt;</span></li>
+												<li><span class="notes">&nbsp;&nbsp;&nbsp;&nbsp;您的代码</span></li>
+												<li><span class="notes">&lt;![endif]--&gt;</span></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>针对IE指定以下版本</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">&lt;!--[if lt IE 10]&gt;</span></li>
+												<li><span class="notes">&nbsp;&nbsp;&nbsp;&nbsp;您的代码</span></li>
+												<li><span class="notes">&lt;![endif]--&gt;</span></li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>针对IE指定 及 以下版本</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">&lt;!--[if lte IE 9]&gt;</span></li>
+												<li><span class="notes">&nbsp;&nbsp;&nbsp;&nbsp;您的代码</span></li>
+												<li><span class="notes">&lt;![endif]--&gt;</span></li>
+											</ol>
+										</code>
+									</div>
+									<p><span class="mesText">注：只可以用在HTML文档中 , 不支持非IE浏览器 , 注释中不仅CSS有效 , 任何代码都有效</span></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>EDM制作规范</span></h3>
+								</header>
+								<div class="bd">
+									<p><a href="doc/邮件制作规范-新版.pdf" target="_blank"><cite>参考文献：邮件制作规范-新版.pdf</cite></a></p> 
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>清除浮动</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.clearfix</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>zoom: <i class="num">1</i>; <i class="notes">/* HACK_IE_LTE_7 */</i></li>
+												<li>}</li>
+												<li><i class="cssRed">.clearfix:after</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;visibility: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;display: <i class="cssRed">block</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">0</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;content: <i class="num">""</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;clear: <i class="cssRed">both</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>用CSS给 &lt;img&gt; 标签设置宽高，以免图片太大或太小导致显示不完整</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>上下模块的间隔采用<i class="colorRed"> margin-bottom </i>设置</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>使用<i class="colorRed"> text-indent </i>负值隐藏文字时,最好加上<i class="colorRed"> overflow:hidden </i>以免负值不够大,不能隐藏</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>清除 &lt;img&gt; 图片下方的空隙</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="tag">img</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: <i class="cssRed">top</i>;</li>
+												<li>}</li>
+												<li><i class="notes">或</i></li>
+												<li><i class="tag">img</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;display: <i class="cssRed">block</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>有些时候要考虙文字超出的问题 , 以免影响布局，如：商品名称</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* 应用以下设置隐藏多余文字 */</i></li> 
+												<li><i class="tag">p</i>{<i class="notes">/* 一行文字 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">**</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">**</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;line-height: <i class="num">**</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;text-overflow: <i class="cssRed">ellipsis</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;white-space: <i class="cssRed">nowrap</i>;</li>
+												<li>}</li>
+												<li><i class="tag">p</i>{<i class="notes">/* 多行文字 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">**</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">**</i>px;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span><i class="colorRed">display:inline-block </i>间隙问题</span></h3>
+								</header>
+								<div class="bd">
+									<p class="faq"><b class="colorRed">原因：</b>有空格或换行</p>
+									<p class="faq"><b class="colorRed">解决：</b>删除元素后的空格或换行</p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>height 和 line-height 要大于 font-size 至少<i class="colorRed"> 2px </i>,否则英文小写<i class="colorRed"> q , g , y </i>会显示不完整（firefox）</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>不要给 &lt;th&gt; 或 &lt;td&gt; 设置<i class="colorRed"> position:relative </i>因为firefox不支持,不过可以嵌套 &lt;div&gt; 来解决</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE 6\7 不支持 &lt;th&gt; 设置<i class="colorRed"> border </i>样式</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE6,7 下&lt;textarea&gt;不支持<i class="colorRed"> height:100% </i></span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>给 &lt;table&gt; 设置<i class="colorRed"> table-layout:fixed </i>和<i class="colorRed"> width </i>可以解决 &lt;table&gt; 自动伸缩问题</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE6\7 下<i class="colorRed"> overflow:hidden </i>不隐藏</span></h3>
+								</header>
+								<div class="bd">
+									<p class="faq"><b class="colorRed">原因：</b>可能是子元素有<i class="colorRed"> position:relative</i></p>
+									<p class="faq"><b class="colorRed">解决：</b>给最外层同时也设置<i class="colorRed"> position:relative</i></p>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE6,7块元素不支持<i class="colorRed"> display:inline-block </i></span></h3>
+								</header>
+								<div class="bd">
+									<p class="faq"><b class="colorRed">原因：</b>未触发<i class="colorRed"> hoslayout</i></p>
+									<p class="faq"><b class="colorRed">解决：</b>同时设置<i class="colorRed"> *display:inline </i>和<i class="colorRed"> *zoom:1</i></p>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span><i class="colorRed">!important </i>在IE 6 下不能在同一行样式中使用,否则不生效</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.icon</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">#090</i>;</li>
+												<li>}</li>
+												<li><i class="cssRed">.icon</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">#000</i> <i class="cssRed">!important</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE 6,7,8 不支持 input type[text,password] 设置<i class="colorRed"> vertical-align:middle </i>垂直居中其文字</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>在使用控件时最好让他们浮动 , 来避免各浏览器垂直对齐不一致的情况(<i class="colorRed">根据实际情况而定</i>)</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>input type[radio] 和 input type[checkbox] 的 width、height 统一设置为<i class="colorRed"> 13px</i></span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>制作text控件时应使用<i class="colorRed"> padding </i>值实现设计高度要求要</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">/* HTML */</span></li>
+												<li>&lt;input <i class="attr">type</i>=<i class="val">&#34;text&#34;</i> <i class="attr">class</i>=<i class="val">&#34;txt&#34;</i> <i class="attr">value</i>=<i class="val">&#34;&#34;</i> &#47;&gt;</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* CSS */</i></li>
+												<li><i class="cssRed">.txt</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">188</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">14</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;padding: <i class="num">12</i>px <i class="num">5</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border: <i class="num">1</i>px <i class="cssRed">solid</i> <i class="cssRed">rgb</i>(<i class="num">210,210,210</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;font-size: <i class="num">12</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;line-height: <i class="num">14</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: <i class="cssRed">top</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+									<div class="demo">
+										<style>
+											.txt{
+												width: 188px;
+												height: 14px;
+												padding: 12px 5px;
+												border: 1px solid rgb(210,210,210);
+												font-size: 12px;
+												line-height: 14px;
+												vertical-align: top;
+											}
+										</style>
+										<input type="text" class="txt" />
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>制作button按钮控件不用设置<i class="colorRed"> line-height </i>值</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">/* HTML */</span></li>
+												<li>&lt;input <i class="attr">type</i>=<i class="val">&#34;button&#34;</i> <i class="attr">class</i>=<i class="val">&#34;btn&#34;</i> <i class="attr">value</i>=<i class="val">&#34;&#34;</i> &#47;&gt;</li>
+												<li>&lt;button <i class="attr">type</i>=<i class="val">&#34;submit&#34;</i> <i class="attr">class</i>=<i class="val">&#34;btn&#34;</i> <i class="attr">value</i>=<i class="val">&#34;&#34;</i> &gt;&lt;&#47;button&gt;</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* CSS */</i></li>
+												<li><i class="cssRed">.btn</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">200</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">40</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border: <i class="num">1</i>px <i class="cssRed">solid</i> <i class="cssRed">rgb</i>(<i class="num">210,210,210</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;font-size: <i class="num">14</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: <i class="cssRed">top</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+									<div class="demo">
+										<style>
+											.btn{
+												width: 200px;
+												height: 40px;
+												border: 1px solid rgb(210,210,210);
+												font-size: 14px;
+												vertical-align: top;
+											}
+										</style>
+										<input type="button" class="btn" value="按&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;钮" />
+										<button type="button" class="btn" value="">按&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;钮</button>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>select制作技巧</span></h3>
+								</header>
+								<div class="bd">
+									<p><span class="mesText">注：IE6/7不支持 select 定义height值,默认height值为21-22 ;firefox中select数据对齐偏上</span></p> 
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">/* HTML */</span></li>
+												<li>&lt;div <i class="attr">class</i>=<i class="val">&#34;select&#34;</i>&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;select &gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<i class="text">1</i>&lt;&#47;option&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<i class="text">...</i>&lt;&#47;option&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;select&gt;</li>
+												<li>&lt;&#47;div&gt;</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* CSS */</i></li>
+												<li><i class="cssRed">.select</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;position: <i class="cssRed">relative</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;display: <i class="cssRed">inline-block</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">198</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">36</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border: <i class="num">1</i>px <i class="cssRed">solid</i> <i class="cssRed">rgb</i>(<i class="num">210,210,210</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>display: <i class="cssRed">inline</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>zoom: <i class="num">1</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>background: <i class="font">url(img/select_ico.jpg)</i> <i class="cssRed">no-repeat</i> <i class="num">178</i>px <i class="num">10</i>px;</li>
+												<li>}</li>
+												<li><i class="cssRed">.select:hvoer</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>background: <i class="font">url(img/select_ico.jpg)</i> <i class="cssRed">no-repeat</i> <i class="num">178</i>px <i class="num">-40</i>px;</li>
+												<li>}</li>
+												<li><i class="cssRed">.select select</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">200</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">38</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;margin: <i class="num">-1</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;padding: <i class="num">9</i>px <i class="num">5</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border: <i class="num">1</i>px <i class="cssRed">solid</i> <i class="cssRed">rgb</i>(<i class="num">210,210,210</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;outline: <i class="num">0</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;font-size: <i class="num">14</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: <i class="cssRed">middle</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>position: <i class="cssRed">absolute</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>top: <i class="cssRed">9</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>height: <i class="cssRed">22</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">*</i>clip: <i class="cssRed">rect</i>(<i class="num">2</i>px <i class="num">178</i>px <i class="num">20</i>px <i class="num">3</i>px);</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+									<div class="demo">
+										<style>
+											.select{
+												position: relative;
+												overflow: hidden;
+												display: inline-block;
+												width: 198px;
+												height: 36px;
+												border: 1px solid rgb(210,210,210);
+												*display: inline;
+												*zoom: 1;
+												*background: url(img/select_ico.jpg) no-repeat 178px 10px;/* 下拉箭头 */
+											}
+											.select:hover{
+												background-position: 178px -40px;
+											}
+											.select select{
+												width: 200px;
+												height: 38px;
+												margin: -1px;
+												padding: 9px 5px;
+												border: 1px solid rgb(210,210,210);
+												outline: 0;
+												font-size: 14px;
+												vertical-align: middle;
+												*position:absolute;
+												*top: 9px;
+												*height: 22px;
+												*clip: rect(2px 178px 20px 3px);
+											}
+										</style>
+										<div class="select">
+											<select>
+											    <option>1</option>
+											    <option>…</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>制作icon ( 应使用行内标签 )</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="cssRed">.icon</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;position: <i class="cssRed">relative</i>; <i class="notes"> /* 用top值控制icon定位 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;display: <i class="cssRed">inline-block</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>制作实心箭头</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">/* HTML */</span></li>
+												<li>&lt;i <i class="attr">class</i>=<i class="val">&#34;arrowUp&#34;</i> <i class="attr">title</i>=<i class="val">&#34;up&#34;</i>&gt;&lt;&#47;i&gt;</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* CSS */</i></li>
+												<li><i class="cssRed">.arrowUp</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;position: <i class="cssRed">relative</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;display: <i class="cssRed">inline-block</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">0</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">0</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border: <i class="num">10</i>px <i class="cssRed">solid</i> <i class="cssRed">transparent</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border-bottom-color: <i class="cssRed">rgb</i>(<i class="num">200,200,200</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: <i class="cssRed">top</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>width: <i class="num">20</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>height: <i class="num">20</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>background: <i class="font">url(img/arrow1.png)</i> <i class="cssRed">no-repeat</i> <i class="num">0</i>px <i class="num">10</i>px;<i class="notes">/* IE 6 用图片代替 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>border: <i class="num">0</i>;</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+									<div class="demo">
+										<style>
+											.arrowUp{
+												position: relative;
+												overflow: hidden;
+											    display: inline-block;
+											    width: 0;
+											    height: 0;
+											    border: 10px solid transparent;
+											    border-bottom-color: rgb(200,200,200);
+											    font-size:0;
+											    vertical-align: top;
+											    _width: 20px;
+											    _height: 20px;
+											    _background: url(img/arrow1.png) no-repeat 0px 10px;/* IE 6 用图片代替 */
+											    _border: 0;
+											}
+										</style>
+										<i class="arrowUp"></i>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>制作空心箭头</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">/* HTML */</span></li>
+												<li>&lt;span <i class="attr">class</i>=<i class="val">&#34;arrowUp&#34;</i> <i class="attr">title</i>=<i class="val">&#34;up&#34;</i>&gt;&lt;i&gt;&lt;&#47;i&gt;&lt;&#47;span&gt;</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* CSS */</i></li>
+												<li><i class="cssRed">.arrowUp</i>,</li>
+												<li><i class="cssRed">.arrowUp i</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;display: <i class="cssRed">inline-block</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">0</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;height: <i class="num">0</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border: <i class="num">10</i>px <i class="cssRed">solid</i> <i class="cssRed">transparent</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border-bottom-color: <i class="cssRed">rgb</i>(<i class="num">200,200,200</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: <i class="cssRed">top</i>;</li>
+												<li>}</li>
+												<li><i class="cssRed">.arrowUp</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;position: <i class="cssRed">relative</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>width: <i class="num">20</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>height: <i class="num">20</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>background: <i class="font">url(img/arrow1.png)</i> <i class="cssRed">no-repeat</i> <i class="num">0</i>px <i class="num">-11</i>px;<i class="notes">/* IE 6 用图片代替 */</i></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>border: <i class="num">0</i>;</li>
+												<li>}</li>
+												<li><i class="cssRed">.arrowUp</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;position: <i class="cssRed">absolute</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;top: <i class="num">-8</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;left: <i class="num">-9</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;z-index: <i class="num">20</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border-width: <i class="num">9</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;border-bottom-color: <i class="cssRed">rgb</i>(<i class="num">200,200,200</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="cssRed">_</i>display: <i class="cssRed">none</i>;</li>
+								
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+									<div class="demo">
+										<style>
+											.arrowUpA,
+											.arrowUpA i{
+												display: inline-block;
+												width: 0;
+												height: 0;
+												border: 10px solid transparent;
+												border-bottom-color: rgb(200,200,200);
+												vertical-align: top;
+											}
+											.arrowUpA{
+												position: relative;
+												top:0;
+												left:0;
+												_width: 20px;
+												_height: 20px;
+												_border: 0;
+												_background: url(img/arrow1.png) no-repeat 0 -11px;
+											}
+											.arrowUpA i{
+												position: absolute;
+												top: -8px;
+												left: -9px;
+												z-index: 20;
+												overflow:hidden;
+												_display: none;
+												border-bottom-color: rgb(255,255,255);
+												border-width: 9px;
+											}
+										</style>
+										<span class="arrowUpA" title="up"><i></i></span>
+									</div>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>栅格化概念</span></h3>
+								</header>
+								<div class="bd">
+									<p class="p">栅格系统英文为"grid systems"，开始是从平面栅格系统中发展而来，以规则的网格阵列来指导和规范网页中的版面布局以及信息分布 。</p>
+									<p class="p">通俗点讲是一种平面设计的方法与风格，运用固定的格子设计版面布局，其风格工整简洁。</p>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>栅格化的优势</span></h3>
+								</header>
+								<div class="bd">
+									<ul class="list-symbol">
+										<li>规范性，规律性——易于维护，节约成本</li>
+										<li>一致性——提升用户体验</li>
+										<li>灵活性——便于整体布局和区域设计</li>
+										<li>模块化——便于模块化设计，重复利用</li>
+									</ul>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>栅格化原理与运用</span></h3>
+								</header>
+								<div class="bd">
+									<p><a href="doc/网页栅格设计系统.pdf" target="_blank"><cite>参考文献：网页栅格设计系统.pdf</cite></a></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>语义化概念</span></h3>
+								</header>
+								<div class="bd">
+									<p class="p">首先是关于语义（Semantics）和默认样式的区别，默认样式是浏览器设定的一些常用tag的表现形式，个人认为他的主要目的就是让大家直观的认识标签(markup)和属性(attribute)的用途和作用，很明显Hx系列看起来很像标题，因为拥有粗体和较大的字号。&lt;strong&gt;,&lt;em&gt;用来区别于其他文字，起到了强调的作用。至于列表和表格很明显的告诉你他们是做什么的。</p>
+									<p class="p">其次，语义化的网页的好处，最主要的就是对搜索引擎友好，又了良好的结构和语义你的网页内容自然容易被搜索引擎抓取，你网站的推广便可以省下不少的功夫。</p>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>部分标签语义</span></h3>
+								</header>
+								<div class="bd">
+								 	<p class="p">写语义化的 HTML 结构其实很简单，首先掌握 HTML 中各个标签的语义，在看到内容的时候想想用什么标签能更好的描述它，是什么就用什么标签。</p>
+									<ul class="list-symbol">
+										<li>&lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt;、&lt;h4&gt;、&lt;h5&gt;、&lt;h6&gt; 作为标题使用，并且依据重要性递减</li>
+										<li>&lt;p&gt; 段落标记，&lt;p&gt; 中的文字会自动换行，而且换行的效果优于 &lt;br&#47;&gt;</li>
+										<li>&lt;ul&gt;、&lt;li&gt; 无序列表，这个被大家广泛的使用，&lt;ul&gt; 还被更多的用于导航条</li>
+										<li>&lt;ol&gt;、&lt;li&gt; 有序列表</li>
+										<li>&lt;dl&gt;、&lt;dt&gt;、&lt;dd&gt; 就是“定义列表”，比如词典里面的词的解释、定义就可以用这种列表</li>
+										<li>&lt;em&gt; 是用作强调</li>
+										<li>&lt;strong&gt; 是用作强调</li>
+										<li>&lt;table&gt;、&lt;tr&gt;、&lt;td&gt;、&lt;caption&gt; 如果是为了标记列表的数据，就应该使用表格了。
+											<ul>
+												<li>&lt;thead&gt;为表格中的表头内容</li>
+												<li>&lt;tbody&gt;为表格中的主体内容</li>
+												<li>&lt;tfoot&gt;为表格中的表注内容（脚注）</li>
+												<li>&lt;caption&gt;为表格标题</li>
+												<li>&lt;th&gt;为表头单元格</li>
+												<li>&lt;tr&gt;为表格中的行</li>
+												<li>&lt;td&gt;为表格中的单元</li>
+											</ul>
+										</li>
+										<li>&lt;del&gt;删除，知道&lt;del&gt;就不要再用 &lt;s&gt; 做删除线了，用 &lt;del&gt; 显然更具有语义化</li>
+										<li>&lt;ins&gt; 是表示插入</li>
+										<li>&lt;abbr&gt; 标签是表示 web 页面上的简称</li>
+										<li>&lt;q&gt; 来标记简短的单行引用</li>
+										<li>&lt;blockquote&gt; 块引用</li>
+										<li>&lt;cite&gt; 参考文献的引用</li>
+									</ul>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>模块化的目的</span></h3>
+								</header>
+								<div class="bd">
+									<p class="p">实现多人协同开发页面，提高页面研发速度和降低维护难度。研发速度的提升体现在多人协同并行开发， 维护难度体现在减少版本的混乱，根据模块区分版本降低版本间代码冲突和文件错误覆盖。</p>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>拆分页面模块</span></h3>
+								</header>
+								<div class="bd">
+									<p class="p">一个页面有很多个小单元模块组成，他来自有原始需求文档，比如logo，导航，内容1，内容2，内容3，内容4，尾部导航，版权信息等等；根据他们就可以拆分出基本的模块。</p>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>划分模块的原则</span></h3>
+								</header>
+								<div class="bd">
+									<ul class="list-symbol">
+										<li>哪些模块外观结构一样，我们就可以把它们归为一个模块</li>
+										<li>模块的取名要符合语义化</li>
+										<li>模块取名应加"mod-"前缀；如 .mod-property</li>
+										<li>不要给header、mainNav、footer、pop等常用模块加"mod-"前缀</li>
+										<li>编写模块样式时，选择器使用要具有独立性</li>
+										<li>编写模块样式时，要先将公共样式提取编写；然后私有样式要用独立的class命名</li>
+										<li>模块不应设置width和height值，要具有很好的适应性</li>
+										<li>模块一率采用margin-bottom设置间隔</li>
+									</ul>
+									<p><a href="doc/网页开发模块化.pdf" target="_blank"><cite>参考文献：网页开发模块化.pdf</cite></a></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>"内容"与"容器" 分离</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">/* HTML */</span></li>
+												<li>&lt;div <i class="attr">class</i>=<i class="val">&#34;bd&#34;</i>&gt;<span class="notes">&lt;!-- 容器 --&gt;</span></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <i class="attr">class</i>=<i class="val">&#34;module&#34;</i>&gt;<span class="notes">&lt;!-- 内容 --&gt;</span></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;div&gt;</li>
+												<li>&lt;&#47;div&gt;</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* CSS */</i></li>
+												<li><i class="cssRed">.bd</i>{<span class="notes">/* 容器 */</span></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;width: <i class="num">500</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;margin: <i class="num">10</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>}</li>
+												<li><i class="cssRed">.module</i>{<span class="notes">/* 内容 */</span></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">overflow</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;padding: <i class="num">5</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">rgb</i>(<i class="num">0,255,0</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>"结构性样式"与"表现性样式" 分离</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li><span class="notes">/* HTML */</span></li>
+												<li>&lt;div <i class="attr">class</i>=<i class="val">&#34;module moduleSale&#34;</i>&gt;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>&lt;&#47;div&gt;</li>
+											</ol>
+										</code>
+									</div>
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><i class="notes">/* CSS */</i></li>
+												<li><i class="cssRed">.module</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;position: <i class="cssRed">relative</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;overflow: <i class="cssRed">hidden</i>;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>}</li>
+												<li><i class="cssRed">.moduleSale</i>{</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;background: <i class="font">url(img/select_ico.jpg)</i> <i class="cssRed">no-repeat</i> <i class="num">178</i>px <i class="num">-40</i>px;</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;color: <i class="cssRed">rgb</i>(<i class="num">0,255,0</i>);</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;...</li>
+												<li>}</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>优点 与 缺点</span></h3>
+								</header>
+								<div class="bd">
+									<p class="line"><b>优点</b>：快速组合任意类型的页面；</p>
+									<p class="line"><b>缺点</b>：HTML文件充满class，使用的class名称非语义化。</p>
+									<p><span class="mesText">注：面向对象CSS仅做参考，实际使用再行商议</span></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>block 元素</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table1">
+										<colgroup>
+											<col width="40" />
+											<col width="160" />
+											<col width="400" />
+											<col width="150" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td><b>html</b></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td><b>body</b></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td><b>div</b></td>
+												<td>块元素基本标签</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td><b>h1~h6</b></td>
+												<td>标题</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td><b>ul</b></td>
+												<td>无序列表</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td><b>ol</b></td>
+												<td>有序列表</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>7</th>
+												<td><b>li</b></td>
+												<td>定义列表项目</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>8</th>
+												<td><b>dl</b></td>
+												<td>定义列表</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>9</th>
+												<td><b>dt</b></td>
+												<td>定义列表中的项目</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>10</th>
+												<td><b>dd</b></td>
+												<td>定义条目的定义部分</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>11</th>
+												<td><b>p</b></td>
+												<td>段落</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>12</th>
+												<td><b>form</b></td>
+												<td>表单</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>13</th>
+												<td><b>fieldset</b></td>
+												<td>form组</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>14</th>
+												<td><b>legend</b></td>
+												<td>为fieldset定义标题</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>15</th>
+												<td><b>table</b></td>
+												<td>表格</td>
+												<td>display:table</td>
+											</tr>
+											<tr>
+												<th>16</th>
+												<td><b>address</b></td>
+												<td>文档作者或拥有者的联系信息</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>17</th>
+												<td><b>blockquote</b></td>
+												<td>块引用</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>18</th>
+												<td>pre</td>
+												<td>预格式化的文本</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>19</th>
+												<td>hr</td>
+												<td>水平分隔线</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>20</th>
+												<td>menu</td>
+												<td>排列表单控件</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>21</th>
+												<td>article</td>
+												<td>文章</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>22</th>
+												<td>aside</td>
+												<td>旁白</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>23</th>
+												<td>header</td>
+												<td>头部</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>24</th>
+												<td>footer</td>
+												<td>页脚</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>25</th>
+												<td>section</td>
+												<td>文档中的节</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>26</th>
+												<td>figcaption</td>
+												<td>figure 元素的标题</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>27</th>
+												<td>figure</td>
+												<td>媒介内容的分组</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>28</th>
+												<td>details</td>
+												<td>元素的细节</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>29</th>
+												<td>summary</td>
+												<td>details 元素的标题</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>30</th>
+												<td>nav</td>
+												<td>导航链接</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>31</th>
+												<td>hgroup</td>
+												<td>标题组合</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>32</th>
+												<td>rt</td>
+												<td>ruby 注释的解释?</td>
+												<td>HTML5</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>inline 元素</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table1">
+										<colgroup>
+											<col width="40" />
+											<col width="160" />
+											<col width="400" />
+											<col width="150" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td><b>span</b></td>
+												<td>行内元素基本标签</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td><b>a</b></td>
+												<td>锚点</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td><b>em</b></td>
+												<td>强调</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td><b>strong</b></td>
+												<td>语气更强的强调</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td><b>i</b></td>
+												<td>斜体</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td><b>b</b></td>
+												<td>粗体</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>7</th>
+												<td><b>label</b></td>
+												<td>表单标签</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>8</th>
+												<td><b>input</b></td>
+												<td>输入框</td>
+												<td>inline-block</td>
+											</tr>
+											<tr>
+												<th>9</th>
+												<td><b>img</b></td>
+												<td>图片</td>
+												<td>inline-block</td>
+											</tr>
+											<tr>
+												<th>10</th>
+												<td><b>select</b></td>
+												<td>下拉列表</td>
+												<td>inline-block</td>
+											</tr>
+											<tr>
+												<th>11</th>
+												<td><b>textarea</b></td>
+												<td>多行的文本输入控件</td>
+												<td>inline-block</td>
+											</tr>
+											<tr>
+												<th>12</th>
+												<td><b>sub</b></td>
+												<td>下标</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>13</th>
+												<td><b>sup</b></td>
+												<td>上标</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>14</th>
+												<td><b>abbr</b></td>
+												<td>缩写</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>15</th>
+												<td><b>q</b></td>
+												<td>简短的引用</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>16</th>
+												<td><b>cite</b></td>
+												<td>引用</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>17</th>
+												<td>code</td>
+												<td>计算机代码文本</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>18</th>
+												<td>var</td>
+												<td>变量</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>19</th>
+												<td>dfn</td>
+												<td>定义字段</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>20</th>
+												<td>objcet</td>
+												<td>嵌入的对象</td>
+												<td>inline-block</td>
+											</tr>
+											<tr>
+												<th>21</th>
+												<td>bdo</td>
+												<td>文字方向</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>22</th>
+												<td>kbd</td>
+												<td>键盘文本</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>23</th>
+												<td>samp</td>
+												<td>样本文本</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>24</th>
+												<td>meter</td>
+												<td>预定义范围内的度量inline-block</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>25</th>
+												<td>mark</td>
+												<td>定义带有记号的文本</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>26</th>
+												<td>dialog</td>
+												<td>定义对话框或窗口</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>27</th>
+												<td>command</td>
+												<td>定义命令按钮</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>28</th>
+												<td>bdi</td>
+												<td>文本方向</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>29</th>
+												<td>embed</td>
+												<td>外部交互内容或插件</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>30</th>
+												<td>canvas</td>
+												<td>定义图形inline-block</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>31</th>
+												<td>keygen</td>
+												<td>生成密钥inline-block</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>32</th>
+												<td>output</td>
+												<td>输出的一些类型</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>33</th>
+												<td>progress</td>
+												<td>任何类型的任务的进度inline-block</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>34</th>
+												<td>ruby</td>
+												<td>ruby 注释</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>35</th>
+												<td>rp</td>
+												<td>若浏览器不支持 ruby 元素显示的内容?</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>36</th>
+												<td>time</td>
+												<td>日期/时间</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>37</th>
+												<td>video</td>
+												<td>视频播放器inline-block</td>
+												<td>HTML5</td>
+											</tr>
+											<tr>
+												<th>38</th>
+												<td>audio</td>
+												<td>音频播放器inline-block</td>
+												<td>HTML5</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>可变元素</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table1">
+										<colgroup>
+											<col width="40" />
+											<col width="160" />
+											<col width="400" />
+											<col width="150" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td><b>button</b></td>
+												<td>按钮</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td><b>del</b></td>
+												<td>删除文本</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td><b>ins</b></td>
+												<td>插入文本</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td>iframe</td>
+												<td>行内框架</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td>map</td>
+												<td>图片区块</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>选择器的写法</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes css">
+											<ol>
+												<li><span class="notes">/* CSS */</span></li>
+												<li><i class="tag">div</i> <i class="tag">div</i><span class="notes">/* 有空格 */</span></li>
+												<li><i class="cssRed">.classA</i><i class="cssRed">.classB</i><span class="notes">/* IE6不支持 */</span></li>
+												<li><i class="cssRed">.classA</i> <i class="cssRed">.classB</i><span class="notes">/* 有空格 */</span></li>
+												<li><i class="tag">div</i><i class="cssRed">.class</i></li>
+												<li><i class="cssRed">#id</i><i class="cssRed">.class</i></li>
+												<li><i class="tag">div</i>&gt;<i class="tag">div</i></li>
+												<li>...</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>伪类 和 伪元素</span></h3>
+								</header>
+								<div class="bd">
+									<p class="line">CSS3提倡伪类 用一个“:”链接选择符与伪类；例如 a:hover{…};</p>
+									<p class="line">CSS3提倡伪元素 用两个“::”链接选择符与伪元素；例如 div::after{…};</p>
+									<p class="line colorRed">注：IE 6变相支持::first-letter {}和::first-line {};但是需要在{}前加个空格</p>
+									<p><span class="mesText">特别提醒：IE 6\7\8不支持“::”写法，所以我们不使用“::”写法</span></p>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE 6 支持的选择器</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2">
+										<colgroup>
+											<col width="150" />
+											<col width="225" />
+											<col width="150" />
+											<col width="225" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>*</td>
+												<td>通配符</td>
+												<td>a:hover</td>
+												<td>只支持a标签使用</td>
+											</tr>
+											<tr>
+												<td>a:link</td>
+												<td>只支持a标签使用</td>
+												<td>::first-letter</td>
+												<td>{}前需加空格才有效</td>
+											</tr>
+											<tr>
+												<td>a:visited</td>
+												<td>只支持a标签使用</td>
+												<td>::first-line</td>
+												<td>{}前需加空格才有效</td>
+											</tr>
+											<tr>
+												<td>a:active</td>
+												<td>只支持a标签使用</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE 7 支持的选择器</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2">
+										<colgroup>
+											<col width="150" />
+											<col width="225" />
+											<col width="150" />
+											<col width="225" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>元素选择符(all)</td>
+												<td>*,class,id,tag</td>
+												<td>tag:hover</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>关系选择符(all)</td>
+												<td>E F,E+F,E>F,E~F</td>
+												<td>tag:active</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>属性选择符(all)</td>
+												<td>P[class="name"]</td>
+												<td>::first-letter</td>
+												<td>伪元素</td>
+											</tr>
+											<tr>
+												<td>tag:link</td>
+												<td></td>
+												<td>::first-line</td>
+												<td>伪元素</td>
+											</tr>
+											<tr>
+												<td>tag:visited</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE 6/7 不支持的选择器</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2">
+										<colgroup>
+											<col width="150" />
+											<col width="225" />
+											<col width="150" />
+											<col width="225" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>:after</td>
+												<td></td>
+												<td>:before</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>IE 8 支持的选择器</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2">
+										<colgroup>
+											<col width="150" />
+											<col width="225" />
+											<col width="150" />
+											<col width="225" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>IE6,7全部选择器</td>
+												<td></td>
+												<td>@page:right</td>
+												<td>伪类</td>
+											</tr>
+											<tr>
+												<td>:focus</td>
+												<td>伪类</td>
+												<td>@page:left</td>
+												<td>伪类</td>
+											</tr>
+											<tr>
+												<td>:lang</td>
+												<td>伪类</td>
+												<td>:after</td>
+												<td>伪元素</td>
+											</tr>
+											<tr>
+												<td>@page:first</td>
+												<td>伪类</td>
+												<td>:before</td>
+												<td>伪元素</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>firefox 不支持的选择器</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2">
+										<colgroup>
+											<col width="150" />
+											<col width="225" />
+											<col width="150" />
+											<col width="225" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>@page:first</td>
+												<td></td>
+												<td>@page:right</td>
+												<td>伪类</td>
+											</tr>
+											<tr>
+												<td>@page:left</td>
+												<td>伪类</td>
+												<td>::selection</td>
+												<td>实验性,需加前缀-moz-</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>IE 6,7,8 不支持的样式属性(不含CSS3)</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2" id="ie678">
+										<colgroup>
+											<col width="450" />
+											<col width="300" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>position:fixed</td>
+												<td>IE 6不支持</td>
+											</tr>
+											<tr>
+												<td>除了display:inline\list-item\inline-block</td>
+												<td>IE 6不支持</td>
+											</tr>
+											<tr>
+												<td>visibility:collapse</td>
+												<td>IE 6不支持</td>
+											</tr>
+											<tr>
+												<td>min-width\max-width</td>
+												<td>IE 6不支持</td>
+											</tr>
+											<tr>
+												<td>min-height\max-height</td>
+												<td>IE 6不支持</td>
+											</tr>
+											<tr>
+												<td>border-color:transparent</td>
+												<td>IE 6不支持</td>
+											</tr>
+											<tr>
+												<td>块元素display:inline-blcok</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>white-space:pro-wrap\pre-line</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>border-spacing</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>caption-side</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>empty-cells</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>content</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>counter-increment</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>counter-reset</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>quotes</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>outline</td>
+												<td>IE 6,7不支持</td>
+											</tr>
+											<tr>
+												<td>opacity</td>
+												<td>IE 6,7,8不支持</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>具有继承性的样式</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2">
+										<colgroup>
+											<col width="40" />
+											<col width="335" />
+											<col width="40" />
+											<col width="335" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>color</td>
+												<th>13</th>
+												<td>word-break</td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>font</td>
+												<th>14</th>
+												<td>word-spacing</td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>line-height</td>
+												<th>15</th>
+												<td>word-wrap</td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td>text-align</td>
+												<th>16</th>
+												<td>direction</td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td>text-indent</td>
+												<th>17</th>
+												<td>cursor</td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td>text-justify</td>
+												<th>18</th>
+												<td>zoom</td>
+											</tr>
+											<tr>
+												<th>7</th>
+												<td>vertical-align</td>
+												<th>19</th>
+												<td>quotes</td>
+											</tr>
+											<tr>
+												<th>8</th>
+												<td>white-space</td>
+												<th>20</th>
+												<td>border-collapse</td>
+											</tr>
+											<tr>
+												<th>9</th>
+												<td>letter-spacing</td>
+												<th>21</th>
+												<td>border-spacing  IE8+</td>
+											</tr>
+											<tr>
+												<th>10</th>
+												<td>list-style</td>
+												<th>22</th>
+												<td>empty-cells  IE8+</td>
+											</tr>
+											<tr>
+												<th>11</th>
+												<td>visibility</td>
+												<th>23</th>
+												<td>text-shadow  CSS3</td>
+											</tr>
+											<tr>
+												<th>12</th>
+												<td>table-layout</td>
+												<th></th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>可触发hoslayout的属性</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table2">
+										<colgroup>
+											<col width="40" />
+											<col width="600" />
+											<col width="110" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>zoom (初normal外任意值)</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>display: inline-block</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>height (初normal外任意值)</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td>width (初normal外任意值)</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td>float: left\right</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td>position: absolute;</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>7</th>
+												<td>min-width\min-height (任意值)</td>
+												<td>IE7支持</td>
+											</tr>
+											<tr>
+												<th>8</th>
+												<td>max-width\max-width (除none外任意值)</td>
+												<td>IE7支持</td>
+											</tr>
+											<tr>
+												<th>9</th>
+												<td>overflow-x\overflow-y\overflow (除visible外任意值,仅用于块元素</td>
+												<td>IE7支持</td>
+											</tr>
+											<tr>
+												<th>10</th>
+												<td>position: fixed;</td>
+												<td>IE7支持</td>
+											</tr>
+											<tr>
+												<th>11</th>
+												<td>...</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>content-box盒模型</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table1">
+										<colgroup>
+											<col width="375" />
+											<col width="375" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>input[text]</td>
+												<td>input[time]</td>
+											</tr>
+											<tr>
+												<td>input[password]</td>
+												<td>input[month]</td>
+											</tr>
+											<tr>
+												<td>input[image]</td>
+												<td>input[number]</td>
+											</tr>
+											<tr>
+												<td>input[file]</td>
+												<td>input[range]</td>
+											</tr>
+											<tr>
+												<td>input[hidden]</td>
+												<td>input[url]</td>
+											</tr>
+											<tr>
+												<td>input[date]</td>
+												<td>input[email]</td>
+											</tr>
+											<tr>
+												<td>input[datetime]</td>
+												<td>input[week]</td>
+											</tr>
+											<tr>
+												<td>input[datetime-local]</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>border-box盒模型</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table1">
+										<colgroup>
+											<col width="375" />
+											<col width="375" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>input[button]</td>
+												<td>input[checkbox]</td>
+											</tr>
+											<tr>
+												<td>input[reset]</td>
+												<td>button</td>
+											</tr>
+											<tr>
+												<td>input[sumbit]</td>
+												<td>select</td>
+											</tr>
+											<tr>
+												<td>input[radio]</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									<p><span class="mesText">注：由于盒模型的不同，在制作控件样式的时候要注意</span></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item -->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>实验性样式的写法</span></h3>
+								</header>
+								<div class="bd">
+									<p>
+										<img src="img/experiment.jpg" alt="" />
+									</p> 
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>实验性样式的支持</span></h3>
+								</header>
+								<div class="bd">
+									<table class="table table3">
+										<colgroup>
+											<col width="200" />
+											<col width="90" />
+											<col width="90" />
+											<col width="90" />
+											<col width="90" />
+											<col width="90" />
+										</colgroup>
+										<caption>实验性样式的支持(不包含弹性盒模型)</caption>
+										<thead>
+											<tr>
+												<th>样式名\版本</th>
+												<th>IE</th>
+												<th>Firefox</th>
+												<th>Safari</th>
+												<th>Chrome</th>
+												<th>Opera</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>border-radius</th>
+												<td></td>
+												<td>3.5</td>
+												<td>3.0-5.1</td>
+												<td>1.0–4.0</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>box-shadow</th>
+												<td></td>
+												<td>3.5</td>
+												<td>3.0-5.1</td>
+												<td>1.0–9.0</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>border-image</th>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>10.5-14.0</td>
+											</tr>
+											<tr>
+												<th>box-sizing</th>
+												<td>8</td>
+												<td>4-18</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>transform</th>
+												<td>9-10</td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td>11.5-12.5</td>
+											</tr>
+											<tr>
+												<th>transform-origin</th>
+												<td>9-10</td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td>11.5-12.5</td>
+											</tr>
+											<tr>
+												<th>transition</th>
+												<td>10</td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td>11.5-12.5</td>
+											</tr>
+											<tr>
+												<th>animation</th>
+												<td>10</td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>columns</th>
+												<td></td>
+												<td>9-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-width</th>
+												<td></td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-span</th>
+												<td></td>
+												<td></td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-rule</th>
+												<td></td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-gap</th>
+												<td></td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-fill</th>
+												<td></td>
+												<td>13-18</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-count</th>
+												<td></td>
+												<td>4-18</td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-break-inside</th>
+												<td></td>
+												<td></td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-break-before</th>
+												<td></td>
+												<td></td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>column-break-after</th>
+												<td></td>
+												<td></td>
+												<td>5.1.7</td>
+												<td>13-23</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>user-select</th>
+												<td>10</td>
+												<td>4</td>
+												<td>5.1.7</td>
+												<td>13</td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>text-align-last</th>
+												<td></td>
+												<td>12.0-28.0</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>tab-size</th>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>10.6-14.0</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>使用语义化的标签编写页面</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>使用外部CSS和JS</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>减少或删除注释 , 注释是给程序员看的</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>减少表格 , 尤其是表格嵌套</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>&lt;h1&gt; 标签每个页面只能出现一次 , &lt;h1&gt; 不要用在 LOGO 上</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>&lt;h1&gt; 用在页面主体内容唯一的地方。如：单个文章列表页,文章或产品内容页</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>&lt;a&gt; 标签必需加 title，&lt;img &#47;&gt; 标签必需加 alt</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>使用 &lt;meta &#47;&gt; 标签</span></h3>
+								</header>
+								<div class="bd">
+									<div class="example example2">
+										<code class="codes html">
+											<ol>
+												<li>&lt;meta <i class="attr">name</i>=<i class="val">"author"</i> <i class="attr">content</i>=<i class="val">"作者"</i> /&gt;</li>
+												<li>&lt;meta <i class="attr">name</i>=<i class="val">"keywords"</i> <i class="attr">content</i>=<i class="val">"关键词1|关键词2|关键词n"</i> /&gt;</li>
+												<li>&lt;meta <i class="attr">name</i>=<i class="val">"description"</i> <i class="attr">content</i>=<i class="val">"网页描述内容"</i> /&gt;</li>
+											</ol>
+										</code>
+									</div>
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>禁止对文字使用与背景色一样的文字颜色以达到隐藏的效果</span></h3>
+								</header>
+							</article>
+						</div>
+						<!-- c-item end-->
+						<!-- c-item-->
+						<div class="c-item">
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>将 CSS 合并成一个文件 , 压缩代码</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>尽可能的合并元素图片以减少 HTTP 请求，图片之间空隙尽量要小，图片文件也不宜太大 , 图片格式优先选用 PNG8 , 效果不佳可以使用 PNG24</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>不要在 HTML 中缩放图像</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>把样式表置于顶部</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>避免使用 CSS表达式（Expression）</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>用&lt;link&gt;代替<i class="colorRed"> @import </i></span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>避免使用滤镜</span></h3>
+								</header>
+							</article>
+							<article class="c-list">
+								<header class="hd">
+									<h3>&rArr;<span>使用外部 CSS</span></h3>
+								</header>
+								<div class="bd">
+								</div>
+							</article>
+							<article class="c-list last">
+								<header class="hd">
+									<h3>&rArr;<span>削减 CSS</span></h3>
+								</header>
+								<div class="bd">
+									<p><a href="doc/yahoo团队：网站性能优化的35条黄金守则.pdf" target="_blank"><cite>参考文献：yahoo团队：网站性能优化的35条黄金守则.pdf</cite></a></p>
+								</div>
+							</article>
+						</div>
+						<!-- c-item end-->
+					</div>
+					<!-- content end-->
+				</div>
+				<!-- main end -->
+				<!--<aside id="sidebarB">
+					<nav id="submenu">
+						<ul>
+							<li><a href="javascript:void(0)" class="on" title="使用 html5的文档声明 &lt;!DOCTYPE html&gt;">使用 html5的文档声明 &lt;!DOCTYPE html&gt;</a></li>
+						</ul>
+					</nav>
+				</aside>-->
+			</div>
+			<!-- container end -->
+			<footer id="footer">
+				
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

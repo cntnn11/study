@@ -1,0 +1,167 @@
+/**
+ * @author		jiangtao.cao
+ * @version		1.0
+ * @date		2014-4-28
+ * 
+ */
+
+/* Base
+ ---------------------------------------- */
+html,body{
+	width:100%;
+	height:100%;
+}
+body{
+	background:rgb(255,255,255);
+	color:rgb(0,0,0);
+	font:62.5% "Microsoft YaHei",arial;
+}
+a{
+	color:rgb(16,114,191);
+	text-decoration:none;
+}
+a:hover{
+	color:rgb(215,0,0);
+}
+img{
+	vertical-align:top;
+}
+ins{
+	text-decoration:none;
+}
+/* Structure
+ ---------------------------------------- */
+
+.wrapper{
+	min-width:1200px;
+}
+#header{
+	width:100%;
+	height:50px;
+}
+#header .wrap{
+	width:1200px;
+	margin:0 auto;
+}
+#container{
+	width:1200px;
+	margin:0 auto 10px;
+	*zoom:1;
+}
+#container:after{
+	visibility:hidden;
+	display:block;
+	height:0;
+	content:"";
+	clear:both;
+}
+#sidebar{
+	overflow:hidden;
+	*display:inline;
+	float:left;
+	width:190px;
+	margin:0 10px;
+}
+#main{
+	position:relative;
+	float:left;
+	/*width:810px;*/
+	width:980px;
+	margin-right:10px;
+}
+#sidebarB{
+	overflow:hidden;
+	*display:inline;
+	float:right;
+	width:160px;
+	margin:0 10px;
+}
+#content{
+	min-height:500px;
+}
+
+/* Layout
+ ---------------------------------------- */
+
+/* header */
+.header{
+	margin-bottom:10px;
+	background:rgb(110,200,110);
+	-webkit-box-shadow:0 1px 2px rgb(100,100,100);
+	-moz-box-shadow:0 1px 2px rgb(100,100,100);
+	box-shadow:0 1px 2px rgb(110,100,110);
+}
+.header h1{
+	padding:0 10px;
+	color:rgb(255,255,255);
+	font-size:2em;
+	font-weight:normal;
+	line-height:50px;
+	text-shadow:2px 2px 3px rgb(100,100,100);
+	cursor:default;
+}
+
+/* content item */
+.c-item{
+	display:none;
+	margin:10px;
+	margin-bottom:0;
+}
+.c-list{
+	margin-bottom:10px;
+	border-bottom:1px dashed rgb(210,210,210);
+}.c-list .hd{
+	margin-bottom:10px;
+}
+.c-list .hd h3{
+	color:rgb(50,50,50);
+	font-size:1.4em;
+}
+.c-list .hd h3:hover ins{
+	color:rgb(215,0,0);
+}
+.c-list .hd h3 span{
+	margin-left:5px;
+}
+.c-list .bd{
+	padding-top:10px;
+	*zoom:1
+}
+.c-list .bd:after{
+	visibility:hidden;
+	display:block;
+	height:0;
+	content:"";
+	clear:both;
+}
+/* c-list p */
+.c-list .bd p,
+.c-list .list-symbol,
+.c-list .demo{
+	margin-bottom:10px;
+	padding:0 31px;
+	padding:0 4%;
+}
+.c-list .bd p{
+	font-size:1.2em;
+}
+.c-list .bd p.p{
+	margin-bottom:5px;
+	font-size:1.4em;
+	line-height:28px;
+	text-indent:2em;
+}
+.c-list .bd p.faq,
+.c-list .bd .line{
+	font-size:1.4em;
+}
+/* c-list table */
+.c-list .table{
+	width:750px;
+	margin:0 31px 10px;
+	color:rgb(50,50,50);
+	font-family:"Microsoft YaHei";
+}
+.c-list .table2 thead tr{
+	border-bottom:1px solid rgb(150,150,150);
+}

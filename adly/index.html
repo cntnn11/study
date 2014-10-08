@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charse="utf-8" >
+<head>
+	<title>刘莹广告右下角浮层</title>
+	<link rel="stylesheet" type="text/css" href="./ad_ly.css">
+</head>
+<body>
+<div class="ad-block" id="ly_ad">
+
+	<div class="ad-nav-block cf">
+		<div class="ad-box-nav">
+			<span>特别关注</span>
+			<span> <a id="ad_dpp" href="javascrip:void(0);" onclick="fAd('prev');">&lt;</a> <strong id="ad_pn">1</strong>/<strong id="ad_pt">2</strong> <a id="ad_dpn" href="javascrpt:void(0);" onclick="fAd('next')" >&gt;</a> </span>
+			<span class="rf"><a href="javascript:void(0)" onclick="fAdNone();">关闭</a></span>
+		</div>
+	</div>
+	<div class="ad-content-block">
+		<div id="ad-box-content" next="0" prev="0">
+			<a id="ad-content-tit" href="#" target="_blank"><strong>一二三四五六七八九十一二三四五六七八九十</strong></a>
+			<a id="ad-content-img" href="#" target="_blank"><img src="http://ww1.sinaimg.cn/bmiddle/73cc1d9fgw1ek095bbpmej202s02s0sm.jpg" width="60px" height="60" /></a>
+			<p id="ad-content-body">奥斯卡的减肥哈市了地方哈斯卢卡斯地方刻录机哈桑来看就好了啊据了解</p>
+		</div>
+		<div class="ad-box-sel"><a class="rf" id="ad_sel" href="#" target="_blank">查看 &raquo;</a></div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+function fAdNone()
+{
+	document.getElementById( 'ly_ad' ).style.display = 'none';
+}
+function fAd( do_mouse )
+{
+	var ad_data	= [
+		/*{url:"http://www.jikexueyuan.com", tit: "这是第一个标题", img: "http://ww1.sinaimg.cn/bmiddle/73cc1d9fgw1ek095bbpmej202s02s0sm.jpg", content: "一二三四五六七八九十一二三四五六七八九十"},
+		{url:"http://www.eoeandroid.com", tit: "第二个标题", img: "http://eventdove.com/resource/20140925/5576_20140925125237023.JPG", content: "一二三四五六七八九空间啊哈拉黑法拉克水立方十一二三四五六七八九十"},*/
+		{url:"http://www.jikexueyuan.com/course.html", tit: "标题3 阿斯顿发生", img: "http://ww1.sinaimg.cn/bmiddle/73cc1d9fgw1ek095bbpmej202s02s0sm.jpg", content: "爱很烂东方宏辉啊uhdfla93q48q87阿道夫垃圾啊拉倒了爱的fago8a8faudfo83大概嘎多看哈"}
+	];
+	var num_max	= ad_data.length;
+	
+	// 设置翻页
+	if( do_mouse === 'prev' )
+	{
+		var num	= parseInt( document.getElementById( 'ad-box-content' ).getAttribute('prev') );
+		num		= num<0 ? num_max-1 : num;
+	}
+	else
+	{
+		var num	= parseInt( document.getElementById( 'ad-box-content' ).getAttribute('next') );
+		num		= num>=num_max ? 0 : num ;
+	}
+	var next	= num+1>num_max ? 0 : num+1;
+	var prev	= num-1<0 ? num_max-1 : num-1;
+
+//console.log('动作 -> ', do_mouse, '当前 -> ', num, ' 下一个 -> ', next, ' 上一个 -> ', prev );
+	document.getElementById( 'ad-box-content' ).setAttribute('next', next);
+	document.getElementById( 'ad-box-content' ).setAttribute('prev', prev);
+	document.getElementById( 'ad-content-tit' ).innerHTML	= "<strong>"+ad_data[num]['tit']+"</strong>";
+	document.getElementById( 'ad-content-tit' ).href		= ad_data[num]['url'];
+	document.getElementById( 'ad-content-img' ).innerHTML	= "<img src='"+ad_data[num]['img']+"' width='60px' height='60px' />";
+	document.getElementById( 'ad-content-img' ).href		= ad_data[num]['url'];
+	document.getElementById( 'ad-content-body' ).innerHTML	= ad_data[num]['content'];
+	document.getElementById( 'ad_sel' ).href		= ad_data[num]['url'];
+	document.getElementById( 'ad_pn' ).innerHTML	= num+1;
+	document.getElementById( 'ad_pt' ).innerHTML	= num_max;
+};
+fAd();
+setInterval( fAd , 2000 );
+
+</script>
+</body>
+</html>

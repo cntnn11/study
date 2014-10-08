@@ -1,0 +1,410 @@
+/**
+ * @author		jiangtao.cao
+ * @version		1.0
+ * @date		2014-4-28
+ * 
+ */
+
+/* Reset
+ ---------------------------------------- */
+
+
+
+/* Common
+ ---------------------------------------- */
+
+.last{
+	margin:0!important;
+	border:0!important;
+}
+.last-bdr{
+	margin:0!important;
+	border-bottom-width:1px;
+}
+.fixed{
+	position:absolute;
+	top:0;
+}
+.static{
+	position:static;
+}
+.active{
+	position:fixed;
+	top:0;
+	_position:absolute;
+	_top:expression(documentElement.scrollTop+"px");
+	_margin-top:-0px;
+}
+
+/* Color
+ ---------------------------------------- */
+
+.colorRed{
+	color:rgb(215,0,0);
+}
+
+/* Module
+ ---------------------------------------- */
+
+/* sidebar menu */
+#menu,
+#submenu ul,
+.crumbs ul,
+#content{
+	padding:8px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:0 0 10px rgb(200,200,200) inset;
+	-moz-box-shadow:0 0 10px rgb(200,200,200) inset;
+	box-shadow:0 0 10px rgb(200,200,200) inset;
+
+}
+#menu li,
+#submenu li{
+	padding:0 4px;
+	line-height:22px;
+}
+#menu>li{
+	margin-bottom:6px;
+	border-bottom:1px dashed rgb(110,200,110);
+}
+#menu>li.on ol{
+	display:block;
+}
+#menu h2{
+	margin-bottom:4px;
+	font-size:1.2em;
+	cursor:pointer;
+}
+#menu h2:hover{
+	color:rgb(150,150,150);
+}
+#menu li ol{
+	display:none;
+	margin-bottom:4px;
+	font-size:1.2em;
+}
+#menu li li:hover,
+#menu li li.on{
+	background:rgb(230,230,230);
+}
+#menu li li:hover a,
+#menu li li.on a{
+	color:rgb(215,0,0);
+}
+#menu li li.on a{
+	font-weight:bold;
+}
+.allExpand{
+	height:26px;
+	margin-top:-5px;
+	padding:0 10px;
+	background:rgb(110,200,110);
+	-webkit-border-radius:0 0 4px 4px;
+	-moz-border-radius:0 0 4px 4px;
+	border-radius:0 0 4px 4px;
+	color:rgb(255,255,255);
+	font-size:1.2em;
+	font-weight:bold;
+	line-height:26px;
+	text-align:center;
+	letter-spacing:.1em;
+	cursor:pointer;
+}
+
+/* submenu */
+#submenu li{
+	overflow:hidden;
+	color:rgb(16,114,191);
+	font-size:1.2em;
+	white-space:nowrap;
+
+}
+#submenu a.on{
+	color:rgb(215,0,0);
+	font-weight:bold;
+}
+
+/* crumbs */
+.crumbs{
+	width:980px;
+	margin-bottom:10px;
+	background:rgb(255,255,255);
+	z-index:990;
+}
+.crumbs ul{
+	*zoom:1;
+}
+.crumbs ul:after{
+	visibility:hidden;
+	display:block;
+	height:0;
+	content:"";
+	clear:both;	
+}
+.crumbs li{
+	float:left;
+	font:1.2em/1.6em "simsun";
+}
+.crumbs li i{
+	margin:0 5px;
+}
+.crumbs .toolbar,
+.crumbs .returnTop{
+	float:right;
+}
+.crumbs .toolbar span,
+.crumbs .returnTop span{
+	display:block;
+	float:left;
+	margin:0 4px;
+	padding:0 3px;
+	background:rgb(240,240,240);
+	border:1px solid rgb(210,210,210);
+	border-radius:4px;
+	color:rgb(80,80,80);
+	line-height:20px;
+	cursor:pointer;
+}
+.crumbs .toolbar span.on,
+.crumbs .toolbar span:hover{
+	background:rgb(110,200,110);
+	color:rgb(255,255,255);
+}
+
+/* example */
+.example{
+	display:inline-block;
+	margin-bottom:10px;
+	text-align:left;
+	vertical-align:top;
+	*display:inline;
+	*zoom:1;
+}
+.example1{
+	width:40%;
+	margin:0 4% 10px;
+}
+.example2{
+	width:89%;
+	margin:0 4% 10px;
+}
+/* code */
+.codes{
+	display:block;
+	margin-bottom:10px;
+}
+.codes ol{
+	overflow:hidden;
+}
+.codes ol li{
+	position:relative;
+	z-index:0;
+	margin-left:36px;
+	padding-left:8px;
+	font:1.4em/1.8em 'Microsoft YaHei';
+	text-align:left;
+	list-style-type:decimal;
+}
+/* code theme */
+.html ol li:before,
+.css ol li:before{
+	position:absolute;
+	top:0;
+	left:-36px;
+	z-index:-1;
+	display:block;
+	width:38px;
+	height:1.8em;
+	background:rgb(194,224,181);
+	content:"";
+}
+.html,
+.css{
+	background:rgb(208,241,194);
+}
+.html .notes,
+.css .notes{
+	color:rgb(139,153,161);
+}
+.html{
+	color:rgb(36,153,190);
+}
+.html .attr{
+	color:rgb(203,45,77);
+}
+.html .text{
+	color:rgb(62,75,83);
+}
+.html .val{
+	color:rgb(0,0,160);
+}
+.css{
+	color:rgb(60,122,3);
+}
+.css .cssRed{
+	color:rgb(203,45,1);
+}
+.css .tag{
+	color:rgb(36,153,190);
+}
+.css .num{
+	color:rgb(182,71,235);
+}
+.css .font{
+	color:rgb(0,0,160);
+}
+
+/* return */
+#return{
+	position:fixed;
+	right:10px;
+	bottom:10px;
+}
+#return a{
+	overflow:hidden;
+	display:block;
+	width:31px;
+	height:31px;
+	padding: 3px;
+	background:url(../img/return.gif) no-repeat;
+	color: #666;
+	line-height:16px;
+	text-align:center;
+	text-indent:-9em;
+}
+#return a:hover{
+	width: 31px;
+	height: 31px;
+	padding: 2px;
+	background: rgb(200,200,200);
+	border: 1px solid rgb(190,190,190);
+	text-decoration: none;
+	text-indent: 0em;
+}
+
+/* list-symbol */
+.list-symbol{
+	margin-left:1em;
+	font-size:1.4em;
+}
+.list-symbol li{
+	list-style:disc;
+	line-height:28px;
+}
+.list-symbol li ul{
+	margin-left:2em;
+}
+.list-symbol li li{
+	list-style:circle;
+}
+
+/* Table
+ ---------------------------------------- */
+
+.table{
+	table-layout:fixed;
+	border:1px solid rgb(150,150,150);
+	border-width:1px 0;
+}
+.table th,
+.table td{
+	overflow:hidden;
+	padding:0 5px;
+	font-size:1.4em;
+	line-height:26px;
+}
+.table tbody tr:hover th,
+.table tbody tr:hover td{
+	background:rgb(110,200,110)!important;
+	border-left-width:0;
+	border-right-width:0;
+	color:rgb(255,255,255)!important;
+	cursor:default;
+}
+/* table1 */
+.table1 th,
+.table2 th{
+	font-family:arial;
+}
+.table1 tbody tr:nth-child(even),
+.table3 tbody tr:nth-child(even){
+	background:rgb(220,220,220);
+}
+.table1 tbody tr,
+.table3 tbody tr{
+	background:rgb(240,240,240);
+}
+
+/* table2 */
+.table2 th,
+.table2 td{
+	border:1px solid rgb(220,220,220);
+	border-width:1px 0;
+}
+.table2 th:nth-child(odd),
+.table2 td:nth-child(odd){
+	background:rgb(220,220,220);
+}
+.table2 tr:first-child th,
+.table2 tr:first-child td{
+	border-top-color:rgb(150,150,150);
+}
+.table2 tr:last-child th,
+.table2 tr:last-child td{
+	border-bottom-color:rgb(150,150,150);
+}
+
+/* table3 */
+.table3{
+	text-align:center;
+}
+.table3 caption{
+	margin-bottom:3px;
+	background:rgb(120,120,120);
+	color:rgb(255,255,255);
+	line-height:34px;
+	font-size:1.5em;
+	font-weight:bold;
+}
+.table3 thead th{
+	background:rgb(180,180,180);
+}
+.table3 tbody th,
+.table3 tbody td{
+	border:1px solid rgb(255,255,255);
+	line-height:30px;
+}
+.table3 tbody th{
+	text-align:left;
+}
+
+/* Icon
+ ---------------------------------------- */
+
+.icon{
+	display:block;
+	width:30px;
+	margin:0 auto;
+	text-align:center;
+}
+.i-error,.i-enter{
+	font:bold 4em "Microsoft YaHei";
+}
+.i-error{
+	color:rgb(215,0,0);
+}
+.i-enter{
+	color:rgb(0,215,0);
+	font-size:3em;
+}
+
+/* Message
+ ---------------------------------------- */
+
+.mesText{
+	color:rgb(215,0,0);
+	font-size:1.25em;
+	font-weight:bold;
+}

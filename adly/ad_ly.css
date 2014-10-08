@@ -1,0 +1,133 @@
+body, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, figure, select
+{ margin: 0; padding: 0; font-family: "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif; }
+h1, h2, h3, h4, h5, h6, button, input, select, textarea
+{ font-size: 100%; font-weight: normal; }
+address, cite, dfn, em, var
+{ font-style: normal; }
+code, kbd, pre, samp
+{ font-family: courier new, courier, monospace; }
+small
+{ font-size: 12px; }
+ul, ol
+{ list-style: none; }
+a
+{ text-decoration: none; }
+sup
+{ vertical-align: text-top; }
+sub
+{ vertical-align: text-bottom; }
+legend
+{ color: #000; }
+fieldset, img
+{ border: 0; }
+table
+{ border-collapse: collapse; border-spacing: 0; }
+input::-moz-focus-inner, button::-moz-focus-inner
+{ border:0; padding:0; outline:0; }
+iframe
+{ vertical-align: top; }
+s
+{ text-decoration: none; }
+button
+{ border: 0 none; }
+article, aside, footer, header, hgroup, nav, section, figure, figcaption, video
+{ display: block; }
+input
+{ outline: none; border: 0; }
+input, img, label, select
+{ vertical-align: middle; }
+
+/*---------------------common 公共区---------------------*/
+/**--------------基本--------------**/
+.none { display:none}
+.cf
+{ zoom: 1; }
+.cf:after
+{ content: ''; display: block; clear: both; height: 0; overflow: hidden; visibility: hidden; }
+.lf
+{ float: left; }
+.rf
+{ float: right; }
+
+.ad-block
+{
+	position: fixed;
+	padding-bottom: 10px;
+	right: 10px;
+	bottom: 10px;
+	width: 270px;
+	/*height: 210px;*/
+	border: 1px solid #999;
+	background: #FFF;
+}
+.ad-block .ad-nav-block
+{
+	background: #F2F2F2;
+	border-bottom: 1px solid #C2D5E3;
+}
+.ad-block .ad-nav-block .ad-box-nav
+{
+	padding: 10px;
+	line-height: 24px;
+	
+}
+.ad-block .ad-nav-block .ad-box-nav > span
+{
+	font-size: 12px;
+}
+.ad-box-nav #ad_dpp, .ad-box-nav #ad_dpn
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	background: #fff;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+.ad-box-nav #ad_dpp
+{
+	margin-left: 10px;
+}
+.ad-block .ad-content-block
+{
+	background: #FFF;
+}
+
+.ad-block .ad-content-block #ad-box-content
+{
+	padding: 10px;
+	min-height: 100px;
+}
+.ad-content-block #ad-content-tit
+{
+	width: 250px;
+	line-height: 150%;
+	font-size: 12px;
+	color: #369;
+	display: inline-block;
+}
+.ad-content-block #ad-content-img
+{
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 60px;
+	height: 60px;
+}
+.ad-content-block #ad-content-body
+{
+	margin-top: 10px;
+	text-indent: 2em;
+	font-size: 10px;
+}
+
+.ad-content-block .ad-box-sel
+{
+	margin: 10px;
+	padding-top: 5px;
+	border-top: 1px dashed #cdcdcd;
+}
+.ad-content-block .ad-box-sel > a
+{
+	line-height: 150%;
+	font-size: 12px;
+}

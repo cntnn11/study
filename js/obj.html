@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>一个js面试题</title>
+</head>
+<body>
+<p>题目：
+让你定义一个对象o<br/>
+o中有两个方法，getO()和setO(str)，str是字符串<br/>
+默认情况下调用getO() ，输出结果是"aaa",当setO("bbb")后，再次调用getO（），得到结果“bbb”。</p>
+<pre>
+var obj = {
+	get value(){console.log(this._val ? this._val : 'aaa')},
+	set value(str){ this._val = str; }
+};
+obj.value;
+obj.value = 'bbb';
+obj.value;
+</pre>
+<script type="text/javascript">
+	var obj = {
+		get value(){console.log(this._val ? this._val : 'aaa')},
+		set value(str){ this._val = str; }
+	};
+	obj.value;
+	obj.value = 'bbb';
+	obj.value;
+	obj.value = 'ccc';
+	obj.value;
+</script>
+</body>
+</html>

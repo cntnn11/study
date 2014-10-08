@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>图片始终居中</title>
+<style type="text/css">
+.img-box
+{
+	width: 1000px;
+	height: 500px;
+	border: 1px solid #000;
+
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	/* hack for ie */
+	*display: block;
+	*font-size: 175px;
+	/* end */
+}
+</style>
+</head>
+<body>
+<div class="img-box">
+	<img src="http://www.baidu.com/img/bdlogo.png" alt="图片居中测试" />
+</div>
+</body>
+</html>

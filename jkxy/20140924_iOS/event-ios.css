@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors FangYaFei (1120309265@qq.com)
+ * @date	2014-09-03 10:01:38
+ * @version $Id$
+ */
+/**{padding: 0;margin: 0;border: 0;list-style: none;font-family: "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;}*/
+a{text-decoration: none !important;}
+p{text-align: center;}
+.cf {
+	zoom: 1;
+}
+.cf:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.mr-75
+{ margin-right: 75px; }
+.mb-50
+{ margin-bottom: 50px; }
+.mb-30
+{ margin-bottom: 30px; }
+.pl-20
+{ padding-left: 20px; }
+.pr-20
+{ padding-right: 20px; }
+.w-auto{background:#f6f6f6;width:100%;height:auto;overflow:hidden;padding-bottom: 80px;}
+.event-android-top{ padding: 110px 0px 105px 0px; width: 929px; margin:0 auto;text-align: center; }
+.event-android-top a.button{width: 253px;height: 60px;line-height: 60px;text-align: center;font-size: 24px;background: #E84608;font-weight: 600;display: block;border-radius: 6px;margin:0 auto;margin-top: 40px;}
+.envent-android-banner-one{height: 653px;margin-top: 15px; background: url('http://static-jkxy.qiniudn.com/iOS%2Fbg1.png?20140925') no-repeat; }
+.envent-android-banner-one .i-inner{height: 634px; }
+.envent-android-banner-one .i-inner .i-san-white{width: 0;
+    height: 16px;margin:0 auto;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 16px solid white;
+}
+.envent-android-banner-one  .i-san-black{width: 0;
+    height: 16px;margin:0 auto;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 16px solid #1f1f1f;
+}
+.envent-android-banner-one .p1,.p2{text-align: center;}
+.envent-android-banner-one .p1{font-size: 40px;padding-top: 100px;color: #fff;}
+.envent-android-banner-one .p2{font-size: 18px;font-weight: 500;padding-top: 10px;width: 800px;margin:0 auto;color: #fff;}
+.one-bige-block
+{
+	margin: 90px auto;
+	width: 1100px;
+}
+.one-bige-block .one-bige-box
+{
+	float: left;
+	width: 315px;
+	text-align: center;
+}
+.one-bige-box .bige-box-tit
+{
+	padding-left: 1.6em;
+	padding-right: 1.6em;
+	font-size: 60px;
+	line-height: 2em;
+	color: #fff;
+	border: 1px solid #666;
+	border-radius: 5px;
+}
+.one-bige-box p
+{
+	font-size: 14px;
+	color: #fff;
+	line-height: 2em;
+}
+
+
+.event-android-teamVsJike
+{ margin: 0 auto; padding-top: 80px; width: 1100px; height: auto;overflow: hidden;text-align: center;}
+.event-android-teamVsJike .p3{ text-align: center;font-size: 40px; font-weight: normal; color: #141414;}
+.event-android-teamVsJike .p4{ color: #999999;font-size: 18px; line-height: 2em; }
+.event-android-teamVsJike .p5 { color: #999; font-size: 24px; font-weight: normal; line-height: 2em; }
+.event-android-teamVsJike .p6 { color: #999; font-size: 24px; line-height: 4em; }
+.event-android-teamVsJike a.button{ margin:30px auto; padding: 20px 20px 15px 20px; text-align: center; background: #e84608; border-radius: 6px; }
+.event-android-teamVsJike a.button > span{ font-size: 19px; line-height: 51px; color: #FFF; }
+.event-android-teamVsJike img{margin-top: 60px;}
+
+.event-android-stepNine{ margin:30px auto; width: 800px; height:470px; background: url('http://static-jkxy.qiniudn.com/jkxy-android/e-a-nine.jpg') center no-repeat; position: relative;}
+/*number*/
+.event-android-stepNine .number
+{ width: 77px;height:77px;border: 3px solid #141414; border-radius: 40px; text-align: center; display: block; }
+.event-android-stepNine .number > div
+{
+	margin-top: 26px;
+	width: 77px;
+	font-size: 24px;
+	color: #141414;
+	font-family: Arial;
+	line-height: 0.8em;
+	font-weight: bold;
+}
+.event-android-stepNine .number > span
+{
+	font-size: 13px;
+	font-weight: bold;
+	color: #ff6600;
+	display: none;
+}
+/* .event-android-stepNine .number:hover{border: 3px solid #FF6600;color: #FF6600;} */
+.event-android-stepNine .number1,.number2,.number3,.number4,.number5,.number6,.number7,.number8,.number9,.text1,.text2,.text3,.text4,.text5,.text6,.text7,.text8,.text9,.day1,.day2,.day3,.day4,.day5,.day6,.day7,.day8,.day9{position: absolute;}
+.event-android-stepNine .number1{left: 8px;top: 7px;}
+.event-android-stepNine .number2{left: 361px;top: 7px;}
+.event-android-stepNine .number3{left: 712px;top: 7px;}
+.event-android-stepNine .number4{left: 712px;top: 191px;}
+.event-android-stepNine .number5{left: 361px;top: 191px;}
+.event-android-stepNine .number6{left: 8px;top: 191px;}
+.event-android-stepNine .number7{left: 8px;top: 381px;}
+.event-android-stepNine .number8{left: 361px;top: 381px;}
+.event-android-stepNine .number9{left: 712px;top: 381px;}
+/*text*/
+.event-android-stepNine .text{text-align: center;color: #141414;font-size: 18px;}
+.event-android-stepNine .text1{left: -8px;top: 97px;}
+.event-android-stepNine .text2{left: 350px;top: 97px;}
+.event-android-stepNine .text3{width:200px;left: 750px;top: 20px;}
+.event-android-stepNine .text4{width:200px;left: 660px;top: 280px;}
+.event-android-stepNine .text5{left: 374px;top: 280px;}
+.event-android-stepNine .text6{left: -70px;top: 200px;}
+.event-android-stepNine .text7{left: 20px;top: 475px;}
+.event-android-stepNine .text8{left: 360px;top: 475px;}
+.event-android-stepNine .text9{width:200px;left: 660px;top: 475px;}
+/*day*/
+.event-android-stepNine .day{font-size: 18px;font-family: 微软雅黑;color: #999999;}
+.event-android-stepNine .day1{left: 35px;top: 127px;}
+.event-android-stepNine .day2{left: 390px;top: 127px;}
+.event-android-stepNine .day3{left: 790px;top: 47px;width: 80px;}
+.event-android-stepNine .day4{left: 740px;top: 310px;}
+.event-android-stepNine .day5{left: 390px;top: 310px;}
+.event-android-stepNine .day6{left: -37px;top: 230px;}
+.event-android-stepNine .day7{left: 35px;top: 505px;}
+.event-android-stepNine .day8{left: 388px;top: 505px;}
+.event-android-stepNine .day9{left: 750px;top: 505px;}
+.event-android-stepNine .active{ color: #FF6600; font-weight: normal; }
+.event-android-stepNine .active-border{color: #FF6600;border:3px solid #FF6600;}
+a.button{color: #fff !important;}
+a.button:hover{background: #e84608;}
+.ue-index-course-box{width: 920px;margin:0 auto;overflow: hidden;padding-bottom: 110px;}
+.ue-video-list-box{width:220px;float: left;margin: 0 4px;}
+
+
+.event-android-top h1
+{ font-size:48px; color: #141414; font-weight: normal}
+
+.event-android-top p {font-size: 24px;color: #999999;}
+.event-android-teamVsJike p{ color:#000; font-size: 18px}
+.lesson-card{width:846px; margin: 0 auto; margin-top: 30px;}
+.lesson-card2{width:408px; margin: 0 auto;margin-top: 30px;}
+.lesson-card .onecard{ width:147px;height:65px;border:1px solid #ccc; float: left; text-align: center;padding: 20px;border-radius: 5px;}
+.lesson-card .onecard i{width: 32px;height:32px; display:inline-block; background: url("http://static-jkxy.qiniudn.com/iOS%2Fios-icon.png") 0px 0px no-repeat}
+.lesson-card .onecard i.sf{ background-position: 0 -33px;}
+.lesson-card .onecard i.sx{ background-position: 0 -65px;}
+.lesson-card .onecard i.talk{ background-position: 0 -98px;}
+.lesson-card .onecard i.j-down{background-position: 0 }
+.lesson-card h3{ color: #999; font-size: 24px; margin-bottom: 30px; font-weight: normal}
+.lesson-card2 .onecard{ width:147px;height:65px;border:1px solid #ccc; float: left; text-align: center;padding: 20px;border-radius: 5px;}
+.lesson-card2 .onecard i{width: 32px;height:32px; display:inline-block; background: url("http://static-jkxy.qiniudn.com/iOS%2Fios-icon.png") 0px 0px no-repeat}
+.lesson-card2 .onecard i.sf{ background-position: 0 -35px;}
+.lesson-card2 .onecard i.sx{ background-position: 0 -68px;}
+.lesson-card2 .onecard i.talk{ background-position: 0 -101px;}
+.lesson-card2 .onecard i.j-down{ background-position: 0 -131px;}
+.lesson-card2 .onecard i.j-source{ background-position: 0 -165px;}
+
+.lesson-card2 h3{ color: #999; font-size: 26px; margin-bottom: 30px; font-weight: normal}
+.mar-r30{ margin-right: 30px;}
+.mar-r40{ margin-right: 40px;}
+.mar-t60{margin-top:60px}
+
+.user-talk{width:1100px; margin-left:auto; margin-right: auto;}
+.user-talk .talk-one{  width:340px; float: left;}
+.user-talk .talk-one .borderbox{  padding: 15px; border-radius: 40px; border:1px solid #548cbc; color: #fff;}
+
+.user-talk .talk-one img{ float: left; margin-right: 10px;width:74px;height:74px;}
+.user-talk p{ font-size: 12px;
+	margin-top: 15px;
+	text-align: left;}
+.user-talk .name{ text-align: right;font-size: 12px; margin-top: 10px}
+.user-talk .talk-one .infor{margin-top:50px;}
+.user-talk .talk-one .infor strong{ color: #fff; text-align: center;width: 100%;display: block;font-size: 24px;font-weight: normal;}
+.user-talk .talk-one .infor p{ text-align: center;font-size: 18px; color: #fff; font-weight: normal；}
+.padding-b100{padding-bottom: 100px;}
