@@ -1,0 +1,176 @@
+.w-980
+{ width: 980px; }
+.w-100b
+{ width: 100%; }
+.h-162
+{ height: 162px; }
+.h-180
+{ height: 180px; }
+.fl
+{ float: left; }
+.fr
+{ float: right; }
+.mr-16
+{ margin-right: 16px; }
+.mr-20
+{ margin-right: 20px; }
+.mr-30
+{ margin-right: 30px; }
+.mt-20
+{ margin-top: 20px; }
+.mb-30
+{ margin-bottom: 30px; }
+.ue-video-show-grey-btn span
+{
+	background: #c6c6c6;
+}
+
+/*头部的Flash框*/
+.flash-block
+{
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+	display: inline-block;
+	height: 350px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	background: url("http://static-jkxy.qiniudn.com/ms/bg_flash.png") no-repeat;
+}
+.flash-block .flash-box
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	width: 100%;
+	height: 350px;
+}
+.flash-block .flash-box > object
+{
+	min-height: 350px;
+}
+
+/*Flash下的两个文本框*/
+.body-intr-block
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.body-intr-block .body-intr-box
+{
+	margin: 0 auto;
+	padding: 0;
+	width: 980px;
+	height: 244px;
+	text-align: center;
+}
+.body-intr-block .body-intr-box .intr-content-block
+{
+	float: left;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 410px;
+	
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	text-align: left;
+	display: inline-block;
+}
+.intr-content-block > h3
+{
+	line-height: 60px;
+	font-size: 24px;
+	color: #00bcf2;
+}
+.intr-content-block > h3 > span
+{
+	font-size: 14px;
+}
+.intr-content-block > p
+{
+	width: 100%;
+	font-size: 14px;
+	color: #999;
+	line-height: 150%;
+}
+.intr-content-block > p.intr-btn
+{
+	margin-top: 20px;
+	display: inline-block;
+	text-align: right;
+}
+.intr-content-block > p.intr-btn > a
+{
+	float: right;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border: 2px solid #efefef;
+	border-radius: 5px;
+	background: #c6c6c6;
+}
+.intr-content-block > p.intr-btn > a:hover
+{
+	text-decoration: none;
+}
+.intr-content-block > p.intr-btn > a > em
+{
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	font-size: 14px;
+	color: #fff;
+}
+
+/*课程块*/
+.course_wp
+{
+	margin: 0 auto;
+	width: 980px;
+	text-align: center;
+}
+.course_wp > h2
+{
+	line-height: 200%;
+	font-size: 30px;
+	color: #00bcf2;
+	font-weight: normal;
+}
+.course_wp > p.course-subtit
+{
+	line-height: 2em;
+	font-size: 14px;
+	color: #999;
+}
+.course-block
+{
+	margin: 0 auto;
+	width: 770px;
+	text-align: left;
+}
+.course-block .course-body-tit
+{
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #00bcf2;
+	display: inline-block;
+}
+.course-block .course-body-tit > span
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 14px;
+	color: #fff;
+}
+.course-block .course-body-box
+{
+	margin-left: 75px;
+	margin-bottom: 60px;
+	width: 694px;
+}
+.course-body-box .course-box-card
+{
+	display: inline-block;
+}

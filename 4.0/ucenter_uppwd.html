@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>极客学院</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./css/ucenter.css" />
+<script src="./js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+<script type="text/javascript" src="./js/common.js" ></script>
+</head>
+
+<body>
+	<div id="ue-bar">
+		<div class="logobox w-1000 cf"> <img src="{:cdn('PUBLIC')}/static/images/logo.png" class="logo"/>
+		<div class="searchbox"> 
+				<a href="#" target="_blank" class="col-green01">免费体验VIP会员</a> 
+			<span>
+				<i></i>
+		 		 <input type="text" value="" class="search-lesson" placeholder="搜索课程"  />
+			</span>
+		</div>
+	</div>
+	<div class="ue-box cf">
+		<div class="uebox-content w-1000 cf">
+			 <div class="navbox"> <i></i> <span>专业课程</span> <span>学习路径图</span> <span>技术问答</span> <span>VIP会员</span> <span>APP下载</span> </div>
+			<!-- <div class="loginbox"> <a class="register">注册</a><em>|</em><a class="login greenbtn">登录</a> </div> -->
+			<div class="loginbox"> 
+				<a class="mylesson">我的课程</a><em>|</em><a class="myask">我的问答</a><em>|</em><span class="user-name green-color">我的测试账号名称</span> 
+				<!-- 登录后弹出层 -->
+					<div class="login-success none">
+						<i class="trangle2"></i> 
+						<div class="my-nav">
+							<a href="#"><i class="learncenter-icon"></i>学习中心</a>
+							<a href="#"><i class="my-zh"></i>我的账户</a>
+							<a href="#"><i class="gotvip"></i>获取VIP</a>
+							<a href="#"><i class="myset"></i>个人设置</a>
+							<span class="garybtn">登出</span>
+						</div>
+					</div>
+				<!-- 登录后弹出层 -->
+			</div>
+		</div>
+		<!--下拉-->
+		<div class="pulldownbox none">
+			<div class="down-content w-1000"> <i class="trangle"></i> 
+			<!--显示区-->
+			<div class="showbox none padd-t40 ">
+				<ul>
+				<li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+				<li> <strong>职业课程</strong> <a href="#">Android</a>| <a href="#">iOS</a>| <a href="#">Java</a>| <a href="#">PHP</a>| <a href="#">Unity 3D</a>| <a href="#">Cocos2d-x</a>| <a href="#">HTML5</a>| <a href="#">Python</a>| <a href="#">Ruby</a>| <a href="#">Mongo DB</a> </li>
+				<li> <strong>课程类型</strong> <a href="#">环境搭建</a>| <a href="#">语言基础</a>| <a href="#">技术核心</a>| <a href="#">实战开发</a>| <a href="#">知识点</a> </li>
+				</ul>
+			</div>
+			<!--显示区--> 
+			<!--显示区路径图-->
+			<div class="showbox none">
+				<h2>通过学习路径图,完整掌握一门技术的必备技能</h2>
+				<div class="learn-nav">
+			 	<a>
+				<div class="imgshow coco2d"></div>
+				<p class="coco2dp">Cocos2d-x<br/>
+				学习路径图</p>
+				</a> 
+				<a>
+				<div class="imgshow android"></div>
+				<p class="androidp">Android-x<br/>
+				  学习路径图</p>
+				</a> 
+				<a>
+				<div class="imgshow java"></div>
+				<p class="javap">
+					java<br/>
+				  学习路径图</p>
+				</a> 
+				<a>
+				<div class="imgshow iphone"></div>
+				<p class="iphonep">IOS<br/>
+				  学习路径图</p>
+				</a> <a>
+				<div class="imgshow html5"></div>
+				<p class="html5p">HTML5<br/>
+				  学习路径图</p>
+				</a> <a>
+				<div class="imgshow python"></div>
+				<p class="pythonp">Python<br/>
+				  学习路径图</p>
+				</a></div>
+			</div>
+			<!--显示区路径图 end--> 
+			
+			<!--技术问答-->
+			<div class="showbox padd-t40 none">
+				<ul>
+					<li> <strong>技术分类</strong> <a href="#">Android</a>| <a href="#">iOS</a>| <a href="#">Java</a>| <a href="#">PHP</a>| <a href="#">Unity 3D</a>| <a href="#">Cocos2d-x</a>| <a href="#">HTML5</a>| <a href="#">Python</a>| <a href="#">Ruby</a>| <a href="#">Mongo DB</a> </li> </li>
+				</ul>
+			</div>
+			<!--技术问答 end--> 
+			
+			<!--vip-->
+			<div class="showbox none"> 
+			<ul class="vip-content cf">
+				<li>
+					<a href="#"><img src="{:cdn('PUBLIC')}/static/images/vip_01.png"><span class="greenbtn">加入体验</span></a>
+				</li>
+				<li>
+					<a href="#"><img src="{:cdn('PUBLIC')}/static/images/vip_02.png"><span class="orinagebtn">立即购买</span></a>
+				</li>
+				<li>
+					<a href="#"><img src="{:cdn('PUBLIC')}/static/images/vip_03.png"><span class="orinagebtn">立即购买</span></a>
+				</li>
+			</ul>
+			</div>
+			<!--vip end--> 
+			</div>
+		</div>
+		<!--下拉 end--> 
+		</div>
+	</div>
+	<!--ue-bar end-->
+
+	<div class="ue-content cf  ">
+		<div class="ucenter w-1000">
+
+			<div class="ucenter-left">
+				<div class="ucenter-l-header">
+					<div class="ucenter-headicon">
+						<img src="http://assets.jikexueyuan.com/user/avtar/avatar_1267165.jpg-l?date=1411012258" width="140" height="140" />
+					</div>
+					<p class="ucenter-name">cntnn11</p>
+					<p class="ucenter-vipbtn">
+						<i class="icon-vip"></i>年会员，<br/>2015-06-16到期
+					</p>
+					<p class="ucenter-vipbtn"><a class="orinagebtn" href="#">VIP会员续费</a></p>
+					<!-- <p class="ucenter-vipbtn"><a class="orinagebtn" href="#">成为VIP会员</a></p> -->
+				</div>
+				<div class="ucenter-l-column">
+					<ul class="ucenter-lcolumn-block">
+						<li><a href="#"><i class="icon-course"></i>我的课程</a></li>
+						<li><a href="#"><i class="icon-question"></i>课程回答</a></li>
+						<li><a href="./ucenter_log"><i class="icon-account"></i>我的账户</a></li>
+						<li><a href="./ucenter_setting.html"><i class="icon-setting"></i>个人设置</a></li>
+						<li class="active"><a href="./ucenter_uppwd.html"><i class="icon-uppwd"></i>修改密码</a></li>
+						<li><a href="#"><i class="icon-freevip"></i>免费VIP</a></li>
+						<li><a href="#"><i class="icon-buyvip"></i>购买VIP</a></li>
+						<li><a href="./ucenter_gvip.html"><i class="icon-gvip"></i>G码兑换</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="ucenter-right">
+				<div class="ucenter-right-nav">
+					<div class="ucenter-rnav-name"><span>修改密码</span></div>
+				</div>
+				<div class="ucenter-right-content ucenter-r-uppwd">
+
+					<div class="ue-form" id="uppwdHtml">
+						<form >
+							<input type="hidden" id="PwdVerify" value="" />
+							<div class="form-l">
+								<div class="form-dom">
+									<div class="form-tit">旧密码：</div>
+									<div class="form-input">
+										<div class="check-dom">&nbsp;<input placeholder="请输入旧的密码" type="password" class="jkxy-input form-check-succ ck" name="oldpassword" /></div>
+										<div class="form-tip checkError">&nbsp;提示语句</div>
+									</div>
+								</div>
+								<div class="form-dom">
+									<div class="form-tit">新密码：</div>
+									<div class="form-input">
+										<div class="check-dom">&nbsp;<input placeholder="请输入新的密码" type="password" class="jkxy-input form-check-error ck" name="password" /></div>
+										<div class="form-tip checkError">密码错误了六七八九十一二三四五六七八九十</div>
+									</div>
+								</div>
+								<div class="form-dom">
+									<div class="form-tit">确认新密码：</div>
+									<div class="form-input">
+										<div class="check-dom">&nbsp;<input placeholder="再次输入新的密码" type="password" class="jkxy-input form-check-error ck" name="password" /></div>
+										<div class="form-tip checkError"></div>
+									</div>
+								</div>
+
+								<div class="form-dom">
+									<div class="form-tit">验证码：</div>
+									<div class="form-input">
+										<div class="check-dom">
+											&nbsp;<input placeholder="输入验证码" type="text" maxlength="4" autocomplete="off" name="safecode" class="jkxy-code" data-type="blur" style="width:80px;" >
+											&nbsp;&nbsp;<a href="javascript:void(0);" id="verifyA"><img id="verifyImg" src="" border="0" alt="点击刷新验证码" style="cursor: pointer" align="absmiddle"></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="m-t-30 form-dom">
+									<div class="form-tit">&nbsp;</div>
+									<div class="form-input"><a class="greenbtn" href="#">确认提交</a></div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 网站底部 -->
+	<div id="footer">
+		<div class="footer-container w-1000">
+			<div class="footer-left">
+				<div class="footer-search">
+					<span><i></i><input type="text" placeholder="搜索课程" class="search-lesson" /></span>
+				</div>
+				<div class="footer-l-block">
+					<p>联系客服QQ：491923715</p>
+					<p>业务资源合作：hey@jikexueyuan.com</p>
+					<ul class="footer-l-nav">
+						<li><a href="#">关于我们</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">加入我们</a></li>
+						<li><a href="#">常见问题</a></li>
+						<li><a href="#">课程需求</a></li>
+						<li><a href="#">黑板报</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-right">
+				<div class="footer-subscribe">
+					<span><input type="text" placeholder="输入订阅邮箱" class="search-lesson" /></span>
+					<a class="btn-green" href="#"><span>订 阅</span></a>
+				</div>
+				<div class="footer-weixin">
+					<img src="{:cdn('PUBLIC')}/static/images/weixin.png" width="250px" height="86px" />
+				</div>
+			</div>
+		</div>
+		<div class="common-footer">
+			<div class="w-1000">
+				<div class="cfooter-l">
+					<p>Copyright © 2009 - 2014 jikexueyuan.com All Rights Reversed.</p>
+					<p>京ICP备11018032号-7 京公网安备11010802013056</p>
+				</div>
+				<div class="cfooter-r">
+					<ul class="cfooter-r-nav">
+						<li><a href="#">网站地图</a> | </li>
+						<li><a href="#">服务条款</a> | </li>
+						<li><a href="#">版权声明</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 网站底部 结束 -->
+</body>
+</html>

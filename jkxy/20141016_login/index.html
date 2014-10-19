@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>登录窗口</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="http://s1.jikexueyuan.com/v3/static/css/ue.global.css" rel="stylesheet" type="text/css" />
+<link href="./login.css" rel="stylesheet">
+<script type="text/javascript" src="http://s1.jikexueyuan.com/v3/static/scripts/jquery-1.7.2.min.js"></script>
+
+
+</head>
+<body>
+<div class="qqlogin">
+	
+	<div class="w-650 qqlogin-welcome">
+		<div class="qqlogin-welocome-img">
+			<img src="./headericon.50x50.png" />
+		</div>
+		<div class="qqlogin-welocome-text">
+			<p><span>Hi~ 一二三四五六, </span>欢迎使用QQ账号登录极客学院网站</p>
+		</div>
+	</div>
+
+	<div class="w-650 qqlogin-form">
+		<div class="qqlogin-form-block">
+			<div class="qqlogin-tab-btn">
+				<a href="javascript:void(0);" class="qqlogin_tab_btn mr-10 qqlogin-btn-grey qqlogin-btn-grey-active" tab="1"><em>创建账号</em></a>
+				<a href="javascript:void(0);" class="qqlogin_tab_btn mr-10 qqlogin-btn-grey" tab="2"><em>绑定账号</em></a>
+				<a href="javascript:void(0);" class="qqlogin_tab_btn mr-10 qqlogin-btn-grey" tab="3"><em>eoe社区用户绑定</em></a>
+			</div>
+			<div class="qqlogin-tab-body">
+				
+				<div class="qqlogin_tab_body qqlogin-tab-form" tab="1">
+					<div class="ue-regPage-form">
+					<form >
+						<input type="hidden" id="PwdVerify" value="" />
+						<div class="form-l form-l-reg">
+							<div class="form-dom">
+								<div class="form-tit reg-tit">用户名：</div>
+								<div class="form-input">
+									<div class="check-dom">&nbsp;<input type="text" class="ue-input ue-text reg-input" name="username" /></div>
+									<div class="form-tip checkError">&nbsp;</div>
+								</div>
+							</div>
+							<div class="form-dom">
+								<div class="form-tit">Email：</div>
+								<div class="form-input">
+									<div class="check-dom">&nbsp;<input type="text" class="ue-input ue-text reg-input" name="email" /></div>
+									<div class="form-tip checkError">&nbsp;</div>
+								</div>
+							</div>
+							<div class="form-dom">
+								<div class="form-tit">QQ：</div>
+								<div class="form-input">
+									<div class="check-dom">&nbsp;<input type="text" class="ue-input ue-text reg-input" name="qq" /></div>
+									<div class="form-tip checkError">&nbsp;</div>
+								</div>
+							</div>
+
+							<div class="form-dom">
+								<div class="form-tit">&nbsp;</div>
+								<div class="form-input">
+									<a href="#" class="mr-10 qqlogin-btn-orange"><em>完成登录</em></a>
+								</div>
+							</div>
+						</div>
+					</form>
+					</div>
+				</div>
+
+				<div class="qqlogin_tab_body qqlogin-tab-form hidden" tab="2">
+					<div class="ue-regPage-form">
+					<form >
+						<input type="hidden" id="PwdVerify" value="" />
+						<div class="form-l form-l-reg">
+							<div class="form-dom">
+								<div class="form-tit reg-tit">用户名：</div>
+								<div class="form-input">
+									<div class="check-dom">&nbsp;<input type="text" class="ue-input ue-text reg-input" name="username" /></div>
+									<div class="form-tip checkError">这里是还错误提示</div>
+								</div>
+							</div>
+							<div class="form-dom">
+								<div class="form-tit">密码：</div>
+								<div class="form-input">
+									<div class="check-dom">&nbsp;<input type="text" class="ue-input ue-text reg-input" name="password" /></div>
+									<div class="form-tip checkError">这里是错误提示</div>
+								</div>
+							</div>
+
+							<div class="form-dom">&nbsp;</div>
+
+							<div class="form-dom">
+								<div class="form-tit">&nbsp;</div>
+								<div class="form-input">
+									<a href="#" class="mr-10 qqlogin-btn-orange"><em>绑定账号</em></a>
+								</div>
+							</div>
+						</div>
+						<div class="form-l form-r-reg">
+							<div class="ue-diaRegLogin-right">
+								<div class="ue-diaRegLogin-r-box">
+									<p class="f-14 c-999">为了更好的为极客学院用户提供更优质的服务，eoe社区的用户<a href="#" class="eoe-btn-gologin">点击此处登录</a></p>
+								</div>
+							</div>
+						</div>
+					</form>
+					</div>
+				</div>
+
+				<div class="qqlogin_tab_body qlogin-tab-form hidden" tab="3">
+					<p class="w-570 f-18 fw-n c-999 mt-20">为了更好的为极客学院用户提供优质服务，通过eoe社区登录的同学在这里快速登录</p>
+					<p class="mt-30">
+						<a href="#" class="qqlogin-btn-orange"><em>快速登录</em></a>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+var www_url = '';
+</script>
+<script type="text/javascript" src="http://s1.jikexueyuan.com/v3/static/scripts/common.js?20140926"></script>
+<script type="text/javascript">
+$(function(){
+	$('.qqlogin_tab_btn').click(function(){
+
+		var obj		= $(this);
+		var tab_id	= parseInt(obj.attr('tab'));
+
+		$('.qqlogin_tab_btn').each(function(){
+			if( parseInt($(this).attr('tab')) === tab_id )
+			{
+				$(this).addClass('qqlogin-btn-grey-active');
+			}
+			else
+			{
+				$(this).removeClass('qqlogin-btn-grey-active');
+			}
+		});
+
+		$('.qqlogin_tab_body').each(function(){
+			if( parseInt($(this).attr('tab')) === tab_id )
+			{
+				$(this).removeClass('hidden');
+			}
+			else
+			{
+				$(this).addClass('hidden');
+			}
+		});
+
+
+	});
+});
+</script>
+</html>

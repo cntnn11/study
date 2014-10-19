@@ -1,0 +1,230 @@
+.bread-crumbs-navigation{width:1000px;height:60px;color:#747474; font-size: 16px; line-height: 60px; margin:0 auto;}
+.bread-crumbs-navigation a,.bread-crumbs-navigation a:hover,.bread-crumbs-navigation a:visited{ color:#747474 }
+
+/*公用导航*/
+.jk-lesson-leftnav{width:226px; float: left;}
+.jk-lesson-leftnav .classif{background: #fff}
+.jk-lesson-leftnav h2{line-height:38px;font-size:18px; color:#101213;height:38px; background: #101213;color: #fff;padding:0px 10px;} .jk-lesson-leftnav .leftnav-content{ padding: 10px;}
+.jk-lesson-leftnav .leftnav-content ul li{
+	height:40px; line-height: 40px;padding: 0px 10px; font-size: 16px; color: #363636;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  cursor: pointer;
+}
+
+.mar-rt24{margin-right:24px; }
+
+.jk-lesson-leftnav .leftnav-content ul li.onthis{background: #1abc9c; color: #fff;}
+.jk-lesson-leftnav .leftnav-content ul li:hover, 
+.jk-lesson-leftnav .leftnav-content ul li:focus, 
+.jk-lesson-leftnav .leftnav-content ul li:active {
+  background:#93decf;
+  color:#fff;
+}
+
+.jk-lesson-leftnav .leftnav-content ul#difficulty li{ float: left;width:40px;margin:0 4px; text-align: center;}
+
+
+
+/*#lesson-casssif-listbox*/
+#lesson-casssif-listbox{
+	width:750px;
+	float: left;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+#lesson-casssif-listbox .listbox-780{width:780px;}
+#lesson-casssif-listbox .listbox-780 .lessonimgbox{
+	margin-right: 30px;
+	float: left;
+	margin-bottom: 30px;
+}
+#lesson-casssif-listbox .lisetbox-classif-title{
+	height:30px; line-height: 30px; color: #929292;font-size: 16px;
+}
+#lesson-casssif-listbox .lisetbox-classif-title .classif-one,#lesson-casssif-listbox .lisetbox-classif-title .classif-tow{
+	width:30px;height:30px; display:inline-block;margin:0;padding: 0;
+	background: url(../images/classif.png) 0 -30px no-repeat;
+	float: left;
+	cursor:pointer;
+}
+.lesson-showimg-list{ margin-top: 10px;}
+#lesson-casssif-listbox .lisetbox-classif-title .classif-tow{background-position:-30px -30px;}
+#lesson-casssif-listbox .lisetbox-classif-title  .lesson-number,
+#lesson-casssif-listbox .lisetbox-classif-title .video-number{float: left; line-height: 30px;color: #000; padding: 0px 10px; display:inline-block;font-size: 14px}
+
+
+#lesson-casssif-listbox .lisetbox-classif-title .time-classfi{float: right; color: 545454;font-size: 14px; text-decoration: underline; width: 300px; text-align: right;}
+#lesson-casssif-listbox .lisetbox-classif-title .time-classfi span{ padding: 0 10px; line-height: 30px; cursor: pointer;}
+
+/*follow-jkteacher*/
+.follow-jkteacher{width:100%;height:270px; border-top:1px solid #d2d2d2;}
+.follow-jkteacher .left-textbox{width:770px;height:235px; float: left; padding-top: 35px;position: relative;}
+.follow-jkteacher .left-textbox h4{ font-size: 18px; line-height: 30px; color: #1abc9c; display: block; padding-left:42px;}
+.follow-jkteacher .left-textbox strong{ font-size: 24px; line-height: 40px; color: #727272; display: block;padding-left:42px;}
+.follow-jkteacher .left-textbox .cardshowbox{width:670px;height:72px;overflow: hidden;margin:0 auto; margin-top: 40px;  position: relative; }
+.follow-jkteacher .left-textbox .prev-btn{ position: absolute;left:10px; top:170px; z-index: 50; cursor: pointer;}
+.follow-jkteacher .left-textbox .smallcardlist{ position: absolute;top:0; left:0; z-index: 50}
+.follow-jkteacher .left-textbox .next-btn{ position: absolute;right:10px; top:170px; z-index: 50;cursor: pointer;}
+.follow-jkteacher .left-textbox .cardshowbox a{display: block;float: left; margin-right: 20px;width:210px;height:72px;}
+.follow-jkteacher .left-textbox .cardshowbox a img{width:210px;height:72px;}
+
+
+.follow-jkteacher .right-showbox{width:230px;height:235px; float: right;padding-top:35px; }
+.follow-jkteacher .right-showbox h5{ font-size: 18px; line-height: 30px; color: #666; display: block; text-align: center;}
+.follow-jkteacher .right-showbox .plan-text{height:130px;border-left:1px solid #ccc; margin-top: 25px; text-align: center;}
+.follow-jkteacher .right-showbox .plan-text p{ height:80px; padding: 10px;font-size: 14px; line-height: 22px; color: #666; overflow: hidden; text-align:center;}
+.follow-jkteacher .right-showbox .vipbtn{ padding:5px 10px; font-size:12px; background:#ff6600;color: #fff; display:inline-block; margin-right: 10px}
+.follow-jkteacher .right-showbox .sxbtn{ padding:5px 10px; font-size:12px; background:#cdcdcd;color: #fff; display:inline-block;}
+/**/
+/*lessonimgbox*/
+.lessonimgbox{
+	width:230px;
+	height:230px;
+	overflow: hidden;
+	background: #fff;
+	position:relative;
+	cursor: pointer;
+}
+.lessonimgbox .img-box{
+  overflow: hidden;
+  width:100%;
+  height:130px;
+  margin-bottom: 5px;
+}
+.lessonimgbox h3{
+	height:48px;
+	padding:0px 10px;
+	overflow: hidden;
+	font-size: 16px;
+	line-height:24px;
+}
+.lessonimgbox a h3,.lessonimgbox a:hover h3,.lessonimgbox a:visited h3{
+ color: #273346;
+
+}
+.lessonimgbox .imgboxfoot{
+	background: #fff;
+	height:30px; 
+	line-height: 30px;
+	font-size: 12px;
+	color: #a9a9a9;
+	padding:0px 10px;
+	position:absolute;
+	bottom: 0;
+	width:210px;
+	left:0;
+	z-index: 50;
+}
+.lessonimgbox .imgboxfoot .minandtime{ float: right;}
+
+.lessonimgbox .img-box img{display: block;width:100%;height:130px;}
+
+
+
+.lessonimgbox .img-pop {width:230px;height:210px; padding:10px 0px; position:absolute; top:230px; left:0; z-index: 40; background: #fff;}
+.lessonimgbox .img-pop blockquote p{ 
+	padding: 10px;
+	font-size: 12px;
+	line-height: 16px;
+	height: 85px;
+	overflow: hidden;
+	color: #8d8d8d;
+}
+.lessonimgbox .img-pop .time-user-number{padding: 10px; font-size: 12px; line-height: 16px; color: #8d8d8d}
+.lessonimgbox .img-pop .time-user-number span:nth-child(2){ float: right;}
+/*icon*/
+.icon-vip
+{ margin-right: 5px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -10px -10px; }
+
+/*page-nav*/
+.page-nav{
+	height: 40px;
+	width:100%;
+
+}
+.page-nav span.prevbtn{width:70px;}
+.page-nav span.nextbtn{width:70px; margin-right:0;}
+.page-nav span{
+	display:inline-block;
+	text-align:center;
+	height:40px;
+	width:40px;
+	line-height: 40px;
+	font-size: 12px;
+	color: #fff;
+	background: #93decf;
+	margin-right: 10px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+	transition-property: background;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.page-nav span.onthis{
+	background: #1abc9c;
+}
+.page-nav span:hover{
+   background: #1abc9c;
+}
+
+
+
+.lessonimgbox2{width: 750px;height:130px; margin-bottom: 30px; background: #fff; overflow: hidden}
+.lessonimgbox2 .img-box{
+  overflow: hidden;
+  width:230px;
+  height:130px;
+  float: left;
+  margin-right:20px;
+}
+.lessonimgbox2 h3{
+	height:30px;
+	line-height:30px;
+	padding:0px 10px;
+	overflow: hidden;
+	font-size: 16px;
+	display: none;
+
+}
+.lessonimgbox2 a h3,.lessonimgbox2 a:hover h3,.lessonimgbox2 a:visited h3{
+ color: #273346;
+
+}
+.lessonimgbox2 .imgboxfoot{
+	background: #fff;
+	height:30px; 
+	line-height: 30px;
+	font-size: 12px;
+	color: #a9a9a9;
+	padding:0px 10px;
+	position:absolute;
+	bottom: 0;
+	width:210px;
+	left:0;
+	z-index: 50;
+}
+.lessonimgbox2 .img-pop h3{ display: block;}
+.lessonimgbox2 .imgboxfoot .minandtime{ float: right;}
+
+.lessonimgbox2 .img-box img{display: block;width:100%;height:130px;}
+
+.lessonimgbox2 .img-pop {height:210px; padding:10px 0px; }
+.lessonimgbox2 .img-pop blockquote p{ 
+	padding: 0 10px;
+	font-size: 12px;
+	line-height: 16px;
+	height: 45px;
+	overflow: hidden;
+	color: #8d8d8d;
+}
+.lessonimgbox2 .img-pop .time-user-number{padding: 10px; font-size: 12px; line-height: 16px; color: #8d8d8d}
+.lessonimgbox2 .img-pop .time-user-number span:nth-child(2){ float: right;}
+
+
+

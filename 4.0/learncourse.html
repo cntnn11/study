@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>课时播放</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./css/learnCourse.css" />
+<script src="./js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+<script type="text/javascript" src="./js/common.js" ></script>
+<script type="text/javascript" src="./js/learncourse.js"></script>
+</head>
+<body>
+	<!--ue-bar-->
+<div id="ue-bar">
+  	<div class="logobox w-1000 cf"> 
+  		<img src="images/logo.png" class="logo"/>
+	    <div class="searchbox"> 
+	    		<a href="#" target="_blank" class="col-green01">免费体验VIP会员</a> 
+	    	<span>
+	    		<i></i>
+	    		 <em>搜索课程</em>
+	     		 <input type="text" value="" class="search-lesson jk-search" />
+	      </span>
+
+	    </div>
+	</div>
+  	<div class="ue-box cf  ">
+	    <div class="uebox-content w-1000 cf">
+	      	<div class="navbox"> 
+	      		<i></i> <span>专业课程</span> <span>学习路径图</span> <span>技术问答</span> 
+	      		<span>VIP会员</span> <span>APP下载</span> 
+	      	</div>
+	      	<div class="loginbox"> 
+	      		<a class="register">注册</a><em>|</em><a class="login greenbtn">登录</a> 
+	      	</div>
+	    </div>
+	    <!--下拉-->
+	    <div class="pulldownbox none">
+		    <div class="down-content w-1000"> <i class="trangle"></i> 
+		        <!--显示区-->
+		        <div class="showbox none">
+		          	<ul>
+			            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+			            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+			            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+			         </ul>
+		        </div>
+        		<!--显示区--> 
+        
+		        <!--显示区路径图-->
+		        <div class="showbox none">
+		          <h2>通过学习路径图,完整掌握一门技术的必备技能</h2>
+		          <div class="learn-nav"> <a>
+		            <div class="imgshow"></div>
+		            <p>Cocos2d-x<br/>
+		              学习路径图</p>
+		            </a> <a>
+		            <div class="imgshow"></div>
+		            <p>Cocos2d-x<br/>
+		              学习路径图</p>
+		            </a> <a>
+		            <div class="imgshow"></div>
+		            <p>Cocos2d-x<br/>
+		              学习路径图</p>
+		            </a> <a>
+		            <div class="imgshow"></div>
+		            <p>Cocos2d-x<br/>
+		              学习路径图</p>
+		            </a> <a>
+		            <div class="imgshow"></div>
+		            <p>Cocos2d-x<br/>
+		              学习路径图</p>
+		            </a> <a>
+		            <div class="imgshow"></div>
+		            <p>Cocos2d-x<br/>
+		              学习路径图</p>
+		            </a></div>
+		        </div>
+		        <!--显示区路径图 end--> 
+        
+		        <!--技术问答-->
+		        <div class="showbox none">
+		          <ul>
+		            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+		            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+		            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+		          </ul>
+		        </div>
+		        <!--技术问答 end--> 
+        
+        		<!--vip-->
+		        <div class="showbox"> </div>
+		        <!--vip end-->     
+      		</div>
+    	</div>
+    	<!--下拉 end--> 
+  	</div>
+</div>
+<!--ue-bar end--> 
+
+<!-- main -->
+<div class="w-1000">
+	<!-- 面包屑导航 -->
+	<div class="ue-bread-nav">
+		<a href="#">所有课程</a><em></em>
+		<a href="#">专题</a><em></em>
+		<span>Android</span>
+	</div><!-- 面包屑导航 end -->
+	<!-- 标题&简介 -->
+	<div class="ue-title-des learn-course-banner-android">
+		<div class="ue-title">天气预报应用开发-Swift语言实战项目</div>
+		<div class="ue-des">掌握使用Swift语言开发iOS应用的基本流程，掌握使用Swift语言开发iOS应用的基本流程，掌握使用Swift语言开发iOS应用的基本流程，掌握使用Swift语言开发iOS应用的基本流程，
+		</div>
+	</div><!-- 标题&简介 end  -->
+
+	<!-- video  -->
+	<div class="ue-video">
+		<img src="./images/video.jpg" alt="" width="1000" />
+	</div><!-- video end -->
+	<div class="ue-video-info">
+		<div class="left">
+			<p><a href="#">下载课程全部源码</a></p>
+			<p><a href="#">太卡点我</a></p>
+		</div>
+
+		<div class="right">
+			<span class="spanLeft"></span>
+			<span class="spanRight"></span>
+
+					<!-- 提示 -->
+					<div class="showtitle none">
+						<div class="ue-course-title">
+							<p></p>
+						</div>
+						<div class="rowdown"></div>
+					</div>
+					<!-- 提示end -->
+
+			<div class="rightNum">
+			    <div class="f-numberbox">
+				<a href="#" text="只在这里放内容就可以了">1</a>
+				<a href="#" text="这是第二个视频的内容">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">8</a>
+				<a href="#">9</a>
+				<a href="#">10</a>
+				<a href="#">11</a>
+				<a href="#">12</a>
+				<a href="#">13</a>	
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">8</a>
+				<a href="#">9</a>
+				<a href="#">10</a>
+				<a href="#">11</a>
+				<a href="#">12</a>
+				<a href="#">13</a>
+
+							</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="video-list">
+		<div class="left1">
+			<div class="left positionthis">
+				<p class="title">
+					<b>用Swift语言开发基SpriteKit框架的物理引擎游戏</b>
+				</p>
+				<p class="time">11课时 45分钟</p>
+				<div class="content">
+					课程背景：
+					1.使用Swift语言可快速进行开发<br/>
+					2.SpriteKit游戏引擎是iOS专用的2D游戏引擎<br/><br/>
+
+					核心内容：<br/>
+					1.SpriteKit游戏项目的创建<br/>
+					2.SpriteKit中场景设计工具、物理引擎<br/><br/>
+
+					课程等级：中级课程<br/>
+
+					适应群体：<br/>
+					1.熟悉Swift语言的开发者
+
+				</div>
+				<a href="" class="b b-course">添加到我的课程</a>	
+				<a href="" class="b">源码下载</a>	
+				<a href="" class="b">视频下载</a>	
+			</div>
+			<div class="teacher-info">
+				<div class="teacher-img">
+					<img src="./images/touxiang.png">
+				</div>	
+				<div class="teacher-name-des">
+					<div class="teacher-name">IME</div>
+					<div class="teacher-des">
+						极客学院首席讲师9年研发总监和讲师经历
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="right">
+			<div class="list-question">
+				<span class="active">课程列表</span>
+				<span href="#">课程问答</span>
+			</div>
+			<div class="cf"></div>
+			<!-- 课程问答 -->
+			<div class="list-content">
+				<div class="lists">
+					<div class="question-title">
+						<a href="">发嘎嘎和规范化很关键很健康很健康 都是废话空间</a>
+						<div class="replynum">
+							<p>已解决：</p>
+							<div class="topbottom">
+								<div class="replynumtop">123</div>
+								<div class="replynumbottom"></div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="reply-img-namep-des">
+						<div class="reply-img">
+							<img src="./images/touxiang.png" width="32">
+						</div>
+						<div class="reply-name">
+							<span>f1120309265</span>
+							所属课程：绝对是拉国家法律国家法律的国际法发了几个
+						</div>
+						<div class="reply-time">最后回答：5小时前</div>
+					</div>
+				</div>
+			</div>
+			<!-- 课程列表 -->
+			<div class="list-content none">
+				<div class="lists">
+					<div class="lists-left1-active">1</div>
+					<div class="lists-right">
+						<div class="right-title">
+							<a href=""> 用Xcode创建SpriteKit游戏项目</a>
+							<span>11:20</span>
+						</div>
+						<div class="right-content">
+							用Xcode创建SpriteKit游戏项目视频教程,主讲SpriteKit ,SpriteKit,Xcodepppp学会创建SpriteKit工程,SpriteKit游戏项目
+						</div>
+					</div>
+				</div>
+				<div class="lists">
+					<div class="lists-left2-active">2</div>
+					<div class="lists-right"></div>
+				</div>
+				<div class="lists">
+					<div class="lists-left2-active">3</div>
+					<div class="lists-right"></div>
+				</div>
+				<div class="lists">
+					<div class="lists-left2-active">4</div>
+					<div class="lists-right"></div>
+				</div>
+				<div class="lists">
+					<div class="lists-left2-active">5</div>
+					<div class="lists-right"></div>
+				</div>
+				<div class="lists">
+					<div class="lists-left2">4</div>
+					<div class="lists-right"></div>
+				</div>
+				<div class="lists">
+					<div class="lists-left2">5</div>
+					<div class="lists-right"></div>
+				</div>
+
+				<div class="lists">
+					<div class="lists-left3-active">6</div>
+					<div class="lists-right"></div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="cf"></div>
+</div><!-- main end -->
+
+
+
+
+
+<!-- 网站底部 -->
+<div id="footer">
+	<div class="footer-container w-1000">
+		<div class="footer-left">
+			<div class="footer-search">
+				<span><i></i><input type="text" placeholder="搜索课程" class="search-lesson" /></span>
+			</div>
+			<div class="footer-l-block">
+				<p>联系客服QQ：491923715</p>
+				<p>业务资源合作：hey@jikexueyuan.com</p>
+				<ul class="footer-l-nav">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">课程需求</a></li>
+					<li><a href="#">黑板报</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-right">
+			<div class="footer-subscribe">
+				<span><input type="text" placeholder="输入订阅邮箱" class="search-lesson" /></span>
+				<a class="btn-green" href="#"><span>订 阅</span></a>
+			</div>
+			<div class="footer-weixin">
+				<img src="./images/weixin.png" width="250px" height="86px" />
+			</div>
+		</div>
+	</div>
+	<div class="common-footer">
+		<div class="w-1000">
+			<div class="cfooter-l">
+				<p>Copyright © 2009 - 2014 jikexueyuan.com All Rights Reversed.</p>
+				<p>京ICP备11018032号-7 京公网安备11010802013056</p>
+			</div>
+			<div class="cfooter-r">
+				<ul class="cfooter-r-nav">
+					<li><a href="#">网站地图</a> | </li>
+					<li><a href="#">服务条款</a> | </li>
+					<li><a href="#">版权声明</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 网站底部 结束 -->
+</body>
+</html>

@@ -1,0 +1,518 @@
+.ucenter
+{
+	padding-top: 30px;
+	margin-bottom: 100px;
+	display: inline-block;
+	text-align: left;
+}
+.ucenter .ucenter-left
+{
+	float: left;
+	width: 226px;
+	min-height: 760px;
+	background: #FFF;
+}
+.ucenter-left .ucenter-l-header
+{
+	margin: 20px;
+	text-align: center;
+}
+.ucenter-l-header .ucenter-headicon
+{
+	margin: 0 auto;
+	width: 140px;
+	height: 140px;
+}
+.ucenter-l-header .ucenter-headicon > img
+{
+	border-radius: 70px;
+}
+.ucenter-l-header .ucenter-name
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 18px;
+	line-height: 1.2em;
+}
+.ucenter-l-header .ucenter-vipbtn
+{
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+
+.ucenter-left .ucenter-l-column
+{
+	margin: 30px;
+	display: inline-block;
+}
+.ucenter-l-column .ucenter-lcolumn-block
+{
+	
+}
+.ucenter-l-column .ucenter-lcolumn-block > li
+{
+	float: left;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+	line-height: 1.2em;
+	font-size: 16px;
+	text-align: center;
+}
+.ucenter-l-column .ucenter-lcolumn-block > li:hover, .ucenter-l-column .ucenter-lcolumn-block > li.active
+{
+	background: #f1f1f1;
+	border-radius: 2px;
+}
+.ucenter-l-column .ucenter-lcolumn-block > li > a
+{
+	color: #101213;
+}
+
+.ucenter-right
+{
+	float: right;
+	width: 750px;
+	min-height: 760px;
+	background: #fff;
+}
+.ucenter-right em
+{
+	color: #ff3300;
+}
+.ucenter-right .ucenter-right-nav
+{
+	height: 44px;
+	border-bottom: 2px solid #f1f1f1;
+}
+.ucenter-right-nav .ucenter-rnav-name
+{
+	padding-left: 10px;
+	line-height: 44px;
+}
+.ucenter-right-nav .ucenter-rnav-name > span
+{
+	padding-left: 10px;
+	font-size: 18px;
+	color: #101213;
+	border-left: 2px solid #1dd243;
+}
+
+.ucenter-right .ucenter-right-content
+{
+	padding: 20px;
+	height: auto;
+	display: inline-block;
+}
+/*icon*/
+.icon-course
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -36px -10px; }
+.icon-question
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -62px -10px; }
+.icon-account
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -88px -10px; }
+.icon-setting
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -113px -10px; }
+.icon-uppwd
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -140px -10px; }
+.icon-freevip
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -166px -10px; }
+.icon-buyvip
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -193px -10px; }
+.icon-gvip
+{ margin-right: 10px; width: 16px; height: 16px; display: inline-block; vertical-align: top; background: url('./../images/ucenter.png') no-repeat; background-position: -220px -10px; }
+/*适用于G码兑换、邮箱激活的大input*/
+.big-input
+{
+	margin: 20px auto;
+	width: 710px;
+	font-size: 14px;
+	color: #101213;
+	line-height: 3em;
+	text-align: center;
+}
+.big-input span
+{
+	float: left;
+	margin-right: 10px;
+	width: 50px;
+}
+.big-input .input-box
+{
+	float: left;
+	width: 380px;
+	height: 34px;
+	line-height: 34px;
+	border: 1px solid #f1f1f1;
+	text-align: left;
+}
+.big-input .input-box > input[type=text]
+{
+	margin-left: 10px;
+	width: 95%;
+}
+
+
+/*我的账户专属*/
+.ucenter-r-buylog > p.tip
+{
+	padding: 10px;
+	font-size: 14px;
+	color: #101213;
+	line-height: 120%;
+}
+.ucenter-r-buylog > p.buy
+{
+	padding: 10px;
+	font-size: 18px;
+	color: #101213;
+	line-height: 120%;
+}
+.ucenter-r-buylog .ucenter-buyvip-block
+{
+	margin-top: 10px;
+}
+.ucenter-table
+{
+	width: 710px;
+	display: inline-table;
+}
+.ucenter-table tr
+{
+	width: 100%;
+	line-height: 48px;
+	background: #fff;
+}
+.ucenter-table tr.gray
+{
+	background: #f1f1f1;
+}
+.ucenter-table tr td,.ucenter-table tr th
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+	color: #252525;
+	border: 2px solid #fff;
+	text-align: left;
+	font-weight: normal;
+}
+
+/*忘记密码*/
+.ucenter-r-uppwd
+{
+	text-align: center;
+	width: 710px;
+}
+.ucenter-r-uppwd .ue-form
+{
+	margin: 0 auto;
+	padding: 100px 10px 45px 10px;
+	background: #FFF;
+	border-radius: 5px;
+}
+.ucenter-r-uppwd .ue-form .form-l
+{
+	width: 400px;
+	display: inline-block;
+}
+.ue-form .form-l .form-dom
+{
+	float: left;
+	text-align: left;
+	vertical-align: middle;
+}
+.form-dom .form-tit
+{
+	float: left;
+	width: 120px;
+	line-height: 3em;
+	text-align: right;
+	font-size: 12px;
+	color: #101213;
+}
+.form-tit > span
+{
+	color: red;
+	vertical-align: middle;
+}
+.form-dom .form-input
+{
+	float: left;
+	width: 230px;
+}
+.form-input .check-dom
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.form-input .check-dom .jkxy-input
+{
+	padding-left: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width: 215px;
+	vertical-align:middle;
+	border: 1px solid #e4e4e4;
+	border-radius: 3px;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+.jkxy-input-disabled
+{
+	background: #f6f6f6;
+}
+.form-input .check-dom .jkxy-code
+{
+	padding-left: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width: 120px;
+	vertical-align:middle;
+	border: 1px solid #e4e4e4;
+	border-radius: 3px;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+.form-input .check-dom .jkxy-code-img
+{
+	width: 100px;
+}
+.form-input .form-tip
+{
+	padding-bottom: 3px;
+	float: left;
+	display: inline-block;
+	font-size: 10px;
+	line-height: 1.2em;
+}
+.checkError { color: red; }
+.form-check-succ { border: 1px solid green !important; }
+.form-check-error { border: 1px solid red !important; }
+.form-check-wait { border: 1px solid orange !important; }
+
+/*兑换G码*/
+.ucenter-r-gvip
+{
+	margin: 140px auto;
+	width: 710px;
+	text-align: center;
+}
+.ucenter-r-gvip .gvip-font
+{
+	font-size: 14px;
+	color: #101213;
+	line-height: 3em;
+}
+.ucenter-r-gvip .gvip-input
+{
+	margin: 0 auto;
+	width: 450px;
+}
+.ucenter-r-gvip .gvip-btn
+{
+	padding: 10px;
+}
+
+/*个人设置*/
+.ucenter-right-nav .ucenter-setting-nav
+{
+	
+}
+.ucenter-setting-nav .setting-nav-block
+{
+	margin: 15px;
+	height: 48px;
+	border-bottom: 2px solid #f1f1f1;
+}
+.setting-nav-block > li
+{
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.setting-nav-block > li:hover, .setting-nav-block > li.active
+{
+	border-bottom: 2px solid #101213;
+}
+.setting-nav-block > li > a
+{
+	line-height: 48px;
+	font-size: 18px;
+	color: #101213;
+}
+/*个人设置-激活邮箱*/
+.ucenter-r-activeemail
+{
+	padding-top: 100px;
+	width: 710px;
+	text-align: center;
+}
+.ucenter-r-activeemail .font1
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	color: #101213;
+}
+.ucenter-r-activeemail .font2
+{
+	padding-top: 10px;
+	font-size: 30px;
+	color: #101213;
+}
+.activeemail-input
+{
+	width: 380px;
+	margin: 0 auto;
+}
+/*个人设置-信息修改*/
+.ucenter-r-setedit
+{
+	text-align: center;
+	width: 710px;
+}
+.ucenter-r-setedit .ue-form
+{
+	margin: 0 auto;
+	padding: 0px 10px 45px 10px;
+	background: #FFF;
+	border-radius: 5px;
+}
+.ucenter-r-setedit .ue-form .form-l
+{
+	width: 600px;
+	display: inline-block;
+}
+.ucenter-r-setedit .form-dom .form-input
+{
+	float: left;
+	width: 400px;
+}
+
+/*课程问答*/
+.ucenter-question-nav .question-nav-block
+{
+	margin: 0;
+	height: 48px;
+	border-bottom: 2px solid #f1f1f1;
+}
+.question-nav-block > li
+{
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.question-nav-block > li:hover, .question-nav-block > li.active
+{
+	border-bottom: 2px solid #101213;
+}
+.question-nav-block > li > a
+{
+	line-height: 48px;
+	font-size: 18px;
+	color: #101213;
+}
+.question-nav-block span.question-nav-tip
+{
+	margin-left: 6px;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	background: #ff0c3f;
+	color: #FFF;
+	font-size: 12px;
+	line-height: 1.5em;
+	vertical-align: text-top;
+}
+/*课程问题-我的回答*/
+.ucenter-right .ucenter-question-answer
+{
+	margin: 0 auto;
+}
+.ucenter-question-answer .question-answer-block
+{
+	width: 100%;
+}
+.question-answer-block .question-answer-list
+{
+	float: left;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	border-bottom: 1px solid #f1f1f1;
+}
+.question-answer-block .question-answer-list:hover, .question-answer-block .question-answer-list-active
+{
+	background: #fffaea;
+}
+.question-answer-block .question-answer-list .question-list-content
+{
+	float: left;
+	margin-left: 10px;
+	width: 740px;
+}
+	.question-list-content > p
+	{
+		font-size: 12px;
+		line-height: 2em;
+		color: #999;
+	}
+	.question-list-content > p.question-tit > a
+	{
+		width: 545px;
+		font-size: 14px;
+		line-height: 2em;
+		color: #101213;
+		overflow: hidden;
+	}
+	.question-list-content > p.question-tit > a:hover
+	{
+		text-decoration: underline;
+	}
+	.question-list-content > p.question-tit > span
+	{
+		float: right;
+		margin-right: 10px;
+	}
+
+/*我的课程*/
+.ucenter-right-course
+{
+	float: right;
+	width: 750px;
+}
+.ucenter-right-course .ucenter-course-nav
+{
+	padding: 10px;
+	background: #fff;
+}
+.ucenter-course-nav .course-nav-box
+{
+	border-left: 2px solid #1dd243;
+	padding-left: 10px;
+}
+.ucetner-right .ucenter-course-list
+{
+	
+}
+.ucenter-course-list .course-box
+{
+	margin-top: 15px;
+	display: inline-block;
+	background-color: #FFF;
+	position: relative;
+}
+.ucenter-course-list .course-box .course-box-close
+{
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>极客学院</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./css/special.css" />
+<script src="./js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.slides.min.js" ></script>
+<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+<script type="text/javascript" src="./js/common.js" ></script>
+</head>
+
+<body>
+<!--ue-bar-->
+<div id="ue-bar">
+  <div class="logobox w-1000 cf"> <img src="images/logo.png" class="logo"/>
+    <div class="searchbox"> 
+    		<a href="#" target="_blank" class="col-green01">免费体验VIP会员</a> 
+    	<span>
+    		<i></i>
+     		 <input type="text" value="" class="search-lesson" placeholder="搜索课程"  />
+      </span>
+    </div>
+</div>
+  <div class="ue-box cf  ">
+    <div class="uebox-content w-1000 cf">
+         <div class="navbox"> <i></i> <span>专业课程</span> <span>学习路径图</span> <span>技术问答</span> <span>VIP会员</span> <span>APP下载</span> </div>
+        <!--  <div class="loginbox"> <a class="register">注册</a><em>|</em><a class="login greenbtn">登录</a> </div> -->
+      	<div class="loginbox"> 
+      		<a class="mylesson">我的课程</a><em>|</em><a class="myask">我的问答</a><em>|</em><span class="user-name green-color">我的测试账号名称</span> 
+      		<!-- 登录后弹出层 -->
+      			<div class="login-success none">
+      				<i class="trangle2"></i> 
+      				<div class="my-nav">
+      					<a href="#"><i class="learncenter-icon"></i>学习中心</a>
+      					<a href="#"><i class="my-zh"></i>我的账户</a>
+      					<a href="#"><i class="gotvip"></i>获取VIP</a>
+      					<a href="#"><i class="myset"></i>个人设置</a>
+      					<span class="garybtn">登出</span>
+      				</div>
+      			</div>
+      		<!-- 登录后弹出层 -->
+      	</div>
+    </div>
+    <!--下拉-->
+    <div class="pulldownbox none">
+      <div class="down-content w-1000"> <i class="trangle"></i> 
+        <!--显示区-->
+        <div class="showbox none padd-t40 ">
+          <ul>
+            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+            <li> <strong>快捷导航</strong> <a href="#">免费课程</a>| <a href="#">最新课程</a>| <a href="#">所有课程</a>| <a href="#">课程预告</a>| <a href="#">提交课程需求</a> </li>
+          </ul>
+        </div>
+        <!--显示区--> 
+         
+      </div>
+    </div>
+    <!--下拉 end--> 
+  </div>
+</div>
+<!--ue-bar end--> 
+
+
+<!-- Bread crumbs navigation -->
+
+<div class="bread-crumbs-navigation">
+	<a href="#">所有课程</a> › <a href="#">专题</a> › Cocos2d-x
+</div>
+<!-- Bread crumbs navigation end -->
+
+<!-- jk-lesson-listbox -->
+<div id="jk-lesson-listbox" class="w-1000 cf">
+   		<!-- 导航  -->
+		<div class="jk-lesson-leftnav mar-top40 fl mar-rt24">
+			<div class="classif">
+				<h2>技术分类</h2>
+				<div class="leftnav-content">
+					<ul>
+						<li class="onthis">html5</li>
+						<li>html5</li>
+						<li>html5</li>
+						<li>html5</li>
+						<li>html5</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="classif mar-top20">
+				<h2>技术分类</h2>
+				<div class="leftnav-content">
+					<ul>
+						<li class="onthis">html5</li>
+						<li>html5</li>
+						<li>html5</li>
+						<li>html5</li>
+						<li>html5</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="classif mar-top20">
+				<h2>难度</h2>
+				<div class="leftnav-content">
+					<ul id="difficulty" class="cf">
+						<li class="onthis">基础</li>
+						<li>中等</li>
+						<li>困难</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!-- 导航 end -->
+		<!-- 专题列表 -->
+		<div id="lesson-casssif-listbox">
+			<div class="lisetbox-classif-title cf">
+				<span class="classif-one"></span><span class="classif-tow"></span><span class='lesson-number'>200 课程</span><span class="video-number">34403个视频</span>
+				<div class="time-classfi">
+					<span>按发布日期</span>|<span>热度</span>
+				</div>
+			</div>
+
+			<!-- 课程列表 -->
+			<div class="lesson-showimg-list">
+				<div class="listbox-780 cf">
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+					<!-- oneimg -->
+					<div class="lessonimgbox">
+						<a href="">
+						<div class="img-box">
+							<img src="images/lesson.jpg">
+						</div>
+						<h3>c语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+						<div class="imgboxfoot cf">
+							<span class="minandtime">24min 6课时</span>
+						</div>
+
+						<div class="img-pop">
+							<h3>语言面向对象++语言面向对象++语言面向对象++语言面向对象++</h3>
+							<blockquote>
+								<p>语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++语言面向对象++</p>
+							</blockquote>
+							<div class="time-user-number"><span>2014-09-15</span><span>2000人在学习</span></div>
+						</div>
+						</a>
+					</div>
+					<!-- oneimg end -->
+
+				</div>
+			</div>
+			<!-- 课程列表 -->
+			<!-- 分页 -->
+			<div class="page-nav cf">
+				<span class="prevbtn">上一页</span>
+				<span class="onthis">1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+				<span class="nextbtn">下一页</span>
+
+			</div>
+			<!-- 分页 end -->
+		</div>
+		<!-- 专题列表 end -->
+
+
+	
+</div>
+<!-- jk-lesson-listbox end -->
+<!--follow-jkteacher -->
+<div class="follow-jkteacher">
+	<div class="follow w-1000 cf">
+		<div class="left-textbox">
+			<h4>课程太多不知从何学起？</h4>
+			<strong>跟随专业讲师精心制定的学习<span class="orange-color">路径图</span>，系统学习成为技术高手</strong>
+			<img src="images/leftbtn.jpg" class="prev-btn" />
+			<img src="images/rightbtn.jpg" class="next-btn" />
+			<div class="cardshowbox">
+				<div class="smallcardlist cf">
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+					<a href="#"><img src="images/smalcard.jpg"></a>
+				</div>
+			</div>
+		</div>
+		<div class="right-showbox">
+			<h5>享受定制学习计划</h5>
+			<div class="plan-text">
+			<p>跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手跟随专业讲师精心制定的学习路径图，系统学习成为技术高手s</p>
+				<a href="#" class="vipbtn">成为VIP</a><a class="sxbtn" href="#">即将上线</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--follow-jkteacher -->
+<!-- 网站底部 -->
+	<div id="footer">
+		<div class="footer-container w-1000">
+			<div class="footer-left">
+				<div class="footer-search">
+					<span><i></i><input type="text" placeholder="搜索课程" class="search-lesson" /></span>
+				</div>
+				<div class="footer-l-block">
+					<p>联系客服QQ：491923715</p>
+					<p>业务资源合作：hey@jikexueyuan.com</p>
+					<ul class="footer-l-nav">
+						<li><a href="#">关于我们</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">加入我们</a></li>
+						<li><a href="#">常见问题</a></li>
+						<li><a href="#">课程需求</a></li>
+						<li><a href="#">黑板报</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-right">
+				<div class="footer-subscribe">
+					<span><input type="text" placeholder="输入订阅邮箱" class="search-lesson" /></span>
+					<a class="btn-green" href="#"><span>订 阅</span></a>
+				</div>
+				<div class="footer-weixin">
+					<img src="./images/weixin.png" width="250px" height="86px" />
+				</div>
+			</div>
+		</div>
+		<div class="common-footer">
+			<div class="w-1000">
+				<div class="cfooter-l">
+					<p>Copyright © 2009 - 2014 jikexueyuan.com All Rights Reversed.</p>
+					<p>京ICP备11018032号-7 京公网安备11010802013056</p>
+				</div>
+				<div class="cfooter-r">
+					<ul class="cfooter-r-nav">
+						<li><a href="#">网站地图</a> | </li>
+						<li><a href="#">服务条款</a> | </li>
+						<li><a href="#">版权声明</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 网站底部 结束 -->
+
+</body>
+</html>
