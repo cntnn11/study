@@ -9,10 +9,88 @@
 </style>
 <body>
 <p>canvas绘图</p>
-<div class="canvas-block">
-	<canvas id="canvas"></canvas>
+<div class="canvas-block"> 
+	<canvas id="c1" width="800" height="500">
+		<p>不支持canvas浏览器</p>
+	</canvas>
 </div>
 <script type="text/javascript">
+var init	= function(){
+	var oC	= document.getElementById('c1');
+
+	// 获取一个2d绘画对象    --webgl : 3D绘图，部分浏览器支持
+	var oGC	= oC.getContext('2d');
+
+	//oGC.save();
+	// 画一个实心矩形
+	//oGC.fillStyle	= "orange";								// 设置矩形的填充颜色
+	//oGC.fillRect( 50, 50, 120, 120 );						// 生成图画
+	//oGC.restore();
+
+	// 边框矩形（非实心）
+	//var oGC2	= oC.getContext('2d');
+	//oGC2.strokeStyle	= "red";
+	//oGC2.lineWidth	= "10";									// 边框宽度，支持stroke
+	//oGC2.lineJoin	= "round";								// 边框样式，同css的border设置。其他选项：bevel/round/miter(默认)
+	//oGC2.strokeRect( 200.5, 100.5, 100, 100 );
+
+
+	// 画一条直线
+	//var oGC3	= oC.getContext('2d');
+	//oGC3.beginPath();
+	//oGC3.moveTo(100, 100);									// 线条起点
+	//oGC3.lineTo(200, 200);									// 下一个点，可以添加N个
+	//oGC3.lineTo(100, 300);
+	//oGC3.closePath();										// 闭合
+	//oGC3.stroke();
+
+
+	// 保存路径
+	//oGC.save();
+	//oGC.restore();
+
+	// 鼠标画线
+	oC.onmousedown	= function(e)
+	{
+		var e = e || window.event;
+		oGC.moveTo( e.clientX-oC.offsetLeft, e.clientY-oC.offsetTop );
+		document.onmousemove	= function(e)
+		{
+			var e = e || window.event;
+			oGC.lineTo( e.clientX-oC.offsetLeft, e.clientY-oC.offsetTop );
+			oGC.stroke();
+		}
+		document.onmouseup	= function()
+		{
+			document.onmousemove	= null;
+			document.onmouseup		= null;
+		}
+	}
+
+	// 移动方块
+	oGC.strokeRect(0, 0, 50, 50);
+	var num	= 0;
+	var movefill = setInterval(function(){
+		num++;
+		if( num == oC.height-60 )
+		{
+			clearInterval(movefill);
+		}
+		else
+		{
+			oGC.clearRect(0, 0, oC.width, oC.height);
+			oGC.fillRect(num, num, 50, 50);
+		}
+		
+	}, 30);
+}
+
+
+
+
+window.onload	= function (argument){
+	init();
+}
 
 
 </script>
