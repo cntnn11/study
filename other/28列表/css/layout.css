@@ -1,0 +1,969 @@
+
+.wrap {
+    margin: 0 auto;
+    width: 960px;
+}
+.topbar {
+    background: none repeat scroll 0 0 #2d2d2d;
+    border-bottom: 1px solid #000;
+    font-size: 12px;
+    height: 29px;
+}
+.topbar .wrap {
+    color: #fff;
+    line-height: 29px;
+    text-align: right;
+}
+.topbar .wrap1 {
+    text-align: left;
+    width: 960px;
+}
+.topbar .cutline {
+    color: #ccc;
+}
+.topbar a:link, .topbar a:visited, .topbar a:hover {
+    color: #fff;
+}
+.topbar a:hover {
+    text-decoration: underline;
+}
+.header {
+    background: url("http://www.tcsasac.com/statics/front/images/headerBg.gif") repeat-x scroll 0 0 #9a1816;
+    height: 55px;
+}
+.header .wrap {
+    background: url("http://www.tcsasac.com/statics/front/images/headerBg2.gif") no-repeat scroll 160px 0 ;
+    height: 55px;
+    padding-left: 0;
+}
+.header h1 {
+    float: left;
+}
+.header h1 a {
+    background: url("http://www.tcsasac.com/statics/front/images/logo.gif") no-repeat scroll 0 0 ;
+    display: block;
+    height: 51px;
+    text-indent: -9999px;
+    width: 235px;
+}
+.header ul {
+    float: right;
+    height: 30px;
+    padding: 10px 0;
+}
+.header li {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+.header li a {
+    background: url("http://www.tcsasac.com/statics/front/images/icon.gif") no-repeat scroll 0 0 ;
+    display: block;
+    height: 32px;
+    text-indent: -9999px;
+    width: 42px;
+}
+.header .train a {
+    background-position: 0 0;
+}
+.header .train a:hover {
+    background-position: 0 -32px;
+}
+.header .info a {
+    background-position: 0 -64px;
+}
+.header .info a:hover {
+    background-position: 0 -96px;
+}
+.header .password a {
+    background-position: 0 -128px;
+}
+.header .password a:hover {
+    background-position: 0 -160px;
+}
+.header .feedback a {
+    background-position: 0 -192px;
+}
+.header .feedback a:hover {
+    background-position: 0 -224px;
+}
+.header .back a {
+    background-position: 0 -256px;
+}
+.header .back a:hover {
+    background-position: 0 -288px;
+}
+.header .back {
+    margin-right: 0;
+}
+.header .title {
+    background: none repeat scroll 0 0 #2a2a2a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    left: -8px;
+    position: absolute;
+    text-align: center;
+    top: 31px;
+    width: 60px;
+}
+.header .title span {
+    background: url("http://www.tcsasac.com/statics/front/images/arrow.gif") no-repeat scroll 0 0 ;
+    left: 25px;
+    padding: 5px 5px 0;
+    position: absolute;
+    top: -5px;
+}
+.position {
+    color: #858585;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    min-height: 30px;
+}
+.position a:link, .position a:visited, .position a:hover {
+    color: #858585;
+}
+.main {
+    background: none repeat scroll 0 0 #fff;
+    padding: 0 0 20px;
+}
+.nav {
+    border-bottom: 1px solid #e5e5e5;
+    height: 35px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.nav .tag {
+    height: 35px;
+}
+.nav .tag li {
+    float: left;
+    margin-right: 5px;
+}
+.nav .tag .current {
+    position: relative;
+    top: 1px;
+}
+.nav .tag a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-top: 3px;
+    text-align: center;
+}
+.nav .tag .current a {
+    cursor: default;
+    font-weight: bold;
+}
+.nav .tag .current a:link, .nav .tag .current a:visited, .nav .tag .current a:hover {
+    color: #444;
+}
+.tag1 a {
+    background: url("http://www.tcsasac.com/statics/front/images/tag1.gif") no-repeat scroll 0 0 ;
+    width: 190px;
+}
+.tag2 a {
+    background: url("http://www.tcsasac.com/statics/front/images/tag2.gif") no-repeat scroll 0 0 ;
+    width: 105px;
+}
+.tag3 a {
+    background: url("http://www.tcsasac.com/statics/front/images/tag3.gif") no-repeat scroll 0 0 ;
+    width: 80px;
+}
+.tag .current a, .tag .current a:hover {
+    background-position: 0 -35px;
+}
+.tag a:hover {
+    background-position: 0 -70px;
+}
+.nav .goBack {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 80px;
+}
+.nav .goBack a {
+    background: url("http://www.tcsasac.com/statics/front/images/back.gif") no-repeat scroll 0 0 ;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 80px;
+}
+.nav .goBack a:hover {
+    background-position: 0 -30px;
+}
+.nav .code {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.nav .code a {
+    color: #d63e2c;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+}
+.nav .code a:hover {
+    color: #f00;
+}
+.nav .code .personInfo {
+    margin-right: 20px;
+}
+.pager {
+    padding-left: 410px;
+}
+.pager a, span.first, span.pre, span.next, span.end {
+    background: url("http://www.tcsasac.com/statics/front/images/pager.gif") no-repeat scroll 0 0 ;
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    width: 100px;
+}
+.pager a:hover {
+    background-position: 0 -40px;
+}
+.pager .next {
+    margin-right: 0;
+}
+.pager .showPage {
+    float: left;
+    font: 30px Arial,'宋体',Verdana,Helvetica,sans-serif;
+    text-align: center;
+    width: 120px;
+}
+.btn {
+    background: url("http://www.tcsasac.com/statics/front/images/btn.gif") no-repeat scroll 0 0 ;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    width: 84px;
+}
+.btn:link, .btn:visited, .btn:hover {
+    color: #fff;
+}
+.btn2 {
+    background-position: 0 -34px;
+}
+.btn3 {
+    background-color: #db4a39;
+    background-image: none;
+    border: 1px solid #d8d8d8;
+    width: 140px;
+}
+.btn4, .btn5 {
+    background: url("http://www.tcsasac.com/statics/front/images/btn2.gif") no-repeat scroll 0 0 ;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 34px;
+    text-align: center;
+    width: 98px;
+}
+.btn5 {
+    background-position: 0 -35px;
+    width: 110px;
+}
+.btn4:link, .btn4:visited, .btn5:link, .btn5:visited {
+    color: #fff;
+}
+.btn4:hover, .btn5:hover {
+    color: #b60000;
+}
+button.btn4 {
+    height: 34px;
+    line-height: 34px;
+}
+.boxBorder {
+    border: 1px solid #d9d9d9;
+    padding: 25px 30px;
+}
+.noData {
+    background: url("http://www.tcsasac.com/statics/front/images/wrong1.gif") no-repeat scroll 0 10px transparent;
+    padding: 10px 0 10px 35px;
+}
+.cover {
+    background: none repeat scroll 0 0 #000;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+}
+.floatCon {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #c2c2c2;
+    position: absolute;
+}
+.floatCon .close {
+    background: url("http://www.tcsasac.com/statics/front/images/close2.gif") no-repeat scroll 0 0 ;
+    display: block;
+    font-size: 19px;
+    height: 19px;
+    line-height: 19px;
+    position: absolute;
+    right: 6px;
+    text-indent: -9999px;
+    top: 6px;
+    width: 19px;
+}
+.floatCon .close:hover {
+    background-position: 0 -19px;
+}
+.floatCon form {
+    padding: 40px 10px 40px 40px;
+}
+.floatCon .item {
+    margin-bottom: 15px;
+    width: 442px;
+}
+.floatCon .title {
+    float: left;
+    width: 40px;
+}
+.floatCon .con {
+    float: left;
+    position: relative;
+}
+.floatCon .con .textCount {
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: -22px;
+}
+.floatCon .con .textCount b {
+    font-weight: normal;
+}
+.floatCon textarea {
+    border: 1px solid #d8d8d8;
+    height: 75px;
+    line-height: 20px;
+    width: 398px;
+}
+.floatCon .inputText {
+    border: 1px solid #d8d8d8;
+    height: 20px;
+    line-height: 20px;
+    width: 398px;
+}
+.floatCon .btn {
+    float: right;
+}
+.footer {
+    background: none repeat scroll 0 0 #2d2d2d;
+    color: #fff;
+    height: 100px;
+    padding-top: 10px;
+    text-align: center;
+}
+.footer1 {
+    height: 128px;
+}
+.footer a:link, .footer a:visited, .footer p {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.wrongInfo {
+    background: url("http://www.tcsasac.com/statics/front/images/icon3.gif") no-repeat scroll 15px -41px #fce1dd;
+    border: 1px solid #db4a39;
+    color: #db4a39;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 10px;
+    padding-left: 55px;
+    width: auto;
+}
+.rightInfo {
+    background: url("http://www.tcsasac.com/statics/front/images/icon3.gif") no-repeat scroll 10px 5px #4b8ef9;
+    border: 1px solid #2073db;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 10px;
+    padding-left: 55px;
+    width: auto;
+}
+.warnInfo {
+    background: url("http://www.tcsasac.com/statics/front/images/icon3.gif") no-repeat scroll 15px -94px #fff3e7;
+    border: 1px solid #fb9b3f;
+    color: #e67100;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 10px;
+    padding-left: 55px;
+    width: auto;
+}
+.rightInfo2 {
+    background: none repeat scroll 0 0 #fff3e7;
+    border: 1px solid #fb9b3f;
+    color: #e67100;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 440px;
+}
+.topbar .left {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.topbar .right {
+    float: right;
+}
+.topbar .right .title, .topbar .right .con {
+    float: left;
+    line-height: 20px;
+    padding-right: 5px;
+}
+.topbar .right .con {
+    padding-right: 12px;
+}
+.topbar .right input {
+    background-color: #e1e1df;
+    border: 0 none;
+    height: 17px;
+    line-height: 17px;
+    width: 104px;
+}
+.topbar .right form {
+    float: left;
+    padding: 5px 10px 0 0;
+}
+.topbar .right .userInfo {
+    float: right;
+}
+.topbar .right .code {
+    float: left;
+    height: 30px;
+}
+.topbar .right .code span {
+    float: left;
+}
+.topbar .right .code a {
+    background: url("http://www.tcsasac.com/statics/front/images/btnbg.gif") no-repeat scroll 0 center ;
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    width: 79px;
+}
+.topbar .right .code a:link, .topbar .right .code a:visited, .topbar .right .code a:hover {
+    color: #b60000;
+}
+.topbar button {
+    background: url("http://www.tcsasac.com/statics/front/images/into.gif") no-repeat scroll 0 0 ;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 60px;
+}
+.topbar .userInfo {
+    float: right;
+}
+.header1 {
+    background: url("http://www.tcsasac.com/statics/front/images/headerBg3.gif") repeat-x scroll 0 0 #971201;
+    height: 121px;
+}
+.header1 .banner {
+    background: url("http://www.tcsasac.com/statics/front/images/banner.jpg") no-repeat scroll 0 0 ;
+    display: block;
+    height: 120px;
+    margin: 0 auto;
+    padding: 0;
+    width: 996px;
+}
+.header1 .banner a {
+    display: block;
+    height: 121px;
+    text-indent: -9999px;
+    width: 340px;
+}
+
+
+
+.nav1 {
+    background: url("http://www.tcsasac.com/statics/front/images/navigation.gif") repeat-x scroll 0 0 #901101;
+    height: 47px;
+    line-height: 47px;
+}
+.nav1 ul {
+    height: 37px;
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 960px;
+}
+.nav1 li {
+    float: left;
+    padding-right: 22px;
+}
+.nav1 li a {
+    color: #ffffff;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 84px;
+}
+.nav1 li a:link, .nav1 li a:visited {
+    color: #ffffff;
+}
+.nav1 li a:hover {
+    background: url("http://www.tcsasac.com/statics/front/images/currentBg.gif") no-repeat scroll 0 0 ;
+    color: #ffffff;
+}
+.nav1 li.current {
+    background: url("http://www.tcsasac.com/statics/front/images/currentBg.gif") no-repeat scroll 0 0 ;
+}
+.nav1 li.current a:link, .nav1 li.current a:visited, .nav1 li.current a:hover {
+    background: none repeat scroll 0 0 ;
+    cursor: default;
+}
+.content {
+    background: none repeat scroll 0 0 #e9e9e1;
+    padding-top: 3px;
+}
+.content .innerCon {
+    background: none repeat scroll 0 0 #fff;
+    margin: 0 auto;
+    padding: 5px 10px 20px;
+    width: 950px;
+}
+.mainBox {
+    border: 1px solid #d8d8d8;
+}
+.mainBox h2 {
+    background: url("http://www.tcsasac.com/statics/front/images/tbg2.gif") repeat-x scroll 0 0 ;
+    border-bottom: 1px solid #d8d8d8;
+    color: #b60000;
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 20px;
+}
+.pagerBox {
+    color: #757576;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    width: 100%;
+}
+.pagerBox a, .pagerBox span {
+    color: #757576;
+    margin-left: 10px;
+}
+.pagerBox .pager {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c6c6c6;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 10px;
+    padding-left: 0;
+    text-align: center;
+    width: 23px;
+}
+.pagerBox .curPage {
+    margin-right: 5px;
+}
+.pagerBox a:link, .pagerBox a:visited {
+    color: #000000;
+}
+.pagerBox a:hover {
+    color: #ff0000;
+}
+.pagerBox .noData {
+    text-align: center;
+}
+.addrPanel {
+    background-color: #db4a39;
+    padding: 4px;
+    position: absolute;
+    width: 320px;
+    z-index: 2000;
+}
+.addrPanel .addrPanel_innerCon {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 20px;
+}
+.addrPanelArrow {
+    background: url("http://www.tcsasac.com/statics/front/images/arrow5.png") no-repeat scroll 0 0 ;
+    display: block;
+    height: 18px;
+    left: 130px;
+    position: absolute;
+    top: 10px;
+    width: 13px;
+    z-index: 3000;
+}
+.dailogFloat {
+    position: fixed;
+    z-index: 9100;
+}
+.dailogFloat .innerCon {
+    position: absolute;
+}
+.dailogFloat .shadow {
+    position: absolute;
+    right: -5px;
+    top: 5px;
+    z-index: -1000;
+}
+.dailogFloat .close {
+    display: block;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    text-indent: -3000px;
+    top: 10px;
+    width: 14px;
+}
+.dailogFloat .dailog_title {
+    font-size: 14px;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    margin-bottom: 2px;
+    padding: 0 10px;
+    width: auto;
+}
+.dailogFloat .dailog_con {
+    padding: 4px;
+    width: 350px;
+}
+.dailogFloat .dailog_content_con_border {
+    padding: 1px;
+}
+.dailogFloat .dailog_content_con_border_inner {
+    padding: 2px;
+}
+.dailogFloat .dailog_content {
+    padding: 10px;
+}
+.dailogFloat .dailog_button {
+    padding: 20px;
+    text-align: center;
+}
+.alert .shadow {
+    background-color: #c5ddef;
+}
+.alert .dailog_con {
+    background-color: #d1514b;
+}
+.alert .dailog_title {
+    border: 1px solid #d4827e;
+    color: #fff7f7;
+}
+.alert .dailog_content_con_border {
+    background-color: #fff7f7;
+}
+.alert .dailog_content_con_border_inner {
+    background-color: #ffffff;
+}
+.error .shadow {
+    background-color: #d4827e;
+}
+.error .close, .alert .close {
+    background: url("http://www.tcsasac.com/statics/front/images/basic2.gif") no-repeat scroll 0 -180px transparent;
+}
+.error .dailog_con {
+    background-color: #d1514b;
+}
+.error .dailog_title {
+    border: 1px solid #d4827e;
+    color: #fff7f7;
+}
+.error .dailog_content_con_border {
+    background-color: #fff7f7;
+}
+.error .dailog_content_con_border_inner {
+    background-color: #ffffff;
+}
+.error button, .alert button {
+    background: url("http://www.tcsasac.com/statics/front/images/basic2.gif") repeat scroll 0 0 ;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    vertical-align: middle;
+    width: 124px;
+}
+.error button:hover, .alert button {
+    background-position: 0 -30px;
+}
+.floatCon {
+    height: 292px;
+    position: fixed;
+    width: 496px;
+}
+.floatInfoCon {
+    height: 236px;
+    position: fixed;
+    width: 400px;
+}
+.floatInnerCon {
+    position: fixed;
+}
+.floatInnerCon .floatIframe {
+    background-color: #ffffff;
+    border: 1px solid #848484;
+    position: absolute;
+    z-index: 1000;
+}
+.floatInnerCon .floatInfoShadow {
+    background: none repeat scroll 0 0 #858585;
+    border: 0 none;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    z-index: 997;
+}
+.floatInnerCon .floatRegShadow, .floatUnitShadow {
+    background: none repeat scroll 0 0 #858585;
+    border: 0 none;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    z-index: 997;
+}
+.floatInfo {
+    background: none repeat scroll 0 0 #fff;
+    padding: 10px 12px 20px;
+}
+.floatLogin .loginTitle, .floatInfo .infoTitle {
+    border-bottom: 1px solid #c9c9c9;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+}
+.floatLogin .loginTitle span, .floatInfo .infoTitle span {
+    color: #ce1500;
+    font-size: 14px;
+    font-weight: bold;
+}
+.floatLogin .loginTitle .close, .floatInfo .infoTitle .close {
+    background: url("http://www.tcsasac.com/statics/front/images/close2.gif") no-repeat scroll 0 0 ;
+    font-size: 0;
+    height: 11px;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 11px;
+}
+.floatLogin .loginTitle .close:hover, .floatInfo .infoTitle .close:hover {
+    background-position: 0 -11px;
+}
+.floatLogin .floatLoginCon {
+    padding: 20px;
+}
+.floatInfo .infoCon {
+    color: #333;
+    font-size: 14px;
+    line-height: 35px;
+    padding: 15px 30px;
+}
+.floatInfo .infoCon a:link, .floatInfo .infoCon a:visited, .floatInfo .infoCon a:hover {
+    color: #f00;
+}
+.floatInfo .infoCon a:hover {
+    text-decoration: underline;
+}
+.floatInfo .regSuccess {
+    padding: 25px 0 25px 55px;
+}
+.floatInfo .regSuccess span {
+    color: #f00;
+}
+.floatInfo .btnBox {
+    padding-left: 60px;
+}
+.floatInfo .btnBox a {
+    background: url("http://www.tcsasac.com/statics/front/images/btn4.gif") no-repeat scroll 0 0 ;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 29px;
+    line-height: 29px;
+    margin-left: 25px;
+    text-align: center;
+    width: 81px;
+}
+.floatInfo .btnBox a:link, .floatInfo .btnBox a:visited {
+    color: #fff;
+}
+.floatInfo .btnBox a:hover {
+    background-position: 0 -29px;
+    color: #fff;
+}
+.floatUnit {
+    background: none repeat scroll 0 0 #fff;
+    padding: 10px 12px 20px;
+    position: fixed;
+    width: 475px;
+}
+.floatUnit form {
+    padding: 10px 0 0;
+    width: 100%;
+}
+.floatUnit .searchCon {
+    padding: 10px;
+}
+.floatUnit .u_listCon {
+    height: 240px;
+    overflow-y: scroll;
+}
+.floatUnit .u_listCon li {
+    border-bottom: 1px solid #e7e7e7;
+    height: 45px;
+    line-height: 45px;
+}
+.floatUnit .u_listCon li span {
+    color: #9b9b9b;
+    float: left;
+}
+.floatUnit .u_listCon li a:link, .floatUnit .u_listCon li a:visited {
+    color: #333;
+}
+.floatUnit .u_listCon li a:hover {
+    color: #f00;
+}
+.floatUnit .w2 {
+    border: 1px solid #7f9db9;
+    color: #343535;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    vertical-align: middle;
+    width: 330px;
+}
+.floatUnit button {
+    vertical-align: middle;
+}
+.floatUnit .u_list {
+    padding: 0 10px;
+}
+.floatUnit .infoCon {
+    font-size: 12px;
+    padding: 10px;
+}
+.helpIcon {
+    background: url("http://www.tcsasac.com/statics/front/images/help.gif") no-repeat scroll 0 0 ;
+    bottom: 300px;
+    display: block;
+    height: 87px;
+    position: fixed;
+    right: -87px;
+    text-indent: -3000px;
+    width: 87px;
+}
+.cTag {
+    border-bottom: 2px solid #ffc046;
+    height: 26px;
+}
+.cTag li {
+    background: url("http://www.tcsasac.com/statics/front/images/tag.gif") no-repeat scroll 0 -26px ;
+    display: inline-block;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 5px;
+    padding-top: 2px;
+    text-align: center;
+    width: 95px;
+}
+.cTag .current {
+    background-position: 0 0;
+}
+.cTag a {
+    display: block;
+    font-weight: bold;
+    height: 24px;
+    width: 95px;
+}
+.cTag a:link, .cTag a:visited {
+    color: #555;
+}
+.cTag a:hover {
+    color: #d5040a;
+}
+.cTag .current a:link, .cTag .current a:visited, .cTag .current a:hover, .cTag .current a:active {
+    color: #d5040a;
+    cursor: default;
+}
+.floatUnit .infoCon .cTag {
+    padding-left: 5px;
+}
+.floatUnit .infoCon .cTag li {
+    background-position: 0 -78px;
+    width: 85px;
+}
+.floatUnit .infoCon .cTag a {
+    width: 85px;
+}
+.floatUnit .infoCon .cTag .current {
+    background-position: 0 -52px;
+}
+.floatUnit .infoCon .cTag a:link, .floatUnit .infoCon .cTag a:visited {
+    color: #555;
+}
+.floatUnit .infoCon .cTag a:hover {
+    color: #f00;
+    text-decoration: none;
+}
+.floatUnit .infoCon .cTag .current a:link, .floatUnit .infoCon .cTag .current a:visited, .floatUnit .infoCon .cTag .current a:hover, .floatUnit .infoCon .cTag .current a:active {
+    color: #d5040a;
+    cursor: default;
+}
+.floatComment {
+    height: 254px;
+    width: 542px;
+}
+.floatComment .item {
+    width: 460px;
+}
+.floatComment textarea {
+    height: 75px;
+    width: 414px;
+}
+.floatComment .inputText {
+    width: 414px;
+}
+.floatComment .close {
+    background: url("http://www.tcsasac.com/statics/front/images/close.gif") no-repeat scroll 0 0 ;
+}
+.floatComment .btnBox {
+    color: #f00;
+    height: 35px;
+    text-align: right;
+    width: 454px;
+}
+.floatComment .btnBox span {
+    line-height: 34px;
+    padding-right: 10px;
+}

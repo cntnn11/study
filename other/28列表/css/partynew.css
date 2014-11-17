@@ -1,0 +1,1101 @@
+
+body {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_boby_Bg.jpg") repeat-x scroll 0 29px #fffbe5;
+
+}
+body.party {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_line_Bg.jpg") repeat-x scroll 0 0 #720000;
+}
+body.partyLogin {
+    height: 710px;
+}
+.more {
+    float: right;
+    font-size: 12px;
+}
+.dxInnerCon {
+    padding: 7px 10px 10px;
+}
+.topbar .wrap1 {
+    width: 980px;
+}
+.topbar .left {
+    padding-left: 0;
+}
+.partyinnerFrame {
+    padding-top: 223px;
+}
+.partymainFrame {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_loginBg.jpg") no-repeat scroll center 0 rgba(0, 0, 0, 0);
+    height: 100%;
+}
+.partyminFrame {
+    background: url("http://www.tcsasac.com/statics/front/images/jiguanmin_Con.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 401px;
+    margin: 0 auto;
+    width: 543px;
+}
+.partymaxFrame {
+    background: url("http://www.tcsasac.com/statics/front/images/jiguanmax_Con.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 639px;
+    margin: 0 auto;
+    width: 623px;
+}
+.partymainFrame .titleBanner {
+    height: 73px;
+}
+.partymainFrame .welcomeLogin {
+    background: url("http://www.tcsasac.com/statics/front/images/jiguanloginTitle_Icon.jpg") no-repeat scroll 30px 10px rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+}
+.partymainFrame .welcomeReg {
+    background: url("http://www.tcsasac.com/statics/front/images/jiguanRegTitle_Icon.jpg") no-repeat scroll 30px 10px rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+}
+.partymainFrame .activeCodeCon {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_activeCode_Icon.gif") no-repeat scroll 137px 195px rgba(0, 0, 0, 0);
+    padding: 40px 0 355px 60px;
+}
+.partymainFrame .activeCodeCon .tipInfo {
+    font-weight: bold;
+    padding: 0 50px 30px 0;
+}
+.partymainFrame .insert {
+    background: url("http://www.tcsasac.com/statics/front/images/jg_insert.gif") no-repeat scroll 30px 10px rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+}
+.partymainFrame .insertSuccess {
+    background: url("http://www.tcsasac.com/statics/front/images/jg_insertSuccess.gif") no-repeat scroll 30px 10px rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+}
+.partymainFrame .activeCodeForm label {
+    color: #000000;
+}
+.partymainFrame .activeCodeForm .activeCodeInput {
+    border: 1px solid #cf8f8e;
+    margin: 0 15px 0 0;
+    vertical-align: middle;
+}
+.partymainFrame .activeCodeForm button {
+    background: url("http://www.tcsasac.com/statics/front/images/jg_submit.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 39px;
+    margin-right: 30px;
+    text-indent: -9999px;
+    width: 100px;
+}
+.partymainFrame .activeCodeForm a {
+    color: #910000;
+}
+.partymainFrame .regSuccess {
+    background: url("http://www.tcsasac.com/statics/front/images/jg_regSuccess.gif") no-repeat scroll 30px 10px rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+}
+.partymainFrame .regSuccessCon, .partymainFrame .insertSuccessCon {
+    color: #b60000;
+    font-size: 16px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    padding: 150px 0 300px;
+    text-align: center;
+}
+.partymainFrame .footer {
+    background-color: transparent;
+    color: #a94e4c;
+    font-size: 12px;
+    height: 30px;
+    text-align: center;
+}
+.partymaxFrame .regForm {
+    margin-bottom: 50px;
+    padding: 30px 0 0 20px;
+}
+.partymaxFrame .regForm .title {
+    color: #000000;
+}
+.partymaxFrame .regForm .tip {
+    color: #910000;
+}
+.partymaxFrame .regForm .error {
+    color: #ff0000;
+}
+.partymaxFrame .regForm input.w1, .partymaxFrame .regForm input.w2 {
+    border: 1px solid #cf8f8e;
+}
+.activeCodeForm label {
+    line-height: 39px;
+}
+.activeCodeForm .activeCodeSysInfo {
+    color: #fe0000;
+    display: block;
+    font-size: 12px;
+    padding-left: 80px;
+}
+.activeCodeForm .activeCodeInput {
+    border: 1px solid #b2b2b2;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+    margin: 5px 15px 0 0;
+    width: 163px;
+}
+.activeCodeForm .toPlatformLink {
+    color: #555555;
+    line-height: 39px;
+    text-decoration: underline;
+}
+.partyLoginFrom {
+    margin-bottom: 130px;
+    padding: 15px 0 0 110px;
+    position: relative;
+}
+.partyLoginFrom .wrongInfo {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #910000;
+    height: auto;
+    line-height: 20px;
+    margin: 0;
+    width: auto;
+}
+.partyLoginFrom .loginSysInfo {
+    height: 30px;
+    line-height: 30px;
+}
+.partyLoginFrom .item {
+    margin-bottom: 10px;
+}
+.partyLoginFrom a {
+    color: #910000;
+    text-decoration: underline;
+}
+.partyLoginFrom label {
+    color: #000000;
+    float: left;
+    font-size: 14px;
+    line-height: 29px;
+    width: 70px;
+}
+.partyLoginFrom input {
+    border: 1px solid #cf8f8e;
+    float: left;
+    height: 27px;
+    margin-right: 24px;
+    width: 173px;
+}
+.partyLoginFrom #vcode {
+    margin-right: 22px;
+    width: 70px;
+}
+.partyLoginFrom #vimg {
+    float: left;
+    margin-right: 24px;
+}
+.partyLoginFrom .submit {
+    background: url("http://www.tcsasac.com/statics/front/images/jiguanLoginButton_Icon.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    float: left;
+    height: 38px;
+    margin: 0 30px 0 70px;
+    text-indent: -9999px;
+    width: 99px;
+}
+.partyLoginFrom .regLink, .regForm .regLink {
+    color: #910000;
+    line-height: 38px;
+    text-decoration: underline;
+}
+.partyLoginFrom .regLink {
+    float: left;
+}
+.partyLoginFrom .loginNote {
+    color: #ffffff;
+    font-size: 12px;
+    left: 40px;
+    line-height: 20px;
+    position: absolute;
+    top: 250px;
+}
+.partymaxFrame .regForm .item {
+    padding-bottom: 12px;
+}
+.partymaxFrame .regForm .btnBox button {
+    background: url("http://www.tcsasac.com/statics/front/images/jg_reg.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline;
+    height: 38px;
+    margin: 0 30px 0 0;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 99px;
+}
+.courseArea {
+    border: 1px solid #fac16a;
+    margin-bottom: 10px;
+}
+.courseArea .cTitle {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_cTitle.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #fac16a;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 10px;
+}
+.courseArea .cTitle h3 {
+    color: #c30009;
+    float: left;
+    font-size: 14px;
+}
+.courseArea .cCon {
+    padding: 10px;
+}
+.cItem {
+    float: left;
+    height: 165px;
+    margin: 0 23px 0 0;
+    overflow: hidden;
+    width: 164px;
+}
+.last {
+    margin: 0;
+}
+.cItem .cPic {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #e3e3e3;
+    display: block;
+    height: 90px;
+    padding: 1px;
+    position: relative;
+    width: 160px;
+}
+.cItem .cPic:hover {
+    border: 1px solid #fac16a;
+}
+.cItem .cPic img {
+    height: 90px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 160px;
+    z-index: 997;
+}
+.cItem .cPic .mask {
+    background: none repeat scroll 0 0 #000;
+    height: 90px;
+    left: 1px;
+    opacity: 0.3;
+    position: absolute;
+    top: 1px;
+    width: 160px;
+    z-index: 998;
+}
+.cItem .cPic .play {
+    background: url("http://www.tcsasac.com/statics/front/images/playIcon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 35px;
+    left: 64px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 30px;
+    width: 35px;
+    z-index: 1000;
+}
+.cItem .cPic .cStyle {
+    background: none repeat scroll 0 0 #f00;
+    color: #fff;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 71px;
+    width: 40px;
+    z-index: 999;
+}
+.cItem .cTeacher {
+    color: #818181;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: center;
+    width: 164px;
+}
+.cItem .cName {
+    display: block;
+    font-size: 14px;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 0 3px;
+    width: 154px;
+}
+.grid720 {
+    float: left;
+    margin-bottom: 10px;
+    width: 720px;
+}
+.grid210 {
+    float: left;
+    margin-bottom: 10px;
+    width: 210px;
+}
+.mr {
+    margin-right: 10px;
+}
+.bbsArea {
+    border: 1px solid #d9d9d9;
+}
+.bbsArea .bbs_frame1_list {
+    padding: 17px 12px 18px;
+}
+.showArea {
+    border: 1px solid #d9d9d9;
+    width: 208px;
+}
+.showArea .title {
+    background: none repeat scroll 0 0 #f0f0f0;
+    border-bottom: 1px solid #d9d9d9;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+}
+.showArea .title h3 {
+    color: #c30009;
+    float: left;
+    font-size: 14px;
+}
+.showArea .con {
+    background: none repeat scroll 0 0 #fbfbfb;
+}
+.willPower {
+    margin-bottom: 10px;
+}
+.willPower .cItem {
+    height: 88px;
+    margin: 0 2px 10px 4px;
+    width: 93px;
+}
+.willPower .con {
+    overflow: hidden;
+    padding: 10px 5px 0;
+}
+.willPower .cItem .cPic {
+    height: 51px;
+    width: 89px;
+}
+.willPower .cItem .cPic .play {
+    left: 30px;
+    top: 10px;
+}
+.willPower .cItem .cPic em {
+    bottom: -36px;
+    font-size: 12px;
+    font-style: normal;
+    height: 32px;
+    left: 1px;
+    line-height: 16px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 89px;
+}
+.willPower .cItem .cPic img {
+    height: 51px;
+    width: 89px;
+}
+.news .con {
+    padding: 8px 12px;
+}
+.news li {
+    background: url("http://www.tcsasac.com/statics/front/images/pointer3.gif") no-repeat scroll 0 8px rgba(0, 0, 0, 0);
+    padding-left: 10px;
+}
+.news li a {
+    background: url("http://www.tcsasac.com/statics/front/images/pointer2.gif") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 7px;
+    padding-bottom: 5px;
+}
+.news li a.last {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.news li a:link, .news li a:visited {
+    color: #6e6e6e;
+}
+.news li a:hover {
+    color: #c00;
+}
+.friendLink {
+    border: 1px solid #d9d9d9;
+}
+.friendLink .title {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_bbs_title_Bg.gif") no-repeat scroll 0 0 #fefffa;
+    border-bottom: 1px solid #d8d8d8;
+    height: 25px;
+    line-height: 25px;
+    padding: 5px 10px 0;
+}
+.friendLink .title h3 {
+    color: #c30009;
+    float: left;
+    font-size: 14px;
+}
+.friendLink .con {
+    height: 40px;
+    padding: 20px 10px;
+}
+.friendLink a {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #d9d9d9;
+    display: inline-block;
+    float: left;
+    height: 40px;
+    margin-right: 7px;
+    width: 145px;
+}
+.friendLink a img {
+    height: 40px;
+    width: 145px;
+}
+.friendLink a.last {
+    margin-right: 0;
+}
+.party_header {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_header_Bg.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 157px;
+    width: 960px;
+}
+.party_header .banner a {
+    display: block;
+    height: 157px;
+    text-indent: -3000px;
+    width: 960px;
+}
+.guide {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_guide_Bg.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    height: 32px;
+}
+.guide li {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_guide_cutLine.gif") no-repeat scroll right 5px rgba(0, 0, 0, 0);
+    float: left;
+    text-align: center;
+    width: 100px;
+}
+.guide li a {
+    color: #c70000;
+    display: block;
+    font-weight: bold;
+}
+.guide .current a {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_guide_current.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    color: #fff;
+}
+.content {
+    background: none repeat scroll 0 0 #fff;
+    margin: 0 auto;
+    width: 960px;
+}
+.innerFrame_1 {
+    padding: 10px;
+    width: 940px;
+}
+.innerFrame_2 {
+    padding: 0 10px 10px;
+    width: 940px;
+}
+.innerFrame_2 .position {
+    margin-bottom: 0;
+}
+.position {
+    color: #858585;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    min-height: 30px;
+}
+.position a:link, .position a:visited, .position a:hover {
+    color: #858585;
+}
+.pager2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.pager2 a, span.first, span.pre, span.next, span.end {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_pager.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #d8d8d8;
+    display: block;
+    float: left;
+    line-height: 20px;
+    margin-right: 10px;
+    padding: 0 5px;
+    text-align: center;
+}
+.pager2 a:hover {
+    background-position: 0 -40px;
+}
+.pager2 .current {
+    background-color: #fffbe5;
+    border: 1px solid #fccd01;
+}
+.pager2 .to {
+    float: left;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 20px;
+}
+.pager2 .next {
+    margin-right: 0;
+}
+.pager2 .showPage {
+    float: left;
+    font: 30px Arial,"宋体",Verdana,Helvetica,sans-serif;
+    text-align: center;
+    width: 120px;
+}
+.btn12 {
+    background: url(../images/themesend.png) no-repeat scroll 0 0;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    height:31px;
+    line-height: 26px;
+    text-align: center;
+    width: 112px;
+	font-family:微软雅黑,Microsoft Yahei;
+}
+.bbs_frame1 {
+    border: 1px solid #d8d8d8;
+	border-bottom:none;
+	background:url(../images/conbg.png) repeat-x scroll bottom left;
+    margin-bottom: 10px;
+    padding: 10px;
+	font-family:微软雅黑,Microsoft Yahei;
+}
+.bbs_frame1_topButton {
+    float: right;
+    margin-top: -35px;
+}
+.bbs_frame1 .btn12 {
+    float: right;
+    margin-left: 10px;
+}
+.bbs_frame1_title {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_bbs_title_Bg.gif") no-repeat scroll 0 0 #fefffa;
+    border-bottom: 1px solid #d8d8d8;
+    height: 25px;
+    line-height: 25px;
+    padding: 5px 10px 0;
+}
+.bbs_frame1_title h3 {
+    color: #c30009;
+    float: left;
+    font-size: 14px;
+}
+.bbs_frame1_list {
+    padding: 12px;
+}
+.bbs_list {
+    color: #878787;
+    line-height: 30px;
+    margin: 0 auto;
+}
+.bbs_list th {
+    background-color: #fce5c5;
+    font-weight: bold;
+    text-align: left;
+}
+.bbs_list td, .bbs_list th {
+    padding: 0 5px;
+}
+.bbs_list td {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_cutLine_1.gif") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.bbs_list .last td {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.bbs_list .topic {
+    width: 710px;
+}
+.bbs_list .author {
+    width: 80px;
+}
+.bbs_list .date {
+    width: 80px;
+}
+.home_bbs_list .topic {
+    width: 610px;
+}
+.home_bbs_list .date {
+    width: 80px;
+}
+.publish_topic_Form1 {
+    padding: 20px 10px;
+}
+.publish_topic_Form1 .item {
+    margin-bottom: 5px;
+}
+.publish_topic_Form1 .tips02{
+	width:760px;
+	font-size:12px;
+	float: left;
+	 margin-left: 70px;
+}
+.publish_topic_Form1 #topicTitle {
+    border: 1px solid #d8d8d8;
+    float: left;
+    height: 37px;
+    line-height: 20px;
+    margin-right: 5px;
+    width: 760px;
+}
+.publish_topic_Form1 label {
+    float: left;
+    width: 50px;
+	margin-left:20px;
+}
+.publish_topic_Form1 #topicContent {
+    border: 1px solid #d8d8d8;
+    float: left;
+    height: 350px;
+    line-height: 20px;
+    margin-right: 5px;
+    width: 760px;
+}
+.publish_topic_Form1 .btn12 {
+    float: none;
+    margin: 10px 0 0 70px;
+}
+.bbs_frame1 .contentTopic1 {
+    font-weight: bold;
+    line-height: 30px;
+    padding: 15px 10px;
+	font-size:16px;
+	text-align:center;
+}
+.bbs_frame1 i {
+    font-style: normal;
+}
+.bbs_frame1 .contentBack {
+    float: right;
+    font-weight: normal;
+}
+.bbs_frame1 .contentItem1 {
+}
+.bbs_frame1 .contentBaseInfo1 {
+	text-align:center;
+    padding: 5px 10px;
+	margin:0 auto;
+}
+.bbs_frame1 .contentBaseInfo1 baseInfo_Item{ text-align:center; font-size:12px}
+.bbs_frame1 .contentBaseInfo1 strong {
+  
+}
+.bbs_frame1 .contentBaseInfo1 span {
+ 
+}
+.contentItem1 .contentMainInfo1 {
+    background-color: #fff;
+    min-height: 115px;
+}
+.contentItem1 .contentMainInfo1 .contentText {
+    min-height: 75px;
+    overflow: hidden;
+    padding: 10px;
+    word-wrap: break-word;
+}
+.contentItem1 .contentMainInfo1 .cotentBanner {
+    background-color: #fffffa;
+    border-top: 1px solid #f4f4f4;
+    height: 30px;
+    padding: 0 10px;
+}
+.contentItem1 .contentMainInfo1 .cotentBanner a {
+    float: right;
+    margin-left: 15px;
+}
+.bbs_sysInfo {
+    border-top: 1px solid #d8d8d8;
+    min-height: 250px;
+    padding: 20px;
+}
+.bbs_sysInfo h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.bbs_sysInfo .right {
+    color: #00cc00;
+}
+.bbs_sysInfo .error {
+    color: #cc0000;
+}
+.bbs_sysInfo p {
+    text-align: center;
+}
+.bbs_sysInfo a {
+    color: #cc0000;
+    text-decoration: underline;
+}
+.courseFocus {
+    border: 1px solid #d9d9d9;
+    height: 306px;
+    margin-bottom: 10px;
+    padding: 1px;
+}
+.courseFocus .smallPic {
+    float: left;
+    margin-right: 2px;
+    width: 210px;
+}
+.courseFocus .smallPic a {
+    border: 1px solid #fff;
+    display: block;
+    height: 100px;
+    position: relative;
+    width: 208px;
+}
+.courseFocus .smallPic a img {
+    height: 100px;
+    position: absolute;
+    width: 208px;
+    z-index: 998;
+}
+.courseFocus .smallPic a span.mask {
+    background: none repeat scroll 0 0 #000;
+    display: block;
+    height: 100px;
+    opacity: 0.5;
+    position: absolute;
+    width: 208px;
+    z-index: 999;
+}
+.courseFocus .smallPic a.last {
+    margin: 0;
+}
+.courseFocus .bigPic {
+    float: left;
+    position: relative;
+    width: 724px;
+}
+.courseFocus .bigPic a {
+    display: block;
+    height: 306px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 723px;
+}
+.courseFocus .bigPic a img {
+    height: 304px;
+    width: 723px;
+}
+.courseSort {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_cBg.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #d9d9d9;
+    margin-bottom: 10px;
+}
+.courseSort .title {
+    border-top: 2px solid #f01712;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+}
+.courseSort .title h3 {
+    color: #bd0703;
+    float: left;
+    font-size: 16px;
+}
+.courseSort .con {
+    padding: 0 13px;
+}
+.courseSort .more {
+    font-size: 14px;
+}
+.courseList {
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    width: 898px;
+}
+.courseList .cItem {
+    background: url("http://www.tcsasac.com/statics/front/images/pointer2.gif") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    height: 94px;
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+    width: 449px;
+}
+.courseList .cItem .cPic {
+    border: 1px solid #fabc69;
+    float: left;
+}
+.courseList .cItem .info {
+    float: left;
+    padding: 0 20px 0 10px;
+    width: 255px;
+}
+.courseList .cItem .cTeacher, .courseList .cItem .cName {
+    padding: 0;
+    text-align: left;
+    width: 255px;
+}
+.courseList .cItem .cName {
+    padding-bottom: 10px;
+}
+.courseList .last {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.detailIntro {
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    width: 898px;
+}
+.freeView .cItem {
+    height: 76px;
+    width: 128px;
+}
+.freeView .cItem .cPic {
+    height: 68px;
+    padding: 3px;
+    width: 120px;
+}
+.freeView .cItem .cPic img, .freeView .cItem .cPic .mask {
+    height: 68px;
+    left: 3px;
+    top: 3px;
+    width: 120px;
+}
+.freeView .cItem .cPic .play {
+    left: 45px;
+    top: 20px;
+}
+.dxNews {
+    border: 1px solid #fd9a00;
+}
+.dxNews .title {
+    background: url("http://www.tcsasac.com/statics/front/images/titleBg.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #fe9901;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 10px;
+}
+.dxNews .title h3 {
+    color: #cc0000;
+    font-size: 15px;
+    font-weight: bold;
+}
+.dxNews .con {
+    padding: 10px 15px;
+}
+.newsList li {
+    background: url("http://www.tcsasac.com/statics/front/images/pointer3.gif") no-repeat scroll 2px 14px rgba(0, 0, 0, 0);
+    border-bottom: 1px dotted #ccc;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    padding-left: 15px;
+    position: relative;
+    vertical-align: bottom;
+}
+.newsList .last {
+    border-bottom: 0 none;
+}
+.newsList li a:link, .newsList li a:visited, .newsList li a:hover, .newsList li a:active {
+    color: #333;
+    font-size: 14px;
+    line-height: 35px;
+}
+.newsList li a:hover {
+    color: #d5040a;
+}
+.newsList li .date {
+    color: #999;
+    font-size: 14px;
+    line-height: 35px;
+    padding-right: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.dxNewsDetail {
+    border: 1px solid #fe9901;
+    padding: 20px 50px;
+}
+.dxNewsDetail h2 {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.dxNewsDetail img {
+    border: 1px solid #ccc;
+}
+.dxNewsDetail p {
+    margin-bottom: 25px;
+}
+.dxNewsDetail .downloadFile {
+    margin-bottom: 0;
+    padding-top: 30px;
+}
+.dxNewsDetail a.download:link, .dxNewsDetail a.download:visited {
+    color: #a91a0f;
+    line-height: 35px;
+    text-decoration: underline;
+}
+.dxNewsDetail a.download:hover {
+    color: #f00;
+}
+.dxNewsDetail .publishTime {
+    color: #999;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 35px 30px 0 0;
+    text-align: right;
+}
+.play_player {
+    background-color: #2b2b2b;
+    height: 270px;
+    margin: 0 auto 30px;
+    width: 430px;
+}
+.flashplayer {
+    background-color: #e0e0e0;
+    height: 270px;
+    position: relative;
+    width: 430px;
+}
+.flashplayer .fpTips {
+    color: #333;
+    font-size: 14px;
+    height: 170px;
+    line-height: 28px;
+    margin: -86px 0 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 430px;
+}
+.flashplayer .fpTips img {
+    border: 0 none;
+    display: block;
+    height: 116px;
+    margin: 0 auto;
+    width: 101px;
+}
+.flashplayer a:link, .flashplayer a:visited {
+    color: #f00;
+    text-decoration: underline;
+}
+.flashplayer a:hover {
+    color: #f00;
+}
+.flashplayer a:active {
+    color: #f00;
+}
+.partySchoolIntro h2 {
+    margin-bottom: 15px;
+}
+.partySchoolIntro h3 {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_introIcon.gif") no-repeat scroll 0 10px rgba(0, 0, 0, 0);
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 0 0 28px;
+}
+.partySchoolIntro .icon {
+    background: url("http://www.tcsasac.com/statics/front/images/dx_introIcon.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.partySchoolIntro div.leader {
+    padding-left: 28px;
+}
+.partySchoolIntro p {
+    margin-bottom: 10px;
+    text-indent: 28px;
+}
+.testCourseCon {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 940px;
+}
+.testCourseCon .position {
+    margin-bottom: 0;
+}
+.testCourseCon h2.courseName {
+    line-height: 30px;
+    padding-bottom: 5px;
+}
+.testCourseCon .jsIframe .boxBorder {
+    margin-bottom: 10px;
+    width: 878px;
+}
+.testCourseCon .otherVideoSilder {
+    width: 940px;
+}
+.testCourseCon .otherVideoSilder .otherListCon {
+    padding: 6px 2px 0 8px;
+}
+.testCourseCon .play_player, .testCourseCon .flashplayer {
+    height: 500px;
+    width: 940px;
+}
+.bbs_frame2 {
+
+	font-family:微软雅黑,Microsoft Yahei;
+}
+.publish_topic_Form2 {
+    padding: 20px 0px;
+}
+.publish_topic_Form2 .item {
+    margin-bottom: 5px;
+}
+.publish_topic_Form2 .tips02{
+	width:760px;
+	font-size:12px;
+	float: left;
+	 margin-left: 70px;
+}
+.publish_topic_Form2 #topicTitle {
+    border: 1px solid #d8d8d8;
+    float: left;
+    height: 37px;
+    line-height: 20px;
+    margin-right: 5px;
+    width: 760px;
+}
+.publish_topic_Form2 label {
+    width: 760px;
+	 float: left;
+	 margin-bottom:10px;
+}
+.publish_topic_Form2 #topicContent {
+    border: 1px solid #d8d8d8;
+    float: left;
+    height: 120px;
+    line-height: 20px;
+    width: 100%;
+}
+.publish_topic_Form2 .btn12 {
+    float: none;
+}
+
+.student_topic {
+
+	font-family:微软雅黑,Microsoft Yahei;
+}
+.student_topic .title{
+ width: 100%;
+	 float: left;
+	 margin-bottom:10px;
+}
+.student_topic .basicInfo{ width:100%;float: left;}
+.student_topic .basicInfo .floor{ background:#f7f7f7 repeat; border:1px solid #dfdfdf;}
+.student_topic .basicInfo .floor span{ margin-left:25px}
+.student_topic .basicInfo .contenttext{ line-height:25px; padding:10px}

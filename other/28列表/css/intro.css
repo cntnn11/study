@@ -1,0 +1,438 @@
+
+.content .con1 {
+    padding: 5px 10px 50px;
+}
+.innerCon .detailIntro {
+    border: 1px solid #dadada;
+    padding: 24px 22px 20px;
+    width: 904px;
+}
+.detailIntro .basicInfo {
+    border-bottom: 1px dotted #d7d7d7;
+    padding: 0 0 20px;
+}
+.detailIntro img.head {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #e7e3e2;
+    float: left;
+    height: 104px;
+    margin-right: 20px;
+    padding: 1px;
+    width: 104px;
+}
+.detailIntro .info {
+    padding-left: 129px;
+}
+.detailIntro .info .item strong {
+    font-size: 12px;
+}
+.detailIntro .info h2 {
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+}
+.detailIntro .info h3 {
+    color: #333;
+    font-size: 12px;
+    line-height: 24px;
+}
+.detailIntro .info .item p {
+    color: #6a6a6a;
+    font-size: 12px;
+    line-height: 24px;
+}
+.detailIntro .btnBox .btn4 {
+    float: right;
+    margin-top: 20px;
+}
+.detailIntro .courseCon {
+    background: url("http://www.tcsasac.com/statics/front/images/arrow6.gif") no-repeat scroll 65px 13px transparent;
+    color: #6a6a6a;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.detailIntro .tab {
+    color: #666;
+    width: 100%;
+}
+.detailIntro .tab th {
+    background: url("http://www.tcsasac.com/statics/front/images/tablethBg.gif") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.tab .left {
+    text-align: left;
+}
+.tab .ac {
+    text-align: center;
+}
+.detailIntro .tab td {
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 12px;
+}
+.tab .even td {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+.detailIntro .info1 {
+    padding-left: 183px;
+}
+.detailIntro img.head1 {
+    height: 90px;
+    width: 160px;
+}
+.detailIntro .info a {
+    display: block;
+    float: right;
+}
+.detailIntro .courseCon1 {
+    background: url("http://www.tcsasac.com/statics/front/images/arrow6.gif") no-repeat scroll 65px 33px transparent;
+    padding-top: 20px;
+}
+.detailIntro img.head2 {
+    height: 90px;
+    width: 160px;
+}
+.detailIntro .info h2.fontSize {
+    font-size: 16px;
+}
+.detailIntro .wareList {
+    padding: 5px 0 0;
+}
+.detailIntro .wareList li {
+    float: left;
+    height: 110px;
+    margin: 0 69px 20px 0;
+    width: 125px;
+}
+.wareList li .wareIcon {
+    border: 1px solid #e7e3e2;
+    cursor: pointer;
+    display: block;
+    height: 75px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 128px;
+}
+.wareList li .wareIcon img {
+    height: 67px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    width: 120px;
+}
+.wareList li .wareIcon .mask {
+    background: none repeat scroll 0 0 #000;
+    height: 67px;
+    left: 5px;
+    opacity: 0.5;
+    position: absolute;
+    top: 4px;
+    width: 120px;
+    z-index: -999;
+}
+.wareList li .wareIcon .play {
+    background: url("http://www.tcsasac.com/statics/front/images/playIcon_1.png") no-repeat scroll 0 0 transparent;
+    bottom: 18px;
+    height: 35px;
+    left: 47px;
+    position: absolute;
+    text-indent: -9999px;
+    width: 35px;
+    z-index: 1000;
+}
+.wareList li .wareTitle {
+    color: #6a6a6a;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    height: 24px;
+    line-height: 12px;
+    overflow: hidden;
+    padding-top: 2px;
+    text-align: center;
+}
+.wareList ul li.lastLi {
+    margin-right: 0;
+}
+.wareList li a:hover {
+    color: #d5040a;
+}
+.wareList li .wareIcon:hover {
+    border: 1px solid #ffb02d;
+    color: #d5040a;
+}
+.rightInfo {
+    background: none repeat scroll 0 0 #d1514b;
+    border: 1px solid #ba2d26;
+    color: #ffffff;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    padding-left: 0;
+    text-align: center;
+}
+
+
+
+.content2 .con2 {
+    padding: 5px 10px 50px;
+}
+.content8 .con2 {
+    padding: 5px 10px 50px;
+}
+.innerCon1 .detailIntro1 {
+	font-family:微软雅黑,Microsoft YaHei;
+    border: 1px solid #dadada;
+	border-bottom:none;
+	background: url(../images/conbg.png) repeat-x  scroll left bottom;
+    padding: 24px 22px 20px;
+}
+.detailIntro1 .basicInfo {
+    border-bottom: 1px dotted #d7d7d7;
+    padding: 0 0 20px;
+}
+.detailIntro1 img.head {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #e7e3e2;
+    float: left;
+    height: 104px;
+    margin-right: 20px;
+    padding: 1px;
+    width: 104px;
+}
+.detailIntro1 .info {
+    padding-left: 129px;
+}
+.detailIntro1 .info .item strong {
+	font-family:微软雅黑,Microsoft YaHei;
+    font-size: 12px;
+}
+.detailIntro1 .info h2 {
+	font-family:微软雅黑,Microsoft YaHei;
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+}
+.detailIntro1 .info h3 {
+	font-family:微软雅黑,Microsoft YaHei;
+    color: #333;
+    font-size: 12px;
+    line-height: 24px;
+}
+.detailIntro1 .info .item p {
+	font-family:微软雅黑,Microsoft YaHei;
+    color: #6a6a6a;
+    font-size: 12px;
+    line-height: 24px;
+}
+.detailIntro1 .btnBox .btn4 {
+    float: right;
+    margin-top: 20px;
+}
+.detailIntro1 .courseCon {
+	background:url(../images/arrow6.gif) no-repeat scroll 70px 23px;
+    color: #414141;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+}
+.detailIntro1 .tab {
+    color: #666;
+    width: 100%;
+	
+    border-bottom: 1px solid #e6e6e6;
+}
+.detailIntro1 .tab th {
+    background:#515151;
+	color:#fff;
+	font-family:微软雅黑,Microsoft YaHei;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.tab .left {
+    text-align: left;
+}
+.tab .ac {
+    text-align: center;
+}
+.detailIntro1 .tab td {
+    font-size: 12px;
+}
+.tab .even td {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+.detailIntro1 .info1 {
+    padding-left: 183px;
+}
+.detailIntro1 img.head1 {
+    height: 90px;
+    width: 160px;
+}
+.detailIntro1 .info a {
+    display: block;
+    float: right;
+}
+.detailIntro1 .courseCon1 {
+    background: url("http://www.tcsasac.com/statics/front/images/arrow6.gif") no-repeat scroll 65px 33px transparent;
+    padding-top: 20px;
+}
+.detailIntro1 img.head2 {
+    height: 90px;
+    width: 160px;
+}
+.detailIntro1 .info h2.fontSize {
+    font-size: 16px;
+}
+.detailIntro1 .wareList {
+    padding: 5px 0 0;
+}
+.detailIntro1 .wareList li {
+    float: left;
+    height: 110px;
+    margin: 0 69px 20px 0;
+    width: 125px;
+}
+
+
+.innerCon1 .detailIntro2 {
+	font-family:微软雅黑,Microsoft YaHei;
+    border: 1px solid #dadada;
+	border-bottom:none;
+	background: url(../images/conbg.png) repeat-x  scroll left bottom;
+    padding: 24px 22px 20px;
+}
+.detailIntro2 .basicInfo {
+    border-bottom: 1px dotted #d7d7d7;
+    padding: 0 0 20px;
+}
+.detailIntro2 img.head {
+	margin-top:5px;
+    border: 2px solid #e7e3e2;
+    float: left;
+    height: 100px;
+    margin-right: 20px;
+   
+    width: 160px;
+}
+.detailIntro2 .info {
+    padding-left: 180px;
+}
+.detailIntro2 .info .item strong {
+	font-family:微软雅黑,Microsoft YaHei;
+    font-size: 12px;
+	float: left;
+	width:700px;
+}
+.detailIntro2 .info h2 {
+	color: #1e1e1e;
+    font-size: 12px;
+	font-weight:bold;
+	float:left;
+	width:700px;
+	display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:left;
+	padding:0px 6px 0px 0;
+}
+.detailIntro2 .info h3 {
+	font-family:微软雅黑,Microsoft YaHei;
+    color: #333;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.detailIntro2 .info .item p {
+	font-family:微软雅黑,Microsoft YaHei;
+    color: #6a6a6a;
+    font-size: 12px;
+    line-height: 22px;
+	float: left;
+	width:700px;
+}
+.detailIntro2 .btnBox .btn4 {
+    float: right;
+    margin-top: 20px;
+}
+.detailIntro2 .courseCon {
+	background:url(../images/arrow6.gif) no-repeat scroll 70px 23px;
+    color: #414141;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+}
+.detailIntro2 .tab {
+    color: #666;
+    width: 100%;
+	
+    border-bottom: 1px solid #e6e6e6;
+}
+.detailIntro2 .tab th {
+    background:#515151;
+	color:#fff;
+	font-family:微软雅黑,Microsoft YaHei;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.tab .left {
+    text-align: left;
+}
+.tab .ac {
+    text-align: center;
+}
+.detailIntro2 .tab td {
+    font-size: 12px;
+}
+.tab .even td {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+.detailIntro2 ul{width:100%; margin:0px auto 5px;}
+.detailIntro2 ul li{ float:left; margin:5px; text-align:center;}
+.detailIntro2 ul li img{  border:2px solid #eeeeee; width:160px; height:100px;}
+.detailIntro2 ul li h3{ width:160px;font-family:微软雅黑,Microsoft Yahei; font-size:12px; font-weight:bold; color:#525252;margin:0px auto; padding:0px; line-height:20px; text-align:left;}
+.detailIntro2 ul li p{width:160px;;font-family:微软雅黑,Microsoft Yahei; font-size:12px; color:#525252;margin:0px auto; padding:0px;line-height:20px; text-align:left;}
+
+
+
+
+.detailIntro3 .courseCon {
+	background:url(../images/arrow6.gif) no-repeat scroll 70px 23px;
+    color: #414141;
+    font-weight: bold;
+    padding: 10px 10px 0px 10px;
+	margin:0 13px;
+	border-top:1px dashed #CCC;
+}
+.detailIntro3 .tab {
+    color: #666;
+    width: 98%;
+	margin:10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.detailIntro3 .tab th {
+    background:#515151;
+	color:#fff;
+	font-family:微软雅黑,Microsoft YaHei;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.tab .left {
+    text-align: left;
+}
+.tab .ac {
+    text-align: center;
+}
+.detailIntro1 .tab td {
+    font-size: 12px;
+}
+.tab .even td {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+
+
+
+
+
+
+

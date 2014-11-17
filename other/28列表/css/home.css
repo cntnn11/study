@@ -1,0 +1,488 @@
+
+.content .innerCon {
+    padding: 10px 10px 20px;
+}
+a:link, a:visited {
+    color: #585757;
+}
+a:hover {
+    color: #b60000;
+}
+h2 {
+    background: url("http://www.tcsasac.com/statics/front/images/title.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 30px;
+    text-indent: -9999px;
+}
+.more {
+    font-size: 12px;
+}
+.focusBox {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    height: 232px;
+    padding: 0 12px 15px 0;
+    width: 270px;
+}
+.focusBox .imgCon, .focusBox .item a, .focusBox .item img {
+    height: 218px;
+    width: 270px;
+}
+.focusBox .item a {
+    display: block;
+    position: relative;
+}
+.focusBox .item img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 777;
+}
+.focusBox .item .cover, .focusBox .item .info {
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 168px;
+    width: 270px;
+}
+.focusBox .item .cover {
+    background: none repeat scroll 0 0 #000;
+    opacity: 0.6;
+    z-index: 888;
+}
+.focusBox .item .info {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    z-index: 999;
+}
+.focusBox .pageArea {
+    background: none repeat scroll 0 0 #313131;
+    height: 14px;
+    padding-left: 95px;
+    width: 175px;
+}
+.focusBox .pageArea a {
+    background: url("http://www.tcsasac.com/statics/front/images/focusP.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 14px;
+    margin-right: 6px;
+    width: 11px;
+}
+.focusBox .pageArea a.current, .focusBox .pageArea a:hover {
+    background-position: 0 -14px;
+}
+.trainBox {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    height: 232px;
+    overflow: hidden;
+    padding: 0 12px 15px;
+    width: 342px;
+}
+.trainBox .title {
+    height: 30px;
+    position: relative;
+}
+.trainBox .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.trainBox h2 {
+    background-position: 0 -5px;
+}
+.trainBox li {
+    background: url("http://www.tcsasac.com/statics/front/images/p2.gif") no-repeat scroll 0 11px rgba(0, 0, 0, 0);
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    padding-left: 10px;
+    vertical-align: bottom;
+    width: 332px;
+}
+.trainBox li a {
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    padding-right: 30px;
+    text-overflow: ellipsis;
+}
+.trainBox li a.recruiting {
+    background: url("http://www.tcsasac.com/statics/front/images/hotIcon.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+}
+.newsBox {
+    float: left;
+    padding: 0 0 15px 12px;
+    width: 286px;
+}
+.newsBox .title {
+    height: 30px;
+    position: relative;
+}
+.newsBox h2 {
+    background-position: 0 -35px;
+}
+.newsBox .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.newsBox li {
+    line-height: 26px;
+}
+.newsBox li a {
+    background: url("http://www.tcsasac.com/statics/front/images/p2.gif") no-repeat scroll 0 center rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 12px;
+    line-height: 26px;
+    overflow: hidden;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 276px;
+}
+.newsBox .link {
+    height: 58px;
+    padding: 9px 0 0 6px;
+}
+.newsBox .link a {
+    display: block;
+    float: left;
+    height: 58px;
+    text-indent: -9999px;
+    width: 127px;
+}
+.newsBox .link1 {
+    background: url("http://www.tcsasac.com/statics/front/images/xxpt.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-right: 10px;
+}
+.newsBox .link2 {
+    background: url("http://www.tcsasac.com/statics/front/images/jgwx.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.newsBox .link3 {
+    background: url("http://www.tcsasac.com/statics/front/images/tyzx.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.cSort {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    height: 395px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    width: 272px;
+}
+.cSort .title {
+    height: 30px;
+    position: relative;
+}
+.cSort h2 {
+    background-position: 0 -62px;
+}
+.cSort .more {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+.cSort .newlist h3 {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_bg.jpg") repeat-x scroll 0 bottom #eeeeee;
+    height: 34px;
+    line-height: 34px;
+    width: 273px;
+}
+.cSort .newlist h3 .current {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_arrow.jpg") no-repeat scroll 255px 0 rgba(0, 0, 0, 0);
+}
+.cSort .newlist .class1 {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_arrow.jpg") no-repeat scroll 255px -34px rgba(0, 0, 0, 0);
+    color: #971201;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 34px;
+    padding-left: 27px;
+    width: 246px;
+}
+.cSort .newlist .itemlist ul {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_bg.jpg") repeat-x scroll 0 bottom #fbfbfb;
+    height: 194px;
+}
+.cSort .newlist .itemlist li {
+    height: 32px;
+    line-height: 32px;
+}
+.cSort .newlist .itemlist li a {
+    background: url("http://www.tcsasac.com/statics/front/images/p3.gif") no-repeat scroll 30px center rgba(0, 0, 0, 0);
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 42px;
+}
+.cSort .newlist .itemlist li a:hover {
+    background-color: #eee;
+    color: #971201;
+}
+.cSort .newlist .itemlist li.current a:link, .cSort .newlist .itemlist li.current a:visited, .cSort .newlist .itemlist li.current a:hover, .cSort .newlist .itemlist li.current a:active {
+    background: url("http://www.tcsasac.com/statics/front/images/p3Hover.gif") no-repeat scroll 30px center #bc0202;
+    color: #fff;
+    cursor: default;
+    font-weight: bold;
+}
+.cSort .more:link, .cSort .more:visited, .cSort .more:hover {
+    color: #b60000;
+}
+.goodCourse {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    height: 395px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    width: 346px;
+}
+.goodCourse h2 {
+    background-position: 0 -92px;
+    border-bottom: 2px solid #ebe9e9;
+}
+.goodCourse .tag {
+    height: 28px;
+    padding: 4px 0 0;
+}
+.goodCourse .tag li {
+    background: url("http://www.tcsasac.com/statics/front/images/ctag.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 28px;
+    margin-right: 6px;
+    overflow: hidden;
+    text-align: center;
+    width: 94px;
+}
+.goodCourse .tag li.current {
+    background-position: 0 -28px;
+    position: relative;
+    top: 1px;
+}
+.goodCourse .tag a {
+    display: block;
+    padding-top: 1px;
+    width: 100%;
+}
+.goodCourse .con {
+    border: 1px solid #e6e6e6;
+    height: 330px;
+    overflow: hidden;
+    width: 342px;
+}
+.goodCourse .item .imgLink {
+    display: block;
+    height: 66px;
+    width: 342px;
+}
+.goodCourse .item img {
+    height: 66px;
+    width: 342px;
+}
+.goodCourse .item ul {
+    line-height: 30px;
+    padding: 10px 10px 4px;
+}
+.goodCourse .item li a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 322px;
+}
+.goodCourse .link {
+    height: 30px;
+    line-height: 30px;
+    padding-right: 10px;
+    text-align: right;
+}
+.latest {
+    float: left;
+    height: 395px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 0 0 0 12px;
+    width: 286px;
+}
+.latest h2 {
+    background-position: 0 -122px;
+    border-bottom: 2px solid #ebe9e9;
+}
+.latest .con {
+    padding: 10px 5px;
+}
+.latest .item {
+    background: url("http://www.tcsasac.com/statics/front/images/p4.gif") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    height: 44px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    width: 276px;
+}
+.latest .item .pic {
+    display: block;
+    float: left;
+    height: 44px;
+    width: 44px;
+}
+.latest .item .pic img {
+    border: 1px solid #ebe9e9;
+    height: 43px;
+    width: 43px;
+}
+.latest .item .info {
+    color: #7c7c7c;
+    float: left;
+    font-size: 12px;
+    height: 44px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 10px;
+    width: 220px;
+}
+.latest .item .info .name {
+    padding-bottom: 5px;
+}
+.latest .last {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.advBox {
+    height: 110px;
+    margin-bottom: 10px;
+    width: 950px;
+}
+.advBox a, .advBox img {
+    display: block;
+    height: 110px;
+    width: 950px;
+}
+.advBox2 {
+    height: 55px;
+    margin-bottom: 10px;
+    width: 950px;
+}
+.advBox2 a, .advBox2 img {
+    display: block;
+    height: 55px;
+    width: 950px;
+
+}
+.trainTeam {
+    margin-bottom: 15px;
+}
+.trainTeam a {
+    display: block;
+    float: left;
+    height: 74px;
+    margin-right: 10px;
+    width: 230px;
+}
+.trainTeam .last {
+    margin-right: 0;
+}
+.trainItem {
+    float: left;
+    padding: 0 5px;
+    width: 460px;
+}
+.type1, .type3 {
+    margin-right: 10px;
+}
+.type1 h2 {
+    background-position: 0 -152px;
+}
+.type2 h2 {
+    background-position: 0 -182px;
+}
+.type3 h2 {
+    background-position: 0 -212px;
+}
+.type4 h2 {
+    background-position: 0 -242px;
+}
+.trainItem .title {
+    background: url("http://www.tcsasac.com/statics/front/images/line.gif") repeat-x scroll 0 center rgba(0, 0, 0, 0);
+    height: 30px;
+}
+.trainItem .title h2 {
+    float: left;
+    height: 30px;
+    width: 84px;
+}
+.trainItem .title .more {
+    background: none repeat scroll 0 0 #fff;
+    display: block;
+    float: right;
+    font-size: 14px;
+    height: 30px;
+    text-align: center;
+    width: 60px;
+}
+.trainItem ul {
+    padding: 10px 5px 10px 2px;
+}
+.trainItem li {
+    background: url("http://www.tcsasac.com/statics/front/images/p2.gif") no-repeat scroll 0 center rgba(0, 0, 0, 0);
+    line-height: 30px;
+    overflow: hidden;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    width: 433px;
+}
+.trainItem li a {
+    float: left;
+    padding-right: 30px;
+    white-space: nowrap;
+}
+.trainItem li a.recruiting {
+    background: url("http://www.tcsasac.com/statics/front/images/hotIcon.gif") no-repeat scroll right top transparent;
+}
+.fLink {
+    border-top: 2px solid #dedede;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.fLink .con {
+    padding-left: 156px;
+}
+.fLink a {
+    border: 1px solid #ddd;
+    display: block;
+    float: left;
+    height: 42px;
+    margin-right: 10px;
+    width: 150px;
+}
+#rightDiv {
+    height: 244px;
+    position: absolute;
+    width: 150px;
+}
+.itemFloat {
+    height: auto;
+    line-height: 5px;
+    width: 150px;
+}
+.closebut {
+    background: url("http://www.tcsasac.com/statics/front/images/close1.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 16px;
+    line-height: 99px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 49px;
+}
+#ad2 {
+    z-index: 10000;
+}
+#ad2 .closebut {
+    background: url("http://www.tcsasac.com/statics/front/images/close3.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    height: 12px;
+    position: absolute;
+    right: -12px;
+    width: 12px;
+}

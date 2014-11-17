@@ -1,0 +1,368 @@
+
+.list_mainFrame {
+    margin-bottom: 40px;
+}
+.list_mainFrame .list_sortFrame {
+    border: 1px solid #d8d8d8;
+    float: left;
+    margin-right: 10px;
+    width: 228px;
+}
+.list_mainFrame .list_sortFrame .title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("http://www.tcsasac.com/statics/front/images/loginBg.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border-color: #ffffff #ffffff #d8d8d8;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: 1px;
+    color: #b80000;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 18px 1px;
+}
+.list_mainFrame .list_sortFrame .list_sortCon {
+    padding: 4px 3px;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list {
+    background-color: #f8f8f6;
+    font-size: 14px;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list li {
+    height: 35px;
+    line-height: 35px;
+    margin: 0 9px;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list li a {
+    background: url("http://www.tcsasac.com/statics/front/images/sortItem_Icon.gif") no-repeat scroll 190px 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #d9d9d9;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 9px;
+    width: 186px;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list li a:hover {
+    background-position: 190px -70px;
+    color: #b60000;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list .current {
+    background-color: #a31313;
+    border-bottom: medium none;
+    margin: 0;
+    padding: 0 9px;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list .current a, .list_mainFrame .list_sortFrame .list_sortCon .list .current a:hover {
+    background-position: 190px -35px;
+    border: 0 none;
+    cursor: default;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list .current a {
+    color: #ffffff;
+    display: block;
+    font-weight: bold;
+    height: 33px;
+    padding: 0 10px;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list .current a:hover {
+    color: #ffffff;
+}
+.list_mainFrame .list_sortFrame .list_sortCon .list .last a {
+    border-bottom: 0 none;
+}
+.list_mainFrame .list_itemFrame {
+    border: 1px solid #d8d8d8;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px;
+    width: 685px;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame {
+    background-color: #f8f8f6;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_setpagesize {
+    float: left;
+    line-height: 15px;
+    padding: 5px 0 0 10px;
+    width: 300px;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_setpagesize span {
+    float: left;
+    padding-right: 5px;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_setpagesize a {
+    background: url("http://www.tcsasac.com/statics/front/images/setPagesize_Icon.jpg") no-repeat scroll 0 -15px rgba(0, 0, 0, 0);
+    color: #ffffff;
+    float: left;
+    height: 15px;
+    margin-right: 10px;
+    text-align: center;
+    width: 20px;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_setpagesize .current {
+    background-position: 0 0;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_search {
+    float: right;
+    padding: 2px 0 0;
+    position: relative;
+    width: 205px;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_search input {
+    border: 0 none;
+    padding: 0;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_search .input {
+    border: 1px solid #d8d8d8;
+    height: 16px;
+    left: 0;
+    line-height: 16px;
+    position: absolute;
+    top: 3px;
+    width: 155px;
+}
+.list_mainFrame .list_itemFrame .list_toolFrame .tool_search .button {
+    background: url("http://www.tcsasac.com/statics/front/images/searchButton_Icon.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    cursor: pointer;
+    height: 21px;
+    position: absolute;
+    right: 2px;
+    text-indent: -30000px;
+    top: 1px;
+    width: 38px;
+}
+.list_mainFrame .list_itemFrame .subSite {
+    padding: 0 0 10px 5px;
+}
+.list_mainFrame .list_itemFrame .subSite label {
+    color: #b60000;
+    font-size: 14px;
+}
+.listBox {
+    padding: 10px 0;
+}
+.listBox .basicInfo {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 18px 5px 18px 15px;
+    width: 667px;
+}
+.listBox .even {
+    background: none repeat scroll 0 0 #f9f9f9;
+}
+.listBox .lastLi {
+    border-bottom: 0 none;
+}
+.listBox img {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #e7e3e2;
+    float: left;
+    height: 90px;
+    margin-right: 20px;
+    padding: 1px;
+    width: 160px;
+}
+.listBox .info {
+    float: left;
+    width: 480px;
+}
+.listBox .hasCourse {
+    color: #696969;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+}
+.listBox h2 {
+    color: #3c3b3b;
+    font-size: 14px;
+}
+.listBox h2 a:link, .listBox h2 a:visited, .listBox h2 a:hover {
+    color: #3c3b3b;
+    font-size: 14px;
+}
+.listBox h2 a:hover {
+    color: #ef0001;
+}
+.listBox .item {
+    color: #444444;
+}
+.listBox .item a:link, .listBox .item a:visited {
+    color: #444444;
+}
+.listBox .item a:hover {
+    color: #ff0000;
+}
+.listBox .item .detailIntro {
+    color: #6d6d6d;
+}
+.listBox .item .detailIntro b {
+    color: #444444;
+}
+.listBox .detailInfo {
+    color: #6e6e6e;
+    line-height: 20px;
+}
+.listBox .btnBox {
+    padding: 2px 8px 0 0;
+}
+.listBox .btnBox .btn4 {
+    background-position: 0 0;
+    float: right;
+}
+.listBox .btnBox .btn4:hover {
+}
+.teachersLib .listBox .basicInfo .job {
+    color: #444444;
+    font-weight: bold;
+}
+.listBox .info h2, .listBox .info .item strong {
+    color: #333333;
+    line-height: 24px;
+}
+.listBox .info p {
+    color: #6a6a6a;
+    line-height: 24px;
+}
+.teachersLib img {
+    height: 100px;
+    width: 100px;
+}
+.teachersLib .info {
+    width: 543px;
+}
+.newsList {
+    padding: 0 0 0 7px;
+}
+.newsList li {
+    background: url("http://www.tcsasac.com/statics/front/images/pointer3.gif") no-repeat scroll 0 14px rgba(0, 0, 0, 0);
+    border-bottom: 1px dotted #ccc;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    padding-left: 12px;
+    position: relative;
+    vertical-align: bottom;
+}
+.newsList .last {
+    border-bottom: 0 none;
+}
+.newsList li a:link, .newsList li a:visited, .newsList li a:hover, .newsList li a:active {
+    color: #666;
+    font-size: 14px;
+    line-height: 35px;
+}
+.newsList li a:hover {
+    color: #d5040a;
+}
+.newsList li a.indate:link, .newsList li a.indate:visited {
+    color: #d5040a;
+}
+.newsList li a.indate:hover {
+    color: #d5040a;
+}
+.newsList li .date {
+    color: #999;
+    font-size: 14px;
+    line-height: 35px;
+    padding-right: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.newDetailcon {
+    color: #6a6a6a;
+    padding: 10px 10px 0;
+}
+.newDetailcon h2 {
+    font-size: 16px;
+    line-height: 35px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.newDetailcon p {
+    font-size: 14px;
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+.newDetailcon img {
+    margin: 0 auto 5px;
+}
+.newDetailcon .publishTime {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 35px 70px 0 0;
+    text-align: right;
+}
+.newDetailcon .downloadFile {
+    padding: 20px 0;
+}
+.newDetailcon a.download {
+    font-size: 14px;
+}
+.newDetailcon a.download:link, .newDetailcon a.download:visited {
+    color: #a91a0f;
+    line-height: 35px;
+    text-decoration: underline;
+}
+.newDetailcon a.download:hover {
+    color: #b60000;
+}
+.cSortList {
+    background: none repeat scroll 0 0 #fbfbfb;
+}
+.cSortList .newlist {
+    width: 220px;
+}
+.cSortList .newlist h3 {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_bg.jpg") repeat-x scroll 0 bottom #eeeeee;
+    height: 34px;
+    line-height: 34px;
+    width: 228px;
+}
+.cSortList .newlist h3 .current {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_arrow.jpg") no-repeat scroll 204px 0 rgba(0, 0, 0, 0);
+}
+.cSortList .newlist .class1 {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_arrow.jpg") no-repeat scroll 204px -34px rgba(0, 0, 0, 0);
+    color: #971201;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 34px;
+    padding-left: 20px;
+    width: 208px;
+}
+.cSortList .newlist .itemlist ul {
+    background: url("http://www.tcsasac.com/statics/front/images/cList_bg.jpg") repeat-x scroll 0 bottom #fbfbfb;
+    width: 228px;
+}
+.cSortList .newlist .itemlist ul.last {
+    background: none repeat scroll 0 0 #fbfbfb;
+}
+.cSortList .newlist .itemlist li {
+    height: 32px;
+    line-height: 32px;
+}
+.cSortList .newlist .itemlist li a {
+    background: url("http://www.tcsasac.com/statics/front/images/p3.gif") no-repeat scroll 20px center rgba(0, 0, 0, 0);
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 32px;
+}
+.cSortList .newlist .itemlist li a:hover {
+    background-color: #eee;
+    color: #971201;
+}
+.cSortList .newlist .itemlist li.current a:link, .cSortList .newlist .itemlist li.current a:visited, .cSortList .newlist .itemlist li.current a:hover, .cSortList .newlist .itemlist li.current a:active {
+    background: url("http://www.tcsasac.com/statics/front/images/p3Hover.gif") no-repeat scroll 20px center #bc0202;
+    color: #fff;
+    cursor: default;
+    font-weight: bold;
+}

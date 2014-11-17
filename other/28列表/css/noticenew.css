@@ -1,0 +1,84 @@
+.noticename,.noticedate{ text-align:right}
+.noticeCon .download {
+    color: #555;
+    font-size: 14px;
+    line-height: 25px;
+	font-family:微软雅黑,Microsoft YaHei;
+	 border-top:1px dashed #a6a6a6;
+}
+.noticeCon .download h3{color: #414141;
+    font-size: 14px;
+    line-height: 25px;
+	font-family:微软雅黑,Microsoft YaHei;
+	font-weight:bold;
+	text-align:left;
+	padding:10px}
+.noticeCon .download .filelist{ width:840px; border-bottom:1px solid #aaaaaa}
+.noticeCon .download .filelist th{ background:none scroll 0 0 #515151; color:#fff;}
+.col_1{text-align:left; width:601px;display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.col_2{text-align:center}
+.noticeCon .downloadFile {
+    padding-top: 30px;
+}
+.noticeCon a.download:link, .noticeCon a.download:visited {
+    color: #a91a0f;
+    line-height: 35px;
+    text-decoration: underline;
+}
+.noticeCon a.download:hover {
+    color: #f00;
+}
+.even{ background:#efefef;}  /* 偶数行样式*/
+.odd{ background:#ffffff;}  /* 奇数行样式*/
+
+
+.noticeCon01 {
+    color: #696969;
+    height: auto !important;
+    min-height: 300px;
+    padding: 20px 50px 35px;
+}
+.noticeCon01_2 {
+    width: auto;
+}
+.noticeCon01 h2, .noticeCon01 .issn {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+    color: #3c3b3b;
+    font-size: 20px;
+    font-weight: bold;
+    height: auto;
+    line-height: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.noticeCon01 .detail {
+    color: #555;
+    font-size: 14px;
+    line-height: 25px;
+	text-align:center
+}
+.noticeCon01 .detail p {
+	margin-left:80px
+}
+.noticeCon01 .btnBox {
+    padding: 35px 0 0 325px;
+}
+.noticeCon01 .downloadFile {
+    padding-top: 30px;
+}
+.noticeCon01 a.download:link, .noticeCon01 a.download:visited {
+    color: #a91a0f;
+    line-height: 35px;
+    text-decoration: underline;
+}
+.noticeCon01 a.download:hover {
+    color: #f00;
+}
+.noticeCon01 a.btn4 {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+.noticeCon01 a.text:link, .noticeCon01 a.text:visited, .noticeCon01 a.text:hover {
+    color: #b60000;
+}

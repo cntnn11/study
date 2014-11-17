@@ -1,0 +1,145 @@
+
+.noticeCon {
+    color: #696969;
+    height: auto !important;
+    min-height: 300px;
+    padding: 20px 50px 35px;
+}
+.noticeCon_2 {
+    width: auto;
+}
+.noticeCon h2, .noticeCon .issn {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #3c3b3b;
+    font-size: 20px;
+    font-weight: bold;
+    height: auto;
+    line-height: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.noticeCon .detail {
+    color: #555;
+    font-size: 14px;
+    line-height: 25px;
+}
+.noticeCon .detail p {
+    margin-bottom: 20px;
+}
+.noticeCon .btnBox {
+    padding: 35px 0 0 325px;
+}
+.noticeCon .downloadFile {
+    padding-top: 30px;
+}
+.noticeCon a.download:link, .noticeCon a.download:visited {
+    color: #a91a0f;
+    line-height: 35px;
+    text-decoration: underline;
+}
+.noticeCon a.download:hover {
+    color: #f00;
+}
+.noticeCon a.btn4 {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+.noticeCon a.text:link, .noticeCon a.text:visited, .noticeCon a.text:hover {
+    color: #b60000;
+}
+.bmBtn, .detailBtn, .overBtn, .notStart, .fullBtn, .bmNotStart {
+    background: url("../images/bmBtn.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 51px;
+    margin: 0 10px 0 0;
+    text-indent: -9999px;
+    width: 181px;
+}
+.bmBtn:hover {
+    background-position: 0 -51px;
+}
+.detailBtn {
+    background-position: 0 -102px;
+}
+.detailBtn:hover {
+    background-position: 0 -153px;
+}
+.overBtn {
+    background-position: 0 -204px;
+    cursor: default;
+}
+.notStart {
+    background: url("../images/notStartBtn.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: default;
+}
+.fullBtn {
+    background: url("../images/fullBtn.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: default;
+}
+.bmNotStart {
+    background: url("../images/bmNotStart.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: default;
+}
+.planCon {
+    width: 858px;
+}
+.planTab {
+    border-left: 1px solid #ffddd4;
+    border-top: 1px solid #ffddd4;
+    margin-top: 20px;
+    width: 100%;
+}
+.planTab td, .planTab th {
+    border-bottom: 1px solid #ffddd4;
+    border-right: 1px solid #ffddd4;
+    padding: 10px;
+    text-align: center;
+}
+.planTab th {
+    background: none repeat scroll 0 0 #fffaf9;
+    color: #ff5d35;
+    font-weight: bold;
+}
+.contactUs .detail {
+    line-height: 35px;
+    padding-left: 130px;
+}
+.tindent {
+    text-indent: 28px;
+}
+.noticeCon_3 {
+    color: #6a6a6a;
+    padding: 20px 50px;
+}
+.noticeCon_3 h2 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    margin: 0;
+    text-align: center;
+}
+.noticeCon_3 .detail {
+    padding: 20px 0 0 155px;
+}
+.noticeCon_3 .detail_1 p {
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0;
+}
+.noticeCon_3 .detail_2 {
+    padding: 20px 20px 0;
+}
+.noticeCon_3 .detail_2 p.tindent {
+    text-indent: 28px;
+}
+.noticeCon_4 {
+    padding: 10px 15px;
+}
+
+
+
+

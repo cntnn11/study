@@ -1,0 +1,143 @@
+
+.content .mainBox {
+}
+.content .mainBox .infoCon {
+    padding: 37px 0 30px 42px;
+}
+.regForm .item {
+    height: 26px;
+    padding-bottom: 15px;
+}
+.regForm .title {
+    color: #555;
+    float: left;
+    line-height: 26px;
+    text-align: center;
+    width: 140px;
+}
+.regForm .con {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    width: 190px;
+}
+.regForm input.w1, .regForm input.w2 {
+    border: 1px solid #c5c5c5;
+    height: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+    width: 186px;
+}
+.regForm input.w2 {
+    width: 70px;
+}
+.regForm .radioInput {
+    height: auto;
+    margin: 3px 2px 0 0;
+    vertical-align: top;
+    width: auto;
+}
+.regForm .tip {
+    color: #888;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+    padding-left: 5px;
+}
+.regForm .tip a {
+    text-decoration: underline;
+}
+.regForm .error {
+    color: #f00;
+}
+.regForm input.error {
+    border: 1px solid #f00;
+}
+.regForm span.sex {
+    padding-left: 128px;
+}
+.regForm .verification {
+    height: 30px;
+    line-height: 30px;
+}
+.regForm .verification input {
+    border: 1px solid #c5c5c5;
+    height: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+    width: 50px;
+}
+.regForm .verification input.error {
+    border: 1px solid #f00;
+}
+.regForm .verification img {
+    height: 30px;
+    vertical-align: middle;
+    width: 80px;
+}
+.regForm .verification a {
+    font-size: 12px;
+}
+.regForm .verification a:link, .regForm .verification a:visited, .regForm .verification a:hover {
+    color: #555555;
+    text-decoration: underline;
+}
+.regForm .btnBox {
+    padding: 13px 0 0 140px;
+}
+.regResult {
+    height: 400px;
+    padding-top: 50px;
+}
+.regResult .success {
+    background: url("../images/success.gif") no-repeat scroll 15px center rgba(0, 0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 35px;
+    margin: 0 auto 20px;
+    text-align: center;
+    width: 200px;
+}
+.regResult .tip {
+    margin: 0 auto;
+    width: 200px;
+}
+.regResult .tip a:link, .regResult .tip a:visited, .regResult .tip a:hover {
+    color: #b60000;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

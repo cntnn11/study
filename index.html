@@ -7,11 +7,11 @@
 <script src="jquery-1.7.1.min.js"></script>
 <script>
 $(document).ready(function(){
-	/*$('#conn').click(function(){
+	$('#conn').click(function(){
 		var ip = $('#ip').val();
 		var user = $('#user').val();
 		var pwd = $('#pwd').val();
-		--$.ajax()方法
+		//$.ajax()方法
 		$.ajax({
 			type: 'post',	//提交类型
 			url: 'ajax.php',	//提交页面
@@ -27,9 +27,9 @@ $(document).ready(function(){
 				$('#result').html('提交失败了');
 			}
 		});
-	});*/
-	/*
-	--$.POST提交
+	});
+	
+	/*$.POST提交
 	$.post(
 		"ajax.php",	//提交得页面
 		{
@@ -62,7 +62,7 @@ $(document).ready(function(){
 <body>
 <form name="form1" id="form1" action="" enctype="multipart/form-data">
 <h3>输入数据库IP，数据库用户名和密码连接mysql</h3>
-<!-- 数据库IP：<input type='text' name='sql[ip]' id="ip" value='127.0.0.1' /><br />
+数据库IP：<input type='text' name='sql[ip]' id="ip" value='127.0.0.1' /><br />
 用户名：<input type='text' name='sql[user]' id="user" value='root' /><br />
 密码：<input type='text' name='sql[pwd]' id="pwd" value='ms' /><br />
 <input type="button" name='conn' id='conn' value="连接数据库" />
@@ -70,7 +70,7 @@ $(document).ready(function(){
 <h5>选择一个数据库</h5>
 <div id='selDBdiv' style='width:100%; display:none;'></div>
 
-<div id='result' style="width:300px; height:50px;"></div>-->
+<div id='result' style="width:300px; height:50px;"></div>
 日期：<input type='text' name='date' id='date' />
 平台：<input type='text' name='site_id' id='site_id' />
 <input type='button' name='sch' id='sch' value='查询' />

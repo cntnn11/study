@@ -1,0 +1,96 @@
+.loginCon1 {
+    padding: 20px 40px 60px;
+	font-family:微软雅黑,Microsoft Yahei;
+	border: 1px solid #d8d8d8;
+	border-bottom:none;
+	background:url(../images/conbg.png) repeat-x scroll left bottom;
+	min-height: 320px;
+}
+.loginForm1 .fillIn {
+    float: left;
+    margin-top:26px;
+}
+.loginForm1 .item {
+    height: 35px;
+    overflow: hidden;
+    padding-bottom:36px;
+}
+.loginForm1 .title {
+    color: #000;
+    float: left;
+    line-height: 26px;
+    padding-right: 15px;
+}
+.loginForm1 .con {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+.loginForm1 input {
+    border: 1px solid #c5c5c5;
+    height: 30px;
+    line-height: 20px;
+    width: 270px;
+}
+.loginForm1 .verification input {
+    vertical-align: middle;
+    width: 95px;
+	margin-right: 15px;
+}
+.loginForm1 .verification img {
+    height: 35px;
+    margin-right: 15px;
+    vertical-align: middle;
+    width: 100px;
+	background:#fff45c;
+}
+.loginForm1 .verification a:link, .loginForm1 .verification a:visited, .loginForm1 .verification a:hover {
+    color: #000;
+	font-size:12px;
+}
+.loginForm1 .btnBox {
+    float: left;
+    text-align: center;
+    width: 355px;
+}
+.loginForm1 button {
+    background: url(../images/logincon.png) no-repeat scroll 0 0 ;
+    cursor: pointer;
+    display: block;
+    height: 44px;
+    margin: 0 auto 10px;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 151px;
+	float: left;
+}
+/*.loginForm1 button:hover {
+    background-position: 0 -62px;
+}*/
+.loginForm1 button.logining, .loginForm1 button.logining:hover {
+    background-position: 0 -45px;
+    cursor: default;
+}
+.loginForm1 .btnBox a.reg {
+    margin-right: 5px;
+}
+.loginForm1 .btnBox a:link, .loginForm1 .btnBox a:visited, .loginForm1 .btnBox a:hover {
+    color: #363535;
+    font-weight: bold;
+	font-size:16px;
+    text-decoration: underline;
+	vertical-align:middle;
+	padding-right:10px
+}
+.loginCon2 {
+    padding: 20px 40px 60px;
+	font-family:微软雅黑,Microsoft Yahei;
+	border: 1px solid #d8d8d8;
+	border-bottom:none;
+	background:url(../images/conbg.png) repeat-x scroll left bottom;
+	min-height: 320px;
+	text-align:center;
+}
+.loginCon2 h2{font-family:微软雅黑,Microsoft Yahei; font-weight:bold; font-size:16px;color:#363535; background:none; margin: 100px auto 50px;}
+.loginCon2 img{ border:none; background:none; margin: 0px auto 100px;}
+.loginCon2 img a{ cursor:pointer}

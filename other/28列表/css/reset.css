@@ -1,0 +1,44 @@
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tr, th, td, button {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none outside none;
+}
+table {
+    border-collapse: collapse;
+}
+body, input, textarea {
+    color: #444;
+    font-family: '宋体',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+}
+a {
+    outline: medium none;
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: #444;
+}
+a:hover {
+    color: #c00;
+}
+a:active {
+    color: #c00;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}

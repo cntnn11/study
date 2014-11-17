@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>中央党校国资委分校欢迎您</title>
+		<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="css/layout.css" type="text/css"/>
+<script src="js/mo.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/layoutnew.css" type="text/css"/>
+<link rel="stylesheet"  href="css/expertList.css" type="text/css"/>  
+<link rel="stylesheet"  href="css/expertListnew.css" type="text/css"/>  
+<link rel="stylesheet"  href="css/menu.css" type="text/css"/>
+</head>
+<body><script language="javascript">
+//临时使用
+function AddFavorite(sURL,sTitle){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.indexOf("msie 8")>-1){//IE8浏览器，使用AddToFavoritesBar函数
+        window.external.AddToFavoritesBar(sURL,sTitle,'slice');//IE8
+    }else{
+        try{
+            window.external.addFavorite(sURL,sTitle);//针对其他ie
+        }catch(e){
+            try{
+                window.sidebar.addPanel(sTitle,sURL,"");
+            }catch(e){
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+}
+//设置为首页
+function SetHome(obj,vrl){
+    try{obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);}
+    catch(e){
+        if(window.netscape) {
+            try {netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");}
+            catch (e) {alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");}
+            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage',vrl);
+         }
+    }
+}
+
+</script>	
+	<!--顶部-->
+	    <!--顶部-->
+    <div class="topbar1">
+        <div class="wrap2 wrap3">
+            <div class="left">
+            <a href='http://www.tcsasac.com'>网站首页</a>
+            <span>|</span>
+            <a href='http://jiguan.tcsasac.com'>机关网校</a>
+            <span>|</span>
+            <a href='http://dangxiao.tcsasac.com'>党校园地</a>
+        </div>
+
+            <div class="right" id='__user_banner'>
+            
+                <script src="http://www.tcsasac.com/user/banner" type="text/javascript"></script>
+            </div>
+        </div>
+    </div>
+    <!--头部logo和Icon-->
+    <div class="header2">
+        <div class="banner1">
+            <h1>
+                <a href="/">国资委干部教育培训网</a>
+            </h1>
+        </div>
+    </div>
+    
+    <!--页面主体内容区-->
+    <div class="content1">
+    <div class="nav2">
+        <ul>
+             <li class="current">
+                <a href="/">网站首页</a>
+            </li>
+            <li>
+                <a href="">课程列表</a>
+            </li>
+            
+            <li>
+            <a href="/teacher/list">专家团队</a>
+            </li>
+           
+         <li>
+            <a href="/share/interface/statics?site=&tpl=pxjh">培训计划</a>
+        </li>
+            <li>
+                <a href="/train/trainnotice/classList">培训项目</a>
+            </li>
+            <li>
+                <a href="/course/list?ispub=0">学习平台</a>
+            </li>
+            <li>
+                <a href="">新闻动态</a>
+            </li>
+            <li>
+                <a href="/user/feedback">意见反馈</a>
+            </li>
+        </ul>
+    </div>
+<!--页面主体内容区-->
+    <div id="part">
+	<div class="innerCon">
+				<div class="position">
+			    <span class="text">您现在的位置：</span><a href="/">首页</a> &gt; <a href="/">课程中心</a> &gt; <a href="/">课程列表</a>
+		</div>
+	       <div class="leftcon">
+           <div class="leftcon_list">
+<div class="nav3">
+
+       
+  <div id="zeropane" class="menu_title">
+       <div id="kcList01"> <h2 id="kc01" class="menu_titlelist current">全部课程</h2>
+      
+       <script type="text/javascript" src="js/AccControl.js"></script>
+       <script type="text/javascript">
+          //加载效果
+             window.onload = function(){
+	        ex = new AccControl("accordion_panel1");
+               };
+        </script>
+        <div id="accordion_panel1" class="panel">
+	<h3 class="gray-top">转型升级战略</h3>	
+	<div class="grayList">
+		<ol>
+			<li><a href="#">资产并购重组与企业改制</a></li>
+			<li><a href="#">企业风险管理与危机管理</a></li>
+			<li><a href="#">上市公司管理与治理</a></li>
+            <li><a href="#">企业投融资决策管理</a></li>
+            <li><a href="#">委内政策与实务</a></li>
+		</ol>
+	</div>
+    <h3 class="gray">国际化经营战略</h3>
+	<div  class="grayList">	
+		<ol>
+			<li><a href="#">资产并购重组与企业改制</a></li>
+			<li><a href="#">企业风险管理与危机管理</a></li>
+            <li><a href="#">企业投融资决策管理</a></li>
+            <li><a href="#">委内政策与实务</a></li>
+		</ol>
+	</div>
+	<h3 class="gray">人才强企战略</h3>
+	<div  class="grayList">	
+		<ol>
+			<li><a href="#">资产并购重组与企业改制</a></li>
+			<li><a href="#">企业风险管理与危机管理</a></li>
+			<li><a href="#">上市公司管理与治理</a></li>
+			<li><a href="#">现代企业制度与公司治理</a></li>
+            <li><a href="#">企业投融资决策管理</a></li>
+            <li><a href="#">委内政策与实务</a></li>
+            <li><a href="#">上市公司管理与治理</a></li>
+		</ol>
+	</div>
+	<h3 class="gray">科技创新战略</h3>
+	<div  class="grayList">	
+		<ol>
+			
+			<li><a href="#">现代企业制度与公司治理</a></li>
+            <li><a href="#">企业投融资决策管理</a></li>
+            <li><a href="#">委内政策与实务</a></li>
+		</ol>
+	</div>
+	<h3 class="deep">和谐发展战略</h3>
+	<div class="panel-bottom grayList">	
+		<ol>
+			<li><a href="#">资产并购重组与企业改制</a></li>
+			<li><a href="#">企业风险管理与危机管理</a></li>
+			<li><a href="#">上市公司管理与治理</a></li>
+			<li><a href="#">现代企业制度与公司治理</a></li>
+            <li><a href="#">企业投融资决策管理</a></li>
+            <li><a href="#">委内政策与实务</a></li>
+		</ol>
+	</div>
+	<h3 class="deep-bottom">&nbsp;</h3>
+        </div>
+        
+        
+       </div>
+    
+		
+		<div id="kcList02"> <h2 id="kc02" class="menu_titlelist">热门课程</h2></div>
+        <div id="kcList03"> <h2 id="kc03" class="menu_titlelist">最新课程</h2></div>
+		
+</div>
+
+	</div>    
+         </div>  
+           <div class="leftcon_list">
+           <h2 id="kc05" class="menu_titlelist1"> 讲师</h2>
+           
+           <ul class="teactime">
+<li class="current"><a href="#">全部</a></li>    <li><a href="#">向春玲</a></li>     <li><a href="#">韩庆祥</a></li>
+<li><a href="#">公方彬</a></li>  <li><a href="#">向春玲</a></li>    <li><a href="#">韩庆祥</a></li>
+<li><a href="#">公方彬</a></li>  <li><a href="#">向春玲</a></li>    <li><a href="#">韩庆祥</a></li>
+<li><a href="#">公方彬</a></li>  <li><a href="#">向春玲</a></li>    <li><a href="#">韩庆祥</a></li>
+<li><a href="#">公方彬</a></li>  <li><a href="#">向春玲</a></li>    <li><a href="#">韩庆祥</a></li>  
+           </ul>
+           <div class="clear"></div>
+           </div>   
+           <div class="leftcon_list last">
+           <h2 id="kc06" class="menu_titlelist1">发布时间</h2>
+           
+           <ul class="teactime">
+<li class="current"><a href="#">全部</a></li>    <li><a href="#">2014</a></li>     <li><a href="#">2013</a></li>
+<li><a href="#">2012</a></li>  <li><a href="#">2011</a></li>    <li><a href="#">2010</a></li>
+<li><a href="#">2009</a></li>  <li><a href="#">2008</a></li>    <li><a href="#">2007</a></li>
+<li><a href="#">2006</a></li>  <li><a href="#">2005</a></li>    <li><a href="#">2004</a></li>
+           </ul>
+           <div class="clear"></div>
+           </div>
+      </div>
+           <div class="rightcon"><div class="list_mainFrame5">
+                
+                <div id="rightCon" class="list_itemFrame">
+                                        <div class="list_toolFrame">
+                                        <div class="tool_display">
+                                        <span>显示方式：</span>
+                                     <a href="" class="a1"> </a>
+                                     <a href="" class="a2on"> </a> 
+                                        
+                                        </div>
+<div class="tool_search">
+                <form method="post" action="/train/Trainnotice/classList">
+                                <input type="text" class="input" name="search" value=""/>
+                                <input type='hidden' name='type' value='' />
+                                <input type='hidden' name='num' value='10' />
+                                <input type='hidden' name='subsite_id' value='' />
+                                <button type="submit" class="button">搜索</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="listBox5 list_itemCon newsLib">
+						<div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>
+                            <div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>
+                            <div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>
+                            <div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>
+                            <div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>	<div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>	<div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿   国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>	<div class="basicInfo ">
+                        <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                    
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                  
+                          <div class="clear">
+                                </div>
+                                
+                            </div>	
+                            <div class="basicInfo ">
+                               <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                                <div class="clear">
+                                </div>
+                                
+                            </div>
+                            <div class="basicInfo lastLi">
+                               <a href="/teacher/Detail?id=110917200000001">
+<img width="137" height="89" alt="中央党校国资委分校召开2014年教学组织管理工作交流会" src="images/newslist.jpg">
+</a>
+                        <h2><a href="/teacher/Detail?id=110917200000001">中央企业改革的形势与任务</a></h2>
+                        <div class="timelist"><p>讲师：白英姿&nbsp;&nbsp;国务院国资委企业改革局局长</p></div>
+                       
+<div class="info">
+                                
+                                    
+                          <div class="item">
+                            <p>课程简介：本课程围绕“青年干部成长必须处理好的三个关系”这一主题，以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。以习近平总书记青年时代领导成长经历为背景，详细讲述了这三个必须处理好的关系。[<a href="#" target="_blank">详细</a>]</p>
+                </div>
+                          </div>
+                                <div class="clear">
+                                </div>
+                                
+                            </div>	
+					<div class="clear">
+                                </div></div>
+                
+                </div>
+                    <!--分页代码部分开始-->
+             <!--<a href="javascript:if($('pager_currentpage').value>0 && $('pager_currentpage').value<=19)window.location='/teacher/list?start='+($('pager_currentpage').value-1)*10">转到</a>-->
+              
+              <div class="pagenext"><a href="/teacher/list?start=10">下一页 >></a></div>
+              <div class="pagerBox1">
+              
+                        <span class="preone">上一页</span><span  class="curPage">1</span><span><a href="#">2</a></span><span><a href="#">3</a></span><span><a href="#">4</a></span><span><a href="#">5</a></span><span><a href="#">6</a></span><span><a href="#">7</a></span><span><a href="#">8</a></span><span><a href="#">9</a></span><span><a href="#">10</a></span><span><a href="#">...17</a></span><span id="totalpage"><input id="pager_currentpage" type="text" class="pager" value="1" /> / 17</span><span class="jump"><a href="javascript:if($('pager_currentpage').value>0 && $('pager_currentpage').value<=19)window.location='/teacher/list?start='+($('pager_currentpage').value-1)*10">转到</a></span><span class="nextone"><a href="/teacher/list?start=10">下一页</a></span>
+             
+                        
+                    </div>
+      </div></div>    
+
+
+	<!--内容回复-->
+	<div class="clear">
+					</div>	
+	</div>
+    </div>
+    <div class="clear">
+					</div>	
+</div>
+	<!--页底-->
+<!--页底-->
+	<div class="footer footer1">
+		<a href="http://www.tcsasac.com/share/interface/contact">联系我们</a>
+		<span>|</span>
+		<a href="http://www.tcsasac.com/share/interface/jigou">机构简介</a>
+		<span>|</span>
+		<a href="http://www.tcsasac.com/share/interface/sitedeclare">网站声明</a>
+		<span>|</span>
+		<a href="http://mail.tcsasac.com">邮箱入口</a>
+		<span>|</span>
+		<a href="http://admin.tcsasac.com">管理入口</a>
+        <span>|</span>
+    <a href="http://sms.tcsasac.com" target="_blank">短信平台</a>
+    
+    <span>|</span>
+    <a href="#" target="_blank">证书查询</a>
+    <p>国务院国有资产监督管理委员会干部教育培训中心</p>
+    <p>Copyright 2009 Education and Trainning Centre for Officials and Entrepreneurs Education Network,SASAC</p>
+    <p>地址：北京市东城区安定门外大街56号　电话：010-64471871/0547 　邮政编码：100011　京ICP备08104266号 　技术支持：华录文化产业有限公司</p>
+	</div>			
+</body>
+<script type="text/javascript">
+	BBS.re_init();
+		new FlipCode_2({'currentpage':1,'totalSize':1,'pageSize':10,'urlTemplate':'/comment/index/clist?commentid=340&start={start}'});
+		
+	document.getElements('.contentText').each(function(item,index){
+	item.innerHTML=item.innerHTML.replace(/[\x0c|\x0a|\cJ|\cM]/g,"<br/>");
+	item.innerHTML=item.innerHTML.replace(/[\x09|\cI|\x0b|\cK|' ']/g,"&nbsp;");
+
+	})
+
+</script>
+</html>

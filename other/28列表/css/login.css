@@ -1,0 +1,129 @@
+
+h2.userLogin {
+    background: url("http://www.tcsasac.com/statics/front/images/title_login.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.loginCon {
+    background: url("http://www.tcsasac.com/statics/front/images/loginBg.jpg") no-repeat scroll right top rgba(0, 0, 0, 0);
+    height: 260px;
+    padding: 20px 40px 60px;
+}
+.wrongInfo {
+    color: #d5040a;
+}
+.loginForm .fillIn {
+    float: left;
+    margin-right: 22px;
+    width: 320px;
+}
+.loginForm .item {
+    height: 30px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.loginForm .title {
+    color: #555;
+    float: left;
+    line-height: 26px;
+    padding-right: 6px;
+}
+.loginForm .con {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+.loginForm input {
+    border: 1px solid #c5c5c5;
+    height: 20px;
+    line-height: 20px;
+    width: 240px;
+}
+.loginForm .verification input {
+    vertical-align: middle;
+    width: 75px;
+}
+.loginForm .verification img {
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 80px;
+}
+.loginForm .verification a:link, .loginForm .verification a:visited, .loginForm .verification a:hover {
+    color: #5f5f5f;
+    text-decoration: underline;
+}
+.loginForm .btnBox {
+    float: left;
+    text-align: center;
+    width: 120px;
+}
+.loginForm button {
+    background: url("http://www.tcsasac.com/statics/front/images/login.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    height: 62px;
+    margin: 0 auto 10px;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 94px;
+}
+.loginForm button:hover {
+    background-position: 0 -62px;
+}
+.loginForm button.logining, .loginForm button.logining:hover {
+    background-position: 0 -124px;
+    cursor: default;
+}
+.loginForm .btnBox a.reg {
+    margin-right: 5px;
+}
+.loginForm .btnBox a:link, .loginForm .btnBox a:visited, .loginForm .btnBox a:hover {
+    color: #666;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.floatCon {
+    height: 292px;
+    position: fixed;
+    width: 496px;
+}
+.floatInnerCon {
+    position: relative;
+}
+.floatInnerCon .floatIframe {
+    background-color: #ffffff;
+    border: 1px solid #848484;
+    position: absolute;
+    z-index: 1000;
+}
+.floatInnerCon .floatLoginShadow {
+    background: none repeat scroll 0 0 #858585;
+    border: 0 none;
+    height: 292px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 496px;
+    z-index: 997;
+}
+.cover {
+    background-color: #000000;
+    position: absolute;
+}
+.controlPos {
+    padding: 10px 0 0 62px;
+}
+.experience {
+    background: none repeat scroll 0 0 #fff3e7;
+    border: 1px solid #fb9b3f;
+    color: #666;
+    line-height: 28px;
+    padding: 8px 10px 10px 15px;
+    width: 240px;
+}
+.experience span {
+    font-weight: bold;
+}
+.experience strong {
+    color: #e64c00;
+    font-family: Arial;
+}

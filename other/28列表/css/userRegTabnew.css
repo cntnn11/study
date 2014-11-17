@@ -1,0 +1,47 @@
+.trainPlan1 {
+    padding: 10px 15px;
+}
+.trainPlan1 h3 {
+	padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+	font-family:微软雅黑,Microsoft YaHei,SimHei;
+	font-size:20px;
+	font-weight:bold;
+	color:#343434;
+}
+.trainPlan1 table th {
+    background: none repeat scroll 0 0 #7b7b7b;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+	color:#fff;
+}
+.trainPlan1 table td {
+    height: 25px;
+    line-height: 25px;
+    padding: 5px;
+    text-align: center;
+	font-family:微软雅黑,Microsoft YaHei,黑体,SimHei;
+	font-size:13px;
+	font-weight:bold;
+	color:424242;
+}
+.regTab1 {
+    border-left: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    width: 100%;
+}
+.regTab1 td {
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    color: #343535;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 0 10px;
+}
+.even{ background:#f6f6f6;}  /* 偶数行样式*/
+.odd{ background:#ffffff;}  /* 奇数行样式*/
+.bg{ background:#e7e7e7;}

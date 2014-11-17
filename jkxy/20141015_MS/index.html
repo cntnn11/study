@@ -14,28 +14,48 @@
 <body>
 
 <div class="w-100b flash-block">
+	<script type="text/javascript">
+		var custHtmlRoot="http://e1.jikexueyuan.com/ms/";
+		var script	= document.createElement('script'); 
+		script.type	= "text/javascript";
+		script.src	= custHtmlRoot+"animate.js";
+			var head = document.getElementsByTagName('head')[0], done=false;
+			script.onload = script.onreadystatechange = function(){
+				if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'))
+				{
+					done=true;
+					var opts ={
+						scaleToFit: "none",
+						centerStage: "none",
+						minW: "0",
+						maxW: "100%",
+						width: "100%",
+						height: "350px"
+					};
+					opts.htmlRoot	= custHtmlRoot;
+					AdobeEdge.loadComposition('./weiruanpage_4', 'EDGE-841347746', opts,{"dom":{}}, {"dom":{}});
+					script.onload	= script.onreadystatechange = null;
+					head.removeChild(script);
+				}
+			};
+			head.appendChild(script);
+	</script>
 	<div class="flash-box">
-		<img src="http://static-jkxy.qiniudn.com/ms/banner_font.png" />
-		<!-- <object height="100%" hspace="0" vspace="0" width="100%" type="application/x-shockwave-flash" wmode="transparent" quality="high"  data="http://static-jkxy.qiniudn.com/ms/flash14.swf?20141016">
-			<param name="allowfullscreen" value="true">
-			<param name="allowscriptaccess" value="always">
-			<param name="wmode" value="opaque">
-			<parameter="wmode" value="transparent">
-		</object> -->
+		<div class="EDGE-841347746" id="Stage"></div>
 	</div>
 </div>
 <div class="w-100b body-intr-block">
 	<div class="body-intr-box">
 		<div class="mr-30 intr-content-block">
 			<h3>课程合作：</h3>
-			<p class="h-162">极客学院与微软虚拟学院达成在线课程合作意向，正式推出微软制作的移动应用开发系列课程和极客学院制作的TypeScript课程，极客学院WP实战、.Net开发、C#开发课程也将陆续与开发者见面。</p>
+			<p class="h-162">极客学院与微软虚拟学院达成在线课程合作意向，正式推出微软制作的移动应用开发系列课程和极客学院制作的TypeScript课程，极客学院Windows Phone 实战、.Net开发、C#开发课程也将陆续与开发者见面。</p>
 		</div>
 		<div class="intr-content-block">
-			<h3>开发者激励计划（即将上线）：</h3>
+			<h3>开发者激励计划：</h3>
 			<p>作为微软“开发者激励计划”的官方合作伙伴，凡极客学院注册用户参与该计划将获得微软额外的积分，可兑换极客学院VIP学习资格及官方活动提供的一系列神秘大奖。</p>
 			<p>（微信关注 “jikexueyuan00”，可及时跟进活动动态）</p>
-			<php>if($user){</php>
-				<p class="intr-btn"><a href="<php>echo U('/course@www');</php>" target="_blank"><em>进入学习预热</em></a></p>
+			<php>if($user['uid']){</php>
+				<p class="intr-btn intr-btn"><a href="http://www.wpappchallenge.com" target="_blank" style="background:#00bcf2;"><em>了解具体详情</em></a></p>
 			<php>}else{</php>
 				<p class="intr-btn"><a href="javascript:eoe.dialogin();" target="_blank" ><em>极速注册 参与活动</em></a></p>
 			<php>}</php>
@@ -46,99 +66,99 @@
 <div class="w-100b">
 	<div class="course_wp">
 		<h2>Windows Phone 移动应用开发系列课程</h2>
-		<p class="course-subtit">微软虚拟学院官方推出移动应用开发系列课程，包括你感兴趣的WP应用开发基础，</p>
-		<p class="mb-30 course-subtit">基于C#、HTML5的WP应用开发，WP游戏开发等热门技术。</p>
+		<p class="course-subtit">微软虚拟学院官方推出移动应用开发系列课程，包括你感兴趣的Windows Phone应用开发基础，</p>
+		<p class="mb-30 course-subtit">基于C#、HTML5的Windows Phone应用开发，Windows Phone游戏开发等热门技术。</p>
 		<div class="course-block">
 			<div class="course-body-tit">
-				<span>WP应用开发基础课程</span>
+				<span>Windows Phone应用开发基础课程</span>
 			</div>
 			<div class="course-body-box">
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469707" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="新手入门 : Windows Phone 8.1 开发" src="http://static-jkxy.qiniudn.com/ms/wp1.png"></div><div class="ue-video-show-name"><h3>新手入门 : Windows Phone 8.1 开发</h3></div><div class="ue-video-show-long"><i></i><span>30课时,672分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>新手入门 : Windows Phone 8.1 开发</h3></div><div class="ue-video-show-desc">从零开始掌握 Windows Phone 8.1 平台应用开发的入门知识</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200487842" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="在线课堂 : 跨平台移动开发者日" src="http://e1.jikexueyuan.com/ms/wp0.png"></div><div class="ue-video-show-name"><h3>在线课堂 : 跨平台移动开发者日</h3></div><div class="ue-video-show-long"><i></i><span>8课时,480分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>在线课堂 : 跨平台移动开发者日</h3></div><div class="ue-video-show-desc"></div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469708" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="快速入门 : Windows Phone 8.1 应用开发" src="http://static-jkxy.qiniudn.com/ms/wp2.png"></div><div class="ue-video-show-name"><h3>快速入门 : Windows Phone 8.1 应用开发 (10月上线)</h3></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>快速入门 : Windows Phone 8.1 应用开发 (10月上线)</h3></div><div class="ue-video-show-desc"></div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469707" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="新手入门 : Windows Phone 8.1 开发" src="http://e1.jikexueyuan.com/ms/wp1.jpg"></div><div class="ue-video-show-name"><h3>Windows Phone 8.1 开发</h3></div><div class="ue-video-show-long"><i></i><span>30课时,672分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>Windows Phone 8.1 开发</h3></div><div class="ue-video-show-desc">从零开始掌握 Windows Phone 8.1 平台应用开发的入门知识</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class=" mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469709" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="快速入门 : Windows 8 UX 设计" src="http://static-jkxy.qiniudn.com/ms/wp3.png"></div><div class="ue-video-show-name"><h3>快速入门 : Windows 8 UX 设计</h3></div><div class="ue-video-show-long"><i></i><span>13课时,660分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>快速入门 : Windows 8 UX 设计</h3></div><div class="ue-video-show-desc">学会如何为 Windows 8 应用做出最完美的UX设计</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469709" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="快速入门 : Windows 8 UX 设计" src="http://e1.jikexueyuan.com/ms/wp2.png"></div><div class="ue-video-show-name"><h3>快速入门 : Windows 8 UX 设计</h3></div><div class="ue-video-show-long"><i></i><span>13课时,660分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>快速入门 : Windows 8 UX 设计</h3></div><div class="ue-video-show-desc">学会如何为 Windows 8 应用做出最完美的UX设计</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 			</div>
 
 			<div class="course-body-tit">
-				<span>C#开发WP应用</span>
+				<span>C#开发Windows Phone应用</span>
 			</div>
 			<div class="course-body-box">
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469710" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="快速入门 : C# 编程" src="http://static-jkxy.qiniudn.com/ms/c_ms1.png"></div><div class="ue-video-show-name"><h3>快速入门 : C# 编程</h3></div><div class="ue-video-show-long"><i></i><span>8课时,517分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>快速入门 : C# 编程</h3></div><div class="ue-video-show-desc">掌握 C# 语言的对象、操作类型、字符串、代码反射、程序集等基础内容</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469710" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="快速入门 : C# 编程" src="http://e1.jikexueyuan.com/ms/c_ms1.png"></div><div class="ue-video-show-name"><h3>快速入门 : C# 编程</h3></div><div class="ue-video-show-long"><i></i><span>8课时,517分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>快速入门 : C# 编程</h3></div><div class="ue-video-show-desc">掌握 C# 语言的对象、操作类型、字符串、代码反射、程序集等基础内容</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469711" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 C# 开发 Windows 商店应用" src="http://static-jkxy.qiniudn.com/ms/c_ms2.png"></div><div class="ue-video-show-name"><h3>使用 C# 开发 Windows 商店应用</h3></div><div class="ue-video-show-long"><i></i><span>8课时,468分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 C# 开发 Windows 商店应用</h3></div><div class="ue-video-show-desc">通过、动手演示让你快速掌握 Windows 应用开发技能</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469711" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 C# 开发 Windows 商店应用" src="http://e1.jikexueyuan.com/ms/c_ms2.jpg"></div><div class="ue-video-show-name"><h3>使用 C# 开发 Windows 商店应用</h3></div><div class="ue-video-show-long"><i></i><span>8课时,468分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 C# 开发 Windows 商店应用</h3></div><div class="ue-video-show-desc">通过、动手演示让你快速掌握 Windows 应用开发技能</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class=" course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469712" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 C# 进行高级 Windows 应用商店应用程序开发" src="http://static-jkxy.qiniudn.com/ms/c_ms3.png"></div><div class="ue-video-show-name"><h3>使用 C# 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-long"><i></i><span>8课时,569分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 C# 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-desc">掌握如何使用 C# 添加动画和转换效果以改善用户体验</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469712" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 C# 进行高级 Windows 应用商店应用程序开发" src="http://e1.jikexueyuan.com/ms/c_ms3.jpg"></div><div class="ue-video-show-name"><h3>使用 C# 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-long"><i></i><span>8课时,569分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 C# 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-desc">掌握如何使用 C# 添加动画和转换效果以改善用户体验</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 			</div>
 
 			<div class="course-body-tit">
-				<span>HTML5开发WP应用</span>
+				<span>HTML5开发Windows Phone应用</span>
 			</div>
 			<div class="course-body-box">
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469713" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用包含 JavaScript 和 CSS3 的 HTML5 技术开发应用程序 " src="http://static-jkxy.qiniudn.com/ms/h5wp1.png"></div><div class="ue-video-show-name"><h3>使用包含 JavaScript 和 CSS3 的 HTML5 技术开发应用程序 </h3></div><div class="ue-video-show-long"><i></i><span>6课时,433分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用包含 JavaScript 和 CSS3 的 HTML5 技术开发应用程序 </h3></div><div class="ue-video-show-desc">掌握使用HTML5/CSS3/JavaScript执行编程逻辑、执行循环和创建结构良好的应用程序</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469713" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用包含 JavaScript 和 CSS3 的 HTML5 技术开发应用程序 " src="http://e1.jikexueyuan.com/ms/h5wp1.png"></div><div class="ue-video-show-name"><h3>使用包含 JavaScript 和 CSS3 的 HTML5 技术开发应用程序 </h3></div><div class="ue-video-show-long"><i></i><span>6课时,433分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用包含 JavaScript 和 CSS3 的 HTML5 技术开发应用程序 </h3></div><div class="ue-video-show-desc">掌握使用HTML5/CSS3/JavaScript执行编程逻辑、执行循环和创建结构良好的应用程序</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469714" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 HTML5 技术开发 Windows 商店应用" src="http://static-jkxy.qiniudn.com/ms/h5wp2.png"></div><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用</h3></div><div class="ue-video-show-long"><i></i><span>6课时,375分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用</h3></div><div class="ue-video-show-desc">入门开发 Web 应用程序和 Windows 商店应用</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469714" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 HTML5 技术开发 Windows 商店应用" src="http://e1.jikexueyuan.com/ms/h5wp2.jpg"></div><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用</h3></div><div class="ue-video-show-long"><i></i><span>6课时,375分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用</h3></div><div class="ue-video-show-desc">入门开发 Web 应用程序和 Windows 商店应用</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class=" mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469715" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 HTML5 技术开发 Windows 商店应用 (2)" src="http://static-jkxy.qiniudn.com/ms/h5wp3.png"></div><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用 (2)</h3></div><div class="ue-video-show-long"><i></i><span>6课时,443分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用 (2)</h3></div><div class="ue-video-show-desc">掌握 AppBar 等控件、文件管理、UX/UI、JavaScript 编辑器、HTML设计功能等内容</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469715" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 HTML5 技术开发 Windows 商店应用 (更新)" src="http://e1.jikexueyuan.com/ms/h5wp3.jpg"></div><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用 (更新)</h3></div><div class="ue-video-show-long"><i></i><span>6课时,443分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 HTML5 技术开发 Windows 商店应用 (更新)</h3></div><div class="ue-video-show-desc">掌握 AppBar 等控件、文件管理、UX/UI、JavaScript 编辑器、HTML设计功能等内容</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469716" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 HTML5 进行高级 Windows 应用商店应用程序开发" src="http://static-jkxy.qiniudn.com/ms/h5wp4.png"></div><div class="ue-video-show-name"><h3>使用 HTML5 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-long"><i></i><span>6课时,460分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 HTML5 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-desc">深入讲解优化 Windows 应用商店应用程序所需的高级编程技巧和技术</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469716" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用 HTML5 进行高级 Windows 应用商店应用程序开发" src="http://e1.jikexueyuan.com/ms/h5wp4.jpg"></div><div class="ue-video-show-name"><h3>使用 HTML5 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-long"><i></i><span>6课时,460分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用 HTML5 进行高级 Windows 应用商店应用程序开发</h3></div><div class="ue-video-show-desc">深入讲解优化 Windows 应用商店应用程序所需的高级编程技巧和技术</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469717" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="HTML5 应用开发介绍及如何使用 HTML5 开发 Universal Apps" src="http://static-jkxy.qiniudn.com/ms/h5wp5.png"></div><div class="ue-video-show-name"><h3>HTML5 应用开发介绍及如何使用 HTML5 开发 Universal Apps</h3></div><div class="ue-video-show-long"><i></i><span>3课时,164分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>HTML5 应用开发介绍及如何使用 HTML5 开发 Universal Apps</h3></div><div class="ue-video-show-desc">掌握 Typescript、WinJS 以及如何将 HTML5 轻应用转化为 Universal Apps</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469717" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="HTML5 应用开发介绍及如何使用 HTML5 开发 Universal Apps" src="http://e1.jikexueyuan.com/ms/h5wp5.jpg"></div><div class="ue-video-show-name"><h3>HTML5 应用开发介绍及如何使用 HTML5 开发 Universal Apps</h3></div><div class="ue-video-show-long"><i></i><span>3课时,164分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>HTML5 应用开发介绍及如何使用 HTML5 开发 Universal Apps</h3></div><div class="ue-video-show-desc">掌握 Typescript、WinJS 以及如何将 HTML5 轻应用转化为 Universal Apps</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 			</div>
 
 			<div class="course-body-tit">
-				<span>WP游戏开发技术</span>
+				<span>Windows Phone游戏开发技术</span>
 			</div>
 			<div class="course-body-box">
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469706" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用Cocos2d-x引擎开发Windows Phone 8游戏" src="http://static-jkxy.qiniudn.com/ms/wpgame1.png"></div><div class="ue-video-show-name"><h3>使用Cocos2d-x引擎开发Windows Phone 8游戏</h3></div><div class="ue-video-show-long"><i></i><span>4课时,270分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用Cocos2d-x引擎开发Windows Phone 8游戏</h3></div><div class="ue-video-show-desc">结合实际游戏，从零开始一步步讲解如何搭建开发环境和使用 Cocos2d-x 引擎快速开发 WP8 游戏的技术</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469706" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="使用Cocos2d-x引擎开发Windows Phone 8游戏" src="http://e1.jikexueyuan.com/ms/wpgame1.jpg"></div><div class="ue-video-show-name"><h3>使用Cocos2d-x引擎开发Windows Phone 8游戏</h3></div><div class="ue-video-show-long"><i></i><span>4课时,270分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>使用Cocos2d-x引擎开发Windows Phone 8游戏</h3></div><div class="ue-video-show-desc">结合实际游戏，从零开始一步步讲解如何搭建开发环境和使用 Cocos2d-x 引擎快速开发 Windows Phone 8 游戏的技术</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469718" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="如何将Unity3D游戏移植到Windows Phone 8" src="http://static-jkxy.qiniudn.com/ms/wpgame2.png"></div><div class="ue-video-show-name"><h3>如何将Unity3D游戏移植到Windows Phone 8</h3></div><div class="ue-video-show-long"><i></i><span>4课时,177分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>如何将Unity3D游戏移植到Windows Phone 8</h3></div><div class="ue-video-show-desc">Unity3D 是一个拥有强大功能的跨平台游戏引擎。课程里，我们会演示从现有的游戏到 WP 移植的过程</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469718" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="如何将Unity3D游戏移植到Windows Phone 8" src="http://e1.jikexueyuan.com/ms/wpgame2.jpg"></div><div class="ue-video-show-name"><h3>如何将Unity3D游戏移植到Windows Phone 8</h3></div><div class="ue-video-show-long"><i></i><span>4课时,177分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>如何将Unity3D游戏移植到Windows Phone 8</h3></div><div class="ue-video-show-desc">Unity3D 是一个拥有强大功能的跨平台游戏引擎。课程里，我们会演示从现有的游戏到 Windows Phone 移植的过程</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class=" mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469719" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="OpenGL到DirectX的游戏开发" src="http://static-jkxy.qiniudn.com/ms/wpgame3.png"></div><div class="ue-video-show-name"><h3>OpenGL到DirectX的游戏开发</h3></div><div class="ue-video-show-long"><i></i><span>1课时,68分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>OpenGL到DirectX的游戏开发</h3></div><div class="ue-video-show-desc">掌握使用 ANGLE project 进行 OpenGL 到 DirectX 的迁移以及遇到的问题</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469719" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="OpenGL到DirectX的游戏开发" src="http://e1.jikexueyuan.com/ms/wpgame3.jpg"></div><div class="ue-video-show-name"><h3>OpenGL到DirectX的游戏开发</h3></div><div class="ue-video-show-long"><i></i><span>1课时,68分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>OpenGL到DirectX的游戏开发</h3></div><div class="ue-video-show-desc">掌握使用 ANGLE project 进行 OpenGL 到 DirectX 的迁移以及遇到的问题</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469720" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="HTML5 游戏的开发与将HTML5 游戏迁移到Windows Phone和Windows 8/8.1" src="http://static-jkxy.qiniudn.com/ms/wpgame4.png"></div><div class="ue-video-show-name"><h3>HTML5 游戏的开发与将HTML5 游戏迁移到Windows Phone和Windows 8/8.1</h3></div><div class="ue-video-show-long"><i></i><span>2课时,94分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>HTML5 游戏的开发与将HTML5 游戏迁移到Windows Phone和Windows 8/8.1</h3></div><div class="ue-video-show-desc">介绍如何将 HTML5 游戏迁移到 WP 和 Win8/8.1 上，并介绍 Egret 游戏引擎</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469720" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="HTML5 游戏的开发与将HTML5 游戏迁移到Windows Phone和Windows 8/8.1" src="http://e1.jikexueyuan.com/ms/wpgame4.jpg"></div><div class="ue-video-show-name"><h3>HTML5游戏的开发与HTML5游戏迁移到Windows Phone和 Windows 8/8.1</h3></div><div class="ue-video-show-long"><i></i><span>2课时,94分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>HTML5游戏的开发与HTML5游戏迁移到Windows Phone和 Windows 8/8.1</h3></div><div class="ue-video-show-desc">介绍如何将 HTML5 游戏迁移到 Windows Phone 和 Win8/8.1 上，并介绍 Egret 游戏引擎</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469721" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="快速入门：用于 Windows 8 的游戏引擎" src="http://static-jkxy.qiniudn.com/ms/wpgame5.png"></div><div class="ue-video-show-name"><h3>快速入门：用于 Windows 8 的游戏引擎</h3></div><div class="ue-video-show-long"><i></i><span>6课时,454分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>快速入门：用于 Windows 8 的游戏引擎</h3></div><div class="ue-video-show-desc">学习如何规划游戏，了解 Scirra 的 Construct2、YoYo Games 的 GameMaker 和 Unity等</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469721" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="快速入门：用于 Windows 8 的游戏引擎" src="http://e1.jikexueyuan.com/ms/wpgame5.jpg"></div><div class="ue-video-show-name"><h3>快速入门：用于 Windows 8 的游戏引擎</h3></div><div class="ue-video-show-long"><i></i><span>6课时,454分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>快速入门：用于 Windows 8 的游戏引擎</h3></div><div class="ue-video-show-desc">学习如何规划游戏，了解 Scirra 的 Construct2、YoYo Games 的 GameMaker 和 Unity等</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 			</div>
 
 			<div class="course-body-tit">
-				<span>WP开发其他知识</span>
+				<span>Windows Phone开发其他知识</span>
 			</div>
 			<div class="course-body-box">
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469722" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="如何使用 App Studio 快速生成 Windows Phone 应用" src="http://static-jkxy.qiniudn.com/ms/wpother1.png"></div><div class="ue-video-show-name"><h3>如何使用 App Studio 快速生成 Windows Phone 应用</h3></div><div class="ue-video-show-long"><i></i><span>1课时,53分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>如何使用 App Studio 快速生成 Windows Phone 应用</h3></div><div class="ue-video-show-desc">学习 App Studio 的基本功能，轻松的制作及部署一个 WP 应用到手机上</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469722" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="如何使用 App Studio 快速生成 Windows Phone 应用" src="http://e1.jikexueyuan.com/ms/wpother1.png"></div><div class="ue-video-show-name"><h3>如何使用 App Studio 快速生成 Windows Phone 应用</h3></div><div class="ue-video-show-long"><i></i><span>1课时,53分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>如何使用 App Studio 快速生成 Windows Phone 应用</h3></div><div class="ue-video-show-desc">学习 App Studio 的基本功能，轻松的制作及部署一个 Windows Phone 应用到手机上</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469723" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Windows 8.1企业移动商务应用构建" src="http://static-jkxy.qiniudn.com/ms/wpother2.png"></div><div class="ue-video-show-name"><h3>Windows 8.1企业移动商务应用构建</h3></div><div class="ue-video-show-long"><i></i><span>5课时,309分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>Windows 8.1企业移动商务应用构建</h3></div><div class="ue-video-show-desc">介绍商务应用基础、Windows8.1企业外设集成应用开发和企业应用部署等</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469723" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Windows 8.1企业移动商务应用构建" src="http://e1.jikexueyuan.com/ms/wpother2.png"></div><div class="ue-video-show-name"><h3>Windows 8.1企业移动商务应用构建</h3></div><div class="ue-video-show-long"><i></i><span>5课时,309分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>Windows 8.1企业移动商务应用构建</h3></div><div class="ue-video-show-desc">介绍商务应用基础、Windows8.1企业外设集成应用开发和企业应用部署等</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class=" mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469724" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Universal Apps（通用应用框架）开发基础" src="http://static-jkxy.qiniudn.com/ms/wpother3.png"></div><div class="ue-video-show-name"><h3>Universal Apps（通用应用框架）开发基础</h3></div><div class="ue-video-show-long"><i></i><span>4课时,347分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>Universal Apps（通用应用框架）开发基础</h3></div><div class="ue-video-show-desc">介绍如何进行 Universal Apps 开发，设计，维护</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469724" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Universal Apps（通用应用框架）开发基础" src="http://e1.jikexueyuan.com/ms/wpother3.png"></div><div class="ue-video-show-name"><h3>Universal Apps（通用应用框架）开发基础</h3></div><div class="ue-video-show-long"><i></i><span>4课时,347分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>Universal Apps（通用应用框架）开发基础</h3></div><div class="ue-video-show-desc">介绍如何进行 Universal Apps 开发，设计，维护</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469725" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Windows平台上的第三方SDK介绍和开发" src="http://static-jkxy.qiniudn.com/ms/wpother4.png"></div><div class="ue-video-show-name"><h3>Windows平台上的第三方SDK介绍和开发</h3></div><div class="ue-video-show-long"><i></i><span>1课时,58分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>Windows平台上的第三方SDK介绍和开发</h3></div><div class="ue-video-show-desc">学习应用 Windows 平台上第三方SDK快速开发应用 </div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469725" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Windows平台上的第三方SDK介绍和开发" src="http://e1.jikexueyuan.com/ms/wpother4.png"></div><div class="ue-video-show-name"><h3>Windows平台上的第三方SDK介绍和开发</h3></div><div class="ue-video-show-long"><i></i><span>1课时,58分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>Windows平台上的第三方SDK介绍和开发</h3></div><div class="ue-video-show-desc">学习应用 Windows 平台上第三方SDK快速开发应用 </div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469726" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="跨平台开发工具介绍" src="http://static-jkxy.qiniudn.com/ms/wpother5.png"></div><div class="ue-video-show-name"><h3>跨平台开发工具介绍</h3></div><div class="ue-video-show-long"><i></i><span>2课时,124分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>跨平台开发工具介绍</h3></div><div class="ue-video-show-desc">学习如何使用 Xamarin 和 Apache Cordova 进行跨平台开发</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200469726" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="跨平台开发工具介绍" src="http://e1.jikexueyuan.com/ms/wpother5.png"></div><div class="ue-video-show-name"><h3>跨平台开发工具介绍</h3></div><div class="ue-video-show-long"><i></i><span>2课时,124分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>跨平台开发工具介绍</h3></div><div class="ue-video-show-desc">学习如何使用 Xamarin 和 Apache Cordova 进行跨平台开发</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 			</div>
 		</div>
@@ -147,7 +167,7 @@
 <div class="w-100b">
 	<div class="course_wp">
 		<h2>极客学院课程</h2>
-		<p class="course-subtit">极客学院在本次合作中推出TypeScript语言课程，稍后还将上线WP实战、.Net开发、C#开发课程，</p>
+		<p class="course-subtit">极客学院在本次合作中推出TypeScript语言课程，稍后还将上线Windows Phone实战、.Net开发、C#开发课程，</p>
 		<p class="mb-30 course-subtit">带你更系统地学习微软相关开发技术。</p>
 		<div class="course-block">
 
@@ -156,13 +176,29 @@
 			</div>
 			<div class="course-body-box">
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.jikexueyuan.com/course/280.html" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="TypeScript环境搭建" src="http://static-jkxy.qiniudn.com/ms//jkxy_type2.jpg"></div><div class="ue-video-show-name"><h3>TypeScript环境搭建</h3></div><div class="ue-video-show-long"><i></i><span>3课时,19分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>TypeScript环境搭建</h3></div><div class="ue-video-show-desc">本课程介绍TypeScript在Mac和Windows下完成环境的搭建。</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.jikexueyuan.com/course/280.html" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="TypeScript环境搭建" src="http://e1.jikexueyuan.com/ms//jkxy_type2.jpg"></div><div class="ue-video-show-name"><h3>TypeScript环境搭建</h3></div><div class="ue-video-show-long"><i></i><span>3课时,19分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>TypeScript环境搭建</h3>
+					</div><div class="ue-video-show-desc">本课程介绍TypeScript在Mac和Windows下完成环境的搭建。</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class="mr-16 mt-20 course-box-card ue-video-list-box">
-					<a href="http://www.jikexueyuan.com/course/281.html" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="TypeScript基本数据类型" src="http://static-jkxy.qiniudn.com/ms/jkxy_type1.jpg"></div><div class="ue-video-show-name"><h3>TypeScript基本数据类型</h3></div><div class="ue-video-show-long"><i></i><span>3课时,23分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>TypeScript基本数据类型</h3></div><div class="ue-video-show-desc">TypeScript是一个强类型编程语言，是自定义类所具有的优势，他使得对象处理的数据更容易被理解。本课学习正确使用TypeScript的基本数据类型，包含：boolean、String、number、Array、enum、any和void。</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
+					<a href="http://www.jikexueyuan.com/course/281.html" target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="TypeScript基本数据类型" src="http://e1.jikexueyuan.com/ms/jkxy_type1.jpg"></div><div class="ue-video-show-name"><h3>TypeScript基本数据类型</h3></div><div class="ue-video-show-long"><i></i><span>3课时,23分钟</span></div></div><div class="ue-video-list-hide" style="bottom: -145px;"><div class="ue-video-show-name"><h3>TypeScript基本数据类型</h3></div><div class="ue-video-show-desc">TypeScript是一个强类型编程语言，是自定义类所具有的优势，他使得对象处理的数据更容易被理解。本课学习正确使用TypeScript的基本数据类型，包含：boolean、String、number、Array、enum、any和void。</div><div class="ue-video-show-btn"><span>查看课程</span></div></div></a>
 				</div>
 				<div class=" mt-20 course-box-card ue-video-list-box">
-					<a  target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="TypeScript" src="http://static-jkxy.qiniudn.com/ms/jkxy_type3.png"></div><div class="ue-video-show-name"><h3>TypeScript</h3><div class="ue-video-show-btn ue-video-show-grey-btn"><span>即将上线</span></div></div></div></a>
+					<a target="_blank">
+						<div class="ue-video-list-show">
+							<div class="ue-video-show-img">
+								<img width="218" height="124" alt="TypeScript" src="http://e1.jikexueyuan.com/ms/jkxy_type3.png">
+							</div>
+							<div class="ue-video-show-name">
+								<h3>TypeScript 后续课程</h3>
+							</div>
+							<div class="ue-video-show-long">
+								<span></span>
+								<div class="pab-30 ue-video-show-btn ue-video-show-grey-btn">
+									<span>即将上线</span>
+								</div>
+							</div>
+						</div>
+					</a>
 				</div>
 			</div>
 
@@ -171,13 +207,13 @@
 			</div>
 			<div class="course-body-box">
 				<div class="h-180 mr-16 mt-20 course-box-card ue-video-list-box">
-					<a target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Windows Phone课程" src="http://static-jkxy.qiniudn.com/ms/jkxy_wp.png"></div><div class="ue-video-show-name"><h3>Windows Phone课程</h3></div></div></a>
+					<a target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="Windows Phone实战课程" src="http://e1.jikexueyuan.com/ms/jkxy_wp.png"></div><div class="ue-video-show-name"><h3>Windows Phone实战课程</h3></div></div></a>
 				</div>
 				<div class="h-180 mr-16 mt-20 course-box-card ue-video-list-box">
-					<a target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt=".Net开发" src="http://static-jkxy.qiniudn.com/ms/jkxy_net.png"></div><div class="ue-video-show-name"><h3>.Net开发系列课程</h3></div></div></a>
+					<a target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt=".Net开发" src="http://e1.jikexueyuan.com/ms/jkxy_net.png"></div><div class="ue-video-show-name"><h3>.Net开发系列课程</h3></div></div></a>
 				</div>
 				<div class="h-180 mt-20 course-box-card ue-video-list-box">
-					<a target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="C#开发" src="http://static-jkxy.qiniudn.com/ms/jkxy_Csharp.png"></div><div class="ue-video-show-name"><h3>C#开发系列课程</h3></div></div></a>
+					<a target="_blank"><div class="ue-video-list-show"><div class="ue-video-show-img"><img width="218" height="124" alt="C#开发" src="http://e1.jikexueyuan.com/ms/jkxy_Csharp.png"></div><div class="ue-video-show-name"><h3>C#开发系列课程</h3></div></div></a>
 				</div>
 			</div>
 

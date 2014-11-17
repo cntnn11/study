@@ -1,0 +1,108 @@
+.nav3{width:178px;margin:0 auto;font-family:微软雅黑,Microsoft Yahei;}
+.nav3 #kc01{ background: url(../images/menu.png) no-repeat  -184px 7px;}
+.nav3 #kc02{ background: url(../images/menu.png) no-repeat  -182px -86px;}
+.nav3 #kc03{ background: url(../images/menu.png) no-repeat   -181px -180px;}
+.nav3 #kc04{ background: url(../images/menu.png) no-repeat  5px 7px;}
+.nav3 #zeropane{ padding-left:5px}
+.nav3 #kcList01{ width:167px}
+#firstpane{width:168px;margin:0px auto;padding:5px 5px 4px;}
+#firstpane dl{color:#444;overflow:hidden;}
+#firstpane dt,#firstpane dd{padding-left:15px;}
+#firstpane dt{cursor:pointer;font-size:12px;background: url("http://www.tcsasac.com/statics/front/images/menubg.png") no-repeat scroll 0 -93px;line-height:30px;font:bold 12px/30px Tahoma;}
+#firstpane dt.current{background: url("http://www.tcsasac.com/statics/front/images/menubg.png") no-repeat scroll -190px -93px;color: #ff7300;}
+#firstpane dd{line-height:25px;font:12px/25px Tahoma;}
+#firstpane dd.current{color: #ff7300;background:none;}
+#firstpane dd.current a:link,#firstpane dd.current a:hover,#firstpane dd.current a:active,#firstpane dd.current a:visited{color:#ff7300;text-decoration:none;}
+#firstpane dd a:link{color:#444;text-decoration:none;}
+#firstpane dd a:hover,#firstpane dd a:active,#firstpane dd a:visited{color:#ff7300;text-decoration:none;}
+#copyright{color:#999;width:374px;text-align:right;font:12px/1.5 Tahoma;margin:5px auto 0;}
+.menu_titlelist{height:24px;overflow:hidden;padding: 0px 35px 0px 24px;color:#393939;font-size:12px;font-weight:bold;cursor:pointer;}
+.menu_head{font-family:微软雅黑,Microsoft Yahei;padding:0px 10px 0px 20px;cursor:pointer;position:relative; margin: 1px 1px 1px 5px;font-weight: bold;background: url(../images/menubg.png) no-repeat 0 -95px;font-size:12px;color:#393939;}
+.menu_head a:link,.menu_head a:visited{color:#393939;text-decoration:none;}
+.menu_head a:hover,.menu_head a:active{color:#ff7300;text-decoration:none;}
+.menu_list{ margin-bottom:20px}
+.menu_list .current {background: url(../images/menubg.png) no-repeat -190px -95px;color:#ff7300;}
+.menu_list .current a{background:none;color:#ff7300;}
+
+.menu_body{display:none;font-family:微软雅黑,Microsoft Yahei;}
+.menu_body li{padding:2px 0 0px 24px;height:25px;overflow:hidden;font-size:12px;}
+.menu_body a:link,.menu_body a:visited{color:#444;text-decoration:none;}
+.menu_body a:hover,.menu_body a:active{color:#ff7300;text-decoration:none;}
+.menu_list .menu_body .current{ background:none}
+.menu_body .current a:link,.menu_body .current a:visited,.menu_body .current a:hover,.menu_body .current a:active{color:#ff7300;text-decoration:none;}
+
+
+.leftcon{font-family:微软雅黑,Microsoft Yahei;}
+.leftcon #kc05{ background: url(../images/menu.png) no-repeat  12px -86px;}
+.leftcon #kc06{ background: url(../images/menu.png) no-repeat  12px -180px;}
+.menu_titlelist1{height:24px;overflow:hidden;padding: 0px 35px 0px 28px;color:#393939;font-size:12px;font-weight:bold;cursor:pointer;}
+.leftcon .leftcon_list{ margin: 5px; padding-bottom: 10px; border-bottom:1px dotted #7d7d7d}
+.leftcon_list.last { border:none;}
+.leftcon .leftcon_list .teactime{margin:0 auto;padding: 0px 5px 0px 20px;}
+.leftcon .leftcon_list .teactime li{width:40px;float:left; text-align:center; font-family:微软雅黑,Microsoft Yahei; font-size:12px;color:#393939; margin:3px}
+.leftcon .leftcon_list .teactime .current{color:#ff7300; background:none;}
+.leftcon .leftcon_list .teactime .current a:link,.leftcon .leftcon_list .teactime .current a:visited{color:#ff7300;text-decoration:none;}
+.leftcon .leftcon_list .teactime .current a:hover,.leftcon .leftcon_list .teactime .current a:active{color:#ff7300;text-decoration:none;}
+.leftcon .leftcon_list .teactime a:link,.leftcon .leftcon_list .teactime a:visited{color:#393939;text-decoration:none;}
+.leftcon .leftcon_list .teactime a:hover,.leftcon .leftcon_list .teactime a:active{color:#ff7300;text-decoration:none;}
+
+
+
+/**************************************************
+ * 手风琴效果样式
+ * Download by http://www.codefans.net 
+ * 30.6.2008
+ **************************************************
+ * msn:danxinju@hotmail.com
+ * author:xj.d
+ **************************************************/
+.panel {	/*版面样式*/
+	width:168px;
+	font-size:12px;
+}
+.panel h3 {		/*标题样式*/
+	height:25px;
+	padding-left:20px;
+	margin:0;
+	font-weight:bold;
+	line-height:24px;
+	font-size:12px;
+	cursor:pointer;
+}
+.panel .grayList {	/*内容样式*/
+	margin-left:20px;
+	/*border:1px solid #E8E8E8;*/
+	/*border-bottom:0px solid #fff;*/
+	overflow:hidden;
+	/*background:#FCFCFC;*/
+}
+.panel .current{color:#ff7300;text-decoration:none; background:none}
+.panel .current a:link,.panel .current a:visited,panel .current a:hover,panel .current a:active{color:#ff7300;text-decoration:none; background:none}
+.panel li a:link,.panel li a:visited{color:#444;text-decoration:none;}
+.panel li a:hover,.panel li a:active{color:#ff7300;text-decoration:none;}
+.gray-top {		/*顶部未展开*/
+	color:#444;
+	background: url("http://www.tcsasac.com/statics/front/images/menubg.png") no-repeat scroll 5px -96px;
+}
+.gray-bottom {	/*底部未展开*/
+	color:#444;
+	background: url("http://www.tcsasac.com/statics/front/images/menubg.png") no-repeat scroll 5px -96px;
+}
+.gray {		/*中部未展开*/
+    color:#444;
+	background: url("http://www.tcsasac.com/statics/front/images/menubg.png") no-repeat scroll 5px -96px;
+}
+.deep-top {		/*顶部已展开*/
+	background:url("http://www.tcsasac.com/statics/front/images/menubg.png") no-repeat scroll -184px -96px;
+	color: #ff7300;
+}
+.deep-bottom {	/*底部已展开*/
+	background:none;
+}
+.deep {		/*中部已开展*/
+	background:url("http://www.tcsasac.com/statics/front/images/menubg.png") no-repeat scroll -184px -96px;
+	color: #ff7300;
+}
+.panel-bottom {	/*最后一列向上浮动20个像素*/
+	margin-bottom:-10px;
+}
