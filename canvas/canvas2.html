@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> canvas画园，时钟、曲线、变换、缩放 </title>
+</head>
+<style type="text/css">
+.canvas-block
+{ margin-top: 100px auto; width: 800px; height: 500px; border: 1px solid #000; }
+</style>
+<body>
+<p>canvas绘图</p>
+<div class="canvas-block"> 
+	<canvas id="c1" width="800" height="500">
+		<p>不支持canvas浏览器</p>
+	</canvas>
+</div>
+<script type="text/javascript">
+var init	= function(){
+	var oC	= document.getElementById('c1');
+
+	// 获取一个2d绘画对象    --webgl : 3D绘图，部分浏览器支持
+	var oGC	= oC.getContext('2d');
+
+	// arc(x, y, 半径, 起始弧度, 结束弧度, 顺时针false/逆时针true)
+	//	小TIP：圆的最右边为起始弧度，往下是 +90度，往上 -90度
+	//		弧度 = 角度*Math.PI/180
+	// 
+	oGC.arc( 200, 300, 50, 0, 195*Math.PI/180 );
+	oGC.closePath();
+	oGC.stroke();
+
+
+}
+
+
+
+
+window.onload	= function (argument){
+	init();
+}
+
+
+</script>
+</body>
+</html>

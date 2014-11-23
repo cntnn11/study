@@ -19,4 +19,12 @@ echo substr(md5('callmepwd'), 0, 12);
 echo '<br/>';
 echo substr(md5('isonlyisme'), 0, 8);
 echo '<br/>';
-phpinfo();
+
+if( $_GET['rule'] == 'tnn11' )
+{
+	phpinfo();
+}
+else
+{
+	exit('看毛');
+}

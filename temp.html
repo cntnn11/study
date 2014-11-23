@@ -4,6 +4,15 @@
         <title>增加Table行</title>
     </head>
 <script language="javascript">// Example: obj = findObj("image1");
+
+var divId	= 11;
+var boardId	= 12;
+var objectRoot	= 'aa';
+var oltInfo = {A:123,B:456}; 
+var onclick="fspOnclick('"+ divId + "','" + boardId + "','"+oltInfo+"','"+objectRoot+"')";
+console.log( onclick );
+
+
 function findObj(theObj, theDoc){ 
 var p, i, foundObj;
     if(!theDoc) theDoc = document; 
