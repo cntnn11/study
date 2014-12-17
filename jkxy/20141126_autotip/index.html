@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>极客学院</title>
+	<link href="./css/common.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./css/budaoshi.css" />
+
+	<script src="./js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/jkxy.common.js"></script>
+
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+var tip_data=	[{"step":1,"tit":"\u524d\u534a\u591c","time_s":1416843001,"time_e":1416844799,"msg":["\u591c\u6df1\u4e86\uff0c\u8be5\u4f11\u606f\u4e86\uff01\u665a\u5b89~","\u591c\u6df1\u4e86\uff0c\u8ba9\u6211\u966a\u4f34\u52e4\u594b\u7684\u4f60~","\u95ee\u5019\u8fd9\u9759\u8c27\u7684\u591c\uff0c\u594b\u6597\u7684\u4f60~","\u591c\u6df1\u4e86\uff0c\u8981\u52b3\u9038\u7ed3\u5408\u54e6~"],"expire":16200},{"step":1,"tit":"\u51cc\u6668","time_s":1416758400,"time_e":1416772800,"msg":["\u591c\u6df1\u4e86\uff0c\u8be5\u4f11\u606f\u4e86\uff01\u665a\u5b89~","\u591c\u6df1\u4e86\uff0c\u8ba9\u6211\u966a\u4f34\u52e4\u594b\u7684\u4f60~","\u95ee\u5019\u8fd9\u9759\u8c27\u7684\u591c\uff0c\u594b\u6597\u7684\u4f60~","\u591c\u6df1\u4e86\uff0c\u8981\u52b3\u9038\u7ed3\u5408\u54e6~"],"expire":16200},{"step":2,"tit":"\u65e9\u4e0a","time_s":1416772801,"time_e":1416783600,"msg":["\u65e9\u5b89\uff0c\u6211\u4eec\u4e00\u8d77\u62e5\u62b1\u6668\u5149\uff01","\u5929\u660e\uff0c\u4eae\u8d77\u7684\u4e0d\u53ea\u662f\u9633\u5149\uff0c\u8fd8\u6709\u5fc3\u60c5\uff01","\u6628\u5929\u662f\u56de\u4e0d\u53bb\u7684\u4ece\u524d\uff0c\u4eca\u5929\u6211\u4eec\u4f9d\u65e7\u575a\u6301\u4fe1\u5ff5\uff01","\u6bcf\u4e2a\u65e9\u6668\uff0c\u95ee\u95ee\u81ea\u5df1\uff0c\u5f53\u521d\u7684\u613f\u671b\u5b9e\u73b0\u4e86\u5417\uff1f"],"expire":10800},{"step":3,"tit":"\u4e0a\u73ed\u8def\u4e0a","time_s":1416783601,"time_e":1416790800,"msg":["\u603b\u6709\u4e00\u79cd\u671f\u5f85\uff0c\u6765\u81ea\u6781\u5ba2\u5b66\u9662~\u4e0a\u5348\u597d\uff01","\u4e0d\u5403\u65e9\u9910\u4f1a\u5bfc\u81f4\u7cbe\u529b\u4e0d\u96c6\u4e2d\u54e6~","\u65b0\u7684\u4e00\u5929\uff0c\u5411\u9633\u5149\u656c\u793c\uff0c\u5411\u81ea\u5df1\u95ee\u597d~","Hi~\u6b64\u65f6\u6b63\u662f\u4e00\u5929\u4e2d\u7684\u6700\u4f73\u8bb0\u5fc6\u671f~"],"expire":7200},{"step":4,"tit":"\u4e0a\u5348","time_s":1416790801,"time_e":1416798000,"msg":["\u4e00\u676f\u7eff\u8336\u6709\u52a9\u4e8e\u51cf\u5c11\u8f90\u5c04\u54e6~","\u5fc3\u60c5\u8d8a\u6109\u5feb\uff0c\u5934\u8111\u8d8a\u7075\u6d3b~","\u8f7b\u8f7b\u7684\u4e00\u58f0\u95ee\u5019\uff1a\u4e0a\u5348\u597d~","\u6bcf\u5929\u544a\u8bc9\u81ea\u5df1\u4e00\u6b21\uff0c\u201d\u6211\u771f\u7684\u5f88\u4e0d\u9519\u201c~"],"expire":7200},{"step":5,"tit":"\u4e2d\u5348","time_s":1416798001,"time_e":1416805200,"msg":["\u5348\u9910\u4f4e\u70ed\u91cf \u6781\u5ba2\u9ad8\u80fd\u91cf~\u5348\u5b89~","\u5348\u5b89~\u5c06\u6765\u7684\u4f60\u4e00\u5b9a\u4f1a\u611f\u8c22\u73b0\u5728\u62fc\u547d\u52aa\u529b\u7684\u81ea\u5df1\uff01","\u7528\u6700\u5c11\u7684\u6d6a\u8d39\u9762\u5bf9\u73b0\u5728\uff0c\u7528\u6700\u591a\u7684\u68a6\u9762\u5bf9\u672a\u6765\uff01","\u68a6\u5728\u5fc3\u4e2d\uff0c\u8def\u5728\u811a\u4e0b~"],"expire":7200},{"step":6,"tit":"\u4e0b\u5348","time_s":1416805201,"time_e":1416812400,"msg":["\u5f88\u9ad8\u5174\u548c\u4f60\u76f8\u9047\u5728\u8fd9\u4e2a\u7f8e\u597d\u7684\u4e0b\u5348~","\u4e0b\u5348\u597d~\u517b\u8db3\u7cbe\u795e\u5f00\u59cb\u5b66\u4e60\u4e86\u5417\uff1f","\u4e0b\u5348\u7684\u65f6\u5149\u4f9d\u65e7\u7f8e\u597d~Never give up~","\u5929\u518d\u9ad8\u53c8\u600e\u6837\uff0c\u8e2e\u8d77\u811a\u5c16\u5c31\u66f4\u63a5\u8fd1\u9633\u5149\uff01"],"expire":7200},{"step":7,"tit":"\u4e0b\u5348","time_s":1416812401,"time_e":1416819600,"msg":["\u5750\u5728\u7535\u8111\u524d\u6700\u597d\u6bcf\u96942\u5c0f\u65f6\u5c31\u8fd0\u52a8\u4e00\u4e0b~","\u5982\u6b64\u7f8e\u597d\u7684\u4e0b\u5348\uff0c\u600e\u80fd\u8f9c\u8d1f~","\u6211\u8d70\u5f97\u672a\u5fc5\u5f88\u5feb\uff0c\u4f46\u6211\u4ece\u4e0d\u540e\u9000\uff01","\u4eba\u751f\u4e0d\u552e\u56de\u7a0b\u7968\uff0c\u5c11\u5e74\u987b\u4e89\u65e0\u9650\u79d2\uff01"],"expire":7200},{"step":8,"tit":"\u4e0b\u73ed\u4e86","time_s":1416819601,"time_e":1416826800,"msg":["\u665a\u996d\u65f6\u95f4~\u522b\u997f\u7740\u809a\u5b50\u5b66\u4e60\u54e6~","\u76cf\u76cf\u8857\u706f\u4eae\u8d77\uff0c\u4e3a\u68a6\u60f3\u6307\u660e~","\u8857\u706f\u7480\u74a8\uff0c\u6211\u5bf9\u4f60\u7684\u7231\u4ece\u6765\u4e0d\u66fe\u6d88\u6563~","\u5f85\u6211\u5f3a\u5927\uff0c\u6211\u7ed9\u81ea\u5df1\u5929\u4e0b\uff01"],"expire":7200},{"step":9,"tit":"\u665a\u4e0a","time_s":1416826801,"time_e":1416834000,"msg":["\u591c\u95f4\u770b\u7535\u8111\uff0c\u5468\u56f4\u73af\u5883\u4e0d\u8981\u592a\u6697\u54e6~","\u52e4\u594b\u7684\u4f60\uff0c\u5b9a\u4f1a\u8d62\u5f97\u6700\u540e\u7684\u638c\u58f0~","\u7edd\u4e0d\u62d6\u5ef6 Just do it~","\u4eba\u4e4b\u6240\u4ee5\u80fd\uff0c\u662f\u76f8\u4fe1\u80fd\u3002"],"expire":7200},{"step":10,"tit":"\u591c\u665a","time_s":1416834001,"time_e":1416843000,"msg":["\u8bb0\u5f97\u8c03\u4f4e\u97f3\u91cf\uff0c\u4e0d\u8981\u5f71\u54cd\u5176\u4ed6\u4eba\u54e6~","\u60f3\u8981\u98de\u5f97\u9ad8\uff0c\u5c31\u8be5\u628a\u5730\u5e73\u7ebf\u5fd8\u6389\uff01\u665a\u5b89~","\u53ea\u8981\u8def\u662f\u5bf9\u7684\uff0c\u5c31\u4e0d\u5bb3\u6015\u9065\u8fdc\u3002\u665a\u5b89~","\u4e00\u4e2a\u4eca\u5929\u80dc\u8fc7\u4e24\u4e2a\u660e\u5929~"],"expire":9000}];
+	var date	= new Date();
+	var hour	= date.getHours();
+	var minutes	= date.getMinutes();
+	var seconds	= date.getSeconds();
+	var times	= date.getTime()/1000;
+		times	= parseInt( times.toString().substring(0, (times.toString().length)-4) );
+	var msg		= '';
+	for ( var i in tip_data )
+	{
+		var tip	= tip_data[i]['time_s']<=times && times<=tip_data[i]['time_e'];
+		if( tip )
+		{
+			var cookie_key	= 'takeCare_'+tip_data[i]['step'];
+
+			// 判断下当前时间段是否存在cookie，存在表示提示过了，不用在提示
+			//var show_nums	= JKXY.cookie.get( cookie_key );
+			if( true || !show_nums )
+			{
+				//JKXY.cookie.set( cookie_key, 1, days );
+				//set : function( name , value , days , path , domain , secure )
+				msg	= tip_data[i]['msg'][parseInt( tip_data[i]['msg'].length*Math.random())];
+			}
+			break;
+		}
+	}
+
+	// 查询都提示语句
+	if( tip )
+	{
+		console.log('提示语 -> '+msg+'	 ---> '+$('.web-dia-tip').length);
+		if( $('.web-dia-tip').length <= 0 )
+		{
+			showCare( msg );
+		}
+	}
+
+	// 显示提示
+	function showCare( msg )
+	{
+		var msg		= msg ? msg : '亲爱的VIP，这是来自极客学院小雪的问候~';
+		var id		= "timeCare";
+		var html;
+			html	= '<div class="web-dia-tip" id="'+id+'" >';
+				html	+= '<p class="jkxy_hello">'+msg+'</p>';
+				html	+= '<p class="jkxy_time">当前时间：</p>';
+			html	+= '</div>';
+		$('body').append( html );
+
+		JKXY.CJT.nowTime( 'jkxy_time', '当前时间：%Y年%m月%d日 %H:%i:%s' );
+		var _W	= window.screen.width/2 - $('#'+id).width()/2;
+		$('#'+id).css("marginLeft", _W);
+		$('#'+id).animate({top:"0px",opacity:1},300,function(){
+
+			$('#'+id).delay(5000).animate({top:"-50px",opacity:0},500,function(){
+				$('#'+id).remove();
+			});
+		});
+	}
+</script>

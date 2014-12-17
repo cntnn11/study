@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<meta charset='utf-8'>
+<head>
+	<title>Bootstrap响应式后台管理系统模版lite - JS代码网</title> 
+    <meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap后台模版下载,Bootstrap教程,后台管理系统模版,后台模版下载,后台管理系统,后台管理模版" />
+    <meta name="description" content="JS代码网提供Bootstrap模版,后台管理系统模版,后台管理界面,Bootstrap后台模版,Bootstrap中文翻译等相关Bootstrap插件下载" />
+	<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<script type='text/javascript' src="js/jquery-1.7.2.min.js"></script>
+	<script type='text/javascript' src="js/bootstrap.min.js"></script>
+	<script type='text/javascript' src="js/main.js"></script>
+</head>
+<body>
+<header class='navbar blue blue2 navbar-fixed-top'>
+	<div class='navbar-inner'>
+		<div class='container-fluid'>
+			<a class='brand pull-left'><i class='icon-white icon-leaf'></i>Lite</a>
+			<ul class='nav pull-left'>
+				<li class='active'><a href="#"><i class='icon-white icon-home'></i> 首页</a></li>
+				<li><a href="#"><i class='icon-white icon-user'></i> 账号</a></li>
+				<li><a href="#"><i class='icon-white icon-tasks'></i> 任务</a></li>
+				<li class="dropdown">
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+    					<i class='icon-white icon-star'></i> 特性 <b class="caret"></b>
+    				</a>
+			    <ul class="dropdown-menu">
+			    	<li><a href="#">多彩导航条</a></li>
+			    	<li><a href="#">滑动流畅</a></li>
+			    	<li><a href="#">.sharp Class</a></li>
+			    	<li><a href="#">Canvas 图表</a></li>
+			    	<li><a href="#">迷你任务模块</a></li>
+			    	<li><a href="#">消息</a></li>			    	
+
+			    </ul>
+  				</li>
+			</ul>
+			<form class="navbar-search pull-left">
+                <input type="text" class="search-query span3" placeholder="搜索">
+                <div class="icon-search"></div>
+            </form>
+			<ul class='nav pull-right'>
+				<li><a href="#" rel='tooltip' title='还有8个项目'><span class="badge badge-nav">8</span></a></li>
+				<li><a href="#" rel='tooltip' title='2 个任务'><span class="badge badge-nav">2 个任务</span></a></li>
+				<li><a href="#" rel='tooltip' title='用户界面'><i class='icon-white icon-user'></i> nanu</a></li>
+				<li><a href="#" rel='tooltip' title='帮助'><i class='icon-white icon-question-sign'></i></a></li>
+				<li><a href="#" rel='tooltip' title='设置' ><i class='icon-white icon-wrench'></i></a></li>
+				<li><a href="#" rel='tooltip' title='退出'><i class='icon-white icon-off'></i></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<section class='container-fluid pad40'>
+	
+	<section class='row-fluid'>
+		<div class="span2 sideBar">
+			
+			<br/>
+			<ul>
+				<li class="active" data-target='dashboard'><figure><i class='icon-home'></i> 首页 &nbsp;&nbsp;<span class='badge badge-warning'>2</span></figure></li>
+				<hr/>
+				<li data-target='projects'><figure><i class='icon-book'></i> 项目 &nbsp;&nbsp;<span class='badge badge-info'>4</span></figure></li>
+				<li data-target='tasks'><figure><i class='icon-tasks'></i> 任务 &nbsp;&nbsp;<span class='badge badge-info'>3</span></figure></li>
+				<li data-target='messages'><figure><i class='icon-envelope'></i> 消息 &nbsp;&nbsp;<span class='badge badge-info'>3</span></figure></li>
+				<hr/>
+				<li data-target='functions'><figure><i class='icon-heart'></i> 功能</figure></li>
+				<li class='dropper'>
+					<figure><i class='icon-circle-arrow-down'></i> 下拉 &nbsp;›</figure>
+					<ul class='subSide'>
+						<li><i class='icon-plus'></i> 下拉 1</li>
+						<li><i class='icon-plus'></i> 下拉 2</li>
+						<li><i class='icon-plus'></i> 下拉 3</li>
+					</ul>
+				</li>
+				<li data-target='charts'><figure><i class='icon-signal'></i> 图表</figure></li>
+				<hr/>
+				<li data-target='settings'><figure><i class='icon-wrench'></i> 设置</figure></li>
+				<li data-target='profile'><figure><i class='icon-user'></i> 资料</figure></li>
+				<hr/>
+				<li data-target='help'><figure><i class='icon-question-sign'></i> 帮助</figure></li>
+			</ul>
+			<div class='sideBottom'>
+				<button class='btn btn-primary headblue' data-toggle="collapse" data-target="#tasksSideList">任务列表 <i class='icon-white icon-circle-arrow-down'></i></button>
+				<ul id='tasksSideList' class='collapse in'>
+					<li data-taskId='6' data-taskState='1'><a href="#">Explore Elements</a></li>
+					<li data-taskId='5' data-taskState='0'><a href="#">Add New Project</a></li>
+					<li data-taskId='4' data-taskState='0'><a href="#">Add New Messages</a></li>
+					<li data-taskId='3' data-taskState='1'><a href="#">Custom Functions</a></li>
+					<li data-taskId='2' data-taskState='0'><a href="#"></a>Custom CSS</li>
+					<li data-taskId='1' data-taskState='1'><a href="#">Love this Theme :)</a></li>
+				</ul>
+			</div>
+		</div>
+		<section class='span10 content borBox'>
+
+		</section>
+	</section>
+</section>
+</body>
+</html>

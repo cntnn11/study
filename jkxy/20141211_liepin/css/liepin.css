@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors FangYaFei (1120309265@qq.com)
+ * @date    2014-09-03 10:01:38
+ * @version $Id$
+ */
+*{padding: 0;margin: 0;border: 0;list-style: none;font-family: "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;}
+a{text-decoration: none !important;}
+
+.cf {
+    zoom: 1;
+}
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.none{ display: none}
+.w1000{ width:1000px; margin:0 auto;}
+
+#topbanner{ background: url("http://e1.jikexueyuan.com/liepin1212/topbanner.jpg") center center no-repeat; height:800px;}
+#pingtai,#zaixian{ padding:75px 0px; background: #fff;}
+#pingtai h2{ color: #191c1e; font-size: 40px; text-align: center; margin-bottom:25px; font-weight: 400; }
+#pingtai .infor{ font-size: 24px; color: #191c1e; text-align: center; margin-bottom: 80px;}
+#pingtai .infor i{ display: inline-block; border-radius: 50%; background: #18dfae; width:14px;height:14px;  margin-right: 10px;}
+#pingtai .infor span{ display: inline-block; color:#18dfae;margin-right: 20px; }
+.lesson-iconbox{width:845px; margin:0 auto;}
+.lesson-iconbox ul li{ width:25%; float: left; text-align: center;}
+.lesson-iconbox ul li img{ width:107px;height:107px;}
+.lesson-iconbox ul li span{ display: block; font-size: 18px; color: #191c1e; margin-top: 20px;}
+
+#tiyan h2{ color: #191c1e; font-size: 30px; text-align: center; margin-bottom:65px; font-weight: 400;}
+#zaixian h2,.videobox h2{ color: #191c1e; font-size: 24px; text-align: center; margin-bottom:65px; font-weight: 400;}
+#zaixian h2 i,.videobox h2 i{display: inline-block; border-radius: 50%; background: #18dfae; width:14px;height:14px;  margin-right: 10px;}
+#zaixian h2 span,.videobox h2 span{ display: inline-block; color:#18dfae;margin-right: 20px; }
+#zaixian ul li{ width:50%; float: left; text-align: center;}
+#zaixian ul li img{ margin-bottom: 25px;}
+
+#tiyan{ background: #f3f3f3; padding: 75px 0px; }
+
+#tiyan .tiyanyue{ width:344px;position: relative; float: left; border-top:5px solid #18dfae; border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px; padding: 30px 10px; background: #fff;}
+#tiyan .tiyanyue .topbox{ width:260px; margin: 0 auto; border-bottom: 1px dashed #f3f3f3; text-align: center; padding-bottom: 20px; }
+#tiyan .tiyanyue h3{ color: #252525; font-size: 30px;font-weight:200;}
+#tiyan .tiyanyue p{ color: #999; font-size: 18px;}
+#tiyan .tiyanyue .ty-30{ display: block; margin: 30px auto; margin-bottom: 50px;}
+
+#tiyan .tiyanyue dl dd{height:36px; line-height: 36px; text-align: center; color:#666; font-size: 14px; }
+#tiyan .tiyanyue dl dd:nth-child(2n+1){ background: #f6f6f6;}
+#tiyan .tiyanyue dl{ margin-bottom: 110px;}
+
+#tiyan .tiyanyue .yh{ position: absolute; z-index: 20; left:-9px; bottom:84px;}
+.green-btn{     -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    display: block; margin:0 auto; width:254px;height:47px; text-align: center; line-height: 47px; font-size: 18px;  color: #fff; background:#18dfae; border-radius: 5px; }
+.mar-r120{ margin-right: 120px;}
+.w850{ width:850px; margin: 0 auto;}
+#tiyan .tiyanyue p.shengqian{ font-size: 14px; text-align: center; color: #999; margin-bottom:21px;
+
+}
+
+.green-btn:hover, .green-btn:focus, .green-btn:active {
+    background:#66d178;
+    color:#fff;
+
+}
+.tuijian{ position: absolute; right:-12px; top:-17px; z-index: 20;}
+.timeandrule {width:460px; border:1px dashed #d7d6d6; text-align: center; padding:30px; margin:70px auto; margin-bottom: 0px; border-radius: 5px; font-size: 14px; color:#5e5e5e; line-height: 24px;   }
+.timeandrule span{ color: #f79560;}
+#add-jixy{background: #fff; padding: 75px 0px;  font-size: 30px; color:#5e5e5e; text-align: center;  }
+.tagebox{ margin-top: 70px; width:1030px;}
+.tagebox span:nth-child(1){ background:#ff95a6; }
+.tagebox span:nth-child(2){ background:#d791e1; }
+.tagebox span:nth-child(3){ background:#3a4f64; }
+.tagebox span:nth-child(4){ background:#6ea5dd; }
+.tagebox span:nth-child(5){ background:#f79560; }
+.tagebox span:nth-child(6){ background:#f57b7b; }
+.tagebox span:nth-child(7){ background:#ebd986; }
+.tagebox span:nth-child(8){ background:#7ac2f9; }
+.tagebox span:nth-child(9){ background:#42d9d0; margin: 0px; }
+.tagebox span{ display: inline-block;  margin-right:11px; padding:5px 23px; background:#6ea5dd; font-size: 18px; color: #fff;  border-radius: 3px;  }
+
+.videobox{ background: #f3f3f3; padding: 50px;}
+.videobox .lesson-video{ width:240px; float: left; margin-right:63px; height:220px;background: #fff; }
+.videobox .lesson-video img.lesson-img{ display: block; }
+.lesson-icon{ float: right; width:16px;height:16px;}
+.lesson_time{ font-size: 12px; color: #666;}
+.lesson_infor{ padding: 20px; background: #fff; margin: 0;}
+.lesson_infor strong{ font-weight: 300;font-size: 14px; color: #191c1e; margin-bottom: 15px; display: block;}
+.clock-icon{ display: inline-block; margin-right:10px; float: left; }
+.w950{ width:950px;}
+.lessonimgbox{width:240px;height:130px;}
+.relative{ position: relative}
+.banner-text{ position: absolute; left:210%;  top:0px; z-index: 50; margin-left: -598px;
+
+}
+.zhuce{ position: absolute; left:50%; top:559px;  z-index: 60; margin-left:-285px; }

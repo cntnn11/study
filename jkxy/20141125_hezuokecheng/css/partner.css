@@ -1,0 +1,27 @@
+.partner-header
+{ margin-bottom: 25px; width: 100%; height: 200px; background: url("./../images/hezuo.jpg"); text-align: center; display: inline-block; }
+.partner-header > h1
+{ margin-top: 60px; font-size: 30px; }
+.partner-header > p
+{ margin-top: 15px; font-size: 18px; color: #666; }
+
+
+.partner-intr-block
+{ margin-bottom: 25px; width: 100%; height: 100px; background-color: #f3f3f3; }
+.partner-intr-block .partner-intr-img
+{ float: left; margin: 15px; width: 45px; height: 50px; }
+.partner-intr-block .partner-intr-content
+{ float: left; margin: 15px; width: 645px; line-height: 180%; font-size: 12px; color: #333; }
+
+/**/
+.partner-other
+{  background-color: #f3f3f3; }
+.partner-other .partner-other-img
+{ width: 240px; height: 200px; }
+.partner-other .partner-other-href
+{ width: 240px; height: 40px; line-height: 40px; text-align: center; background: #e8e8e8; font-size: 16px; color: #666; }
+
+.listbox
+{ margin-bottom: 30px; }
+.lesson-list ul
+{ margin-top: 0; }

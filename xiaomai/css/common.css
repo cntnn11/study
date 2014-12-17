@@ -1,0 +1,129 @@
+@charset "utf-8";
+/******************************
+ reset- 2014-09-30
+*******************************/
+/*reset*/
+body, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, figure, select
+{ margin: 0; padding: 0; font-family: "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif; }
+h1, h2, h3, h4, h5, h6, button, input, select, textarea
+{ font-size: 100%; font-weight: normal; }
+address, cite, dfn, em, var
+{ font-style: normal; }
+code, kbd, pre, samp
+{ font-family: courier new, courier, monospace; }
+small
+{ font-size: 12px; }
+ul, ol
+{ list-style: none; }
+a
+{ text-decoration: none; }
+sup
+{ vertical-align: text-top; }
+sub
+{ vertical-align: text-bottom; }
+legend
+{ color: #000; }
+fieldset, img
+{ border: 0; }
+table
+{ border-collapse: collapse; border-spacing: 0; }
+input::-moz-focus-inner, button::-moz-focus-inner
+{ border:0; padding:0; outline:0; }
+iframe
+{ vertical-align: top; }
+s
+{ text-decoration: none; }
+button
+{ border: 0 none; }
+article, aside, footer, header, hgroup, nav, section, figure, figcaption, video
+{ display: block; }
+input
+{ outline: none; border: 0; }
+input, img, label, select
+{ vertical-align: middle; }
+
+/*---------------------common 公共区---------------------*/
+/**--------------基本--------------**/
+.none { display:none}
+.cf
+{ zoom: 1; }
+.cf:after
+{ content: ''; display: block; clear: both; height: 0; overflow: hidden; visibility: hidden; }
+.lf
+{ float: left; }
+.rf
+{ float: right; }
+/**--------------宽度集合--------------**/
+.w-1100
+{ width: 1100px; }
+/**--------------内边距--------------**/
+.p-20
+{ padding: 20px; }
+.pr-20
+{ padding-right: 20px; }
+/**--------------外边距--------------**/
+.m-20
+{ margin: 20px; }
+.mr-20
+{ margin-right: 20px; }
+.mt-24
+{ margin-top: 24px; }
+.mt-26
+{ margin-top: 26px; }
+/**--------------边框--------------**/
+.b-1
+{ border: 1px; }
+.b-c-f
+{ border-color: #fff; }
+.br-1
+{ border-right: 1px; }
+.br-c-f
+{ border-right-color: #fff; }
+.b-s-s
+{ border-style: solid; }
+.b-s-d
+{ border-style: dashed; }
+/**--------------圆角--------------**/
+.rb-1
+{ border-radius: 1px; }
+.rb-2
+{ border-radius: 2px; }
+.rb-3
+{ border-radius: 3px; }
+.rb-4
+{ border-radius: 4px; }
+.rb-5
+{ border-radius: 5px; }
+/**--------------透明度--------------**/
+.op-10
+{ filter:alpha(opacity=10); -moz-opacity:0.1; -khtml-opacity: 0.1; opacity: 0.1; }
+.op-30
+{ filter:alpha(opacity=30); -moz-opacity:0.3; -khtml-opacity: 0.3; opacity: 0.3; }
+.op-50
+{ filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; }
+.op-70
+{ filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity: 0.7; opacity: 0.7; }
+.op-90
+{ filter:alpha(opacity=90); -moz-opacity:0.9; -khtml-opacity: 0.9; opacity: 0.9; }
+
+/**--------------字体大小--------------**/
+.f-10
+{ font-size: 10px; }
+.f-12
+{ font-size: 12px; }
+.f-14
+{ font-size: 14px; }
+.f-16
+{ font-size: 16px; }
+.f-18
+{ font-size: 18px; }
+.f-24
+{ font-size: 24px; }
+.f-30
+{ font-size: 30px; }
+.f-48
+{ font-size: 48px; }
+.f-60
+{ font-size: 60px; }
+
+/**--------------颜色--------------**/

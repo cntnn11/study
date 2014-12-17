@@ -1,0 +1,80 @@
+/*.nav
+{
+	margin: 0 auto;
+	width: 1000px;
+	height: 68px;
+	line-height: 68px;
+	border-bottom: 1px solid #ccc;
+}
+.nav-login
+{
+	float: right;
+}
+.nav .nav-login .login
+{
+	text-align: right;
+	position: relative;
+	color: #999;
+	font-size: 14px;
+}
+*/
+.nav-login-click
+{ padding-left: 30px; padding-right: 30px; color: #333; }
+.nav-login-click:hover, .nav-login-chover
+{ background: #999; opacity: 0.5; color: #fff; cursor: pointer; }
+.nav-dialogin
+{
+	position: absolute;
+	right: -50px;
+	padding: 5px;
+	padding-bottom: 5px;
+	width: 420px;
+	font-size: 12px;
+	background: #FFF;
+	border: 1px solid #333;
+	border-radius: 2px;
+}
+.nav-dialogin .nav-dialogin-block
+{
+	float: left;
+	width: 200px;
+}
+.nav-dialogin .nav-dialogin-block .dialog-form-dom
+{
+	float: left;
+	margin: 2px 0;
+	width: 200px;
+	line-height: 120%;
+}
+.nav-dialogin .nav-dialogin-block .dialog-form-dom > span
+{
+	float: left;
+	margin-right: 2px;
+	width: 60px;
+	text-align: right;
+	display: inline-block;
+}
+.nav-dialogin .nav-dialogin-block .nav-login-btn
+{
+	margin-top: 26px;
+}
+.nav-dialogin .nav-dialogin-block .dialog-form-dom .dialog-form-input
+{
+	float: left;
+	width: 120px;
+	height: 18px;
+	border: 1px solid #999;
+	border-radius: 2px;
+}
+.nav-dialogin .nav-dialogin-block .dialog-form-dom .dialog-form-input > input
+{
+	padding: 2px;
+	width: 95%;
+	height: 80%;
+	border: none;
+}
+.nav-dialogin .nav-dialogin-block .dialog-form-dom .dialog-form-btn
+{
+	padding: 5px 30px;
+	margin-right: 55px;
+}

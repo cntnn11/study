@@ -1,0 +1,31 @@
+.main
+{
+	width: 960px;
+	height: 540px;
+	background-image: url(http://assets.jikexueyuan.com/play_bg_v4.jpg?20141111);
+	position: relative;
+	margin-bottom: 100px;
+}
+.lesson-prev
+{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 30px;
+	height: 80px;
+}
+.lesson-next
+{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 30px;
+	height: 80px;
+}
+
+.player-video
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
