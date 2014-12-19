@@ -3,54 +3,82 @@
 <html lang="en"><!--<![endif]--> 
 <head>
 	<meta charset="utf-8">
-	<title>TODO - 极客学院出版社</title>
+	<title>新手任务 - 所有课程 - 数字出版社 - 极客学院</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link href="css/site.css" rel="stylesheet">
-	<link href="css/jkxy_press.css" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="./css/jkxy_press.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="./js/html5.js"></script><![endif]-->
 </head>
 <body>
-<div class="container">
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="#">数字出版</a>
-			<div class="nav-collapse">
-				<ul class="nav">
-					<li class="active"><a href="index.html">规范中心</a></li>
-					<li><a href="settings.htm">课程中心</a></li>
-					<li><a href="help.htm">结算中心</a></li>
-					<li><a href="help.htm">个人中心</a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li><a href="profile.htm">用户名啊</a></li>
-					<li><a href="login.htm">退出</a></li>
-				</ul>
-			</div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">极客学院数字出版</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">规范中心 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="guide.html">Win平台</a></li>
+						<li><a href="guide.html">Mac平台</a></li>
+					</ul>
+				</li>
+				<li><a href="course_list.html">课程中心</a></li>
+				<!--<li><a href="help.htm">结算中心</a></li>-->
+				<li><a href="setting.html">个人中心</a></li>
+				<li class="active"><a href="todo.html">新手任务</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">我是用户名 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="setting.html">个人设置</a></li>
+					</ul>
+				</li>
+				<li><a href="./login.html">退出登录</a></li>
+			</ul>
 		</div>
 	</div>
-</div>
-
-<div class="crumbs">
+</nav>
+<div class="container crumbs">
 	<ol class="breadcrumb">
-		<li><a href="index.html">管理中心</a> &gt; </li>
-		<li>ToDo</li>
+		<li><a href="index.html">管理中心</a></li>
+		<li>新手任务</li>
 	</ol>
 </div>
 
 <div class="container">
-	<p class="text-center">欢迎加入极客学院专家团队，和极客学院一起让学习更有效。</p>
+	<div class="page-header">
+		<p class="text-center">欢迎你加入极客学院专家团队，和极客学院一起让学习更有效。</p>
+	</div>
 	<div class="row">
-			
-		<div class="span12">
-			sdf
-		</div>
+		<h3>第一步，登记个人信息</h3>
+		<p>个人信息将会在如下几个地方需要用到</p>
+		<ol>
+			<li>邮箱：课程进度跟踪通知</li>
+			<li>真实姓名、身份证号码、住址：个人专家签署合同（合作企业不用填写）</li>
+			<li>快递收货信息：快递地址</li>
+			<li>头像：课程页面的讲师头像</li>
+			<li>支付宝账号：个人专家分成结算（合作企业不用填写）</li>
+		</ol>
+	</div>
+	<div class="row">
+		<h3>第二步，熟悉课程出品流程</h3>
+		<p>选题 &gt; 撰写大纲 &gt; 撰写课件 &gt; 录制 &gt; 后期制作 &gt; 上线</p>
+		<ol>
+			<li>选题：（一些介绍）</li>
+			<li>撰写大纲：（一些介绍）</li>
+			<li>录制：（一些介绍）</li>
+			<li>后期制作：（一些介绍）</li>
+			<li>上线：（一些介绍）</li>
+		</ol>
 	</div>
 </div>
 
-</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jkxy_press.js"></script>
 </body>
 </html>

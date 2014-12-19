@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="ie6 ielt7 ielt8 ielt9"><![endif]--><!--[if IE 7 ]><html lang="en" class="ie7 ielt8 ielt9"><![endif]--><!--[if IE 8 ]><html lang="en" class="ie8 ielt9"><![endif]--><!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--> 
+<html lang="en"><!--<![endif]--> 
+<head>
+	<meta charset="utf-8">
+	<title>使用html5的canvas画一个时钟 - 课程中心 - 数字出版社 - 极客学院</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="./css/jkxy_press.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="./js/html5.js"></script><![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">极客学院数字出版</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">规范中心 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="guide.html">Win平台</a></li>
+						<li><a href="guide.html">Mac平台</a></li>
+					</ul>
+				</li>
+				<li class="active"><a href="course_list.html">课程中心</a></li>
+				<!--<li><a href="help.htm">结算中心</a></li>-->
+				<li><a href="setting.html">个人中心</a></li>
+				<li><a href="todo.html">新手任务</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">我是用户名 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="setting.html">个人设置</a></li>
+					</ul>
+				</li>
+				<li><a href="./login.html">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container crumbs">
+	<ol class="breadcrumb">
+		<li><a href="index.html">管理中心</a></li>
+		<li><a href="course_list.html">所有课程</a></li>
+		<li>使用html5的canvas画一个时钟</li>
+	</ol>
+</div>
+
+<div class="container main">
+
+	<div class="row">
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>课程概要</h3>
+				</div>
+				<textarea class="form-control field" rows="5" readonly>Android经典的开源项目其实非常多，但是国内的博客总是拿着N年前的一篇复制来复制去，实在是不利于新手学习。今天爬爬把自己熟悉的一些开源项目整理起来，希望能对Android开发同学们有所帮助。另外，如果你有比较好的项目推荐，也烦请在评论里分享出来，我会定期更新博客内容。</textarea>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>课程背景</h3>
+				</div>
+				<textarea class="form-control field" rows="5" readonly stop>不能编辑我。~~~~~Android经典的开源项目其实非常多，但是国内的博客总是拿着N年前的一篇复制来复制去，实在是不利于新手学习。今天爬爬把自己熟悉的一些开源项目整理起来，希望能对Android开发同学们有所帮助。另外，如果你有比较好的项目推荐，也烦请在评论里分享出来，我会定期更新博客内容。</textarea>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<h3>核心知识点</h3>
+				</div>
+				<textarea class="form-control field" rows="5" readonly stop>不能编辑我。~~~~~这里是核心知识点。一二三四五六七八九十</textarea>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>适用人群</h3>
+				</div>
+				<textarea class="form-control field" rows="5" readonly stop>不能编辑我。~~~~~适用人群呢，老少皆宜</textarea>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>软件环境</h3>
+				</div>
+				<textarea class="form-control field" rows="5" readonly>win8 64位，sublime text3</textarea>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>课程难度</h3>
+				</div>
+				<div class="form-group col-md-6">
+					<select class=" form-control">
+						<option>初级</option>
+						<option>中级</option>
+						<option>高级</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>课时信息</h3>
+				</div>
+				<div class="col-md-12 lesson-add">
+					<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>课时标题</th>
+							<th>课时概要</th>
+							<th>课时知识点</th>
+							<th>预估时长</th>
+							<th width="100px">
+								操作&nbsp;
+								<a href="javascript:void(0);" class="btn btn-xs btn-default" id="add-lesson">添加</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<p>填写课时标题</p>
+							</td>
+							<td>
+								<p>填写课时概要</p>
+							</td>
+							<td>
+								<p>这是知识点呢</p>
+							</td>
+							<td>
+								<p>预估课时时长</p>
+							</td>
+							<td>
+								<a href="javascript:void(0);" class="btn btn-xs btn-default">编辑</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-default btn-danger">删除</a>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>课件</h3>
+				</div>
+				<div class="col-md-12">
+					<input id="input-kejian" type="file" class="file" data-preview-file-type="text" >
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<h3>视频</h3>
+				</div>
+				<div class="col-md-12">
+					<input id="input-video" type="file" class="file" data-preview-file-type="text" >
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-md-3">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>沟通记录</h3>
+				</div>
+			</div>
+
+			<div class="row talk-block">
+				<div class="talk-list">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							1. 课件文字不规范，请使用极客学院提供的字体
+							2. 课时信息缺失
+							<p class="text-lowercase mar-t10"> --by cntnn11</p>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							1. 课件文字不规范，请使用极客学院提供的字体
+							2. 课时信息缺失
+							<p class="text-lowercase mar-t10"> --by cntnn11</p>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							1. 课件文字不规范，请使用极客学院提供的字体
+							2. 课时信息缺失
+							<p class="text-lowercase mar-t10"> --by cntnn11</p>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body text-right">
+							讨论区？意见评论？
+							<p class="text-lowercase "> --by 作者</p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body text-right">
+							讨论区？意见评论？
+							<p class="text-lowercase "> --by 作者</p>
+						</div>
+					</div>
+				</div>
+				<div class="talk-sub">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<textarea class="form-control" rows="5" placeholder="管理员留言" id="add-talk-text"></textarea>
+							<a href="javascript:void(0);" class="btn btn-block btn-default mar-t10" id="add_talk">添加留言</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
+<link href="./css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/fileinput.min.js"></script>
+<script type="text/javascript" src="./js/jkxy_press.js"></script>
+</body>
+</html>
