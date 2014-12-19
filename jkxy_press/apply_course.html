@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="ie6 ielt7 ielt8 ielt9"><![endif]--><!--[if IE 7 ]><html lang="en" class="ie7 ielt8 ielt9"><![endif]--><!--[if IE 8 ]><html lang="en" class="ie8 ielt9"><![endif]--><!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--> 
+<html lang="en"><!--<![endif]--> 
+<head>
+	<meta charset="utf-8">
+	<title>单独课程录制申请 - 数字出版社 - 极客学院</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="./css/jkxy_press.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="./js/html5.js"></script><![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">极客学院数字出版</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">规范中心 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="guide.html">Win平台</a></li>
+						<li><a href="guide.html">Mac平台</a></li>
+					</ul>
+				</li>
+				<li class="active"><a href="course_list.html">课程中心</a></li>
+				<!--<li><a href="help.htm">结算中心</a></li>-->
+				<li><a href="setting.html">个人中心</a></li>
+				<li><a href="todo.html">新手任务</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">我是用户名 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="setting.html">个人设置</a></li>
+					</ul>
+				</li>
+				<li><a href="./login.html">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container crumbs">
+	<ol class="breadcrumb">
+		<li><a href="index.html">管理中心</a></li>
+		<li><a href="course_list.html">课程中心</a></li>
+		<li>课程录制申请</li>
+	</ol>
+</div>
+
+<div class="container main">
+	
+	<div class="row">
+		<div class="col-md-12">
+			<h3>课程名称</h3>
+			<input type="text" class="form-control" placeholder="填写课程名称" />
+		</div>
+
+		<div class="col-md-12">
+			<h3>所属知识体系</h3>
+			<select class=" form-control ">
+				<option>0. 独立课程计划</option>
+				<option>1. 知识体系一</option>
+				<option>2. 知识体系二</option>
+				<option>3. 知识体系三</option>
+			</select>
+		</div>
+
+		<div class="col-md-12">
+			<h3>课程概述</h3>
+			<textarea class="form-control field" rows="5" placeholder="填写课程概述" ></textarea>
+		</div>
+
+		<div class="col-md-12">
+			<h3>课程背景</h3>
+			<textarea class="form-control field" rows="5" placeholder="填写课程背景" ></textarea>
+		</div>
+
+		<div class="col-md-12">
+			<h3>核心知识点</h3>
+			<textarea class="form-control field" rows="5" placeholder="填写课程核心知识点，分段描写" ></textarea>
+		</div>
+
+		<div class="col-md-12">
+			<h3>使用人群</h3>
+			<input type="text" class="form-control" name="" placeholder="请填写使用人群">
+		</div>
+
+		<div class="col-md-12">
+			<h3>课程难度</h3>
+			<select class=" form-control">
+				<option>初级</option>
+				<option>中级</option>
+				<option>高级</option>
+			</select>
+		</div>
+
+		<div class="col-md-12 apply-add-course">
+			<h3>添加课时信息</h3>
+			<div class="form-add-lesson">
+				<hr/>
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label for="inputEmail3" class="col-sm-2 control-label text-right">课时标题： </label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control coure_title" id="course[title]" placeholder="请输入课时标题">
+						</div>
+						<div class="col-sm-2 text-right">
+							<a href="javascript:void(0);" class="btn btn-xs btn-danger" >删除当前</a>&nbsp;
+							<a href="javascript:void(0);" class="btn btn-xs btn-default" >继续添加</a>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="inputPassword3" class="col-sm-2 control-label text-right">课时概要： </label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="5" placeholder="填写课时概要"></textarea>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="inputPassword3" class="col-sm-2 control-label text-right">课时知识点： </label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="5" placeholder="填写课时知识点"></textarea>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="inputPassword3" class="col-sm-2 control-label text-right">预估时长：</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control coure_time" id="course[title]" placeholder="填写预估时长 10 ~ 20分钟">
+						</div>
+					</div>
+				</div>
+				<hr/>
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label for="inputEmail3" class="col-sm-2 control-label text-right">课时标题： </label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control coure_title" id="course[title]" placeholder="请输入课时标题">
+						</div>
+						<div class="col-sm-2 text-right">
+							<a href="javascript:void(0);" class="btn btn-xs btn-danger" >删除当前</a>&nbsp;
+							<a href="javascript:void(0);" class="btn btn-xs btn-default" >继续添加</a>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="inputPassword3" class="col-sm-2 control-label text-right">课时概要： </label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="5" placeholder="填写课时概要"></textarea>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="inputPassword3" class="col-sm-2 control-label text-right">课时知识点： </label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="5" placeholder="填写课时知识点"></textarea>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="inputPassword3" class="col-sm-2 control-label text-right">预估时长：</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control coure_time" id="course[title]" placeholder="填写预估时长 10 ~ 20分钟">
+						</div>
+					</div>
+				</div>
+				<hr/>
+			</div>
+		</div>
+
+		<div class="col-md-12">
+			<p class="text-center"><a href="javascript:void(0);" class="btn btn-lg btn-default" id="sub_course">提交申请</a></p>
+		</div>
+
+	</div>
+
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jkxy_press.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.main
+{ margin-bottom: 100px; }
+.btn-default
+{ text-shadow: 0 0px 0 #fff; }
+.mar-t10
+{ margin-top: 10px; }
+.mar-t20
+{ margin-top: 20px; }
+.mar-t30
+{ margin-top: 30px; }
+
+
+.video-block
+{ margin-bottom: 15px; padding: 10px; border: 1px solid #bbb; border-radius: 3px; }
+.video-block .video-tit
+{  }
+.video-block .video-box
+{ height: 480px; }
+
+.crumbs
+{ margin-top: 60px; }
+
+
+.course-show
+{ margin: 40px auto; }
+.course-field
+{ margin-top: 10px; }
+.course-field-right
+{ vertical-align:middle; line-height:56px; text-align:right; }
+
+.form-signin
+{ margin: 40px auto; max-width: 330px; padding: 15px; }
+
+
+.talk-block
+{ margin-left: 0px!important; margin-right: 0px!important; border-radius: 3px; border: 1px solid #bbb; padding: 5px; }
+.talk-block .talk-list
+{ height: 300px; overflow: scroll; }
+.talk-block .talk-sub
+{ margin-top: 10px; }
+
+
+/* 独立课程申请页面 */
+.apply-add-course
+{  }
