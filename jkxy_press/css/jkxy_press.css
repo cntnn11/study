@@ -1,5 +1,7 @@
 .main
 { margin-bottom: 100px; }
+.main .page-header
+{ margin-top: 0px; }
 .btn-default
 { text-shadow: 0 0px 0 #fff; }
 .mar-t10
@@ -43,3 +45,8 @@
 /* 独立课程申请页面 */
 .apply-add-course
 {  }
+
+
+/* todo页面 */
+.todo-btn-qq
+{ margin-top: 50px; }
