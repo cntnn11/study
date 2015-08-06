@@ -44,6 +44,12 @@ input, img, label, select
 
 /*---------------------common 公共区---------------------*/
 /**--------------基本--------------**/
+.text-left-i
+{ text-align: left!important; }
+.text-center-i
+{ text-align: center!important; }
+.text-right-i
+{ text-align: right!important; }
 .none { display:none}
 .cf
 { zoom: 1; }
@@ -54,18 +60,30 @@ input, img, label, select
 .rf
 { float: right; }
 /**--------------宽度集合--------------**/
-.w-1100
-{ width: 1100px; }
-/**--------------内边距--------------**/
-.p-20
-{ padding: 20px; }
-.pr-20
-{ padding-right: 20px; }
-/**--------------外边距--------------**/
-.m-20
-{ margin: 20px; }
-.mr-20
-{ margin-right: 20px; }
+.w50
+{ width: 50px; }
+.w100
+{ width: 100px; }
+.w130
+{ width: 130px; }
+.w150
+{ width: 150px; }
+.w200
+{ width: 200px; }
+.w250
+{ width: 250px; }
+.w300
+{ width: 300px; }
+.w500
+{ width: 500px; }
+.w100-p
+{ width: 100%; }
+.w120-i
+{ width: 120px!important; }
+.h75
+{ height: 75px; }
+.h130
+{ height: 130px; }
 /**--------------边框--------------**/
 .b-1
 { border: 1px; }
@@ -101,7 +119,6 @@ input, img, label, select
 { filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity: 0.7; opacity: 0.7; }
 .op-90
 { filter:alpha(opacity=90); -moz-opacity:0.9; -khtml-opacity: 0.9; opacity: 0.9; }
-
 /**--------------字体大小--------------**/
 .f-10
 { font-size: 10px; }
@@ -121,5 +138,85 @@ input, img, label, select
 { font-size: 48px; }
 .f-60
 { font-size: 60px; }
-
+/**--------------边距--------------**/
+.mar-0
+{ margin: 0px; }
+.mar-0-i
+{ margin: 0px!important; }
+.mar-t0
+{ margin-top: 0px; }
+.mar-t0-i
+{ margin-top: 0px!important; }
+.mar-t5
+{ margin-top: 5px; }
+.mar-t15
+{ margin-top: 15px; }
+.mar-l0-i
+{ margin-left: 0px!important; }
+.mar-l5
+{ margin-left: 5px; }
+.mar-l8
+{ margin-left: 8px; }
+.mar-l10
+{ margin-left: 10px; }
+.mar-t10
+{ margin-top: 10px; }
+.mar-t15
+{ margin-top: 15px; }
+.mar-b10
+{ margin-bottom: 10px; }
+.mar-l10
+{ margin-left: 10px; }
+.mar-t20
+{ margin-top: 20px; }
+.mar-b20
+{ margin-bottom: 20px; }
+.mar-b60
+{ margin-bottom: 60px!important; }
+.mar-t30
+{ margin-top: 30px; }
+.mar-t40
+{ margin-top: 40px; }
+.mar-t60
+{ margin-top: 60px; }
+.mar-r10
+{ margin-right: 10px; }
+.no-mar-i
+{ margin: 0px!important; }
+.no-padding-i
+{ padding: 0px!important; }
+.p-5
+{ padding: 5px; }
+.p-8
+{ padding: 8px; }
+.p-10
+{ padding: 10px; }
+.p-15
+{ padding: 15px; }
+.p-l10
+{ padding-left: 10px; }
+.p-l10-i
+{ padding-left: 10px!important; }
+.p-r10
+{ padding-right: 10px; }
+.p-b0-i
+{ padding-bottom: 0px!important; }
+.p-b10-i
+{ padding-bottom: 10px!important; }
+.bce2e2e2
+{ background-color: #e2e2e2; }
+.bcf3f3f3
+{ background-color: #f3f3f3; }
+.fc35b6558
+{ color: #35b558; }
+.dis-inline
+{ display: inline; }
+.dis-inline-block
+{ display: inline-block; }
 /**--------------颜色--------------**/
+.fcred
+{ color: red; }
+.fcblack
+{ color: black; }
+.cursor-def
+{ cursor: default; }

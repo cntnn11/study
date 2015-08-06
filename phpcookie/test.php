@@ -12,3 +12,7 @@ header("content-type: text/html; charset=utf-8");
 setcookie('test', '存一个cookie！');
 
 ?>
+
+<script type="text/javascript">
+	console.log( document.cookie );
+</script>

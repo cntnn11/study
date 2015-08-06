@@ -1,4 +1,9 @@
 <?php
+echo '<pre>';
+var_dump($_ENV);
+var_dump($_SERVER);
+echo '</pre>';
+
 $i = 0;
 $i++;
 

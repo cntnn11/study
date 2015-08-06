@@ -1,0 +1,13 @@
+1.	安装composer【借用laravel的处理方案】
+	laravel使用composer包工具进行管理，要使用laravel就得确保系统里有composer包（没有就装）。
+	【以下安装方法需要确保php环境已经搭建好，并由curl扩展。（php表示php全局环境变量）】
+	$ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/composer/
+		( --install-dir=安装路径，不指定就是全局安装)
+	mkdir /usr/local/bin/composer 
+	cp composer.phar /usr/local/bin/composer/
+		（composer从下载时所在路径中获取）
+
+	本机环境：/usr/local/bin/composer.phar
+	
+
+2.	
