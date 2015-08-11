@@ -43,10 +43,21 @@ function getKeyMax($jkdata_api)
 	return $res;
 }
 
+function getTuijianCourse($jkdata_api)
+{
+	$token	= '827003dd7d76fff0593df3f375e810c6';
+	//$url	= 'http://stat.jikexueyuan.lc/Home/ApiCourse/getHotCourse';
+	$url	= 'http://stat.jikexy.com/Home/ApiCourse/getHotCourse';
+	$params['uid']	= '$uid';
+	$res		= $jkdata_api->getApiData( $url, $token, $params );
+	return $res;
+}
+
 
 //$res	= test($jkdata_api);
 //$res	= getStudyDetail($jkdata_api);
-$res	= getKeyMax($jkdata_api);
+//$res	= getKeyMax($jkdata_api);
+$res	= getTuijianCourse($jkdata_api);
 
 echo '<hr/>';
 echo '<pre>';

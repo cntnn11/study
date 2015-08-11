@@ -1,54 +1,5 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background: #222;
-	font-family: Georgia, serif;
-	color: #fff;
-	font-size: 14px;
-}
-
-a {
-	color: #ffffcc;
-	text-decoration: none;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-	-ms-transition: 0.5s;
-	transition: 0.5s;
-}
-	a:hover,
-	a.selected {
-		color: #ffcc00;
-	}
-
-h1,h2,h4,h5,h6 {
-	text-align: center;
-	color: #ccc;
-	text-shadow: #000 1px 1px 2px;
-	margin-bottom: 5px;
-}
-	h1 {
-		font-size: 18px;
-	}
-	h2 {
-		font-size: 14px;
-	}
-.sociales {
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-	#timeline {
-		width: 800px;
-		height: 350px;
-		overflow: hidden;
-		margin: 100px auto;
-		position: relative;
-		background: url('../images/dot.gif') left 45px repeat-x;
-	}
+#timeline
+{ width: 800px; height: 350px; overflow: hidden; margin: 100px auto; position: relative; background: url('./../jQueryTimelinr_0954/images/dot.gif') left 45px repeat-x; }
 		#dates {
 			width: 800px;
 			height: 60px;
@@ -61,7 +12,7 @@ h1,h2,h4,h5,h6 {
 				height: 50px;
 				font-size: 24px;
 				text-align: center;
-				background: url('../images/biggerdot.png') center bottom no-repeat;
+				background: url('./../jQueryTimelinr_0954/images/biggerdot.png') center bottom no-repeat;
 			}
 				#dates a {
 					line-height: 38px;
@@ -103,9 +54,9 @@ h1,h2,h4,h5,h6 {
 					transition: all 2s ease-in-out;
 					-webkit-transform: scale(0.7,0.7);
 					-moz-transform: scale(0.7,0.7);
-				    -o-transform: scale(0.7,0.7);
-				    -ms-transform: scale(0.7,0.7);
-				    transform: scale(0.7,0.7);
+					-o-transform: scale(0.7,0.7);
+					-ms-transform: scale(0.7,0.7);
+					atransform: scale(0.7,0.7);
 				}
 				#issues li h1 {
 					color: #ffcc00;
@@ -121,46 +72,25 @@ h1,h2,h4,h5,h6 {
 					text-shadow: #000 1px 1px 2px;
 				}
 		
-		#grad_left,
-		#grad_right {
-			width: 100px;
-			height: 350px;
-			position: absolute;
-			top: 0;
-		}
-			#grad_left {
-		        left: 0;
-		        background: url('../images/grad_left.png') repeat-y;
-			}
-			#grad_right {
-		        right: 0;
-		        background: url('../images/grad_right.png') repeat-y;
-			}
-		
-		#next,
-		#prev {
-			position: absolute;
-			top: 0;
-			font-size: 70px;
-			top: 170px;
-			width: 22px;
-			height: 38px;
-			background-position: 0 0;
-			background-repeat: no-repeat;
-			text-indent: -9999px;
-			overflow: hidden;
-		}
+		#grad_left, #grad_right
+		{ width: 100px; height: 350px; position: absolute; top: 0; }
+			#grad_left
+			{ left: 0; }
+			#grad_right
+			{ right: 0; }
+		#next, #prev
+		{ position: absolute; top: 0; font-size: 70px; top: 170px; width: 22px; height: 38px; background-position: 0 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden; }
 			#next:hover,
 			#prev:hover {
 				background-position: 0 -76px;
 			}
 			#next {
 				right: 0;
-				background-image: url('../images/next.png');
+				background-image: url('./../jQueryTimelinr_0954/images/next.png');
 			}
 			#prev {
 				left: 0;
-				background-image: url('../images/prev.png');
+				background-image: url('./../jQueryTimelinr_0954/images/prev.png');
 			}
 				#next.disabled,
 				#prev.disabled {

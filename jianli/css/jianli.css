@@ -45,7 +45,7 @@ body
 	{ float: right; }
 }
 .cover
-{ padding: 0 20px; }
+{ margin-top: 76px; padding: 0 20px; }
 .cover .btn-lg
 { padding: 10px 20px; font-weight: bold; }
 
@@ -69,3 +69,11 @@ body
 	.masthead, .mastfoot, .cover-container
 	{ width: 100%; }
 }
+.masthead-style
+{ background-color: #333; z-index: 9999; border-bottom: 1px #000 solid; }
+
+
+.t-l
+{ text-align: left; }
+.t-r
+{ text-align: right; }
