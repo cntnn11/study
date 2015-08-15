@@ -30,66 +30,160 @@
 				<div class="inner cover">
 					<section id="cd-timeline" class="cd-container">
 						<div class="cd-timeline-block">
-							<div class="cd-timeline-img cd-picture">
-								<img src="./img/cd-icon-location.svg" alt="Picture">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Movie"></div>
+							<div class="cd-timeline-content t-l">
+								<h2>做过的功能，参与过的项目</h2>
+								<p>极客学院Fcode模块</p>
+								<p>极客学院第一版指路计划（用户分享返利功能）。</p>
+								<p>极客学院SEO支持，sitemap.xml的每天定时生成。</p>
+								<p>极客学院登录js代码改进。</p>
+								<p>极客学院前端静态页面开发支持（在前端人员未配到情况下主动承担）。</p>
+								<p>极客学院数据行为点收集文档整理。</p>
+								<p>极客学院路径图模块。</p>
+								<p>极客学院第一版院校代码。</p>
+								<p>极客学院专题活动模块。</p>
+								<p>极客学院带应届生，教PHP。</p>
+								<p>豆果时采集过大众点评的餐厅数据，友商数据，登录后的餐厅数据获取</p>
+								<p>平常的小修小改等等。</p>
 							</div>
+						</div>
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Movie"></div>
 							<div class="cd-timeline-content t-r">
 								<h2>极客学院数据展示平台</h2>
-								<p>展示平台为方便ETL人员使用，可在后台直接配置一张数据报表出来。包括字段、查询条件、图表配置等等。</p>
-								<p>提供了给各个业务的API数据接口，使用mcrypt进行安全校验、加密等操作。</p>
-								<p>我们使用百度eChart图表进行数据展示。（echart本身开源，文档丰富友好，图表功能强大，种类齐全）。</p>
-								<p>表格上使用jquery插件dataTable，并配套相应的自主开发表格，带字段排序、分页等标准功能。</p>
-								<span class="cd-date">2015-01-06</span>
+								<h6>2015年03月25日 ~ 至今</h6>
+								<h5>产品介绍</h5>
+								<p>该系统主要将一堆堆的数字表格以图表的形式展现给各个业务人员使用。</p>
+								<p>该系统可以直接在“菜单管理选项”中配置一张新的展示报表，无需进行PHP代码开发。</p>
+								<p>支持下探功能，借助于eChart插件，可以灵活定制各种类型的图表展。</p>
+								<p>其次，提供了给各个业务的API数据接口，使用mcrypt进行安全校验、加密等操作。</p>
+								<h5>技术方案</h5>
+								<p>使用ThinkPHP3.2框架开发。</p>
+								<p>图表展示使用eChart插件。</p>
+								<p>使用mcrypt对API请求进行加密校验。</p>
 							</div>
 						</div>
 						<div class="cd-timeline-block">
-							<div class="cd-timeline-img cd-movie">
-								<img src="./img/cd-icon-movie.svg" alt="Movie">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Movie"></div>
+							<div class="cd-timeline-content t-l">
+								<h2>极客学院统计脚本</h2>
+								<h6>2015年03月25日 ~ 至今</h6>
+								<p>因为对这块没什么经验，也找不到可求助的人，受限制于第一版统计代码的思维，在业务代码中做了第一个版本。</p>
+								<p>网站重构，转移到node.js上。第二版统计代码改为node.js版本。同样的，与业务代码耦合性太强。</p>
+								<p>第三版开始，有了一点认识，并且得到了一些指导。将统计脚本移到独立js文件中，同各业务代码进行拆分。</p>
+								<p>目前效果同百度谷歌统计代码一致，一段js脚本，几个参数配置。实现点击行为、页面访问情况的记录。以及对公司视频播放的统计记录。</p>
+								<p>日志发送以get请求方式，访问在日志接收服务器上的一张虚拟 .gif图。保存在日志文件中，ETL开发人员借助该日志文件进行分析。</p>
+								<h5>技术方案</h5>
+								<p>使用原生态js开发。</p>
+								<p>cookie模拟网站session_id。记录停留时长。 </p>
+								<p>匹配对H5-video.js的播放行为统计</p>
 							</div>
+						</div>
 
-							<div class="cd-timeline-content">
-								<h2>jQuery+PHP动态数字展示效果</h2>
-								<p>我们在一些应用中需要动态展示数据，比如当前在线人数，当前交易总额，当前汇率等等，前端页面需要实时刷新获取最新数据。本文将结合实例给大家介绍使用jQuery和PHP来实现动态数字展示效果。</p>
-								<a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a>
-								<span class="cd-date">2014-12-25</span>
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-r">
+								<h2>极客学院讲师系统</h2>
+								<h6>2014年12月15日 ~ 2015年02月</h6>
+								<h5>产品介绍</h5>
+								<p>该系统为公司内部讲师、运营使用的课程录制、审核、上线一体化平台。</p>
+								<p>实现针对到数据的权限控制，上传课程、文件、下载功能，审核体系等等想法。</p>
+								<p>减少人工沟通成本，提升了讲师、运营、后期的工作效率。</p>
+								<h5>技术方案</h5>
+								<p>使用laravel5框架开发。</p>
+								<p>接触composer包来管理该框架。</p>
 							</div>
 						</div>
 						<div class="cd-timeline-block">
-							<div class="cd-timeline-img cd-picture">
-								<img src="./img/cd-icon-picture.svg" alt="Picture">
-							</div>
-
-							<div class="cd-timeline-content">
-								<h2>PHP操作Session和Cookie</h2>
-								<p>我们跟踪用户信息时需要用到Session和Cookie，比如用户登录验证、记录用户浏览历史，存储购物车数据，限制用户会话有效时间等。今天我们来了解下PHP是如何操作Session和Cookie的。</p>
-								<a href="http://www.helloweba.com/view-blog-283.html" class="cd-read-more" target="_blank">阅读全文</a>
-								<span class="cd-date">2014-12-20</span>
-							</div>
-						</div>
-						<div class="cd-timeline-block">
-							<div class="cd-timeline-img cd-movie">
-								<img src="./img/cd-icon-movie.svg" alt="Movie">
-							</div>
-
-							<div class="cd-timeline-content">
-								<h2>jQuery数字加减插件</h2>
-								<p>我们在网上购物提交订单时，在网页上一般会有一个选择数量的控件，要求买家选择购买商品的件数，开发者会把该控件做成可以通过点击实现加减等微调操作，当然也可以直接输入数字件数。本文将介绍常见的几种使用spinner数字微调器来实现数字加减的功能的方法。</p>
-								<a href="http://www.helloweba.com/view-blog-282.html" class="cd-read-more" target="_blank">阅读全文</a>
-								<span class="cd-date">2014-12-14</span>
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-l">
+								<h2><a href="http://wenda.jikexueyuan.com" target="_blank">极客学院问答模块</a></h2>
+								<h5>产品介绍</h5>
+								<p>技术问答是一个小型的问答系统，类segmentfault。</p>
+								<p>实现标记“已解决”、“采纳”、“粘贴图片上传”等功能。</p>
+								<h5>技术方案</h5>
+								<p>使用simeditor编辑器作为问答窗口。</p>
+								<p>simeditor要求jq版本2.1+，所以第一版对其源码进行了修改，用来兼容网站原有的jq1.7.4版本。</p>
+								<p>手动添加highlight代码高亮插件。</p>
 							</div>
 						</div>
 						<div class="cd-timeline-block">
-							<div class="cd-timeline-img cd-movie">
-								<img src="./img/cd-icon-location.svg" alt="Location">
-							</div>
-
-							<div class="cd-timeline-content">
-								<h2>收集整理的非常有用的PHP函数</h2>
-								<p>项目中经常会需要一些让人头疼的函数，作为开发者应该整理一个自己的函数库，在需要之时复制过来即可。本文作者收集整理数十个PHP项目中常用的函数，保证能正常运行，你只要复制粘贴到你项目中即可。</p>
-								<a href="http://www.helloweba.com/view-blog-281.html" class="cd-read-more" target="_blank">阅读全文</a>
-								<span class="cd-date">2014-12-05</span>
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-r">
+								<h2><a href="http://www.jikexueyuan.com/course" target="_blank" >极客学院课程模块</a></h2>
+								<h5>产品介绍</h5>
+								<p>播放视频为网站核心功能。给会员提供视频播放服务。</p>
+								<p>教育类视频播放器中第一家集成键盘暂停、快进快退、连播、切换、收藏该课程等功能。</p>
+								<p>后台服务器实时记录用户播放行为。包括心跳、播放暂停、拖拽等行为。</p>
+								<h5>技术方案</h5>
+								<p>使用H5的video.js播放器插件。</p>
+								<p>利用videoJs的play、pause等事件实现键盘快捷键的控制，播放行为的记录等功能，预留了“字幕”功能。</p>
+								<p><small>（注：网站代码重构时的开发人员未能保留这些功能。伤心）</small></p>
 							</div>
 						</div>
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-l">
+								<h2>豆果统计平台</h2>
+								<h5>产品介绍</h5>
+								<p>在平台上展示公司每个产品线的PV、UV、IP等数量</p>
+								<h5>技术方案</h5>
+								<p>数据来源于nginx日志。</p>
+								<p>每天凌晨时分跑shell脚本，使用awk命令来统计每天的PV、UV、IP。</p>
+								<p>图表使用的jquery.float；</p>
+							</div>
+						</div>
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-r">
+								<h2>豆果后台“餐厅合并”计划</h2>
+								<h5>产品介绍</h5>
+								<p>利用采集到餐厅数据以及用户提交的餐厅数据，进行数据合并。规则由产品提供。</p>
+								<p>按照一定规则进行自动合并，并提供手动合并功能。</p>
+								<h5>技术方案</h5>
+								<p>利用sphinx分词系统，按照一定的规则将相等相似的数据进行归纳整理。</p>
+								<p>将整理的点在百度地图上展示出来，标记目标距离点，便于运营编辑手动合并餐厅，标记餐厅。</p>
+							</div>
+						</div>
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-l">
+								<h2><a href="http://www.douguo.com/huodong" target="_blank" >豆果活动模块</a></h2>
+								<h6>2013年</h6>
+								<h5>产品介绍</h5>
+								<p>产品排序要求：活动三种状态，开始筹备中，进行中，已结束。要求已结束排最后，进行中并且即将结束的排第一，筹备中的按刚开始时间排第一。</p>
+								<p>活动带抽奖、图片生成分享等功能。</p>
+								<h5>技术方案</h5>
+								<p>受限于表结构设计，排序规则有些复杂，估算活动即使使用两年最多也只有700条数据量的考虑，决定获取所有活动数据，使用 array_multisort() 函数对数组进行多重排序。</p>
+								<p>使用GD库生成用户唯一的专属图片并分享。</p>
+								<p>抽奖模块的规则逻辑代码。</p>
+							</div>
+						</div>
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-l">
+								<h2><a href="http://www.douguo.com/article" target="_blank" >豆果主题站</a></h2>
+								<h5>产品介绍</h5>
+								<p>一个按照固定类别分类的文章发布展示模块</p>
+								<h5>技术方案</h5>
+								<p>添删查改，文章缓存。</p>
+								<p><small>因为没有思想，代码被主管重构。</small></p>
+							</div>
+						</div>
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-picture"><img src="./img/cd-icon-location.svg" alt="Location"></div>
+							<div class="cd-timeline-content t-r">
+								<h2>趣游市场统计报表系统功能</h2>
+								<h6>2011年 ~ 2012年</h6>
+								<h5>产品介绍</h5>
+								<p>用于市场部门的数据展示系统。主要负责前端展示的代码实现。</p>
+								<h5>技术方案</h5>
+								<p>PHP使用CI框架。</p>
+								<p>使用过PHP-graph展示第一版的图表，到后期发展为ext.js表格展示，fusioncharts的flash插件作为图表展示插件（不使用js是因为数据量太大，经常导致页面假死）。</p>
+								<p>抽奖模块的规则逻辑代码。</p>
+							</div>
+						</div>
+
 					</section>
 				</div>
 			</div>
