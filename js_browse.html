@@ -37,18 +37,20 @@ var browser={
 	}(),
 	language:(navigator.browserLanguage || navigator.language).toLowerCase()
 }
-if(browser.versions.android)
+
+if( browser.versions.weixin )
 {
-	document.getElementById('content').innerHTML('安卓');
+	document.getElementById('content').innerHTML	= '微信';
+}
+else if(browser.versions.android)
+{
+	document.getElementById('content').innerHTML	= '安卓';
 }
 else if( browser.versions.ios )
 {
-	document.getElementById('content').innerHTML('IOS');
+	document.getElementById('content').innerHTML	= 'IOS';
 }
-else if( browser.versions.weixin )
-{
-	document.getElementById('content').innerHTML('微信');
-}
+
 else
 {
 	document.getElementById('content').innerHTML = '其他';
