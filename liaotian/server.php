@@ -4,7 +4,7 @@ $map	= array();
 $server	= new swoole_websocket_server("115.29.45.104", 9501);
 
 $server->on('open', function(swoole_websocket_server $server, $request){
-	error_log($request->fd, 3, './log.txt');
+	error_log($request->fd."\n", 3, './log.txt');
 });
 
 
