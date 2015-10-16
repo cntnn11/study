@@ -64,7 +64,7 @@ class PolyvSDK {
 			}
 			$data = curl_exec( $ch );
 			curl_close( $ch );
-
+			
 			if($data){
 				return (new SimpleXMLElement($this->sanitize_for_xml($data)));
 			}else{
@@ -101,30 +101,32 @@ class PolyvSDK {
 					);
 	}
 			
-	public function getById($vid) {
-		
-	    $xml = "";
-		if($this->_sign){
-			$hash = sha1('readtoken='.$this->_readtoken.'&vid='.$vid.$this->_privatekey);
+	public function getById($vid)
+	{
+		$xml = "";
+		if($this->_sign)
+		{
+			$hash	= sha1('readtoken='.$this->_readtoken.'&vid='.$vid.$this->_privatekey);
 		}
 		//echo "-->".'http://beta.polyv.net/uc/services/rest?readtoken='.$this->_readtoken.'&method=getById&vid='.$vid.'&format=xml&sign='.$hash;
-		$xml = $this->_processXmlResponse('http://v.polyv.net/uc/services/rest?readtoken='.$this->_readtoken.'&method=getById&vid='.$vid.'&format=xml&sign='.$hash, $xml);
-		if($xml) {
-			if($xml->error=='0') 
-				
-					return $this->makeVideo($xml->data->video);
-			else 
-				return array(
-					'returncode' => $xml->error
-					);
+		$xml	= $this->_processXmlResponse('http://v.polyv.net/uc/services/rest?readtoken='.$this->_readtoken.'&method=getById&vid='.$vid.'&format=xml&sign='.$hash, $xml);
+		if($xml)
+		{
+			if($xml->error=='0')
+			{
+				return $this->makeVideo($xml->data->video);
+			}
+			else
+			{
+				return ['returncode' => $xml->error];
+			}
 		}
-		else {
+		else
+		{
 			return null;
 		}
-		
 	}
-	
-					
+
 	/**
 	 * 通过视频标题获取信息
 	 */
@@ -132,7 +134,6 @@ class PolyvSDK {
 		if($this->_sign){
 			$hash = sha1('keyword='.$keyword.'&numPerPage='.$numPerPage.'&pageNum='.$pageNum.'&readtoken='.$this->_readtoken.$this->_privatekey);
 		}
-		//echo 'http://v.polyv.net/uc/services/rest?readtoken='.$this->_readtoken.'&method=searchByTitle&keyword='.$keyword.'&pageNum='.$pageNum.'&numPerPage='.$numPerPage.'&format=xml&sign='.$hash;
 		$xml = $this->_processXmlResponse('http://v.polyv.net/uc/services/rest?readtoken='.$this->_readtoken.'&method=searchByTitle&keyword='.$keyword.'&pageNum='.$pageNum.'&numPerPage='.$numPerPage.'&format=xml&sign='.$hash, $xml);
 		if($xml) {
 			if($xml->error=='0') {
