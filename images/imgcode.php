@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_ALL);
 /**
  *	一个简单的加乘验证码类
  *	@author 谭宁宁
@@ -14,7 +15,7 @@ class codeimg
 	public $num_1	= 1;
 	public $num_2	= 10;
 	
-	public $f_file	= 'font/msyhbd.ttf';
+	public $f_file	= './font/YaHei.Consolas.1.12.ttf';
 	public $f_size	= 13;
 
 	public $c_type	= 1;	//验证码类型：1加乘混合出现/2纯加法/3纯乘法。默认为1
@@ -34,7 +35,7 @@ class codeimg
 	function genImg()
 	{
 		$this->imgSourc	= $this->createImgSourc();
-		if(!self::$this->dev)
+		if(!$this->dev)
 		{
 			header("content-type: image/png;");
 			imagepng($this->imgSourc);
@@ -60,7 +61,15 @@ class codeimg
 		$x		= intval(($this->height-$strlen));
 
 		$textColor	= imagecolorallocate($this->imgSourc, rand(0, 125), rand(0, 125), rand(0, 125));
-		imagettftext($this->imgSourc, $this->f_size, 0, $x, $y, $textColor, $this->f_file, $text);
+
+		if( !function_exists('imagettftext'))
+		{
+			exit('imagettftext 不存在！');
+		}
+		else
+		{
+			imagettftext($this->imgSourc, $this->f_size, 0, $x, $y, $textColor, $this->f_file, $text);
+		}
 
 		return $this->imgSourc;
 	}
@@ -101,7 +110,7 @@ class codeimg
 		}
 
 		$temp_num	= rand(0, 2);
-		self::$this->sess	= $numArr[$temp_num];
+		$this->sess	= $numArr[$temp_num];
 		$numArr[$temp_num]	= '**';
 		$string		= $numArr[0].' '.$operArr[$operNum].' '.$numArr[1].' = '.$numArr[2];
 		return $string;
@@ -109,7 +118,7 @@ class codeimg
 
 	function getValue()
 	{
-		return self::$this->sess;
+		return $this->sess;
 	}
 
 }

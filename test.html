@@ -5,14 +5,38 @@
 <title>无标题文档</title>
 </head>
 <style>
+#jiandan
+{ width:50px; height:50px; background-color:red; }
+
+#jiandan2
+{ width:50px; height:50px; background-color:yellow; }
 
 </style>
 <body>
-<script type="text/javascript" src="http://www.html580.com/ads/ad.js"></script>
+
+
+<div id="jiandan">
+	hhh
+</div>
+
+
+<div id="jiandan2">
+	gggg
+</div>
+
+
 <script type="text/javascript">
-window.onload=function(){var b='<div style="font-size:14px;font-weight:bold;margin-bottom:5px;"><a href="http://www.jikexueyuan.com/course/158.html/?hmsr= html580_tc_cat" rel="nofollow" target="_blank">零基础1小时学会开发「围住神经猫」</a></div><div style="line-height:20px;font-size:12px;"><a href="http://www.jikexueyuan.com/course/158.html/?hmsr= html580_tc_cat" rel="nofollow" target="_blank"><img src="http://www.html580.com/ads/sjm.jpg" height="100" width="100" style="float:left">“我用了1小时开发了神经猫，击败了98%的人，你能超过我吗？” 立即学习，看你能打败多少人！</a></div>';html580ads.init("极客学院精品课程",b,250,160)};
+document.getElementById("jiandan").onmouseover = function show(){
+	alert('hhh');
+};
+
+
+document.getElementById("jiandan2").onmouseover = show;
+function show()
+{
+	alert('ggg');
+}
+
 </script>
- 你们在我的基础上简单改下
-<script type="text/javascript" src="http://www.html580.com/ads/ad.js"></script>
 </body>
 </html>
