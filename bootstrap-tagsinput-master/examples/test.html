@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Tags Input</title>
+	<meta name="robots" content="index, follow" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/todc-bootstrap/3.1.1-3.2.1/todc-bootstrap.min.css">
+	<link rel="stylesheet" href="../dist/bootstrap-tagsinput.css">
+	<link href="../dist/bootstrap-tagsinput-typeahead.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="assets/app.css">
+	<style type="text/css">
+
+	.course-tag
+	{ color: #FFF; background-color: #337ab7; padding: 5px; }
+	.bootstrap-tagsinput .tt-input
+	{ width: 100px; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<section id="examples">
+			<div class="example example_objects_as_tags">
+				<div class="bs-example">
+					<input type="text" placeholder="填写课程ID" />
+				</div>
+			</div>
+		</section>
+		<div class="row">
+			<div class="col-md-12" id="val"></div>
+			<button id="btn">获取</button>
+		</div>
+	</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script src="http://cdn.bootcss.com/typeahead.js/0.11.1/bloodhound.js"></script>
+<script src="http://apps.bdimg.com/libs/typeahead.js/0.10.2/typeahead.bundle.min.js"></script>
+<script src="../dist/bootstrap-tagsinput.js"></script>
+<script src="assets/app_test_object_tags.js"></script>
+</body>
+</html>
+

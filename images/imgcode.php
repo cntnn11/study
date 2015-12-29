@@ -3,7 +3,7 @@ session_start();
 error_reporting(E_ALL);
 /**
  *	一个简单的加乘验证码类
- *	@author 谭宁宁
+ *	@author tan's
  *	@datetime 2012-09-03
 */
 
