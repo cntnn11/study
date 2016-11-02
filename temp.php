@@ -1,4 +1,31 @@
 <?php
+
+// 默认改为gbk编码导出
+	
+try{
+	$fileName	= 'test.csv';
+	$content	= file_get_contents('/Users/cntnn11/www/temp/order_2016-03-15.csv');
+	//$content	= iconv('UTF8', 'gbk//TRANSLIT', $content);
+	//$content	= mb_convert_encoding( $content, 'UTF-8', 'gbk' );
+
+	header("Content-type:text/csv");
+	header('Cache-Control:must-revalidate,post-check=0,pre-check=0');
+	//header('Expires:0');
+	header('Pragma:public');
+	header("Content-Disposition:attachment;filename=".$fileName);
+	header("Content-Type: text/html; charset=gbk");
+	echo $content;
+
+}
+catch(Exception $e)
+{
+	exit(' error -> ' . $e->getMessage());
+}
+	
+
+
+
+exit();
 /**
  *	@desc 补充消息数据，临时的。
 */
