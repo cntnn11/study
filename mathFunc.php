@@ -42,8 +42,8 @@ for($i=0; $i<$max; $i++ )
 }
 
 echo PHP_EOL.'----------------'.PHP_EOL;
-echo 'res1:' . ( ($s) + ($w+$w) + (0+$s+2+$w+$s) ) . PHP_EOL;
-echo 'res2:' . ( ($s) + ($w+$w) + (1+$s+1+$w+$s) ) . PHP_EOL;
-echo 'res3:' . ( ($s) + ($w+$w) + (2+$s+0+$w+$s) ) . PHP_EOL;
+echo 'res1:' . ( ($s) + ($w+$w) * (0+$s+2+$w+$s) ) . PHP_EOL;
+echo 'res2:' . ( ($s) + ($w+$w) * (1+$s+1+$w+$s) ) . PHP_EOL;
+echo 'res3:' . ( ($s) + ($w+$w) * (2+$s+0+$w+$s) ) . PHP_EOL;
 
 exit(PHP_EOL . 'THE END' . PHP_EOL);

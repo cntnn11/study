@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="tool" content="leanote-desktop-app">
+<title>tanbai</title>
+<style>
+.tab{font-size:12px; margin-bottom: 10px;}
+.tab a{cursor:pointer;cursor:pointer;display:inline-block;margin-right:10px;color:#000}#tab-html{color:#ccc}
+
+.content-container .content-html{visibility: hidden;}
+.content-container.html .content-markdown{display:none}
+.content-container.html .content-html{display:block; visibility: visible;}
+.content-container.html #tab-markdown{color:#ccc}
+.content-container.html #tab-html{color:#000}
+.content-markdown {overflow: auto;}
+textarea {display: none;}
+
+*{font-family:"lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+
+body {
+  margin: 0;
+}
+
+/*公用文字样式*/
+h1{font-size:30px}h2{font-size:24px}h3{font-size:18px}h4{font-size:14px}
+.note-container{
+	width:850px; 
+	margin:auto;
+	padding: 10px 20px;
+	box-shadow: 1px 1px 10px #eee;
+}
+#title {
+  margin: 0;
+}
+table {
+	margin-bottom: 16px;
+	border-collapse: collapse;
+}
+table th, table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+}
+table th {
+	font-weight: bold;
+}
+
+table tr {
+	background-color: none;
+	border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+	background-color: rgb(247, 247, 249);
+}
+.mce-item-table, .mce-item-table td, .mce-item-table th, .mce-item-table caption {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 6px 13px;
+}
+blockquote {
+  border-left-width:10px;
+  background-color:rgba(128,128,128,0.05);
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  padding:15px 20px;
+  border-left:5px solid rgba(128,128,128,0.075);
+}
+blockquote p {
+  margin-bottom:1.1em;
+  font-size:1em;
+  line-height:1.45
+}
+blockquote ul:last-child,blockquote ol:last-child {
+  margin-bottom:0
+}
+pre {
+  padding: 18px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 3px;
+  display: block;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  white-space: nowrap;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+.footnote {
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+  font-size: .8em;
+}
+
+hr {
+  margin:2em 0
+}
+img {
+  max-width:100%;
+  display: block;
+  margin: auto;
+}
+pre {
+  word-break:break-word
+}
+p,pre,pre.prettyprint,blockquote {
+  margin:0 0 1.1em
+}
+hr {
+  margin:2em 0
+}
+img {
+  max-width:100%
+}
+.sequence-diagram,.flow-chart {
+  text-align:center;
+  margin-bottom:1.1em
+}
+.sequence-diagram text,.flow-chart text {
+  font-size:15px !important;
+  font-family:"Source Sans Pro",sans-serif !important
+}
+.sequence-diagram [fill="#ffffff"],.flow-chart [fill="#ffffff"] {
+  fill:#f6f6f6
+}
+.sequence-diagram [stroke="#000000"],.flow-chart [stroke="#000000"] {
+  stroke:#3f3f3f
+}
+.sequence-diagram text[stroke="#000000"],.flow-chart text[stroke="#000000"] {
+  stroke:none
+}
+.sequence-diagram [fill="#000"],.flow-chart [fill="#000"],.sequence-diagram [fill="#000000"],.flow-chart [fill="#000000"],.sequence-diagram [fill="black"],.flow-chart [fill="black"] {
+  fill:#3f3f3f
+}
+ul,ol {
+  margin-bottom:1.1em
+}
+ul ul,ol ul,ul ol,ol ol {
+  margin-bottom:1.1em
+}
+kbd {
+  padding:.1em .6em;
+  border:1px solid rgba(63,63,63,0.25);
+  -webkit-box-shadow:0 1px 0 rgba(63,63,63,0.25);
+  box-shadow:0 1px 0 rgba(63,63,63,0.25);
+  font-size:.7em;
+  font-family:sans-serif;
+  background-color:#fff;
+  color:#333;
+  border-radius:3px;
+  display:inline-block;
+  margin:0 .1em;
+  white-space:nowrap
+}
+.toc ul {
+  list-style-type:none;
+  margin-bottom:15px
+}
+.m-todo-item {
+  list-style: none;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: inherit;
+  border-radius: 0;
+}
+</style>
+<!-- 该css供自定义样式 -->
+<link href="../leanote-markdown.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="note-container">
+		<h3>-- 20190531</h3>
+		<p>本来下述那些是想在过年时说的，但找不到机会，也不知如何开口。因为我和老吗的想法思维习惯也不一样，怕更大的冲突。<br/>
+	年后来到深圳，车友圈的朋友找过来说要做「卡丁车之家」（这块我是很早想过，是能够做起来的，苦于没有切入点，就一直未做）。<br/>
+	所以这半年就没继续找工作，而是跟车友注册公司，做内容，做产品，期间我两各投入了5w以上吧。买设备、注册公司费用、雇人开发、车马费等等。<br/>
+	做到后期先暂停，是因为车友的重心在于赛事，而赛事这块不挣钱，我是想着往路人方向，是挣钱的方向，能够做到每年百万的市场，只是苦于一个人很难有成就。<br/>
+	上半年天天窝在家里，醒了就开发，困了就眯一会，不分白天黑夜，希望把自己的产品做起来，然后对外运营，毕竟在卡丁车这个圈子里，我不愁人脉关系。<br/>
+	这两年的动乱和折腾，债务上实在没法看，一直想着三十而立，做出自己的事业，我尝试抓住各种机会，但人算不如天算，事事不顺。<br/>
+	失败太久了，这半年，性格脾气也早就磨没了，接触一些人和事，也没了以前的固执，算是混入主流了。<br/>
+	期望把所有事给老妈说清，也是想想以后出路在哪。<br/>
+	但自己的债务问题，真不不知道咋开头，一顿痛骂肯定少不了，也怕太伤妈妈的心。<br/>
+	</p>
+		<h3>-- 20190129</h3>
+		<p>我提离职了，心理挺不是滋味的。<br/>
+	年会时感冒了就躺床上歇会，开始了却没人喊，公司就那么12个人，还是走了吧。<br/>
+	我一直想把近况全盘说出，但是找不到机会，对未来在哪也有些迷茫，到底要不要继续待在深圳？还是去长沙离家近？<br/>
+	16年11月从棒棒糖离开，工作断断续续的，接一些外包小活，尝试做些转变，接触别的行业，结果被骗，后来一直飘忽不定，做啥啥不顺。本来就想着离开北京，那就趁这次机会南下好了。走了一圈选中了深圳，因为“来了就是深圳人”这句话。<br/>
+	在棒棒糖团队后期，因为长时间没有成绩，有些着急、有些抑郁、脾气变得越来越大，跟主管争执也越多，犯错也变多，后来不得不离开。<br/>
+	16年底跟几个关系好的同事一块创业，但那会心理还没调整过来，还带着棒棒糖团队的工作习惯，导致新团队磨合矛盾比较多，大家的风格思维都不一样，那会有坚持己见，最终闹翻，之后没了动力，没了期望，17年6月离开。晃荡了一月，做出离开北京，前往深圳的决定。<br/>
+	在深圳这边，朋友的帮助在一家小公司入职，一开始做的还挺好，但后期也是因为团队习惯、思维不一致，也有一些小矛盾，但最后都解决了。只是年会上的事很受伤，于是在过年前提了离职。
+		</p>
+	</div>
+
+</body>
+</html>
