@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FormData上传文件</title>
+</head>
+<body>
+
+<p>
+	<input type="file" name="file-single" id="file-single" />
+	<a href="javascript:void(0);" class="do-upload" data-mult="single" >上传单个文件</a>
+</p>
+<p>
+	<input type="file" name="file-more[]" id="file-more" multiple />
+	<a href="javascript:void(0);" class="do-upload" data-mult="more" >上传多个文件</a>
+</p>
+<div id="preview-box"></div>
+</body>
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var uploadUrl = 'upload.php';
+
+$('input[type=file]').on('change', function(obj){
+	var $preview = document.getElementById('preview-box');
+		$preview.innerHTML = '';
+	var inputFileId = $(this).attr('id');
+console.log( ' filelist-->', $(this) );
+	var uploadFile = document.getElementById(inputFileId);
+
+	if( uploadFile.files.length <= 0 )
+	{
+		alert('请先选择一个文件');
+		return false;
+	}
+
+	let total = uploadFile.files.length;
+	for(var i=0; i<total; i++)
+	{
+		// 图片预览
+		var img = document.createElement("img");
+			img.classList.add("obj");
+			img.file = uploadFile.files[i];
+			img.width= 120;
+			$preview.appendChild(img); // 假设"preview"就是用来显示内容的div
+
+		var reader = new FileReader();
+			reader.onload = (function(aImg) {
+				return function(e) {
+					aImg.src = e.target.result;
+				};
+			})(img);
+			reader.readAsDataURL( uploadFile.files[i] );
+	}
+
+});
+
+$('.do-upload').on('click', function(){
+	var inputFileId = 'file-' + $(this).data('mult');
+	var uploadFile = document.getElementById(inputFileId);
+		if( uploadFile.files.length <= 0 )
+		{
+			alert('请先选择一个文件');
+			return false;
+		}
+
+	var formData = new FormData();
+		let total = uploadFile.files.length;
+		for(var i=0; i<total; i++)
+		{
+			formData.append('file[]', uploadFile.files[i]);
+		}
+		formData.append('key', 'key');
+		formData.append('id', 1);
+		formData.append('sign', 'signlakjsflUHUI#*(');
+		formData.append('filename', 'filename');
+console.log('开始上传----->',inputFileId, uploadFile.files, formData);
+	//创建xhr对象
+	var xhr = new XMLHttpRequest();
+
+	//监听文件上传进度
+	xhr.upload.onprogress = function(evt){
+		console.log( 'onprogress-------', evt );
+		//lengthComputabel: 文件长度是否可计算
+		if(evt.lengthComputable){
+			//evt.loaded: 已下载的字节数
+			//evt.total: 文件总字节数
+			var percent = Math.round(evt.loaded*100/evt.total);
+			console.log(percent, '%');
+		}
+	};
+
+	//监听文件传输开始    
+	xhr.onloadstart = function(evt) {
+		console.log('onloadstart-------', evt);
+	}
+
+	// 监听ajax成功完成事件，请求结束后,在此处写处理代码。
+	xhr.onload = function(evt) {
+		console.log('onload-------', evt);
+	}
+
+	//监听ajax错误事件    
+	xhr.onerror = function(evt) {
+		console.log('onerror-------', $evt);
+	}
+
+	//监听ajax被中止事件
+	xhr.onabort = function(evt) {
+		console.log('onabort-------', evt);
+	}
+
+	//监听传输结束事件: 不管成功或者失败都会触发
+	xhr.onloaded = function(evt) {
+		console.log('onloaded-------', evt);
+	}
+	   
+	//*发起ajax请求数据
+	xhr.open('POST', uploadUrl, true);
+	xhr.send(formData);
+	//xhr.send({key:'key', id:0, sign:'sign--asflajeiow', filename:'name'});
+
+
+});
+
+	
+
+</script>
+</html>
